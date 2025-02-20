@@ -103,7 +103,7 @@ QToolTip {
 }
 .glazewm-workspaces .ws-btn.populated {
   background-color: var(--lavender);
-  color: var(--main);
+  color: #000000;
   width: 10px;
   height: 10px;
   border-radius: 5px;
@@ -121,17 +121,17 @@ QToolTip {
   border-radius: 5px;
 }
 
-/* .apps-widget { */
-/*   padding: 0 4px 0 2px; */
-/* } */
-/* .apps-widget .label { */
-/*   font-size: 14px; */
-/*   padding: 0 2px; */
-/*   color: var(--subtext0); */
-/* } */
-/* .apps-widget .label:hover { */
-/*   color: var(--text); */
-/* } */
+.apps-widget {
+  padding: 0 4px 0 2px;
+}
+.apps-widget .label {
+  font-size: 14px;
+  padding: 0 2px;
+  color: var(--subtext0);
+}
+.apps-widget .label:hover {
+  color: var(--text);
+}
 
 .power-menu-widget .label {
   color: #f38ba8;
@@ -284,38 +284,6 @@ QToolTip {
   max-height: 5px;
   height: 10px;
   background-color: rgba(128, 130, 158, 0.3);
-  /* color: #fff000; */
-}
-
-.glazewm-workspaces {
-  margin: 0;
-}
-
-.glazewm-workspaces .ws-btn {
-  font-size: 14px;
-  background-color: transparent;
-  border: none;
-  padding: 0px 4px 0px 4px;
-  margin: 0 2px 0 2px;
-  color: #cdd6f4;
-}
-
-.glazewm-workspaces .ws-btn.active {
-  background-color: rgba(60, 60, 60, 0.6);
-}
-
-.glazewm-workspaces .ws-btn.populated {
-  color: #c2daf7;
-}
-
-.glazewm-workspaces .ws-btn.empty {
-  color: #7d8b9d;
-}
-
-.glazewm-workspaces .ws-btn:hover,
-.glazewm-workspaces .ws-btn.populated:hover,
-.glazewm-workspaces .ws-btn.empty:hover {
-  background-color: #727272;
 }
 
 .battery-widget {
