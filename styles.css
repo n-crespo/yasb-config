@@ -28,7 +28,7 @@ For more information about configuration options, please visit the Wiki https://
   --surface0: #282936;
   --base: #1e1e2e;
   --mantle: rgba(24, 24, 37, 0.5);
-  --crust: rgba(17, 17, 27, 0.85);
+  --crust: rgba(0, 0, 0, 0.1);
   --main: #10151d;
 }
 /* Global styles for ToolTip */
@@ -44,9 +44,9 @@ QToolTip {
   font-size: 12px;
   color: var(--subtext0);
   font-weight: 600;
-  font-family: "JetBrains Mono";
+  font-family: "JetBrainsMono NFP";
   margin: 0;
-  padding: 0;
+  padding: 0 4px 0 2px;
 }
 .yasb-bar {
   padding: 0;
@@ -55,21 +55,14 @@ QToolTip {
   border-radius: 0px;
 }
 .widget {
-  padding: 0 12px;
+  /* padding: 0 12px; */
   margin: 0;
 }
 .icon {
   font-size: 16px;
 }
 .widget .label {
-  padding: 0px 2px;
-}
-.komorebi-active-layout {
-  padding: 0 4px 0 0;
-}
-.komorebi-active-layout .label {
-  font-weight: 600;
-  padding: 2px 0 0 0;
+  /* padding: 0px 2px; */
 }
 .apps-widget .widget-container,
 .komorebi-workspaces .widget-container,
@@ -205,6 +198,7 @@ QToolTip {
   color: var(--mauve);
 }
 .volume-widget .icon {
+  font-size: 13px;
   color: var(--blue);
   margin: 1px 2px 0 0;
 }
@@ -223,20 +217,20 @@ QToolTip {
   border-radius: 0;
 }
 .media-widget .label {
-  color: #bac2db;
-  background-color: rgba(24, 24, 37, 0.7);
+  color: rgba(255, 255, 255, 80);
   padding: 0px;
   padding-right: 4px;
-  font-size: 12px;
+  padding-left: 9px;
+  font-size: 11px;
 }
 .media-widget .label.maintext {
   padding-top: 3px;
 }
 .media-widget .btn {
-  color: #989caa;
+  color: rgba(255, 255, 255, 80);
   padding: 0 1px;
+  padding-bottom: 1px;
   margin: 0;
-  font-family: JetBrains Mono;
   font-weight: 400;
 }
 .media-widget .btn:hover {
@@ -276,18 +270,18 @@ QToolTip {
 .home-menu .menu-item {
   padding: 8px 48px 9px 16px;
   font-size: 12px;
-  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
-  font-family: "JetBrains Mono", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--text);
   font-weight: 600;
 }
 .home-menu .menu-item:hover {
-  background-color: rgba(128, 130, 158, 0.15);
-  color: #fff;
+  /* background-color: rgba(128, 130, 158, 0.15); */
+  color: #ffffff;
 }
 .home-menu:separator {
-  height: 1px;
+  max-height: 5px;
+  height: 10px;
   background-color: rgba(128, 130, 158, 0.3);
+  /* color: #fff000; */
 }
 
 .glazewm-workspaces {
@@ -321,3 +315,18 @@ QToolTip {
   background-color: #727272;
 }
 
+.battery-widget {
+  /* padding: 0 4px 0 4px; */
+}
+
+.clock-widget {
+  /* padding: 0 4px 0 4px; */
+}
+.clock-widget .widget-container {
+}
+.clock-widget .widget-container .label {
+}
+.clock-widget .widget-container .label.alt {
+}
+.clock-widget .widget-container .icon {
+}
