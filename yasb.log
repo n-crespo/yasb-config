@@ -765,3 +765,128 @@ KeyError: ''
 2025-02-20 14:51:44 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
 2025-02-20 14:51:47 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
 2025-02-20 14:52:14 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 14:52:39 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 14:54:07 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 14:54:09 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 14:54:24 INFO log.py:21: Yasb v1.6.3
+2025-02-20 14:54:24 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 14:54:24 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 14:54:24 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 14:54:25 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 14:54:25 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 14:54:25 DEBUG _windows.py:192: Thread started
+2025-02-20 14:54:31 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 14:54:33 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 14:54:46 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 14:57:56 INFO log.py:21: Yasb v1.6.3
+2025-02-20 14:57:56 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 14:57:58 INFO log.py:21: Yasb v1.6.3
+2025-02-20 14:57:58 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 15:03:42 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:03:42 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:03:43 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:03:43 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:03:44 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:03:44 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:03:44 DEBUG _windows.py:192: Thread started
+2025-02-20 15:04:12 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:04:13 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:04:13 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:04:13 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:04:14 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:04:14 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:04:14 DEBUG _windows.py:192: Thread started
+2025-02-20 15:05:12 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:05:12 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:05:12 WARNING widget_builder.py:38: No widget config could be found for widget 'bluetooth
+2025-02-20 15:05:12 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:05:13 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:05:13 ERROR widget_builder.py:77: Failed to add undefined widget(s)  - The widget "bluetooth" is undefined.
+2025-02-20 15:05:29 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:05:29 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 15:05:36 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:05:36 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:05:36 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:05:36 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:05:37 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:05:37 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:05:37 DEBUG _windows.py:192: Thread started
+2025-02-20 15:06:55 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:06:58 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:08:27 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:08:28 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:08:28 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:08:28 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:08:29 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:08:29 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:08:29 DEBUG _windows.py:192: Thread started
+2025-02-20 15:08:40 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:08:41 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:08:41 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:08:41 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:08:42 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:08:42 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:08:42 DEBUG _windows.py:192: Thread started
+2025-02-20 15:09:03 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:09:03 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:09:03 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:09:03 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:09:04 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:09:04 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:09:04 DEBUG _windows.py:192: Thread started
+2025-02-20 15:09:09 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:09:10 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:09:10 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:09:10 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:09:11 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:09:11 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:09:11 DEBUG _windows.py:192: Thread started
+2025-02-20 15:09:32 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:09:48 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:09:50 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:09:54 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:10:02 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:10:05 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:10:10 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:10:12 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:10:36 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:10:36 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 15:10:44 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:10:50 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:10:58 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:11:01 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:11:41 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:11:41 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 15:11:56 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:12:00 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:12:10 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:12:10 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:12:11 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:12:11 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:12:11 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:12:11 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:12:11 DEBUG _windows.py:192: Thread started
+2025-02-20 15:12:25 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:12:32 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:12:40 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:12:46 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:12:55 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:12:57 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:13:03 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:13:08 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:13:09 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:13:32 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:13:35 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:13:51 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:13:55 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:14:04 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:14:18 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:14:23 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:14:25 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:14:31 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:14:48 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:14:56 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:14:59 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:15:05 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:15:09 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:15:29 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.

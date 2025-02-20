@@ -45,8 +45,7 @@ bars:
         ]
       # center: ["clock", "apps"]
       center: ["media"]
-      right:
-        ["microphone", "bluetooth", "volume", "battery", "clock", "power_menu"]
+      right: ["microphone", "volume", "battery", "clock", "power_menu"]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
@@ -121,23 +120,25 @@ widgets:
       offline_label: "GlazeWM Offline"
       hide_empty_workspaces: true
       hide_if_offline: false
-  komorebi_workspaces:
-    type: "komorebi.workspaces.WorkspaceWidget"
-    options:
-      label_offline: "\u23fc Offline"
-      label_workspace_btn: "\udb81\udc3d"
-      label_workspace_active_btn: ""
-      label_workspace_populated_btn: "\udb81\udc3e"
-      label_default_name: "{index}"
-      label_zero_index: false
-      hide_empty_workspaces: false
-      hide_if_offline: true
-      animation: true
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
+      populated_label: "{display_name}"
+      empty_label: "{display_name}"
+  # komorebi_workspaces:
+  #   type: "komorebi.workspaces.WorkspaceWidget"
+  #   options:
+  #     label_offline: "\u23fc Offline"
+  #     label_workspace_btn: "\udb81\udc3d"
+  #     label_workspace_active_btn: ""
+  #     label_workspace_populated_btn: "\udb81\udc3e"
+  #     label_default_name: "{index}"
+  #     label_zero_index: false
+  #     hide_empty_workspaces: false
+  #     hide_if_offline: true
+  #     animation: true
+  #     container_padding:
+  #       top: 0
+  #       left: 8
+  #       bottom: 0
+  #       right: 8
   komorebi_active_layout:
     type: "komorebi.active_layout.ActiveLayoutWidget"
     options:
@@ -199,17 +200,17 @@ widgets:
   #       blizzard: "\udb81\udd99"
   #       default: "\udb81\udd99"
 
-  bluetooth:
-    type: "yasb.bluetooth.BluetoothWidget"
-    options:
-      label: "<span>{icon}</span>"
-      label_alt: "{device_name}"
-      icons:
-        bluetooth_on: "\udb80\udcaf"
-        bluetooth_off: "\udb80\udcb2"
-        bluetooth_connected: "\udb80\udcb1"
-      callbacks:
-        on_right: "exec cmd.exe /c start ms-settings:bluetooth"
+  # bluetooth:
+  #   type: "yasb.bluetooth.BluetoothWidget"
+  #   options:
+  #     label: "<span>{icon}</span>"
+  #     label_alt: "{device_name}"
+  #     icons:
+  #       bluetooth_on: "\udb80\udcaf"
+  #       bluetooth_off: "\udb80\udcb2"
+  #       bluetooth_connected: "\udb80\udcb1"
+  #     callbacks:
+  #       on_right: "exec cmd.exe /c start ms-settings:bluetooth"
 
   volume:
     type: "yasb.volume.VolumeWidget"
@@ -256,22 +257,22 @@ widgets:
         hibernate: ["\uf28e", "Hibernate"]
         sleep: ["\u23fe", "Sleep"]
         cancel: ["", "Cancel"]
-  apps:
-    type: "yasb.applications.ApplicationsWidget"
-    options:
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
-      label: "{data}"
-      app_list:
-        - { icon: "\uf422", launch: "search" }
-        - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
-        - {
-            icon: "\udb80\ude39",
-            launch: "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-          }
+  # apps:
+  #   type: "yasb.applications.ApplicationsWidget"
+  #   options:
+  #     container_padding:
+  #       top: 0
+  #       left: 8
+  #       bottom: 0
+  #       right: 8
+  #     label: "{data}"
+  #     app_list:
+  #       - { icon: "\uf422", launch: "search" }
+  #       - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
+  #       - {
+  #           icon: "\udb80\ude39",
+  #           launch: "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+  #         }
   taskbar:
     type: "yasb.taskbar.TaskbarWidget"
     options:

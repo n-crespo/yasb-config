@@ -65,70 +65,73 @@ QToolTip {
   /* padding: 0px 2px; */
 }
 .apps-widget .widget-container,
-.komorebi-workspaces .widget-container,
-.komorebi-active-layout .widget-container {
-  background-color: rgba(0, 0, 0, 0.5);
+.glazewm-workspaces .widget-container,
+.glazewm-active-layout .widget-container {
+  /* font-size: 12px; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
   margin: 3px 0 3px 0;
   border-radius: 12px;
-  border: 1px solid var(--surface0);
+  /* border: 1px solid var(--surface0); */
 }
-.komorebi-workspaces .widget-container {
+.glazewm-workspaces .widget-container {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
   margin-left: 4px;
 }
-.komorebi-workspaces {
+.glazewm-workspaces {
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
   padding: 0 4px 0 0;
 }
-.komorebi-workspaces .offline-status {
+.glazewm-workspaces .offline-status {
   color: var(--surface2);
   font-size: 12px;
   padding: 0 0 0 4px;
-  font-weight: 600;
+  font-weight: 6;
 }
-.komorebi-workspaces .ws-btn {
+.glazewm-workspaces .ws-btn {
   border: none;
   background-color: transparent;
   margin: 0;
   font-size: 12px;
-  color: var(--overlay1);
+  color: var(--base);
   height: 28px;
   width: 18px;
 }
-.komorebi-workspaces .ws-btn:hover {
-  color: var(--subtext1);
+.glazewm-workspaces .ws-btn:hover {
+  color: var(--main);
 }
-.komorebi-workspaces .ws-btn.populated {
-  color: transparent;
+.glazewm-workspaces .ws-btn.populated {
+  background-color: var(--lavender);
+  color: var(--main);
   width: 10px;
   height: 10px;
-  background-color: var(--lavender);
   border-radius: 5px;
   margin: 0 4px;
-  font-size: 1px;
+  font-size: 9px;
 }
-.komorebi-workspaces .ws-btn.active {
-  color: transparent;
+.glazewm-workspaces .ws-btn.active {
+  color: #ffffff;
   background-color: var(--blue);
   width: 36px;
   max-width: 36px;
   height: 10px;
+  font-size: 9px;
   margin: 0 4px;
   border-radius: 5px;
 }
-.apps-widget {
-  padding: 0 4px 0 2px;
-}
-.apps-widget .label {
-  font-size: 14px;
-  padding: 0 2px;
-  color: var(--subtext0);
-}
-.apps-widget .label:hover {
-  color: var(--text);
-}
+
+/* .apps-widget { */
+/*   padding: 0 4px 0 2px; */
+/* } */
+/* .apps-widget .label { */
+/*   font-size: 14px; */
+/*   padding: 0 2px; */
+/*   color: var(--subtext0); */
+/* } */
+/* .apps-widget .label:hover { */
+/*   color: var(--text); */
+/* } */
 
 .power-menu-widget .label {
   color: #f38ba8;
