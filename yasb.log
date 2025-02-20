@@ -1,0 +1,43 @@
+2025-02-20 13:10:13 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:10:13 INFO config.py:59: Created default config file at C:\Users\nicol\.config\yasb\config.yaml
+2025-02-20 13:10:13 INFO config.py:73: Created default stylesheet at C:\Users\nicol\.config\yasb\styles.css
+2025-02-20 13:10:14 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:13:45 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:13:45 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:13:49 INFO weather.py:367: Fetched new weather data at 2025-02-20 13:13:49.533520
+2025-02-20 13:13:49 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:13:50 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 36px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:13:52 INFO event_listener.py:52: Created named pipe yasb-959c937c-efcf-11ef-a92c-e86538b86dfa
+2025-02-20 13:13:52 INFO event_listener.py:106: Waiting for Komorebi to subscribe to named pipe yasb-959c937c-efcf-11ef-a92c-e86538b86dfa
+2025-02-20 13:13:52 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:13:52 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:13:52 DEBUG _windows.py:192: Thread started
+2025-02-20 13:13:52 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
+2025-02-20 13:14:06 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:15:20 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:15:20 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 13:15:31 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:15:31 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:15:31 INFO weather.py:367: Fetched new weather data at 2025-02-20 13:15:31.960570
+2025-02-20 13:15:31 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:15:32 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 36px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:15:33 INFO event_listener.py:52: Created named pipe yasb-d215d644-efcf-11ef-b5fa-e86538b86dfa
+2025-02-20 13:15:33 INFO event_listener.py:106: Waiting for Komorebi to subscribe to named pipe yasb-d215d644-efcf-11ef-b5fa-e86538b86dfa
+2025-02-20 13:15:33 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:15:33 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:15:33 DEBUG _windows.py:192: Thread started
+2025-02-20 13:15:33 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
+2025-02-20 13:16:54 WARNING taskbar.py:249: No widget found under cursor.
+2025-02-20 13:17:19 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:17:19 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:17:20 INFO weather.py:367: Fetched new weather data at 2025-02-20 13:17:20.156016
+2025-02-20 13:17:20 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:17:20 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 36px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:17:21 INFO event_listener.py:52: Created named pipe yasb-12ae1887-efd0-11ef-9fe3-e86538b86dfa
+2025-02-20 13:17:21 INFO event_listener.py:106: Waiting for Komorebi to subscribe to named pipe yasb-12ae1887-efd0-11ef-9fe3-e86538b86dfa
+2025-02-20 13:17:21 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:17:21 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:17:21 DEBUG _windows.py:192: Thread started
+2025-02-20 13:17:21 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
+2025-02-20 13:17:52 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:17:52 ERROR main.py:86: Another instance of the YASB is already running.
