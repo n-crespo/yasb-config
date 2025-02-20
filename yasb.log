@@ -41,3 +41,295 @@
 2025-02-20 13:17:21 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
 2025-02-20 13:17:52 INFO log.py:21: Yasb v1.6.3
 2025-02-20 13:17:52 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 13:18:20 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:18:21 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:18:21 WARNING widget_builder.py:38: No widget config could be found for widget 'weather
+2025-02-20 13:18:21 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:18:21 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 36px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:18:23 ERROR widget_builder.py:77: Failed to add undefined widget(s)  - The widget "weather" is undefined.
+2025-02-20 13:18:23 INFO event_listener.py:52: Created named pipe yasb-37359849-efd0-11ef-aa33-e86538b86dfa
+2025-02-20 13:18:23 INFO event_listener.py:106: Waiting for Komorebi to subscribe to named pipe yasb-37359849-efd0-11ef-aa33-e86538b86dfa
+2025-02-20 13:18:23 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
+2025-02-20 13:18:36 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:18:36 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:18:36 DEBUG _windows.py:192: Thread started
+2025-02-20 13:18:45 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:18:45 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:18:46 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:18:46 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 36px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:18:47 INFO event_listener.py:52: Created named pipe yasb-45c856b6-efd0-11ef-80e4-e86538b86dfa
+2025-02-20 13:18:47 INFO event_listener.py:106: Waiting for Komorebi to subscribe to named pipe yasb-45c856b6-efd0-11ef-80e4-e86538b86dfa
+2025-02-20 13:18:47 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:18:47 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:18:47 DEBUG _windows.py:192: Thread started
+2025-02-20 13:18:47 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
+2025-02-20 13:18:51 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:18:51 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:18:52 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:18:52 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 36px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:18:53 INFO event_listener.py:52: Created named pipe yasb-49569288-efd0-11ef-abf5-e86538b86dfa
+2025-02-20 13:18:53 INFO event_listener.py:106: Waiting for Komorebi to subscribe to named pipe yasb-49569288-efd0-11ef-abf5-e86538b86dfa
+2025-02-20 13:18:53 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:18:53 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:18:53 DEBUG _windows.py:192: Thread started
+2025-02-20 13:18:53 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
+2025-02-20 13:19:46 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:19:47 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:19:47 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:19:47 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 36px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:19:48 INFO event_listener.py:52: Created named pipe yasb-6a5581ca-efd0-11ef-ac40-e86538b86dfa
+2025-02-20 13:19:48 INFO event_listener.py:106: Waiting for Komorebi to subscribe to named pipe yasb-6a5581ca-efd0-11ef-ac40-e86538b86dfa
+2025-02-20 13:19:48 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:19:48 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:19:48 DEBUG _windows.py:192: Thread started
+2025-02-20 13:19:48 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
+2025-02-20 13:20:23 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:20:23 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:20:24 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:20:24 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 36px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:20:25 INFO event_listener.py:52: Created named pipe yasb-803aa456-efd0-11ef-83b7-e86538b86dfa
+2025-02-20 13:20:25 INFO event_listener.py:106: Waiting for Komorebi to subscribe to named pipe yasb-803aa456-efd0-11ef-83b7-e86538b86dfa
+2025-02-20 13:20:25 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:20:25 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:20:25 DEBUG _windows.py:192: Thread started
+2025-02-20 13:20:25 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
+2025-02-20 13:21:18 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:22:23 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:23:08 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:23:27 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:25:17 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:25:17 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:25:17 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:25:17 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:25:19 INFO event_listener.py:52: Created named pipe yasb-2f5ef04d-efd1-11ef-853a-e86538b86dfa
+2025-02-20 13:25:19 INFO event_listener.py:106: Waiting for Komorebi to subscribe to named pipe yasb-2f5ef04d-efd1-11ef-853a-e86538b86dfa
+2025-02-20 13:25:19 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:25:19 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:25:19 DEBUG _windows.py:192: Thread started
+2025-02-20 13:25:19 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
+2025-02-20 13:26:24 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:26:25 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:26:25 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:26:25 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:26:26 INFO event_listener.py:52: Created named pipe yasb-57904813-efd1-11ef-83aa-e86538b86dfa
+2025-02-20 13:26:26 INFO event_listener.py:106: Waiting for Komorebi to subscribe to named pipe yasb-57904813-efd1-11ef-83aa-e86538b86dfa
+2025-02-20 13:26:26 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:26:26 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:26:26 DEBUG _windows.py:192: Thread started
+2025-02-20 13:26:26 WARNING event_listener.py:111: Komorebi failed to subscribe named pipe. Waiting for subscription...
+2025-02-20 13:26:48 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:26:49 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:26:49 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:26:49 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:26:50 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:26:50 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:26:50 DEBUG _windows.py:192: Thread started
+2025-02-20 13:28:15 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:28:17 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:29:06 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:29:26 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:29:27 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:29:27 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:29:27 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:29:28 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:29:28 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:29:28 DEBUG _windows.py:192: Thread started
+2025-02-20 13:29:55 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:29:55 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:29:55 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:29:56 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:29:57 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:29:57 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:29:57 DEBUG _windows.py:192: Thread started
+2025-02-20 13:30:10 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:30:10 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:30:11 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:30:11 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:30:12 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:30:12 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:30:12 DEBUG _windows.py:192: Thread started
+2025-02-20 13:30:21 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:30:21 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:30:22 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:30:22 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:30:23 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:30:23 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:30:23 DEBUG _windows.py:192: Thread started
+2025-02-20 13:31:18 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:31:19 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:31:19 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:31:19 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:31:21 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:31:21 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:31:21 DEBUG _windows.py:192: Thread started
+2025-02-20 13:31:48 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:32:01 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:32:01 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:32:01 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:32:01 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:32:03 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:32:03 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:32:03 DEBUG _windows.py:192: Thread started
+2025-02-20 13:32:54 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:32:54 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:32:55 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:32:55 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:32:56 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:32:56 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:32:56 DEBUG _windows.py:192: Thread started
+2025-02-20 13:33:48 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:33:58 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:34:00 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:34:19 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:34:28 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:34:28 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:34:29 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:34:29 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:34:30 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:34:30 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:34:30 DEBUG _windows.py:192: Thread started
+2025-02-20 13:34:33 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:34:33 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:34:34 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:34:34 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:34:35 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:34:35 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:34:35 DEBUG _windows.py:192: Thread started
+2025-02-20 13:34:50 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:34:54 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:35:00 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:35:04 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:35:07 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:35:18 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:35:19 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:35:19 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:35:19 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 29px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:35:21 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:35:21 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:35:21 DEBUG _windows.py:192: Thread started
+2025-02-20 13:35:41 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:35:41 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:35:42 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:35:42 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:35:43 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:35:43 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:35:43 DEBUG _windows.py:192: Thread started
+2025-02-20 13:36:16 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:36:16 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:36:17 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:36:17 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:36:18 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:36:18 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:36:18 DEBUG _windows.py:192: Thread started
+2025-02-20 13:36:24 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:36:25 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:36:25 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:36:25 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:36:26 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:36:26 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:36:26 DEBUG _windows.py:192: Thread started
+2025-02-20 13:36:42 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:36:43 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:36:43 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:36:43 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:36:44 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:36:44 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:36:44 DEBUG _windows.py:192: Thread started
+2025-02-20 13:36:51 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:36:51 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:36:51 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:36:52 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:36:53 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:36:53 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:36:53 DEBUG _windows.py:192: Thread started
+2025-02-20 13:37:06 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:37:07 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:37:07 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:37:07 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:37:08 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:37:08 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:37:08 DEBUG _windows.py:192: Thread started
+2025-02-20 13:37:34 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:37:35 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:37:35 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:37:35 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:37:36 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:37:36 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:37:36 DEBUG _windows.py:192: Thread started
+2025-02-20 13:37:41 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:37:41 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:37:41 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:37:42 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:37:43 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:37:43 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:37:43 DEBUG _windows.py:192: Thread started
+2025-02-20 13:38:03 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:38:04 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:38:04 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:38:04 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:38:05 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:38:05 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:38:05 DEBUG _windows.py:192: Thread started
+2025-02-20 13:38:41 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:38:42 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:38:42 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:38:42 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:38:44 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:38:44 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:38:44 DEBUG _windows.py:192: Thread started
+2025-02-20 13:38:53 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:38:54 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:38:54 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:38:54 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:38:55 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:38:55 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:38:55 DEBUG _windows.py:192: Thread started
+2025-02-20 13:39:42 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:39:43 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:39:43 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:39:43 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:39:44 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:39:44 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:39:44 DEBUG _windows.py:192: Thread started
+2025-02-20 13:40:09 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:40:11 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:40:13 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:40:32 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:40:33 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:40:33 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:40:33 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:40:35 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:40:35 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:40:35 DEBUG _windows.py:192: Thread started
+2025-02-20 13:41:28 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:41:29 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:41:29 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:41:29 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:41:30 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:41:30 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:41:30 DEBUG _windows.py:192: Thread started
+2025-02-20 13:43:08 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:43:42 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:43:45 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:43:47 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:43:52 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:43:59 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:44:02 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:44:07 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:44:13 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:44:13 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:44:13 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:44:13 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:44:15 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:44:15 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:44:15 DEBUG _windows.py:192: Thread started
+2025-02-20 13:44:26 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:44:28 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:44:30 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 13:44:39 INFO log.py:21: Yasb v1.6.3
+2025-02-20 13:44:40 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 13:44:40 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 13:44:40 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 13:44:41 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 13:44:41 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 13:44:41 DEBUG _windows.py:192: Thread started

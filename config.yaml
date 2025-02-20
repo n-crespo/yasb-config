@@ -16,11 +16,11 @@ bars:
       position: "top"
       center: false
     animation:
-      enabled: true
+      enabled: false
       duration: 1000
     blur_effect:
-      enabled: true
-      acrylic: true
+      enabled: false
+      acrylic: false
       dark_mode: true
       round_corners: false
       round_corners_type: "normal"
@@ -30,28 +30,27 @@ bars:
       windows_app_bar: true
     dimensions:
       width: "100%"
-      height: 32
+      height: 25
     padding:
-      top: 4
-      left: 6
+      top: 0
+      left: 0
       bottom: 0
-      right: 6
+      right: 0
     widgets:
-      left:
-        [
+      left: [
           "home",
-          "komorebi_workspaces",
-          "komorebi_active_layout",
-          "active_window",
+          "glazewm_workspaces",
+          # "glazewm_active_layout",
+          # "active_window",
         ]
-      center: ["clock", "apps"]
-      right:
-        ["media", "taskbar", "weather", "microphone", "volume", "power_menu"]
+      # center: ["clock", "apps"]
+      center: ["media"]
+      right: ["microphone", "volume", "clock", "power_menu"]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
     options:
-      label: "<span>\udb81\udf17</span>"
+      label: "|"
       menu_list:
         - { title: "User Home", path: "~" }
         - { title: "Download", path: "~\\Downloads" }
@@ -59,7 +58,7 @@ widgets:
         - { title: "Pictures", path: "~\\Pictures" }
       system_menu: true
       power_menu: true
-      blur: false
+      blur: true
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -71,15 +70,15 @@ widgets:
       show_thumbnail: true
       controls_only: false
       controls_left: true
-      hide_empty: true
+      hide_empty: false
       thumbnail_alpha: 150
       thumbnail_padding: 8
       thumbnail_corner_radius: 0
       icons:
-        prev_track: "\ue892"
-        next_track: "\ue893"
-        play: "\ue768"
-        pause: "\ue769"
+        prev_track: "󰒮"
+        next_track: "󰒭"
+        play: ""
+        pause: "󰏤"
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
@@ -99,6 +98,12 @@ widgets:
       timezones: []
       callbacks:
         on_left: "toggle_label"
+  glazewm_workspaces:
+    type: "glazewm.workspaces.GlazewmWorkspacesWidget"
+    options:
+      offline_label: "GlazeWM Offline"
+      hide_empty_workspaces: true
+      hide_if_offline: false
   komorebi_workspaces:
     type: "komorebi.workspaces.WorkspaceWidget"
     options:
@@ -183,11 +188,12 @@ widgets:
       label_alt: "{volume}"
       tooltip: false
       volume_icons:
-        - "\ueee8"
-        - "\uf026"
-        - "\uf027"
-        - "\uf027"
-        - "\uf028"
+        - "󰝟"
+        - "󰕿"
+        - "󰖀"
+        - "󰕾"
+        # - "\uf027"
+        # - "\uf028"
       callbacks:
         on_left: "toggle_mute"
         on_right: "exec cmd.exe /c start ms-settings:sound"
@@ -206,14 +212,14 @@ widgets:
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
     options:
-      label: "\uf011"
+      label: "󰐥"
       uptime: True
       blur: False
       blur_background: True
-      animation_duration: 200
+      animation_duration: 100
       button_row: 5
       buttons:
-        shutdown: ["\uf011", "Shut Down"]
+        shutdown: ["󰐥", "Shut Down"]
         restart: ["\uead2", "Restart"]
         signout: ["\udb80\udf43", "Sign out"]
         hibernate: ["\uf28e", "Hibernate"]
@@ -240,7 +246,7 @@ widgets:
     options:
       animation:
         enabled: true
-      icon_size: 16
+      icon_size: 8
       ignore_apps:
         processes: []
         titles: []
@@ -250,4 +256,3 @@ widgets:
         left: 0
         bottom: 0
         right: 0
-
