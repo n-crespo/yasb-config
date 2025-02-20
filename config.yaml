@@ -115,6 +115,7 @@ widgets:
         direction: "down"
         distance: 6
   glazewm_workspaces:
+    update_interval: 100
     type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
       offline_label: "GlazeWM Offline"
