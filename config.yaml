@@ -46,15 +46,28 @@ bars:
       # center: ["clock", "apps"]
       center: ["media"]
       # removed: "microphone", "power_menu"
-      right: ["memory", "wifi", "volume", "battery", "clock"]
+      right:
+        [
+          "memory",
+          "glazewm_tiling_direction",
+          "wifi",
+          "volume",
+          "battery",
+          "clock",
+        ]
 widgets:
+  glazewm_tiling_direction:
+    type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
+    options:
+      horizontal_label: ""
+      vertical_label: ""
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
       label: "<span>{icon}</span>{percent}%"
       label_alt: "{icon} {time_remaining}"
       charging_options:
-        icon_format: "{charging_icon}"
+        icon_format: "󱐋"
   media:
     type: "yasb.media.MediaWidget"
     options:

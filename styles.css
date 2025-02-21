@@ -10,6 +10,7 @@ https://github.com/amnweb/yasb/wiki
   --icon: #f8f8ff;
   --surface0: #282936;
   --ws_active: rgba(255, 255, 255, 35);
+  --blue: #84aff2;
 
   --surface2: #585b70;
   --text: white;
@@ -97,10 +98,35 @@ https://github.com/amnweb/yasb/wiki
 
 /* VOLUME WIDGET */
 .volume-widget .icon {
-  color: var(--icon);
+  color: var(--blue);
   font-size: 13px;
   padding-top: 2px;
   padding-right: 1px;
+}
+
+.volume-slider {
+  border: none;
+}
+.volume-slider::groove {
+}
+.volume-slider::handle {
+}
+.audio-menu {
+  background-color: rgba(17, 17, 27, 0.4);
+}
+.audio-container .device {
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.audio-container .device.selected {
+  background-color: rgba(255, 255, 255, 0.085);
+}
+.audio-container .device:hover {
+  background-color: rgba(255, 255, 255, 0.06);
 }
 
 /* MISC WIDGET */
@@ -153,6 +179,10 @@ https://github.com/amnweb/yasb/wiki
 .battery-widget .widget-container .icon {
   padding-right: 1px;
   color: var(--icon);
+}
+.battery-widget .widget-container .icon.status-charging {
+  color: #ffce08;
+  font-size: 14px;
 }
 
 /* CLOCK WIDGET */
