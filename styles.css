@@ -7,7 +7,7 @@ https://github.com/amnweb/yasb/wiki
   --mauve: #cba6f7;
   --red: #f38ba8;
   --yellow: #f9e2af;
-  --blue: #f8f8ff;
+  --icon: #f8f8ff;
   --lavender: #b4befe;
   --subtext0: #a6adc8;
   --overlay2: #9399b2;
@@ -80,10 +80,10 @@ QToolTip {
 .glazewm-workspaces .ws-btn {
   border: none;
   margin: 0;
-  font-size: 12px;
-  color: white;
+  color: var(--icon);
   padding: 3px 7px; /* background color fills the padding */
   border-radius: 2px;
+  font-weight: 1;
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: rgba(255, 255, 255, 20);
@@ -102,7 +102,7 @@ QToolTip {
 
 /* WIFI WIDGET */
 .wifi-widget .widget-container .label {
-  color: var(--blue);
+  color: var(--icon);
   font-size: 11px;
 }
 .wifi-widget .widget-container .label.alt {
@@ -112,7 +112,7 @@ QToolTip {
 
 /* VOLUME WIDGET */
 .volume-widget .icon {
-  color: var(--blue);
+  color: var(--icon);
   font-size: 13px;
   padding-top: 2px;
   padding-right: 1px;
@@ -126,9 +126,6 @@ QToolTip {
 }
 
 /* MEDIA WIDGET */
-.media-widget {
-  font-size: 11px;
-}
 .media-widget .label {
   color: var(--subtle);
   margin-left: 5px;
@@ -170,7 +167,7 @@ QToolTip {
 /* BATTERY WIDGET */
 .battery-widget .widget-container .icon {
   padding-right: 1px;
-  color: var(--blue);
+  color: var(--icon);
 }
 
 /* CLOCK WIDGET */

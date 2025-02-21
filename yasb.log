@@ -1953,3 +1953,43 @@ KeyError: 'prev'
 2025-02-20 22:26:20 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
 2025-02-20 22:26:24 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
 2025-02-20 22:26:29 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:28:46 INFO log.py:21: Yasb v1.6.3
+2025-02-20 22:28:47 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 22:28:48 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 22:28:48 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 22:28:49 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 22:28:49 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 22:28:49 DEBUG _windows.py:192: Thread started
+2025-02-20 22:29:10 INFO log.py:21: Yasb v1.6.3
+2025-02-20 22:29:11 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 22:29:12 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 22:29:12 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 22:29:13 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 22:29:13 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 22:29:13 DEBUG _windows.py:192: Thread started
+2025-02-20 22:29:41 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:29:56 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:31:04 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:31:11 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:31:19 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:31:23 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:31:26 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:31:28 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:31:30 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:31:43 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:31:48 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:31:59 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:03 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:10 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:15 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:20 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:23 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:25 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:26 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:28 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:30 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:31 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:33 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:39 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:45 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:32:54 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
