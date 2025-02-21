@@ -9,8 +9,9 @@ https://github.com/amnweb/yasb/wiki
   --main: #10151d;
   --icon: #f8f8ff;
   --surface0: #282936;
-  --bg_active: rgba(255, 255, 255, 35);
+  --bg_active: rgba(255, 255, 255, 30);
   --blue: #84aff2;
+  --green: #39c559;
   --text: white;
 }
 
@@ -21,7 +22,7 @@ https://github.com/amnweb/yasb/wiki
   font-weight: 600;
   font-family: "JetBrainsMono NFP";
   margin: 0;
-  padding: 0px 3px;
+  padding: 0px 4px;
 }
 .yasb-bar {
   padding: 0;
@@ -34,22 +35,22 @@ https://github.com/amnweb/yasb/wiki
 .widget-container {
 }
 
-/* GLAZEWM WIDGET */
+/* GLAZEWM WIDGET (LEFT) */
 .glazewm-workspaces .widget-container {
 }
 .glazewm-workspaces {
-  margin-left: -3px;
+  margin-left: -4px;
 }
 .glazewm-workspaces .offline-status {
   color: var(--subtle);
-  padding-left: 3px;
-  font-weight: 6;
 }
 .glazewm-workspaces .ws-btn {
+  height: 17;
   color: var(--icon);
-  padding: 2.5px 7px; /* background color fills the padding */
+  padding: 2.5px 8px; /* background color fills the padding */
   border-radius: 3px;
-  font-weight: 500;
+  font-weight: 1000;
+  font-size: 12px;
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--hover_bg);
@@ -61,19 +62,20 @@ https://github.com/amnweb/yasb/wiki
   background-color: var(--bg_active);
 }
 
-/* MEDIA WIDGET */
+/* MEDIA WIDGET (CENTER) */
 .media-widget .label {
+  /* i want it to look a bit different (smaller) */
   color: var(--subtle);
   font-size: 11px;
 }
 .media-widget .btn.prev,
 .media-widget .btn.next {
+  /* this is to make the buttons invisible */
   font-size: 1px;
   padding: -1px;
 }
 .media-widget .btn {
   color: var(--subtle);
-  /* padding: 1 2px; */
   border-radius: 3px;
   font-size: 15px;
   font-weight: 200;
@@ -86,6 +88,8 @@ https://github.com/amnweb/yasb/wiki
 .media-widget .btn.disabled {
 }
 
+/* RIGHT */
+
 /* MEMORY WIDGET */
 .memory-widget .label {
   color: var(--subtle);
@@ -93,12 +97,10 @@ https://github.com/amnweb/yasb/wiki
 
 /* TILING DIRECTION WIDGET */
 .glazewm-tiling-direction .btn {
-  margin-top: 1px;
   color: var(--icon);
-
-  border-radius: 3px;
+  margin-top: 1px;
   font-size: 13px;
-  border: none;
+  border-radius: 3px;
 }
 .glazewm-tiling-direction .btn:hover {
   background-color: var(--hover_bg);
@@ -150,6 +152,20 @@ https://github.com/amnweb/yasb/wiki
   padding-right: 1px;
   color: var(--icon);
 }
+
+.battery-widget .widget-container .icon.status-low {
+  color: red;
+}
+.battery-widget .widget-container .icon.status-medium {
+  color: yellowgreen;
+}
+.battery-widget .widget-container .icon.status-high {
+  color: var(--green);
+}
+.battery-widget .widget-container .icon.status-full {
+  color: var(--green);
+}
+
 .battery-widget .widget-container .icon.status-charging {
   color: #ffce08;
   font-size: 14px;
@@ -157,147 +173,5 @@ https://github.com/amnweb/yasb/wiki
 
 /* CLOCK WIDGET */
 .clock-widget {
-  padding-right: -3px;
+  padding-right: -4px;
 }
-
-/* UNUSED WIDGETS */
-
-/* .apps-widget { */
-/*   padding: 0 4px 0 2px; */
-/* } */
-/* .apps-widget .label { */
-/*   font-size: 14px; */
-/*   /* padding: 0 0px; */
-/*   color: var(--subtext0); */
-/* } */
-/* .apps-widget .label:hover { */
-/*   color: var(--text); */
-/* } */
-
-/* .power-menu-widget .label { */
-/*   color: #f38ba8; */
-/*   font-size: 13px; */
-/*   /* margin-right: -2px; */
-/*   /* background-color: #fff000; */
-/* } */
-/* .power-menu-popup { */
-/*   background-color: transparent; */
-/* } */
-/* .power-menu-popup .button { */
-/*   padding: 0; */
-/*   width: 180px; */
-/*   height: 230px; */
-/*   border-radius: 8px; */
-/*   background-color: rgba(255, 255, 255, 10); */
-/*   color: var(--text); */
-/*   border-left: 4px solid rgba(58, 59, 83, 0); */
-/*   border-right: 4px solid rgba(58, 59, 83, 0); */
-/*   border-top: 4px solid rgba(58, 59, 83, 0); */
-/*   border-bottom: 4px solid rgba(58, 59, 83, 0); */
-/*   margin: 0px; */
-/* } */
-/* .power-menu-popup .button.hover { */
-/*   background-color: var(--base); */
-/*   border-left: 4px solid var(--base); */
-/*   border-right: 4px solid var(--base); */
-/*   border-top: 4px solid var(--base); */
-/*   border-bottom: 4px solid var(--base); */
-/* } */
-/**/
-/* .power-menu-popup .button .label { */
-/*   margin-bottom: 8px; */
-/*   font-size: 16px; */
-/*   font-weight: 500; */
-/*   color: var(--overlay2); */
-/* } */
-/* .power-menu-popup .button .icon { */
-/*   font-size: 64px; */
-/*   padding-top: 32px; */
-/*   color: var(--surface2); */
-/* } */
-/**/
-/* .power-menu-popup .button.cancel .icon { */
-/*   padding: 0; */
-/*   margin: 0; */
-/* } */
-/* .power-menu-popup .button.cancel .label { */
-/*   color: var(--red); */
-/*   margin: 0; */
-/* } */
-/* .power-menu-popup .button.cancel { */
-/*   height: 32px; */
-/*   border-radius: 4px; */
-/* } */
-/* .uptime { */
-/*   font-size: 14px; */
-/*   margin-bottom: 10px; */
-/*   color: var(--surface2); */
-/*   font-weight: 600; */
-/* } */
-
-/* .microphone-widget { */
-/*   padding: 0 6px 0 6px; */
-/* } */
-/* .microphone-widget .icon { */
-/*   font-size: 18px; */
-/* } */
-/* .microphone-widget .icon { */
-/*   font-size: 12px; */
-/*   color: var(--mauve); */
-/* } */
-
-/* .home-widget { */
-/*   padding: 0 4px 0 12px; */
-/* } */
-/* .home-widget .icon { */
-/*   color: var(--lavender); */
-/* } */
-/* .home-widget .icon:hover { */
-/*   color: var(--text); */
-/* } */
-/* .home-menu { */
-/*   background-color: var(--crust); */
-/* } */
-/* .home-menu .menu-item { */
-/*   padding: 8px 48px 9px 16px; */
-/*   font-size: 12px; */
-/*   color: var(--text); */
-/*   font-weight: 600; */
-/* } */
-/* .home-menu .menu-item:hover { */
-/*   /* background-color: rgba(128, 130, 158, 0.15); */
-/*   color: white; */
-/* } */
-/* .home-menu:separator { */
-/*   max-height: 5px; */
-/*   height: 10px; */
-/*   background-color: rgba(128, 130, 158, 0.3); */
-/* } */
-
-/* .weather-widget .icon { */
-/*   font-size: 18px; */
-/*   margin: 0 2px 1px 0; */
-/*   color: var(--yellow); */
-/* } */
-
-/* /* Global styles for ToolTip */
-/* QToolTip { */
-/*   padding: 6px; */
-/*   color: #cdd6f4; */
-/*   font-size: 12px; */
-/*   background-color: #1e1e2e; */
-/*   border: 0px solid #313244; */
-/*   border-radius: 6px; */
-/* } */
-
-/* /* TASKBAR WIDGET */
-/* .taskbar-widget { */
-/*   padding: 0; */
-/*   margin: 0; */
-/*   border: none; */
-/* } */
-/* .taskbar-widget .app-icon { */
-/*   padding: 0 6px; */
-/*   border: none; */
-/*   margin: 0; */
-/* } */

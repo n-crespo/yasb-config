@@ -1,12 +1,9 @@
 # This is default and very simple configuration file for Yasb.
-# For more information about configuration options, please visit the Wiki https://github.com/amnweb/yasb/wiki
+# For more information about configuration options, please visit the Wiki
+# https://github.com/amnweb/yasb/wiki
 watch_stylesheet: true
 watch_config: true
 debug: false
-# komorebi:
-#   start_command: "komorebic start --whkd"
-#   stop_command: "komorebic stop --whkd"
-#   reload_command: "komorebic stop --whkd && komorebic start --whkd"
 bars:
   primary-bar:
     enabled: true
@@ -14,7 +11,7 @@ bars:
     class_name: "yasb-bar"
     alignment:
       position: "top"
-      center: false
+      center: true
     animation:
       enabled: false
       duration: 1000
@@ -37,15 +34,9 @@ bars:
       bottom: 0
       right: 0
     widgets:
-      left: [
-          # "home",
-          "glazewm_workspaces",
-          # "glazewm_active_layout",
-          # "active_window",
-        ]
-      # center: ["clock", "apps"]
+      # removed: "microphone", "power_menu", "home", "active_window", "apps"
+      left: ["glazewm_workspaces"]
       center: ["media"]
-      # removed: "microphone", "power_menu"
       right:
         [
           "memory",
@@ -55,6 +46,7 @@ bars:
           "battery",
           "clock",
         ]
+
 widgets:
   ############## LEFT ############
   glazewm_workspaces:
@@ -79,9 +71,6 @@ widgets:
       controls_only: false
       controls_left: true
       hide_empty: true
-      callbacks:
-        on_right: "prev"
-        on_left: "play_pause"
       thumbnail_alpha: 150
       thumbnail_padding: 8
       thumbnail_corner_radius: 0
@@ -100,8 +89,8 @@ widgets:
       label_alt: "{virtual_mem_free}"
       update_interval: 5000
       callbacks:
-        on_left: "do_nothing"
-        on_right: "exec cmd /c procexp"
+        on_right: "do_nothing"
+        on_left: "exec cmd /c procexp"
       memory_thresholds:
         low: 25
         medium: 50
@@ -112,6 +101,7 @@ widgets:
     options:
       horizontal_label: ""
       vertical_label: ""
+
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
@@ -125,34 +115,7 @@ widgets:
         - "󰤥" # 51-75% strength
         - "󰤨" # 76-100% strength. Alternate theming: \uf1eb
       callbacks:
-        on_middle: "do_nothing"
         on_right: "exec cmd.exe /c start ms-settings:network"
-
-  battery:
-    type: "yasb.battery.BatteryWidget"
-    options:
-      label: "<span>{icon}</span>{percent}%"
-      label_alt: "{icon} {time_remaining}"
-      charging_options:
-        icon_format: "󱐋"
-
-  clock:
-    type: "yasb.clock.ClockWidget"
-    options:
-      label: "{%a %b %d, %I:%M}"
-      # label_alt: "{%A, %d %B %Y %H:%M}"
-      timezones: []
-      callbacks:
-        on_left: "toggle_calendar"
-        on_right: ""
-      calendar:
-        blur: True
-        round_corners: True
-        round_corners_type: "normal"
-        border_color: "System"
-        alignment: "right"
-        direction: "down"
-        distance: 6
 
   volume:
     type: "yasb.volume.VolumeWidget"
@@ -170,103 +133,28 @@ widgets:
         on_left: "toggle_volume_menu"
         on_right: "do_nothing"
         # on_right: "exec cmd.exe /c start ms-settings:sound"
-############# unused widgets ################
 
-# power_menu:
-#   type: "yasb.power_menu.PowerMenuWidget"
-#   options:
-#     label: "󰐥"
-#     uptime: True
-#     blur: False
-#     blur_background: True
-#     animation_duration: 100
-#     button_row: 5
-#     buttons:
-#       shutdown: ["󰐥", "Shut Down"]
-#       restart: ["\uead2", "Restart"]
-#       signout: ["\udb80\udf43", "Sign out"]
-#       hibernate: ["\uf28e", "Hibernate"]
-#       sleep: ["\u23fe", "Sleep"]
-#       cancel: ["", "Cancel"]
+  battery:
+    type: "yasb.battery.BatteryWidget"
+    options:
+      label: "<span>{icon}</span>{percent}%"
+      label_alt: "{time_remaining}"
+      charging_options:
+        icon_format: "󱐋"
 
-# microphone:
-#   type: "yasb.microphone.MicrophoneWidget"
-#   options:
-#     label: "<span>{icon}</span> {level}"
-#     label_alt: "<span>{icon}</span> {level}%"
-#     icons:
-#       normal: "\udb80\udf6c"
-#       muted: "\udb80\udf6d"
-#     callbacks:
-#       on_left: "toggle_mute"
-#       on_middle: "toggle_label"
-#       on_right: "exec cmd.exe /c start ms-settings:sound"
-
-# apps:
-#   type: "yasb.applications.ApplicationsWidget"
-#   options:
-#     container_padding:
-#       top: 0
-#       left: 8
-#       bottom: 0
-#       right: 8
-#     label: "{data}"
-#     app_list:
-#       - { icon: "\uf422", launch: "search" }
-#       - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
-#       - {
-#           icon: "\udb80\ude39",
-#           launch: "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-#         }
-# taskbar:
-#   type: "yasb.taskbar.TaskbarWidget"
-#   options:
-#     animation:
-#       enabled: true
-#     icon_size: 8
-#     ignore_apps:
-#       processes: []
-#       titles: []
-#       classes: []
-#     container_padding:
-#       top: 0
-#       left: 0
-#       bottom: 0
-#       right: 0
-
-# home:
-#   type: "yasb.home.HomeWidget"
-#   options:
-#     label: ""
-#     menu_list:
-#       - { title: "User Home", path: "~" }
-#       - { title: "Download", path: "~\\Downloads" }
-#       - { title: "Documents", path: "~\\Documents" }
-#       - { title: "Pictures", path: "~\\Pictures" }
-#     system_menu: true
-#     power_menu: true
-#     blur: true
-
-# active_window:
-#   type: "yasb.active_window.ActiveWindowWidget"
-#   options:
-#     label: "{win[title]}"
-#     label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
-#     label_no_window: ""
-#     label_icon: true
-#     label_icon_size: 8
-#     max_length: 56
-#     max_length_ellipsis: "..."
-#     monitor_exclusive: false
-
-# bluetooth:
-#   type: "yasb.bluetooth.BluetoothWidget"
-#   options:
-#     label: "<span>{icon}</span>"
-#     label_alt: "{device_name}"
-#     icons:
-#       bluetooth_on: "\udb80\udcaf"
-#       bluetooth_off: "\udb80\udcb2"
-#       bluetooth_connected: "\udb80\udcb1"
-#     callbacks:
-#       on_right: "exec cmd.exe /c start ms-settings:bluetooth"
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%a %b %d, %I:%M %p}"
+      timezones: []
+      callbacks:
+        on_left: "toggle_calendar"
+        on_right: "do_nothing"
+      calendar:
+        blur: True
+        round_corners: True
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        distance: 6
