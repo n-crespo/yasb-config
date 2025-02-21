@@ -141,10 +141,10 @@ https://github.com/amnweb/yasb/wiki
   border-radius: 4px;
 }
 .audio-container .device.selected {
-  background-color: var(--hover_bg);
+  background-color: var(--bg_active);
 }
 .audio-container .device:hover {
-  background-color: var(--bg_active);
+  background-color: var(--hover_bg);
 }
 
 /* BATTERY WIDGET */
