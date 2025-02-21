@@ -38,15 +38,15 @@ bars:
       right: 0
     widgets:
       left: [
-          "home",
+          # "home",
           "glazewm_workspaces",
           # "glazewm_active_layout",
           # "active_window",
         ]
       # center: ["clock", "apps"]
       center: ["media"]
-      # removed: "microphone"
-      right: ["volume", "battery", "clock", "power_menu"]
+      # removed: "microphone", "power_menu"
+      right: ["volume", "battery", "clock"]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
@@ -85,7 +85,7 @@ widgets:
       icons:
         prev_track: "󰒮"
         next_track: "󰒭"
-        play: ""
+        play: "󰐊"
         pause: "󰏤"
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"

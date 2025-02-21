@@ -3,34 +3,21 @@ This is default and very simple styles file for Yasb.
 For more information about configuration options, please visit the Wiki https://github.com/amnweb/yasb/wiki
 */
 :root {
-  --rosewater: #f5e0dc;
-  --flamingo: #f2cdcd;
-  --pink: #f5c2e7;
   --mauve: #cba6f7;
   --red: #f38ba8;
-  --maroon: #eba0ac;
-  --peach: #fab387;
   --yellow: #f9e2af;
-  --green: #a6e3a1;
-  --teal: #94e2d5;
-  --sky: #89dceb;
-  --sapphire: #74c7ec;
   --blue: #89b4fa;
   --lavender: #b4befe;
-  --text: #cdd6f4;
-  --subtext1: #bac2de;
   --subtext0: #a6adc8;
   --overlay2: #9399b2;
-  --overlay1: #7f849c;
-  --overlay0: #6c7086;
   --surface2: #585b70;
-  --surface1: #45475a;
   --surface0: #282936;
   --base: #1e1e2e;
-  --mantle: rgba(24, 24, 37, 0.5);
-  --crust: rgba(0, 0, 0, 0.1);
+  --text: white;
+  --subtle: rgba(255, 255, 255, 90);
   --main: #10151d;
 }
+
 /* Global styles for ToolTip */
 QToolTip {
   padding: 6px;
@@ -42,7 +29,7 @@ QToolTip {
 }
 * {
   font-size: 12px;
-  color: var(--subtext0);
+  color: white;
   font-weight: 600;
   font-family: "JetBrainsMono NFP";
   margin: 0;
@@ -51,32 +38,32 @@ QToolTip {
 .yasb-bar {
   padding: 0;
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 0px;
 }
 .widget {
-  /* padding: 0 12px; */
   margin: 0;
 }
 .icon {
   font-size: 16px;
 }
 .widget .label {
-  /* padding: 0px 2px; */
+  padding: 0px 2px;
 }
 .apps-widget .widget-container,
 .glazewm-workspaces .widget-container,
 .widget-container {
   /* font-size: 12px; */
   /* background-color: rgba(0, 0, 0, 0.5); */
-  margin: 3px 0 3px 0;
-  border-radius: 12px;
+  /* margin: 3px 0 3px 0; */
+  /* border-radius: 12px; */
   /* border: 1px solid var(--surface0); */
 }
+
 .glazewm-workspaces .widget-container {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
-  margin-left: 4px;
+  margin-left: 0px;
 }
 .glazewm-workspaces {
   border-top-right-radius: 14px;
@@ -91,125 +78,28 @@ QToolTip {
 }
 .glazewm-workspaces .ws-btn {
   border: none;
-  background-color: transparent;
-  margin: 2;
+  margin: 0;
   font-size: 12px;
-  color: var(--base);
-  padding: 4px 6px;
-  /* height: 28px; */
-  /* width: 18px; */
-}
-.glazewm-workspaces .ws-btn:hover {
-  color: var(--main);
-}
-
-.glazewm-workspaces .ws-btn.populated {
-  background-color: transparent;
-  color: #ffffff;
-  /* width: 20px; */
-  /* height: 10px; */
-  /* border-radius: 5px; */
-  /* margin: 0 4px; */
-  font-size: 12px;
-}
-.glazewm-workspaces .ws-btn.active {
-  color: #ffffff;
-  background-color: rgba(255, 255, 255, 80);
-  /* width: 36px; */
-  /* max-width: 36px; */
-  /* height: 10px; */
-  font-size: 12px;
-  /* padding: 4px 8px; */
-  /* margin: 0 4px; */
+  color: white;
+  padding: 4px 8px; /* background color fills the padding */
   border-radius: 2px;
 }
 
-.apps-widget {
-  padding: 0 4px 0 2px;
-}
-.apps-widget .label {
-  font-size: 14px;
-  padding: 0 2px;
-  color: var(--subtext0);
-}
-.apps-widget .label:hover {
-  color: var(--text);
+.glazewm-workspaces .ws-btn:hover {
+  background-color: rgba(255, 255, 255, 20);
 }
 
-.power-menu-widget .label {
-  color: #f38ba8;
-  font-size: 13px;
+/* inherits */
+.glazewm-workspaces .ws-btn.populated {
 }
-.power-menu-popup {
-  background-color: transparent;
+.glazewm-workspaces .ws-btn.active {
+  background-color: rgba(255, 255, 255, 35);
 }
-.power-menu-popup .button {
-  padding: 0;
-  width: 180px;
-  height: 230px;
-  border-radius: 8px;
-  background-color: var(--crust);
-  color: var(--text);
-  border-left: 4px solid rgba(58, 59, 83, 0);
-  border-right: 4px solid rgba(58, 59, 83, 0);
-  border-top: 4px solid rgba(58, 59, 83, 0);
-  border-bottom: 4px solid rgba(58, 59, 83, 0);
-  margin: 0px;
-}
-.power-menu-popup .button.hover {
-  background-color: var(--base);
-  border-left: 4px solid var(--base);
-  border-right: 4px solid var(--base);
-  border-top: 4px solid var(--base);
-  border-bottom: 4px solid var(--base);
-}
-
-.power-menu-popup .button .label {
-  margin-bottom: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--overlay2);
-}
-.power-menu-popup .button .icon {
-  font-size: 64px;
-  padding-top: 32px;
-  color: var(--surface2);
-}
-
-.power-menu-popup .button.cancel .icon {
-  padding: 0;
-  margin: 0;
-}
-.power-menu-popup .button.cancel .label {
-  color: var(--red);
-  margin: 0;
-}
-.power-menu-popup .button.cancel {
-  height: 32px;
-  border-radius: 4px;
-}
-.uptime {
-  font-size: 14px;
-  margin-bottom: 10px;
-  color: var(--surface2);
-  font-weight: 600;
-}
-
-/* .microphone-widget { */
-/*   padding: 0 6px 0 6px; */
-/* } */
-/* .microphone-widget .icon { */
-/*   font-size: 18px; */
-/* } */
-/* .microphone-widget .icon { */
-/*   font-size: 12px; */
-/*   color: var(--mauve); */
-/* } */
 
 .volume-widget .icon {
   font-size: 13px;
   color: var(--blue);
-  margin: 1px 2px 0 0;
+  margin: 1px -1px 0 0;
 }
 .weather-widget,
 .volume-widget {
@@ -226,7 +116,7 @@ QToolTip {
   border-radius: 0;
 }
 .media-widget .label {
-  color: rgba(255, 255, 255, 80);
+  color: var(--subtle);
   padding: 0px;
   padding-right: 4px;
   padding-left: 9px;
@@ -236,14 +126,14 @@ QToolTip {
   padding-top: 3px;
 }
 .media-widget .btn {
-  color: rgba(255, 255, 255, 80);
+  color: var(--subtle);
   padding: 0 1px;
   padding-bottom: 1px;
   margin: 0;
   font-weight: 400;
 }
 .media-widget .btn:hover {
-  color: #babfd3;
+  color: var(--text);
 }
 .media-widget .btn.play {
   font-size: 16px;
@@ -264,33 +154,6 @@ QToolTip {
   border: none;
   margin: 0;
 }
-.home-widget {
-  padding: 0 4px 0 12px;
-}
-.home-widget .icon {
-  color: var(--lavender);
-}
-.home-widget .icon:hover {
-  color: var(--text);
-}
-.home-menu {
-  background-color: var(--crust);
-}
-.home-menu .menu-item {
-  padding: 8px 48px 9px 16px;
-  font-size: 12px;
-  color: var(--text);
-  font-weight: 600;
-}
-.home-menu .menu-item:hover {
-  /* background-color: rgba(128, 130, 158, 0.15); */
-  color: #ffffff;
-}
-.home-menu:separator {
-  max-height: 5px;
-  height: 10px;
-  background-color: rgba(128, 130, 158, 0.3);
-}
 
 .battery-widget {
   /* padding: 0 4px 0 4px; */
@@ -307,3 +170,117 @@ QToolTip {
 }
 .clock-widget .widget-container .icon {
 }
+
+/* UNUSED WIDGETS */
+
+/* .apps-widget { */
+/*   padding: 0 4px 0 2px; */
+/* } */
+/* .apps-widget .label { */
+/*   font-size: 14px; */
+/*   /* padding: 0 0px; */
+/*   color: var(--subtext0); */
+/* } */
+/* .apps-widget .label:hover { */
+/*   color: var(--text); */
+/* } */
+
+/* .power-menu-widget .label { */
+/*   color: #f38ba8; */
+/*   font-size: 13px; */
+/*   /* margin-right: -2px; */
+/*   /* background-color: #fff000; */
+/* } */
+/* .power-menu-popup { */
+/*   background-color: transparent; */
+/* } */
+/* .power-menu-popup .button { */
+/*   padding: 0; */
+/*   width: 180px; */
+/*   height: 230px; */
+/*   border-radius: 8px; */
+/*   background-color: rgba(255, 255, 255, 10); */
+/*   color: var(--text); */
+/*   border-left: 4px solid rgba(58, 59, 83, 0); */
+/*   border-right: 4px solid rgba(58, 59, 83, 0); */
+/*   border-top: 4px solid rgba(58, 59, 83, 0); */
+/*   border-bottom: 4px solid rgba(58, 59, 83, 0); */
+/*   margin: 0px; */
+/* } */
+/* .power-menu-popup .button.hover { */
+/*   background-color: var(--base); */
+/*   border-left: 4px solid var(--base); */
+/*   border-right: 4px solid var(--base); */
+/*   border-top: 4px solid var(--base); */
+/*   border-bottom: 4px solid var(--base); */
+/* } */
+/**/
+/* .power-menu-popup .button .label { */
+/*   margin-bottom: 8px; */
+/*   font-size: 16px; */
+/*   font-weight: 500; */
+/*   color: var(--overlay2); */
+/* } */
+/* .power-menu-popup .button .icon { */
+/*   font-size: 64px; */
+/*   padding-top: 32px; */
+/*   color: var(--surface2); */
+/* } */
+/**/
+/* .power-menu-popup .button.cancel .icon { */
+/*   padding: 0; */
+/*   margin: 0; */
+/* } */
+/* .power-menu-popup .button.cancel .label { */
+/*   color: var(--red); */
+/*   margin: 0; */
+/* } */
+/* .power-menu-popup .button.cancel { */
+/*   height: 32px; */
+/*   border-radius: 4px; */
+/* } */
+/* .uptime { */
+/*   font-size: 14px; */
+/*   margin-bottom: 10px; */
+/*   color: var(--surface2); */
+/*   font-weight: 600; */
+/* } */
+
+/* .microphone-widget { */
+/*   padding: 0 6px 0 6px; */
+/* } */
+/* .microphone-widget .icon { */
+/*   font-size: 18px; */
+/* } */
+/* .microphone-widget .icon { */
+/*   font-size: 12px; */
+/*   color: var(--mauve); */
+/* } */
+
+/* .home-widget { */
+/*   padding: 0 4px 0 12px; */
+/* } */
+/* .home-widget .icon { */
+/*   color: var(--lavender); */
+/* } */
+/* .home-widget .icon:hover { */
+/*   color: var(--text); */
+/* } */
+/* .home-menu { */
+/*   background-color: var(--crust); */
+/* } */
+/* .home-menu .menu-item { */
+/*   padding: 8px 48px 9px 16px; */
+/*   font-size: 12px; */
+/*   color: var(--text); */
+/*   font-weight: 600; */
+/* } */
+/* .home-menu .menu-item:hover { */
+/*   /* background-color: rgba(128, 130, 158, 0.15); */
+/*   color: white; */
+/* } */
+/* .home-menu:separator { */
+/*   max-height: 5px; */
+/*   height: 10px; */
+/*   background-color: rgba(128, 130, 158, 0.3); */
+/* } */
