@@ -56,18 +56,18 @@ bars:
           "clock",
         ]
 widgets:
-  glazewm_tiling_direction:
-    type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
+  ############## LEFT ############
+  glazewm_workspaces:
+    update_interval: 100
+    type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
-      horizontal_label: ""
-      vertical_label: ""
-  battery:
-    type: "yasb.battery.BatteryWidget"
-    options:
-      label: "<span>{icon}</span>{percent}%"
-      label_alt: "{icon} {time_remaining}"
-      charging_options:
-        icon_format: "󱐋"
+      offline_label: "GlazeWM Offline"
+      hide_empty_workspaces: true
+      hide_if_offline: false
+      populated_label: "{display_name}"
+      empty_label: "{display_name}"
+
+  ########### CENTER #############
   media:
     type: "yasb.media.MediaWidget"
     options:
@@ -90,6 +90,52 @@ widgets:
         next_track: "󰒭"
         play: "󰐊"
         pause: "󰏤"
+
+  ########## RIGHT ###########
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    options:
+      # icon: ""
+      label: "{virtual_mem_used}"
+      label_alt: "{virtual_mem_free}"
+      update_interval: 5000
+      callbacks:
+        on_left: "do_nothing"
+        on_right: "exec cmd /c procexp"
+      memory_thresholds:
+        low: 25
+        medium: 50
+        high: 90
+
+  glazewm_tiling_direction:
+    type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
+    options:
+      horizontal_label: ""
+      vertical_label: ""
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "{wifi_icon}"
+      label_alt: "{wifi_icon} {wifi_name}"
+      update_interval: 5000
+      wifi_icons:
+        - "󰤯" # 0% strength (no wifi)
+        - "󰤟" # 1-25% strength
+        - "󰤢" # 26-50% strength
+        - "󰤥" # 51-75% strength
+        - "󰤨" # 76-100% strength. Alternate theming: \uf1eb
+      callbacks:
+        on_middle: "do_nothing"
+        on_right: "exec cmd.exe /c start ms-settings:network"
+
+  battery:
+    type: "yasb.battery.BatteryWidget"
+    options:
+      label: "<span>{icon}</span>{percent}%"
+      label_alt: "{icon} {time_remaining}"
+      charging_options:
+        icon_format: "󱐋"
+
   clock:
     type: "yasb.clock.ClockWidget"
     options:
@@ -107,58 +153,6 @@ widgets:
         alignment: "right"
         direction: "down"
         distance: 6
-  glazewm_workspaces:
-    update_interval: 100
-    type: "glazewm.workspaces.GlazewmWorkspacesWidget"
-    options:
-      offline_label: "GlazeWM Offline"
-      hide_empty_workspaces: true
-      hide_if_offline: false
-      populated_label: "{display_name}"
-      empty_label: "{display_name}"
-
-  # # bluetooth:
-  # #   type: "yasb.bluetooth.BluetoothWidget"
-  # #   options:
-  # #     label: "<span>{icon}</span>"
-  # #     label_alt: "{device_name}"
-  # #     icons:
-  # #       bluetooth_on: "\udb80\udcaf"
-  # #       bluetooth_off: "\udb80\udcb2"
-  # #       bluetooth_connected: "\udb80\udcb1"
-  # #     callbacks:
-  # #       on_right: "exec cmd.exe /c start ms-settings:bluetooth"
-
-  memory:
-    type: "yasb.memory.MemoryWidget"
-    options:
-      # icon: ""
-      label: "{virtual_mem_used}"
-      label_alt: "{virtual_mem_free}"
-      update_interval: 5000
-      callbacks:
-        on_left: "do_nothing"
-        on_right: "exec cmd /c procexp"
-      memory_thresholds:
-        low: 25
-        medium: 50
-        high: 90
-
-  wifi:
-    type: "yasb.wifi.WifiWidget"
-    options:
-      label: "{wifi_icon}"
-      label_alt: "{wifi_icon} {wifi_name}"
-      update_interval: 5000
-      wifi_icons:
-        - "\udb82\udd2e" # 0% strength (no wifi)
-        - "\udb82\udd1f" # 1-25% strength
-        - "\udb82\udd22" # 26-50% strength
-        - "\udb82\udd25" # 51-75% strength
-        - "\udb82\udd28" # 76-100% strength. Alternate theming: \uf1eb
-      callbacks:
-        on_middle: "do_nothing"
-        on_right: "exec cmd.exe /c start ms-settings:network"
 
   volume:
     type: "yasb.volume.VolumeWidget"
@@ -176,25 +170,25 @@ widgets:
         on_left: "toggle_volume_menu"
         on_right: "do_nothing"
         # on_right: "exec cmd.exe /c start ms-settings:sound"
-
-  power_menu:
-    type: "yasb.power_menu.PowerMenuWidget"
-    options:
-      label: "󰐥"
-      uptime: True
-      blur: False
-      blur_background: True
-      animation_duration: 100
-      button_row: 5
-      buttons:
-        shutdown: ["󰐥", "Shut Down"]
-        restart: ["\uead2", "Restart"]
-        signout: ["\udb80\udf43", "Sign out"]
-        hibernate: ["\uf28e", "Hibernate"]
-        sleep: ["\u23fe", "Sleep"]
-        cancel: ["", "Cancel"]
-#
 ############# unused widgets ################
+
+# power_menu:
+#   type: "yasb.power_menu.PowerMenuWidget"
+#   options:
+#     label: "󰐥"
+#     uptime: True
+#     blur: False
+#     blur_background: True
+#     animation_duration: 100
+#     button_row: 5
+#     buttons:
+#       shutdown: ["󰐥", "Shut Down"]
+#       restart: ["\uead2", "Restart"]
+#       signout: ["\udb80\udf43", "Sign out"]
+#       hibernate: ["\uf28e", "Hibernate"]
+#       sleep: ["\u23fe", "Sleep"]
+#       cancel: ["", "Cancel"]
+
 # microphone:
 #   type: "yasb.microphone.MicrophoneWidget"
 #   options:
@@ -264,3 +258,15 @@ widgets:
 #     max_length: 56
 #     max_length_ellipsis: "..."
 #     monitor_exclusive: false
+
+# bluetooth:
+#   type: "yasb.bluetooth.BluetoothWidget"
+#   options:
+#     label: "<span>{icon}</span>"
+#     label_alt: "{device_name}"
+#     icons:
+#       bluetooth_on: "\udb80\udcaf"
+#       bluetooth_off: "\udb80\udcb2"
+#       bluetooth_connected: "\udb80\udcb1"
+#     callbacks:
+#       on_right: "exec cmd.exe /c start ms-settings:bluetooth"

@@ -9,10 +9,8 @@ https://github.com/amnweb/yasb/wiki
   --main: #10151d;
   --icon: #f8f8ff;
   --surface0: #282936;
-  --ws_active: rgba(255, 255, 255, 35);
+  --bg_active: rgba(255, 255, 255, 35);
   --blue: #84aff2;
-
-  --surface2: #585b70;
   --text: white;
 }
 
@@ -23,23 +21,13 @@ https://github.com/amnweb/yasb/wiki
   font-weight: 600;
   font-family: "JetBrainsMono NFP";
   margin: 0;
-  padding: 0 4px 0 2px;
+  padding: 0px 3px;
 }
 .yasb-bar {
   padding: 0;
-  margin: 0;
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 0px;
-}
-
-.widget {
-  margin: 0;
 }
 .icon {
   font-size: 16px;
-}
-.widget .label {
-  padding: 0px 2px;
 }
 .apps-widget .widget-container,
 .glazewm-workspaces .widget-container,
@@ -48,28 +36,20 @@ https://github.com/amnweb/yasb/wiki
 
 /* GLAZEWM WIDGET */
 .glazewm-workspaces .widget-container {
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
-  margin-left: 0px;
 }
 .glazewm-workspaces {
-  /* border-top-right-radius: 14px; */
-  /* border-bottom-right-radius: 14px; */
-  padding: 0 0 0 0;
+  margin-left: -3px;
 }
 .glazewm-workspaces .offline-status {
   color: var(--subtle);
-  font-size: 12px;
-  padding: 0 0 0 0;
+  padding-left: 3px;
   font-weight: 6;
 }
 .glazewm-workspaces .ws-btn {
-  font-size: 12px;
   color: var(--icon);
-  background-color: rgba(255, 255, 255, 0);
   padding: 2.5px 7px; /* background color fills the padding */
-  border-radius: 2px;
-  font-weight: normal;
+  border-radius: 3px;
+  font-weight: 500;
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--hover_bg);
@@ -78,12 +58,50 @@ https://github.com/amnweb/yasb/wiki
 .glazewm-workspaces .ws-btn.populated {
 }
 .glazewm-workspaces .ws-btn.active {
-  background-color: var(--ws_active);
+  background-color: var(--bg_active);
+}
+
+/* MEDIA WIDGET */
+.media-widget .label {
+  color: var(--subtle);
+  font-size: 11px;
+}
+.media-widget .btn.prev,
+.media-widget .btn.next {
+  font-size: 1px;
+  padding: -1px;
+}
+.media-widget .btn {
+  color: var(--subtle);
+  /* padding: 1 2px; */
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 200;
+}
+.media-widget .btn:hover {
+  color: var(--text);
+  background-color: var(--hover_bg);
+}
+.media-widget .btn.disabled:hover,
+.media-widget .btn.disabled {
 }
 
 /* MEMORY WIDGET */
 .memory-widget .label {
   color: var(--subtle);
+}
+
+/* TILING DIRECTION WIDGET */
+.glazewm-tiling-direction .btn {
+  margin-top: 1px;
+  color: var(--icon);
+
+  border-radius: 3px;
+  font-size: 13px;
+  border: none;
+}
+.glazewm-tiling-direction .btn:hover {
+  background-color: var(--hover_bg);
 }
 
 /* WIFI WIDGET */
@@ -96,26 +114,6 @@ https://github.com/amnweb/yasb/wiki
 .wifi-widget .widget-container .icon {
 }
 
-/* TILING DIRECTION WIDGET */
-.glazewm-tiling-direction {
-  padding: 0;
-  margin: 0;
-}
-
-.glazewm-tiling-direction .btn {
-  background-color: transparent;
-  padding: 1 4px 0 4px;
-  border: none;
-  font-size: 13px;
-  width: 15px;
-  color: var(--icon);
-}
-
-.glazewm-tiling-direction .btn:hover {
-  background-color: var(--hover_bg);
-  border-radius: 2px;
-}
-
 /* VOLUME WIDGET */
 .volume-widget .icon {
   color: var(--blue);
@@ -123,7 +121,6 @@ https://github.com/amnweb/yasb/wiki
   padding-top: 2px;
   padding-right: 1px;
 }
-
 .volume-slider {
   border: none;
 }
@@ -132,10 +129,9 @@ https://github.com/amnweb/yasb/wiki
 .volume-slider::handle {
 }
 .audio-menu {
-  background-color: rgba(17, 17, 27, 0.4);
+  background-color: transparent;
 }
 .audio-container .device {
-  background-color: transparent;
   border: none;
   padding: 6px 8px 6px 4px;
   margin: 2px 0;
@@ -143,56 +139,10 @@ https://github.com/amnweb/yasb/wiki
   border-radius: 4px;
 }
 .audio-container .device.selected {
-  background-color: rgba(255, 255, 255, 0.085);
-}
-.audio-container .device:hover {
-  background-color: rgba(255, 255, 255, 0.06);
-}
-
-/* MISC WIDGET */
-.wifi-widget,
-.weather-widget,
-.volume-widget {
-  padding: 0 5px;
-}
-
-/* MEDIA WIDGET */
-.media-widget .label {
-  color: var(--subtle);
-  margin-left: 5px;
-  font-size: 11px;
-}
-.media-widget .btn.prev,
-.media-widget .btn.next {
-  font-size: 1px;
-  padding: -1px;
-}
-.media-widget .btn {
-  color: var(--subtle);
-  padding: 1 2px;
-  margin: 2px 0px;
-  border-radius: 2px;
-  font-size: 15px;
-  font-weight: 200;
-}
-.media-widget .btn:hover {
-  color: var(--text);
   background-color: var(--hover_bg);
 }
-.media-widget .btn.disabled:hover,
-.media-widget .btn.disabled {
-}
-
-/* TASKBAR WIDGET */
-.taskbar-widget {
-  padding: 0;
-  margin: 0;
-  border: none;
-}
-.taskbar-widget .app-icon {
-  padding: 0 6px;
-  border: none;
-  margin: 0;
+.audio-container .device:hover {
+  background-color: var(--bg_active);
 }
 
 /* BATTERY WIDGET */
@@ -207,7 +157,7 @@ https://github.com/amnweb/yasb/wiki
 
 /* CLOCK WIDGET */
 .clock-widget {
-  padding: 0 -3px 0 4px;
+  padding-right: -3px;
 }
 
 /* UNUSED WIDGETS */
@@ -338,4 +288,16 @@ https://github.com/amnweb/yasb/wiki
 /*   background-color: #1e1e2e; */
 /*   border: 0px solid #313244; */
 /*   border-radius: 6px; */
+/* } */
+
+/* /* TASKBAR WIDGET */
+/* .taskbar-widget { */
+/*   padding: 0; */
+/*   margin: 0; */
+/*   border: none; */
+/* } */
+/* .taskbar-widget .app-icon { */
+/*   padding: 0 6px; */
+/*   border: none; */
+/*   margin: 0; */
 /* } */
