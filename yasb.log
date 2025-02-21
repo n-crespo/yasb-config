@@ -2033,3 +2033,17 @@ KeyError: 'prev'
 2025-02-20 22:41:07 ERROR main.py:86: Another instance of the YASB is already running.
 2025-02-20 22:41:22 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
 2025-02-20 22:41:26 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:47:45 INFO log.py:21: Yasb v1.6.3
+2025-02-20 22:47:46 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 22:47:46 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 22:47:46 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 22:47:47 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 22:47:47 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 22:47:47 DEBUG _windows.py:192: Thread started
+2025-02-20 22:48:13 INFO log.py:21: Yasb v1.6.3
+2025-02-20 22:48:13 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 22:48:43 INFO log.py:21: Yasb v1.6.3
+2025-02-20 22:48:43 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 22:48:45 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:48:48 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:48:50 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
