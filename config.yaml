@@ -46,20 +46,8 @@ bars:
       # center: ["clock", "apps"]
       center: ["media"]
       # removed: "microphone", "power_menu"
-      right: ["volume", "battery", "clock"]
+      right: ["memory", "wifi", "volume", "battery", "clock"]
 widgets:
-  home:
-    type: "yasb.home.HomeWidget"
-    options:
-      label: ""
-      menu_list:
-        - { title: "User Home", path: "~" }
-        - { title: "Download", path: "~\\Downloads" }
-        - { title: "Documents", path: "~\\Documents" }
-        - { title: "Pictures", path: "~\\Pictures" }
-      system_menu: true
-      power_menu: true
-      blur: true
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
@@ -70,8 +58,7 @@ widgets:
   media:
     type: "yasb.media.MediaWidget"
     options:
-      label: "{title}"
-      label_alt: "{artist}"
+      label: "{title} - {artist}"
       max_field_size:
         label: 64
         label_alt: 24
@@ -79,6 +66,9 @@ widgets:
       controls_only: false
       controls_left: true
       hide_empty: true
+      callbacks:
+        on_right: "prev"
+        on_left: "play_pause"
       thumbnail_alpha: 150
       thumbnail_padding: 8
       thumbnail_corner_radius: 0
@@ -87,17 +77,6 @@ widgets:
         next_track: "󰒭"
         play: "󰐊"
         pause: "󰏤"
-  active_window:
-    type: "yasb.active_window.ActiveWindowWidget"
-    options:
-      label: "{win[title]}"
-      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
-      label_no_window: ""
-      label_icon: true
-      label_icon_size: 8
-      max_length: 56
-      max_length_ellipsis: "..."
-      monitor_exclusive: false
   clock:
     type: "yasb.clock.ClockWidget"
     options:
@@ -137,12 +116,43 @@ widgets:
   # #     callbacks:
   # #       on_right: "exec cmd.exe /c start ms-settings:bluetooth"
 
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    options:
+      # icon: ""
+      label: "{virtual_mem_used}"
+      label_alt: "{virtual_mem_free}"
+      update_interval: 5000
+      callbacks:
+        on_left: "do_nothing"
+        on_right: "exec cmd /c procexp"
+      memory_thresholds:
+        low: 25
+        medium: 50
+        high: 90
+
+  wifi:
+    type: "yasb.wifi.WifiWidget"
+    options:
+      label: "{wifi_icon}"
+      label_alt: "{wifi_icon} {wifi_name}"
+      update_interval: 5000
+      wifi_icons:
+        - "\udb82\udd2e" # 0% strength (no wifi)
+        - "\udb82\udd1f" # 1-25% strength
+        - "\udb82\udd22" # 26-50% strength
+        - "\udb82\udd25" # 51-75% strength
+        - "\udb82\udd28" # 76-100% strength. Alternate theming: \uf1eb
+      callbacks:
+        on_middle: "do_nothing"
+        on_right: "exec cmd.exe /c start ms-settings:network"
+
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
       label: "<span>{icon}</span> {level}"
       label_alt: "{volume}"
-      tooltip: true
+      tooltip: false
       volume_icons:
         - "󰝟"
         - "󰕿"
@@ -216,3 +226,28 @@ widgets:
 #       left: 0
 #       bottom: 0
 #       right: 0
+
+# home:
+#   type: "yasb.home.HomeWidget"
+#   options:
+#     label: ""
+#     menu_list:
+#       - { title: "User Home", path: "~" }
+#       - { title: "Download", path: "~\\Downloads" }
+#       - { title: "Documents", path: "~\\Documents" }
+#       - { title: "Pictures", path: "~\\Pictures" }
+#     system_menu: true
+#     power_menu: true
+#     blur: true
+
+# active_window:
+#   type: "yasb.active_window.ActiveWindowWidget"
+#   options:
+#     label: "{win[title]}"
+#     label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+#     label_no_window: ""
+#     label_icon: true
+#     label_icon_size: 8
+#     max_length: 56
+#     max_length_ellipsis: "..."
+#     monitor_exclusive: false
