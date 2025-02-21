@@ -96,6 +96,26 @@ https://github.com/amnweb/yasb/wiki
 .wifi-widget .widget-container .icon {
 }
 
+/* TILING DIRECTION WIDGET */
+.glazewm-tiling-direction {
+  padding: 0;
+  margin: 0;
+}
+
+.glazewm-tiling-direction .btn {
+  background-color: transparent;
+  padding: 1 4px 0 4px;
+  border: none;
+  font-size: 13px;
+  width: 15px;
+  color: var(--icon);
+}
+
+.glazewm-tiling-direction .btn:hover {
+  background-color: var(--hover_bg);
+  border-radius: 2px;
+}
+
 /* VOLUME WIDGET */
 .volume-widget .icon {
   color: var(--blue);
