@@ -160,8 +160,8 @@ widgets:
         - "󰕾"
         - "󰕾"
       callbacks:
-        on_right: "toggle_volume_menu"
-        on_left: "toggle_mute"
+        on_left: "toggle_volume_menu"
+        on_right: "do_nothing"
         # on_right: "exec cmd.exe /c start ms-settings:sound"
 
   power_menu:

@@ -1,6 +1,7 @@
 /*
 This is default and very simple styles file for Yasb.
-For more information about configuration options, please visit the Wiki https://github.com/amnweb/yasb/wiki
+For more information about configuration options, please visit the Wiki
+https://github.com/amnweb/yasb/wiki
 */
 :root {
   --mauve: #cba6f7;
@@ -28,6 +29,8 @@ QToolTip {
   border: 0px solid #313244;
   border-radius: 6px;
 }
+
+/* this is for everything*/
 * {
   font-size: 12px;
   color: white;
@@ -42,6 +45,7 @@ QToolTip {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 0px;
 }
+
 .widget {
   margin: 0;
 }
@@ -56,6 +60,7 @@ QToolTip {
 .widget-container {
 }
 
+/* GLAZEWM WIDGET */
 .glazewm-workspaces .widget-container {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
@@ -80,11 +85,9 @@ QToolTip {
   padding: 3px 7px; /* background color fills the padding */
   border-radius: 2px;
 }
-
 .glazewm-workspaces .ws-btn:hover {
   background-color: rgba(255, 255, 255, 20);
 }
-
 /* inherits */
 .glazewm-workspaces .ws-btn.populated {
 }
@@ -92,20 +95,22 @@ QToolTip {
   background-color: rgba(255, 255, 255, 35);
 }
 
+/* MEMORY WIDGET */
 .memory-widget .label {
   color: var(--subtle);
 }
 
+/* WIFI WIDGET */
 .wifi-widget .widget-container .label {
   color: var(--blue);
   font-size: 11px;
-  /* padding: 0px 0px; */
 }
 .wifi-widget .widget-container .label.alt {
 }
 .wifi-widget .widget-container .icon {
 }
 
+/* VOLUME WIDGET */
 .volume-widget .icon {
   color: var(--blue);
   font-size: 13px;
@@ -113,32 +118,27 @@ QToolTip {
   padding-right: 1px;
 }
 
+/* MISC WIDGET */
 .wifi-widget,
 .weather-widget,
 .volume-widget {
-  padding: 0 8px;
+  padding: 0 5px;
 }
-.weather-widget .icon {
-  font-size: 18px;
-  margin: 0 2px 1px 0;
-  color: var(--yellow);
-}
+
+/* MEDIA WIDGET */
 .media-widget {
   font-size: 11px;
 }
-
 .media-widget .label {
   color: var(--subtle);
   margin-left: 5px;
   font-size: 11px;
 }
-
 .media-widget .btn.prev,
 .media-widget .btn.next {
   font-size: 1px;
   padding: -1px;
 }
-
 .media-widget .btn {
   color: var(--subtle);
   padding: 1 2px;
@@ -147,16 +147,15 @@ QToolTip {
   font-size: 15px;
   font-weight: 200;
 }
-
 .media-widget .btn:hover {
   color: var(--text);
   background-color: rgba(255, 255, 255, 20);
 }
-
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
 }
 
+/* TASKBAR WIDGET */
 .taskbar-widget {
   padding: 0;
   margin: 0;
@@ -168,11 +167,13 @@ QToolTip {
   margin: 0;
 }
 
+/* BATTERY WIDGET */
 .battery-widget .widget-container .icon {
   padding-right: 1px;
   color: var(--blue);
 }
 
+/* CLOCK WIDGET */
 .clock-widget {
   padding: 0 -3px 0 4px;
 }
@@ -289,4 +290,10 @@ QToolTip {
 /*   max-height: 5px; */
 /*   height: 10px; */
 /*   background-color: rgba(128, 130, 158, 0.3); */
+/* } */
+
+/* .weather-widget .icon { */
+/*   font-size: 18px; */
+/*   margin: 0 2px 1px 0; */
+/*   color: var(--yellow); */
 /* } */
