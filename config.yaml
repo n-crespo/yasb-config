@@ -45,7 +45,8 @@ bars:
         ]
       # center: ["clock", "apps"]
       center: ["media"]
-      right: ["microphone", "volume", "battery", "clock", "power_menu"]
+      # removed: "microphone"
+      right: ["volume", "battery", "clock", "power_menu"]
 widgets:
   home:
     type: "yasb.home.HomeWidget"
@@ -123,95 +124,18 @@ widgets:
       hide_if_offline: false
       populated_label: "{display_name}"
       empty_label: "{display_name}"
-  # komorebi_workspaces:
-  #   type: "komorebi.workspaces.WorkspaceWidget"
-  #   options:
-  #     label_offline: "\u23fc Offline"
-  #     label_workspace_btn: "\udb81\udc3d"
-  #     label_workspace_active_btn: ""
-  #     label_workspace_populated_btn: "\udb81\udc3e"
-  #     label_default_name: "{index}"
-  #     label_zero_index: false
-  #     hide_empty_workspaces: false
-  #     hide_if_offline: true
-  #     animation: true
-  #     container_padding:
-  #       top: 0
-  #       left: 8
-  #       bottom: 0
-  #       right: 8
-  komorebi_active_layout:
-    type: "komorebi.active_layout.ActiveLayoutWidget"
-    options:
-      hide_if_offline: true
-      label: "{icon}"
-      layouts:
-        [
-          "bsp",
-          "columns",
-          "rows",
-          "grid",
-          "vertical_stack",
-          "horizontal_stack",
-          "ultrawide_vertical_stack",
-          "right_main_vertical_stack",
-        ]
-      layout_icons:
-        bsp: "BSP"
-        columns: "COLS"
-        rows: "ROWS"
-        grid: "GRID"
-        vertical_stack: "V-STACK"
-        horizontal_stack: "H-STACK"
-        ultrawide_vertical_stack: "W-STACK"
-        right_main_vertical_stack: "RMV-STACK"
-        monocle: "MONOCLE"
-        maximised: "MAX"
-        floating: "FLOATING"
-        paused: "PAUSED"
-      container_padding:
-        top: 0
-        left: 8
-        bottom: 0
-        right: 8
-      callbacks:
-        on_left: "next_layout"
-        on_middle: "toggle_monocle"
-        on_right: "prev_layout"
-  # weather:
-  #   type: "yasb.weather.WeatherWidget"
-  #   options:
-  #     label: "<span>{icon}</span> {temp}"
-  #     label_alt: "{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}"
-  #     api_key: "3bf4cf9a7c3f40d6b31174128242807"
-  #     update_interval: 600
-  #     hide_decimal: true
-  #     location: "USA Los Angeles 90006"
-  #     callbacks:
-  #       on_left: "toggle_label"
-  #     icons:
-  #       sunnyDay: "\udb81\udd99"
-  #       clearNight: "\udb81\udd99"
-  #       cloudyDay: "\udb81\udd99"
-  #       cloudyNight: "\udb81\udd99"
-  #       rainyDay: "\udb81\udd99"
-  #       rainyNight: "\udb81\udd99"
-  #       snowyIcyDay: "\udb81\udd99"
-  #       snowyIcyNight: "\udb81\udd99"
-  #       blizzard: "\udb81\udd99"
-  #       default: "\udb81\udd99"
 
-  # bluetooth:
-  #   type: "yasb.bluetooth.BluetoothWidget"
-  #   options:
-  #     label: "<span>{icon}</span>"
-  #     label_alt: "{device_name}"
-  #     icons:
-  #       bluetooth_on: "\udb80\udcaf"
-  #       bluetooth_off: "\udb80\udcb2"
-  #       bluetooth_connected: "\udb80\udcb1"
-  #     callbacks:
-  #       on_right: "exec cmd.exe /c start ms-settings:bluetooth"
+  # # bluetooth:
+  # #   type: "yasb.bluetooth.BluetoothWidget"
+  # #   options:
+  # #     label: "<span>{icon}</span>"
+  # #     label_alt: "{device_name}"
+  # #     icons:
+  # #       bluetooth_on: "\udb80\udcaf"
+  # #       bluetooth_off: "\udb80\udcb2"
+  # #       bluetooth_connected: "\udb80\udcb1"
+  # #     callbacks:
+  # #       on_right: "exec cmd.exe /c start ms-settings:bluetooth"
 
   volume:
     type: "yasb.volume.VolumeWidget"
@@ -229,18 +153,6 @@ widgets:
         on_right: "toggle_volume_menu"
         on_left: "toggle_mute"
         # on_right: "exec cmd.exe /c start ms-settings:sound"
-  microphone:
-    type: "yasb.microphone.MicrophoneWidget"
-    options:
-      label: "<span>{icon}</span> {level}"
-      label_alt: "<span>{icon}</span> {level}%"
-      icons:
-        normal: "\udb80\udf6c"
-        muted: "\udb80\udf6d"
-      callbacks:
-        on_left: "toggle_mute"
-        on_middle: "toggle_label"
-        on_right: "exec cmd.exe /c start ms-settings:sound"
 
   power_menu:
     type: "yasb.power_menu.PowerMenuWidget"
@@ -258,34 +170,49 @@ widgets:
         hibernate: ["\uf28e", "Hibernate"]
         sleep: ["\u23fe", "Sleep"]
         cancel: ["", "Cancel"]
-  # apps:
-  #   type: "yasb.applications.ApplicationsWidget"
-  #   options:
-  #     container_padding:
-  #       top: 0
-  #       left: 8
-  #       bottom: 0
-  #       right: 8
-  #     label: "{data}"
-  #     app_list:
-  #       - { icon: "\uf422", launch: "search" }
-  #       - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
-  #       - {
-  #           icon: "\udb80\ude39",
-  #           launch: "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
-  #         }
-  taskbar:
-    type: "yasb.taskbar.TaskbarWidget"
-    options:
-      animation:
-        enabled: true
-      icon_size: 8
-      ignore_apps:
-        processes: []
-        titles: []
-        classes: []
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
+#
+############# unused widgets ################
+# microphone:
+#   type: "yasb.microphone.MicrophoneWidget"
+#   options:
+#     label: "<span>{icon}</span> {level}"
+#     label_alt: "<span>{icon}</span> {level}%"
+#     icons:
+#       normal: "\udb80\udf6c"
+#       muted: "\udb80\udf6d"
+#     callbacks:
+#       on_left: "toggle_mute"
+#       on_middle: "toggle_label"
+#       on_right: "exec cmd.exe /c start ms-settings:sound"
+
+# apps:
+#   type: "yasb.applications.ApplicationsWidget"
+#   options:
+#     container_padding:
+#       top: 0
+#       left: 8
+#       bottom: 0
+#       right: 8
+#     label: "{data}"
+#     app_list:
+#       - { icon: "\uf422", launch: "search" }
+#       - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
+#       - {
+#           icon: "\udb80\ude39",
+#           launch: "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+#         }
+# taskbar:
+#   type: "yasb.taskbar.TaskbarWidget"
+#   options:
+#     animation:
+#       enabled: true
+#     icon_size: 8
+#     ignore_apps:
+#       processes: []
+#       titles: []
+#       classes: []
+#     container_padding:
+#       top: 0
+#       left: 0
+#       bottom: 0
+#       right: 0

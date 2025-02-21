@@ -985,3 +985,53 @@ KeyError: ''
 2025-02-20 15:36:39 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
 2025-02-20 15:36:39 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
 2025-02-20 15:36:39 DEBUG _windows.py:192: Thread started
+2025-02-20 15:42:10 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:42:11 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:42:11 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:42:11 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:42:12 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:42:12 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:42:12 DEBUG _windows.py:192: Thread started
+2025-02-20 15:43:16 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:43:19 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:43:21 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:43:31 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:43:31 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:43:31 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:43:32 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:43:32 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:43:32 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:43:32 DEBUG _windows.py:192: Thread started
+2025-02-20 15:43:42 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:43:43 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:43:43 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:43:44 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:43:44 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:43:44 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:43:44 DEBUG _windows.py:192: Thread started
+2025-02-20 15:43:54 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:44:23 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:44:24 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:44:32 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:44:34 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:44:47 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:44:50 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:44:53 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:44:54 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:44:57 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:44:59 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:45:05 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:45:10 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 15:45:54 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:45:54 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 15:47:05 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:47:05 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 15:48:08 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:48:08 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 15:49:08 INFO log.py:21: Yasb v1.6.3
+2025-02-20 15:49:08 DEBUG __init__.py:149: CoInitializeEx(None, 2)
+2025-02-20 15:49:09 DEBUG win32.py:55: Looking up time zone info from registry
+2025-02-20 15:49:09 INFO app_bar.py:103: Bar Created on Screen: ATNA40CU05-0  [Bar Height: 25px, DPI Scale: 2.0, Scale Screen: True, Screen Geometry: X: 0, Y: 0, Screen Width: 1440, Screen Height: 900]
+2025-02-20 15:49:09 INFO watcher.py:39: Created file watcher for path C:\Users\nicol\.config\yasb
+2025-02-20 15:49:09 DEBUG _windows.py:213: Starting (proactor: <_IocpProactor overlapped#=0 result#=0>)...
+2025-02-20 15:49:09 DEBUG _windows.py:192: Thread started

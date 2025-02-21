@@ -95,7 +95,7 @@ QToolTip {
   margin: 2;
   font-size: 12px;
   color: var(--base);
-  padding: 4px 8px;
+  padding: 4px 6px;
   /* height: 28px; */
   /* width: 18px; */
 }
@@ -194,15 +194,18 @@ QToolTip {
   color: var(--surface2);
   font-weight: 600;
 }
-.microphone-widget {
-  padding: 0 6px 0 6px;
-}
-.microphone-widget .icon {
-  font-size: 18px;
-}
-.microphone-widget .icon {
-  color: var(--mauve);
-}
+
+/* .microphone-widget { */
+/*   padding: 0 6px 0 6px; */
+/* } */
+/* .microphone-widget .icon { */
+/*   font-size: 18px; */
+/* } */
+/* .microphone-widget .icon { */
+/*   font-size: 12px; */
+/*   color: var(--mauve); */
+/* } */
+
 .volume-widget .icon {
   font-size: 13px;
   color: var(--blue);
