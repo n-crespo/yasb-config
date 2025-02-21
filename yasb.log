@@ -1993,3 +1993,43 @@ KeyError: 'prev'
 2025-02-20 22:32:39 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
 2025-02-20 22:32:45 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
 2025-02-20 22:32:54 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:33:34 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:33:37 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:33:42 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:34:28 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:35:07 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:35:11 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:36:20 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:36:22 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:36:34 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:36:42 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:37:02 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:37:05 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:37:08 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:37:18 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:37:31 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:37:33 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:37:37 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:37:42 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:37:50 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:37:52 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:38:07 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:38:27 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:38:39 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:38:41 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:38:52 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:39:47 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:40:06 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:40:08 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:40:10 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:40:14 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:40:18 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:40:21 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:40:23 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:40:29 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:41:05 INFO log.py:21: Yasb v1.6.3
+2025-02-20 22:41:05 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 22:41:07 INFO log.py:21: Yasb v1.6.3
+2025-02-20 22:41:07 ERROR main.py:86: Another instance of the YASB is already running.
+2025-02-20 22:41:22 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.
+2025-02-20 22:41:26 INFO bar_manager.py:46: Successfully loaded updated stylesheet and applied to all bars.

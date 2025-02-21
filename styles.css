@@ -4,30 +4,15 @@ For more information about configuration options, please visit the Wiki
 https://github.com/amnweb/yasb/wiki
 */
 :root {
-  --mauve: #cba6f7;
-  --red: #f38ba8;
-  --yellow: #f9e2af;
-  --icon: #f8f8ff;
-  --lavender: #b4befe;
-  --subtext0: #a6adc8;
-  --overlay2: #9399b2;
-  --surface2: #585b70;
-  --surface0: #282936;
-  --base: #1e1e2e;
-  --text: white;
   --subtle: rgba(255, 255, 255, 90);
+  --hover_bg: rgba(255, 255, 255, 20);
   --main: #10151d;
-  --memory: #ff8080;
-}
+  --icon: #f8f8ff;
+  --surface0: #282936;
+  --ws_active: rgba(255, 255, 255, 35);
 
-/* Global styles for ToolTip */
-QToolTip {
-  padding: 6px;
-  color: #cdd6f4;
-  font-size: 12px;
-  background-color: #1e1e2e;
-  border: 0px solid #313244;
-  border-radius: 6px;
+  --surface2: #585b70;
+  --text: white;
 }
 
 /* this is for everything*/
@@ -67,32 +52,32 @@ QToolTip {
   margin-left: 0px;
 }
 .glazewm-workspaces {
-  border-top-right-radius: 14px;
-  border-bottom-right-radius: 14px;
+  /* border-top-right-radius: 14px; */
+  /* border-bottom-right-radius: 14px; */
   padding: 0 0 0 0;
 }
 .glazewm-workspaces .offline-status {
-  color: var(--surface2);
+  color: var(--subtle);
   font-size: 12px;
   padding: 0 0 0 0;
   font-weight: 6;
 }
 .glazewm-workspaces .ws-btn {
-  border: none;
-  margin: 0;
+  font-size: 12px;
   color: var(--icon);
-  padding: 3px 7px; /* background color fills the padding */
+  background-color: rgba(255, 255, 255, 0);
+  padding: 2.5px 7px; /* background color fills the padding */
   border-radius: 2px;
-  font-weight: 1;
+  font-weight: normal;
 }
 .glazewm-workspaces .ws-btn:hover {
-  background-color: rgba(255, 255, 255, 20);
+  background-color: var(--hover_bg);
 }
 /* inherits */
 .glazewm-workspaces .ws-btn.populated {
 }
 .glazewm-workspaces .ws-btn.active {
-  background-color: rgba(255, 255, 255, 35);
+  background-color: var(--ws_active);
 }
 
 /* MEMORY WIDGET */
@@ -146,7 +131,7 @@ QToolTip {
 }
 .media-widget .btn:hover {
   color: var(--text);
-  background-color: rgba(255, 255, 255, 20);
+  background-color: var(--hover_bg);
 }
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
@@ -293,4 +278,14 @@ QToolTip {
 /*   font-size: 18px; */
 /*   margin: 0 2px 1px 0; */
 /*   color: var(--yellow); */
+/* } */
+
+/* /* Global styles for ToolTip */
+/* QToolTip { */
+/*   padding: 6px; */
+/*   color: #cdd6f4; */
+/*   font-size: 12px; */
+/*   background-color: #1e1e2e; */
+/*   border: 0px solid #313244; */
+/*   border-radius: 6px; */
 /* } */
