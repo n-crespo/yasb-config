@@ -42,27 +42,31 @@ https://github.com/amnweb/yasb/wiki
 .glazewm-workspaces .widget-container {
 }
 .glazewm-workspaces {
-  margin-left: -4px;
+  margin-left: -5px;
 }
 .glazewm-workspaces .offline-status {
   color: var(--subtle);
 }
 .glazewm-workspaces .ws-btn {
-  height: 17;
-  color: var(--icon);
-  padding: 2.5px 8px; /* background color fills the padding */
+  /*     󰓇*/
+  /* height: 17; */
+  color: var(--subtle);
+  padding: 2.5px 7px; /* background color fills the padding */
   border-radius: 3px;
-  font-weight: 1000;
-  font-size: 12px;
+  font-weight: 500;
+  font-size: 13px;
+  width: 13;
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--hover_bg);
+  color: var(--icon);
 }
 /* inherits */
 .glazewm-workspaces .ws-btn.populated {
 }
 .glazewm-workspaces .ws-btn.active {
   background-color: var(--bg_active);
+  color: var(--icon);
 }
 
 /* MEDIA WIDGET (CENTER) */
