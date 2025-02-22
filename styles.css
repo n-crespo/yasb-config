@@ -65,6 +65,7 @@ https://github.com/amnweb/yasb/wiki
 .glazewm-workspaces .ws-btn.populated {
 }
 .glazewm-workspaces .ws-btn.active {
+  font-weight: 700;
   background-color: var(--bg_active);
   color: var(--icon);
 }
