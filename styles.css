@@ -12,6 +12,9 @@ https://github.com/amnweb/yasb/wiki
   --bg_active: rgba(255, 255, 255, 30);
   --blue: #84aff2;
   --green: #39c559;
+  --yellowgreen: #9acd32;
+  --yellow: #ffce08;
+  --red: #d7474b;
   --text: white;
 }
 
@@ -153,11 +156,16 @@ https://github.com/amnweb/yasb/wiki
   color: var(--icon);
 }
 
-.battery-widget .widget-container .icon.status-low {
-  color: red;
+.battery-widget .widget-container .icon.status-critical {
+  color: var(--red);
 }
+
+.battery-widget .widget-container .icon.status-low {
+  color: var(--yellow);
+}
+
 .battery-widget .widget-container .icon.status-medium {
-  color: yellowgreen;
+  color: var(--yellowgreen);
 }
 .battery-widget .widget-container .icon.status-high {
   color: var(--green);
@@ -167,7 +175,7 @@ https://github.com/amnweb/yasb/wiki
 }
 
 .battery-widget .widget-container .icon.status-charging {
-  color: #ffce08;
+  color: var(--yellow);
   font-size: 14px;
 }
 

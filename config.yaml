@@ -140,8 +140,20 @@ widgets:
     options:
       label: "<span>{icon}</span>{percent}%"
       label_alt: "{time_remaining}"
+      # time_remaining_natural: true # this seems to round down 😭
+      status_thresholds:
+        { critical: 10, low: 40, medium: 70, high: 80, full: 100 }
       charging_options:
-        icon_format: "󱐋"
+        icon_format: "{charging_icon}" # show only charging icon
+      status_icons:
+        {
+          icon_charging: "󱐋",
+          icon_critical: "",
+          icon_low: "",
+          icon_medium: "",
+          icon_high: "",
+          icon_full: "",
+        }
 
   clock:
     type: "yasb.clock.ClockWidget"
