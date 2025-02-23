@@ -139,7 +139,7 @@ https://github.com/amnweb/yasb/wiki
 .volume-slider::handle {
 }
 .audio-menu {
-  background-color: transparent;
+  /* background-color: transparent; */
 }
 .audio-container .device {
   border: none;
