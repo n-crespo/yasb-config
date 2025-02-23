@@ -145,9 +145,8 @@ widgets:
         { critical: 10, low: 40, medium: 70, high: 80, full: 100 }
       charging_options:
         icon_format: "{charging_icon}" # show only charging icon
-      status_icons:
-        {
-          icon_charging: "󱐋",
+      status_icons: {
+          # icon_charging: "󱐋",
           icon_critical: "",
           icon_low: "",
           icon_medium: "",
