@@ -50,7 +50,7 @@ bars:
 widgets:
   ############## LEFT ############
   glazewm_workspaces:
-    update_interval: 100
+    update_interval: 50
     type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
       offline_label: "GlazeWM Offline"
