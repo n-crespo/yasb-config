@@ -5,11 +5,11 @@ https://github.com/amnweb/yasb/wiki
 */
 :root {
   --subtle: rgba(255, 255, 255, 90);
-  --hover_bg: rgba(255, 255, 255, 20);
+  --bg_active: rgba(255, 255, 255, 40);
+  --bg_hover: rgba(255, 255, 255, 20);
+  --icon: rgba(255, 255, 255, 0.9);
   --main: #10151d;
-  --icon: #f8f8ff;
   --surface0: #282936;
-  --bg_active: rgba(255, 255, 255, 30);
   --blue: #84aff2;
   --green: #39c559;
   --yellowgreen: #9acd32;
@@ -58,11 +58,12 @@ https://github.com/amnweb/yasb/wiki
   width: 13;
 }
 .glazewm-workspaces .ws-btn:hover {
-  background-color: var(--hover_bg);
+  background-color: var(--bg_hover);
   color: var(--icon);
 }
-/* inherits */
+/* this is the inactive workspaces */
 .glazewm-workspaces .ws-btn.populated {
+  color: var(--icon);
 }
 .glazewm-workspaces .ws-btn.active {
   font-weight: 700;
@@ -90,7 +91,7 @@ https://github.com/amnweb/yasb/wiki
 }
 .media-widget .btn:hover {
   color: var(--text);
-  background-color: var(--hover_bg);
+  background-color: var(--bg_hover);
 }
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
@@ -111,7 +112,7 @@ https://github.com/amnweb/yasb/wiki
   border-radius: 3px;
 }
 .glazewm-tiling-direction .btn:hover {
-  background-color: var(--hover_bg);
+  background-color: var(--bg_hover);
 }
 
 /* WIFI WIDGET */
@@ -152,7 +153,7 @@ https://github.com/amnweb/yasb/wiki
   background-color: var(--bg_active);
 }
 .audio-container .device:hover {
-  background-color: var(--hover_bg);
+  background-color: var(--bg_hover);
 }
 
 /* BATTERY WIDGET */
