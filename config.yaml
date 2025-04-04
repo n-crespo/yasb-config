@@ -143,7 +143,7 @@ widgets:
       label_alt: "{time_remaining}"
       # time_remaining_natural: true # this seems to round down 😭
       status_thresholds:
-        { critical: 10, low: 40, medium: 70, high: 80, full: 100 }
+        { critical: 10, low: 20, medium: 70, high: 80, full: 100 }
       charging_options:
         icon_format: "{charging_icon}" # show only charging icon
       status_icons: {

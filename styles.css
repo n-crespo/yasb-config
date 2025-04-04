@@ -158,7 +158,9 @@ https://github.com/amnweb/yasb/wiki
 
 /* BATTERY WIDGET */
 .battery-widget .widget-container .icon {
+  font-size: 13px;
   padding-right: 1px;
+  padding-top: 1px;
   color: var(--icon);
 }
 
@@ -171,13 +173,13 @@ https://github.com/amnweb/yasb/wiki
 }
 
 .battery-widget .widget-container .icon.status-medium {
-  color: var(--yellowgreen);
+  color: white;
 }
 .battery-widget .widget-container .icon.status-high {
-  color: var(--green);
+  color: white;
 }
 .battery-widget .widget-container .icon.status-full {
-  color: var(--green);
+  color: white;
 }
 
 .battery-widget .widget-container .icon.status-charging {
