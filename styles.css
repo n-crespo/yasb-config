@@ -127,7 +127,7 @@ https://github.com/amnweb/yasb/wiki
 
 /* VOLUME WIDGET */
 .volume-widget .icon {
-  color: var(--blue);
+  color: white;
   font-size: 13px;
   padding-top: 2px;
   padding-right: 1px;
