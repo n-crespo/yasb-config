@@ -104,6 +104,65 @@ https://github.com/amnweb/yasb/wiki
   color: var(--subtle);
 }
 
+/* SYSTRAY WIDGET */
+.systray {
+  /* background: gray; */
+  border: None;
+  padding: 0px 4px;
+  /* padding-top: 1px; */
+  margin: 0;
+}
+
+.systray .unpinned-container {
+  padding: 0px;
+  background: black;
+  /* border-radius: 8px; */
+}
+
+.systray .pinned-container {
+  padding: 0px;
+  background: transparent;
+}
+
+.systray .pinned-container[forceshow="true"] {
+  background: blue;
+}
+
+.systray .button {
+  color: white;
+  border-radius: 4px;
+  padding: 0px 2px;
+}
+
+.systray .button:hover {
+  background: var(--hover);
+}
+
+.systray .button[dragging="true"] {
+  background: blue;
+  border-color: white;
+}
+
+.systray .unpinned-visibility-btn {
+  border-radius: 0px;
+  padding: 4px;
+  /* height: 0px; */
+  /* width: 0px; */
+  /* border-radius: 4px; */
+  /* height: 20px; */
+  /* width: 9; */
+}
+
+.systray .unpinned-visibility-btn:checked {
+  background: black;
+}
+
+.systray .unpinned-visibility-btn:hover {
+  /* border: 1px solid #aaaaaa; */
+  background-color: var(--bg_hover);
+  /* border-color: #aaaaaa; */
+}
+
 /* TILING DIRECTION WIDGET */
 .glazewm-tiling-direction .btn {
   color: var(--icon);
@@ -162,8 +221,8 @@ https://github.com/amnweb/yasb/wiki
 
 /* BATTERY WIDGET */
 .battery-widget .widget-container .icon {
-  font-size: 13px;
-  padding-right: 1px;
+  font-size: 10px;
+  padding-right: 0px;
   padding-top: 1px;
   color: var(--icon);
 }
@@ -188,7 +247,7 @@ https://github.com/amnweb/yasb/wiki
 
 .battery-widget .widget-container .icon.status-charging {
   color: var(--yellow);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* CLOCK WIDGET */
