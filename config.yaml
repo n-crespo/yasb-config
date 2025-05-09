@@ -37,9 +37,8 @@ bars:
       # removed: "microphone", "power_menu", "home", "active_window", "apps"
       left: ["glazewm_workspaces"]
       center: ["media"]
-      right:
-        [
-          "memory",
+      right: [
+          # "memory",
           "systray",
           "glazewm_tiling_direction",
           "wifi",
@@ -83,20 +82,20 @@ widgets:
         pause: "󰏤"
 
   ########## RIGHT ###########
-  memory:
-    type: "yasb.memory.MemoryWidget"
-    options:
-      # icon: ""
-      label: "{virtual_mem_used}"
-      label_alt: "{virtual_mem_free}"
-      update_interval: 5000
-      callbacks:
-        on_right: "do_nothing"
-        on_left: "exec cmd /c procexp"
-      memory_thresholds:
-        low: 25
-        medium: 50
-        high: 90
+  # memory:
+  # type: "yasb.memory.MemoryWidget"
+  # options:
+  #   # icon: ""
+  #   label: "{virtual_mem_used}"
+  #   label_alt: "{virtual_mem_free}"
+  #   update_interval: 5000
+  #   callbacks:
+  #     on_right: "do_nothing"
+  #     on_left: "exec cmd /c procexp"
+  #   memory_thresholds:
+  #     low: 25
+  #     medium: 50
+  #     high: 90
 
   systray:
     type: "yasb.systray.SystrayWidget"
