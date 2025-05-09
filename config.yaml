@@ -110,7 +110,7 @@ widgets:
       show_unpinned_button: true
       show_battery: true
       show_volume: false
-      show_network: false
+      show_network: true
       container_padding:
         left: 0
         top: 0
