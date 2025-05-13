@@ -13,7 +13,7 @@ bars:
       position: "top"
       center: true
     animation:
-      enabled: false
+      enabled: true
       duration: 1000
     blur_effect:
       enabled: false
@@ -39,8 +39,10 @@ bars:
       center: ["media"]
       right: [
           # "memory",
-          "systray",
           "glazewm_tiling_direction",
+          "bluetooth",
+          "systray",
+          "pomodoro",
           "wifi",
           "volume",
           "battery",
@@ -66,20 +68,36 @@ widgets:
       label: "{title} - {artist}"
       label_alt: "{title}"
       max_field_size:
-        label: 64
+        label: 25
         label_alt: 24
-      show_thumbnail: false
       controls_only: false
       controls_left: true
       hide_empty: true
-      thumbnail_alpha: 150
-      thumbnail_padding: 8
-      thumbnail_corner_radius: 0
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+      show_thumbnail: false
+      thumbnail_alpha: 100
+      thumbnail_padding: 0
+      thumbnail_corner_radius: 5
+      symmetric_corner_radius: true
+      thumbnail_edge_fade: true
+      media_menu_icons:
+        prev_track: "󰒮"
+        next_track: "󰒭"
+        play: "󰐊"
+        pause: "󰏤"
       icons:
         prev_track: "󰒮"
         next_track: "󰒭"
         play: "󰐊"
         pause: "󰏤"
+      callbacks:
+        on_left: "toggle_media_menu"
+        on_middle: "do_nothing"
+        on_right: "toggle_label"
 
   ########## RIGHT ###########
   # memory:
@@ -97,20 +115,47 @@ widgets:
   #     medium: 50
   #     high: 90
 
+  glazewm_tiling_direction:
+    type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
+    options:
+      horizontal_label: ""
+      vertical_label: ""
+
+  bluetooth:
+    type: "yasb.bluetooth.BluetoothWidget"
+    options:
+      tooltip: true
+      animation:
+        enabled: true
+        type: "fadeInOut"
+      label: "<span>{icon}</span>"
+      label_alt: "{device_name}"
+      icons:
+        bluetooth_on: ""
+        bluetooth_off: "󰂲"
+        bluetooth_connected: ""
+      callbacks:
+        on_right: "exec cmd.exe /c start ms-settings:bluetooth"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 1
+        offset: [0, 0]
+
   systray:
     type: "yasb.systray.SystrayWidget"
     options:
       class_name: "systray"
-      label_collapsed: ""
-      label_expanded: "󰍴"
+      label_collapsed: ""
+      label_expanded: ""
       label_position: "left" # Can be "left" or "right"
       icon_size: 14 # Can be any integer between 8 and 64
       pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
-      show_unpinned: false
-      show_unpinned_button: true
-      show_battery: true
+      show_unpinned: true
+      show_unpinned_button: false
+      show_battery: false
       show_volume: false
-      show_network: true
+      show_network: false
       container_padding:
         left: 0
         top: 0
@@ -119,17 +164,60 @@ widgets:
       btn_shadow:
         enabled: false
 
-  glazewm_tiling_direction:
-    type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
+  pomodoro:
+    type: "yasb.pomodoro.PomodoroWidget"
     options:
-      horizontal_label: ""
-      vertical_label: ""
+      # label: "<span>{icon}</span> {remaining} {session}/{total_sessions} - {status}"
+      label: "<span>{icon}</span> {remaining}"
+      label_alt: "🍅{remaining}"
+      work_duration: 25
+      break_duration: 5
+      long_break_duration: 15
+      long_break_interval: 4
+      auto_start_breaks: true
+      auto_start_work: false
+      sound_notification: true
+      show_notification: true
+      hide_on_break: false
+      session_target: 8
+      icons:
+        work: "🍅"
+        break: "🌴"
+        paused: "🛑"
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      menu:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        circle_background_color: "#09ffffff"
+        circle_work_progress_color: "#88c0d0"
+        circle_break_progress_color: "#a3be8c"
+        circle_thickness: 8
+        circle_size: 160
+      callbacks:
+        on_left: "toggle_menu"
+        on_middle: "reset_timer"
+        on_right: "toggle_label"
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
 
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
-      label: "{wifi_icon} {wifi_name}"
-      label_alt: "{wifi_icon}"
+      label: "{wifi_icon}"
+      label_alt: "<span>{wifi_icon}<span> {wifi_name}"
       update_interval: 5000
       wifi_icons:
         - "󰤯" # 0% strength (no wifi)
@@ -144,9 +232,12 @@ widgets:
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
+      mute_text: "0%"
+      animation:
+        enabled: true
       label: "<span>{icon}</span> {level}"
       label_alt: "{volume}"
-      tooltip: false
+      tooltip: true
       volume_icons:
         - "󰝟"
         - "󰕿"

@@ -4,10 +4,11 @@ For more information about configuration options, please visit the Wiki
 https://github.com/amnweb/yasb/wiki
 */
 :root {
-  --subtle: rgba(255, 255, 255, 90);
-  --bg_active: rgba(255, 255, 255, 40);
-  --bg_hover: rgba(255, 255, 255, 20);
+  --subtle: #585858;
+  --bg_active: rgba(255, 255, 255, 0.15);
+  --bg_hover: rgba(255, 255, 255, 0.1);
   --icon: rgba(255, 255, 255, 0.9);
+  --blur: rgba(31, 39, 49, 0.5);
   --blue: #84aff2;
   --green: #39c559;
   --yellowgreen: #9acd32;
@@ -26,10 +27,12 @@ https://github.com/amnweb/yasb/wiki
   padding: 0px 4px;
 }
 .yasb-bar {
-  padding: 0;
+  padding: 0px;
 }
 .icon {
+  color: var(--icon);
   font-size: 16px;
+  font-weight: 200;
 }
 .apps-widget .widget-container,
 .glazewm-workspaces .widget-container,
@@ -50,7 +53,7 @@ https://github.com/amnweb/yasb/wiki
   /* height: 17; */
   color: var(--subtle);
   padding: 2px 7px; /* background color fills the padding */
-  border-radius: 3px;
+  border-radius: 5px;
   height: 17px;
   font-weight: 600;
   font-size: 12.5px;
@@ -72,23 +75,32 @@ https://github.com/amnweb/yasb/wiki
 }
 
 /* MEDIA WIDGET (CENTER) */
+.media-widget {
+  /* border: 1px solid grey; */
+  /* padding: 0px; */
+  margin: 0px;
+  padding: 0px;
+}
 .media-widget .label {
-  /* i want it to look a bit different (smaller) */
   color: var(--subtle);
   font-size: 10px;
+  padding: 4px;
+  border-radius: 5px;
 }
 .media-widget .btn.prev,
 .media-widget .btn.next {
+  color: var(--subtle);
   /* this is to make the buttons invisible */
-  font-size: 1px;
-  padding: -1px;
+  /* font-size: 1px; */
+  /* padding: 0px; */
 }
 .media-widget .btn {
   color: var(--subtle);
-  border-radius: 3px;
-  font-size: 13px;
+  border-radius: 5px;
+  font-size: 15px;
   font-weight: 200;
 }
+.media-widget .label:hover,
 .media-widget .btn:hover {
   color: var(--text);
   background-color: var(--bg_hover);
@@ -97,87 +109,215 @@ https://github.com/amnweb/yasb/wiki
 .media-widget .btn.disabled {
 }
 
-/* RIGHT */
+/* MEDIA POPUP (CENTER)*/
+.media-menu {
+  min-width: 420px;
+  max-width: 420px;
+  background-color: var(--blur);
+}
+.media-menu .title,
+.media-menu .artist,
+.media-menu .source {
+  font-size: 14px;
+  font-weight: 600;
+  margin-left: 10px;
+  font-family: "Segoe UI", Tahoma, Verdana;
+}
+.media-menu .artist {
+  font-size: 13px;
+  color: var(--subtle);
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+.media-menu .source {
+  font-size: 11px;
+  color: #000;
+  font-weight: normal;
+  border-radius: 5px;
+  background-color: #bac2de;
+  padding: 2px 4px;
+}
+/* The source class name is the same as what you see in the media widget; just replace spaces with dashes and convert it to lowercase.
+Example: "Windows Media" becomes "windows-media" */
+.media-menu .source.firefox {
+  background-color: #ff583b;
+  color: #ffffff;
+}
+.media-menu .source.spotify {
+  background-color: #199143;
+  color: #ffffff;
+}
+.media-menu .source.edge {
+  background-color: #0078d4;
+  color: #ffffff;
+}
+.media-menu .source.windows-media {
+  background-color: #0078d4;
+  color: #ffffff;
+}
+.media-menu .btn {
+  font-family: "Segoe Fluent Icons";
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px 2px 0px 2px;
+  min-width: 40px;
+  max-width: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  border-radius: 10px;
+}
+.media-menu .btn.prev {
+  margin-left: 10px;
+}
+.media-menu .btn:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.media-menu .btn.play {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 20px;
+}
+.media-menu .btn.disabled:hover,
+.media-menu .btn.disabled {
+  color: var(--subtle);
+  background-color: black;
+}
+.media-menu .playback-time {
+  font-size: 13px;
+  font-family: "Segoe UI", Tahoma, Verdana;
+  color: var(--subtle);
+  margin-top: 20px;
+  min-width: 100px;
+}
+.media-menu .progress-slider {
+  height: 10px;
+  margin: 5px 4px;
+  border-radius: 3px;
+}
+.media-menu .progress-slider::groove {
+  background: transparent;
+  height: 2px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+}
+.media-menu .progress-slider::groove:hover {
+  background: transparent;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.media-menu .progress-slider::sub-page {
+  background: white;
+  border-radius: 3px;
+  height: 4px;
+}
+
+/************* RIGHT ***************/
 
 /* MEMORY WIDGET */
-.memory-widget .label {
+/* .memory-widget .label { */
+/* color: var(--subtle); */
+/* } */
+
+/* TILING DIRECTION WIDGET */
+.glazewm-tiling-direction .btn {
+  padding: 1px 4px;
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--icon);
+  border-radius: 5px;
+  margin-right: 0px;
+}
+.glazewm-tiling-direction .btn:hover {
+  background: var(--bg_hover);
+}
+
+/* BLUETOOTH WIDET  */
+.bluetooth-widget {
+  padding: 0px 4px;
+  border-radius: 4px;
+  margin-right: -4px;
+  margin-left: -4px;
+}
+.bluetooth-widget .label.alt {
+}
+.bluetooth-widget .icon {
+  padding: 2px;
+  padding-top: 0px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: var(--blue);
+}
+.bluetooth-widget .icon::hover {
+  background-color: var(--bg_hover);
+}
+.bluetooth-widget .widget-container {
   color: var(--subtle);
+}
+.bluetooth-widget .label {
+  color: var(--subtle);
+  font-size: 10px;
 }
 
 /* SYSTRAY WIDGET */
 .systray {
-  /* background: gray; */
-  border: None;
-  padding: 0px 4px;
-  /* padding-top: 1px; */
-  margin: 0;
-}
-
-.systray .unpinned-container {
+  background: transparent;
+  font-weight: 200;
   padding: 0px;
-  background: black;
-  /* border-radius: 8px; */
+  margin-left: -5px;
+  border-radius: 5px;
 }
-
+.systray .unpinned-container,
 .systray .pinned-container {
+  margin: 0px;
   padding: 0px;
   background: transparent;
 }
-
 .systray .pinned-container[forceshow="true"] {
   background: blue;
 }
-
 .systray .button {
+  margin: 0px;
   color: white;
   border-radius: 4px;
-  padding: 0px 2px;
+  padding: 2px;
 }
-
 .systray .button:hover {
-  background: var(--hover);
+  background-color: var(--bg_hover);
 }
-
 .systray .button[dragging="true"] {
   background: blue;
   border-color: white;
 }
-
 .systray .unpinned-visibility-btn {
+  backgroud: transparent;
+  color: var(--subtle);
   border-radius: 0px;
   padding: 4px;
-  /* height: 0px; */
-  /* width: 0px; */
-  /* border-radius: 4px; */
-  /* height: 20px; */
-  /* width: 9; */
 }
-
 .systray .unpinned-visibility-btn:checked {
-  background: black;
 }
-
-.systray .unpinned-visibility-btn:hover {
-  /* border: 1px solid #aaaaaa; */
+.systray .pinned-visibility-btn:hover {
   background-color: var(--bg_hover);
-  /* border-color: #aaaaaa; */
 }
 
-/* TILING DIRECTION WIDGET */
-.glazewm-tiling-direction .btn {
-  color: var(--icon);
-  margin-top: 1px;
+/* POMODORO WIDGET */
+.pomodoro-widget {
+}
+.pomodoro-widget .icon {
   font-size: 13px;
-  border-radius: 3px;
-}
-.glazewm-tiling-direction .btn:hover {
-  background-color: var(--bg_hover);
-}
+  padding-right: -3px;
+  padding-top: -1px;
+} /*Style for icon.*/
 
 /* WIFI WIDGET */
+.wifi-widget {
+}
+.wifi-widget .widget-container {
+}
 .wifi-widget .widget-container .label {
+  margin: -4px;
   color: var(--icon);
-  font-size: 11px;
 }
 .wifi-widget .widget-container .label.alt {
 }
@@ -185,26 +325,61 @@ https://github.com/amnweb/yasb/wiki
 }
 
 /* VOLUME WIDGET */
+.volume-widget {
+}
 .volume-widget .icon {
   color: white;
   font-size: 13px;
   /* padding-top: 0px; */
-  padding-right: 1px;
-  background-color: black;
+  padding-right: 0px;
 }
+/* AUDIO MENU POPUP */
 .volume-slider {
   border: none;
-  color: black;
+  height: 10px;
+  margin: 5px 4px;
+  border-radius: 3px;
+  background: transparent;
 }
+.volume-slider::sub-page {
+  background: white;
+  border-radius: 3px;
+  height: 4px;
+}
+
 .volume-slider::groove {
+  background: transparent;
+  height: 2px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer; /* Make it clear it's interactive */
+}
+.volume-slider::groove:hover {
+  background: transparent;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg_hover);
 }
 .volume-slider::handle {
-  color: white;
-  background-color: white;
 }
 .audio-menu {
-  background-color: black;
+  background-color: var(--blur);
 }
+.audio-container .device {
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.audio-container .device.selected {
+  background-color: var(--subtle);
+}
+.audio-container .device:hover {
+  background-color: var(--bg_hover);
+}
+/* DEVICE BUTTONS */
 .audio-container .device {
   border: none;
   padding: 6px 8px 6px 4px;
@@ -221,20 +396,15 @@ https://github.com/amnweb/yasb/wiki
 
 /* BATTERY WIDGET */
 .battery-widget .widget-container .icon {
-  font-size: 10px;
+  font-size: 13px;
   padding-right: 0px;
-  padding-top: 1px;
-  color: var(--icon);
 }
-
 .battery-widget .widget-container .icon.status-critical {
   color: var(--red);
 }
-
 .battery-widget .widget-container .icon.status-low {
   color: var(--yellow);
 }
-
 .battery-widget .widget-container .icon.status-medium {
   color: white;
 }
@@ -244,7 +414,6 @@ https://github.com/amnweb/yasb/wiki
 .battery-widget .widget-container .icon.status-full {
   color: white;
 }
-
 .battery-widget .widget-container .icon.status-charging {
   color: var(--yellow);
   font-size: 12px;
@@ -252,5 +421,6 @@ https://github.com/amnweb/yasb/wiki
 
 /* CLOCK WIDGET */
 .clock-widget {
-  padding-right: -4px;
+  padding-left: 0px;
+  padding-right: -5px;
 }
