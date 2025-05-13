@@ -131,29 +131,28 @@ https://github.com/amnweb/yasb/wiki
 }
 .media-menu .source {
   font-size: 11px;
-  color: #000;
+  font-weight: bold;
   font-weight: normal;
   border-radius: 5px;
-  background-color: #bac2de;
   padding: 2px 4px;
+  color: var(--icon);
 }
 /* The source class name is the same as what you see in the media widget; just replace spaces with dashes and convert it to lowercase.
 Example: "Windows Media" becomes "windows-media" */
 .media-menu .source.firefox {
   background-color: #ff583b;
-  color: #ffffff;
 }
 .media-menu .source.spotify {
   background-color: #199143;
-  color: #ffffff;
+  color: var(--icon);
 }
 .media-menu .source.edge {
   background-color: #0078d4;
-  color: #ffffff;
+  color: var(--icon);
 }
 .media-menu .source.windows-media {
   background-color: #0078d4;
-  color: #ffffff;
+  color: var(--icon);
 }
 .media-menu .btn {
   font-family: "Segoe Fluent Icons";
@@ -171,10 +170,10 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .media-menu .btn:hover {
   color: white;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bg_hover);
 }
 .media-menu .btn.play {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--bg_hover);
   font-size: 20px;
 }
 .media-menu .btn.disabled:hover,
@@ -198,13 +197,13 @@ Example: "Windows Media" becomes "windows-media" */
   background: transparent;
   height: 2px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg_hover);
 }
 .media-menu .progress-slider::groove:hover {
   background: transparent;
   height: 6px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--bg_hover);
 }
 .media-menu .progress-slider::sub-page {
   background: white;
@@ -351,7 +350,7 @@ Example: "Windows Media" becomes "windows-media" */
   background: transparent;
   height: 2px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--bg_hover);
   cursor: pointer; /* Make it clear it's interactive */
 }
 .volume-slider::groove:hover {
