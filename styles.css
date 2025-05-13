@@ -232,21 +232,21 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /* BLUETOOTH WIDET  */
-.bluetooth-widget {
-  padding: 0px 4px;
+.bluetooth-widget,
+.bluetooth-widget .label.alt {
   border-radius: 4px;
   margin-right: -4px;
-  margin-left: -4px;
+  margin-left: -5px;
 }
-.bluetooth-widget .label.alt {
-}
+.bluetooth-widget .label.alt,
 .bluetooth-widget .icon {
-  padding: 2px;
-  padding-top: 0px;
+  /* padding: 2px; */
+  padding-top: 1px;
   border-radius: 5px;
   font-weight: bold;
   color: var(--blue);
 }
+.bluetooth-widget .label::hover,
 .bluetooth-widget .icon::hover {
   background-color: var(--bg_hover);
 }
@@ -254,6 +254,8 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--subtle);
 }
 .bluetooth-widget .label {
+  padding: 2px;
+  border-radius: 5px;
   color: var(--subtle);
   font-size: 10px;
 }
