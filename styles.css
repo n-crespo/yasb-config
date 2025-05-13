@@ -10,6 +10,7 @@ https://github.com/amnweb/yasb/wiki
   --icon: rgba(255, 255, 255, 0.9);
   --blur: rgba(31, 39, 49, 0.5);
   --blue: #84aff2;
+  --black: #1e1e1e;
   --green: #39c559;
   --yellowgreen: #9acd32;
   --yellow: #ffce08;
@@ -219,13 +220,16 @@ Example: "Windows Media" becomes "windows-media" */
 /* } */
 
 /* TILING DIRECTION WIDGET */
+.glazewm-tiling-direction {
+  margin: -2px;
+}
 .glazewm-tiling-direction .btn {
+  padding: 0px 5px;
   font-size: 15px;
+  margin: 0px;
   font-weight: bold;
   color: var(--icon);
-  border-radius: 5px;
-  margin: 0px;
-  margin-right: -2px;
+  border-radius: 3px;
 }
 .glazewm-tiling-direction .btn:hover {
   background: var(--bg_hover);
@@ -234,19 +238,16 @@ Example: "Windows Media" becomes "windows-media" */
 /* BLUETOOTH WIDET  */
 .bluetooth-widget,
 .bluetooth-widget .label.alt {
-  /* border: 2px solid red; */
   border-radius: 4px;
   margin: 0px;
-  /* margin: -1px -4px; */
-  margin-right: -4px;
-  margin-left: -4px;
+  margin-right: 1px;
+  padding: 0px;
 }
 .bluetooth-widget .label.alt,
 .bluetooth-widget .icon {
-  margin: 0px;
-  border-radius: 5px;
-  font-weight: bold;
   color: var(--blue);
+  border-radius: 3px;
+  font-weight: bold;
   font-size: 15px;
 }
 .bluetooth-widget .label::hover,
@@ -258,7 +259,8 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--subtle);
 }
 .bluetooth-widget .label {
-  border-radius: 5px;
+  border-radius: 3px;
+  margin: 0px;
   color: var(--subtle);
   font-size: 10px;
 }
@@ -266,11 +268,21 @@ Example: "Windows Media" becomes "windows-media" */
 /* SYSTRAY WIDGET */
 .systray {
   background: transparent;
-  font-weight: 200;
   padding: 0px;
-  margin-left: -5px;
-  border-radius: 5px;
+  margin: 0px;
 }
+.systray .button {
+  margin: 0px;
+  background: transparent;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.systray .unpinned-container:hover,
+.systray .pinned-container:hover {
+  /* background: var(--bg_hover); */
+}
+
 .systray .unpinned-container,
 .systray .pinned-container {
   margin: 0px;
@@ -278,43 +290,41 @@ Example: "Windows Media" becomes "windows-media" */
   background: transparent;
 }
 .systray .pinned-container[forceshow="true"] {
-  background: blue;
-}
-.systray .button {
-  margin: 0px;
-  color: white;
-  border-radius: 4px;
-  padding: 2px;
+  background-color: blue;
 }
 .systray .button:hover {
-  background-color: var(--bg_hover);
+  background: var(--bg_hover);
 }
 .systray .button[dragging="true"] {
-  background: blue;
-  border-color: white;
+  background-color: blue;
 }
+/* COLLAPSE/UNCOLLAPSE BUTTON */
 .systray .unpinned-visibility-btn {
-  backgroud: transparent;
+  backgroud-color: transparent;
   color: var(--subtle);
-  border-radius: 0px;
-  padding: 4px;
+  /* border-radius: 5px; */
 }
 .systray .unpinned-visibility-btn:checked {
 }
+.systray .unpinned-visibility-btn:hover,
 .systray .pinned-visibility-btn:hover {
-  background-color: var(--bg_hover);
+  background: var(--bg_hover);
 }
 
 /* POMODORO WIDGET */
 .pomodoro-widget {
-  /* border-radius: 5px; */
-  /* padding: 2px; */
+  border-radius: 5px;
+  margin: 0px 4px;
+  background: transparent;
+  padding: 0px;
 }
 .pomodoro-widget:hover {
-  border-radius: 5px;
-  padding: 2px;
-  background-color: var(--bg_hover);
-  color: var(--icon);
+  background: var(--bg_hover);
+  /* color: var(--icon); */
+}
+.pomodoro-widget:pressed {
+  background-color: transparent;
+  appearance: none;
 }
 .pomodoro-widget .icon {
   font-size: 13px;
@@ -363,9 +373,10 @@ Example: "Windows Media" becomes "windows-media" */
   border-radius: 4px;
   padding: 6px 12px;
 }
-.pomodoro-menu .button.start {
+.pomodoro-menu .button.start,
+.pomodoro-menu .button.start:hover {
   background-color: var(--yellowgreen);
-  color: #1e1e1e;
+  color: var(--black);
 }
 .pomodoro-menu .button.reset {
   background-color: var(--bg_active);
@@ -376,10 +387,12 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .pomodoro-menu .button.pause {
   background-color: var(--red);
-  color: #1e1e1e;
+  color: var(--black);
 }
+.pomodoro-menu .button.start:pressed,
 .pomodoro-menu .button:pressed {
   background-color: var(--bg_hover);
+  color: var(--black);
 }
 
 /* WIFI WIDGET */
@@ -509,4 +522,10 @@ Example: "Windows Media" becomes "windows-media" */
 .clock-widget {
   padding-left: 0px;
   padding-right: -5px;
+}
+
+.clock-widget:hover {
+  border-radius: 5px;
+  background-color: var(--bg_hover);
+  color: var(--icon);
 }
