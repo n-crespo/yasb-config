@@ -307,6 +307,14 @@ Example: "Windows Media" becomes "windows-media" */
 
 /* POMODORO WIDGET */
 .pomodoro-widget {
+  /* border-radius: 5px; */
+  /* padding: 2px; */
+}
+.pomodoro-widget:hover {
+  border-radius: 5px;
+  padding: 2px;
+  background-color: var(--bg_hover);
+  color: var(--icon);
 }
 .pomodoro-widget .icon {
   font-size: 13px;
@@ -356,13 +364,15 @@ Example: "Windows Media" becomes "windows-media" */
   padding: 6px 12px;
 }
 .pomodoro-menu .button.start {
-  background-color: var(--bg_active);
+  background-color: var(--yellowgreen);
+  color: #1e1e1e;
 }
 .pomodoro-menu .button.reset {
   background-color: var(--bg_active);
 }
 .pomodoro-menu .button:hover {
   background-color: var(--bg_hover);
+  color: var(--blue);
 }
 .pomodoro-menu .button.pause {
   background-color: var(--red);
@@ -373,9 +383,13 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /* WIFI WIDGET */
-.wifi-widget {
+.wifi-widget:hover {
+  border-radius: 5px;
+  padding: 2px;
+  background-color: var(--bg_hover);
+  color: var(--icon);
 }
-.wifi-widget .widget-container {
+.wifi-widget .widget-container:hover {
 }
 .wifi-widget .widget-container .label {
   margin: -4px;
@@ -387,7 +401,11 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /* VOLUME WIDGET */
-.volume-widget {
+.volume-widget:hover {
+  border-radius: 5px;
+  padding: 2px;
+  background-color: var(--bg_hover);
+  color: var(--icon);
 }
 .volume-widget .icon {
   color: white;
@@ -456,6 +474,13 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /* BATTERY WIDGET */
+
+.battery-widget .widget-container:hover {
+  border-radius: 5px;
+  padding: 2px;
+  background-color: var(--bg_hover);
+  color: var(--icon);
+}
 .battery-widget .widget-container .icon {
   font-size: 13px;
   padding-right: 0px;

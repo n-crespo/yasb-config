@@ -169,7 +169,7 @@ widgets:
     options:
       # label: "<span>{icon}</span> {remaining} {session}/{total_sessions} - {status}"
       label: "<span>{icon}</span> {remaining}"
-      label_alt: "🍅{remaining}"
+      label_alt: "{remaining}"
       work_duration: 25
       break_duration: 5
       long_break_duration: 15
@@ -199,8 +199,8 @@ widgets:
         offset_top: 6
         offset_left: 0
         circle_background_color: "#09ffffff"
-        circle_work_progress_color: "#88c0d0"
-        circle_break_progress_color: "#a3be8c"
+        circle_work_progress_color: "#9acd32"
+        circle_break_progress_color: "#ffce08"
         circle_thickness: 8
         circle_size: 160
       callbacks:
