@@ -312,18 +312,15 @@ Example: "Windows Media" becomes "windows-media" */
   font-size: 13px;
   padding-right: -3px;
   padding-top: -1px;
-} /*Style for icon.*/
-
+}
 .pomodoro-widget .label.paused {
   color: var(--red);
 }
-
 /* .pomodoro-widget .icon.work, */
 /* .pomodoro-widget .icon.break, */
 .pomodoro-widget .icon.paused {
   margin-top: 2px;
 }
-
 .pomodoro-widget .label.work {
   color: var(--yellowgreen);
 }
@@ -414,14 +411,13 @@ Example: "Windows Media" becomes "windows-media" */
 
 .volume-slider::groove {
   background: transparent;
-  height: 2px;
+  height: 6px;
   border-radius: 3px;
   background: var(--bg_hover);
   cursor: pointer; /* Make it clear it's interactive */
 }
 .volume-slider::groove:hover {
   background: transparent;
-  height: 6px;
   border-radius: 3px;
   background: var(--bg_hover);
 }
