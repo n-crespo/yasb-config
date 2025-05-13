@@ -131,7 +131,7 @@ widgets:
       label: "<span>{icon}</span>"
       label_alt: "{device_name}"
       icons:
-        bluetooth_on: ""
+        bluetooth_on: ""
         bluetooth_off: "󰂲"
         bluetooth_connected: ""
       callbacks:
@@ -182,7 +182,7 @@ widgets:
       session_target: 8
       icons:
         work: "🍅"
-        break: "🌴"
+        break: "🏖️"
         paused: "🛑"
       container_padding:
         top: 0

@@ -220,12 +220,12 @@ Example: "Windows Media" becomes "windows-media" */
 
 /* TILING DIRECTION WIDGET */
 .glazewm-tiling-direction .btn {
-  padding: 1px 4px;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: bold;
   color: var(--icon);
   border-radius: 5px;
-  margin-right: 0px;
+  margin: 0px;
+  margin-right: -2px;
 }
 .glazewm-tiling-direction .btn:hover {
   background: var(--bg_hover);
@@ -234,27 +234,30 @@ Example: "Windows Media" becomes "windows-media" */
 /* BLUETOOTH WIDET  */
 .bluetooth-widget,
 .bluetooth-widget .label.alt {
+  /* border: 2px solid red; */
   border-radius: 4px;
+  margin: 0px;
+  /* margin: -1px -4px; */
   margin-right: -4px;
-  margin-left: -5px;
+  margin-left: -4px;
 }
 .bluetooth-widget .label.alt,
 .bluetooth-widget .icon {
-  /* padding: 2px; */
-  padding-top: 1px;
+  margin: 0px;
   border-radius: 5px;
   font-weight: bold;
   color: var(--blue);
+  font-size: 15px;
 }
 .bluetooth-widget .label::hover,
 .bluetooth-widget .icon::hover {
   background-color: var(--bg_hover);
 }
 .bluetooth-widget .widget-container {
+  margin: 0px;
   color: var(--subtle);
 }
 .bluetooth-widget .label {
-  padding: 2px;
   border-radius: 5px;
   color: var(--subtle);
   font-size: 10px;
@@ -310,6 +313,67 @@ Example: "Windows Media" becomes "windows-media" */
   padding-right: -3px;
   padding-top: -1px;
 } /*Style for icon.*/
+
+.pomodoro-widget .label.paused {
+  color: var(--red);
+}
+
+/* .pomodoro-widget .icon.work, */
+/* .pomodoro-widget .icon.break, */
+.pomodoro-widget .icon.paused {
+  margin-top: 2px;
+}
+
+.pomodoro-widget .label.work {
+  color: var(--yellowgreen);
+}
+.pomodoro-widget .label.break,
+.pomodoro-widget .icon.break {
+  color: var(--yellow);
+}
+/* Pomodoro menu styling */
+.pomodoro-menu {
+  background-color: var(--blur);
+  border-radius: 8px;
+}
+.pomodoro-menu .header {
+  font-size: 16px;
+  font-weight: 600;
+  max-height: 0px;
+  color: var(--icon);
+}
+.pomodoro-menu .status {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blue);
+}
+.pomodoro-menu .session {
+  font-size: 12px;
+  color: var(--blue);
+}
+.pomodoro-menu .button {
+  background-color: var(--bg_active);
+  color: var(--blue);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+.pomodoro-menu .button.start {
+  background-color: var(--bg_active);
+}
+.pomodoro-menu .button.reset {
+  background-color: var(--bg_active);
+}
+.pomodoro-menu .button:hover {
+  background-color: var(--bg_hover);
+}
+.pomodoro-menu .button.pause {
+  background-color: var(--red);
+  color: #1e1e1e;
+}
+.pomodoro-menu .button:pressed {
+  background-color: var(--bg_hover);
+}
 
 /* WIFI WIDGET */
 .wifi-widget {
