@@ -39,9 +39,10 @@ bars:
       center: ["media"]
       right: [
           # "memory",
+          "notifications",
+          "systray",
           "glazewm_tiling_direction",
           "bluetooth",
-          "systray",
           "wifi",
           "pomodoro",
           "volume",
@@ -115,6 +116,50 @@ widgets:
   #     medium: 50
   #     high: 90
 
+  notifications:
+    type: "yasb.notifications.NotificationsWidget"
+    options:
+      label: "{count}"
+      label_alt: "{count} notifications"
+      hide_empty: true
+      tooltip: true
+      callbacks:
+        on_left: "toggle_notification"
+        on_right: "toggle_label"
+        on_middle: "toggle_label"
+      container_padding:
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+      label_shadow:
+        enabled: false
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: ""
+      label_expanded: ""
+      label_position: "left" # Can be "left" or "right"
+      icon_size: 14 # Can be any integer between 8 and 64
+      pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
+      show_unpinned: true
+      show_unpinned_button: false
+      show_battery: false
+      show_volume: false
+      show_network: false
+      container_padding:
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+      btn_shadow:
+        enabled: false
+
   glazewm_tiling_direction:
     type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
     options:
@@ -141,28 +186,6 @@ widgets:
         color: "black"
         radius: 1
         offset: [0, 0]
-
-  systray:
-    type: "yasb.systray.SystrayWidget"
-    options:
-      class_name: "systray"
-      label_collapsed: ""
-      label_expanded: ""
-      label_position: "left" # Can be "left" or "right"
-      icon_size: 14 # Can be any integer between 8 and 64
-      pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
-      show_unpinned: true
-      show_unpinned_button: false
-      show_battery: false
-      show_volume: false
-      show_network: false
-      container_padding:
-        left: 0
-        top: 0
-        right: 0
-        bottom: 0
-      btn_shadow:
-        enabled: false
 
   pomodoro:
     type: "yasb.pomodoro.PomodoroWidget"
