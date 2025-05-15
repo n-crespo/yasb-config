@@ -351,7 +351,7 @@ Example: "Windows Media" becomes "windows-media" */
 .wifi-widget .widget-container:hover {
 }
 .wifi-widget .widget-container .label {
-  margin: -4px;
+  margin-left: -4px;
   font-size: 14px;
   color: var(--text);
 }
