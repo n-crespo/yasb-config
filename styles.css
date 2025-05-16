@@ -19,14 +19,14 @@ https://github.com/amnweb/yasb/wiki
 
 /* this is for everything */
 * {
-  border-radius: 3px;
-  font-size: 12px;
-  color: white;
-  font-weight: 600;
   /* font-family: "Microsoft Sans Serif", "JetBrainsMono NFP"; */
   font-family: "JetBrainsMono NFP";
-  margin: 0;
+  border-radius: 3px;
+  font-weight: 600;
   padding: 0px 4px;
+  font-size: 12px;
+  color: white;
+  margin: 0;
 }
 .yasb-bar {
   padding: 0px;
@@ -41,7 +41,6 @@ https://github.com/amnweb/yasb/wiki
 .glazewm-workspaces .widget-container,
 .widget-container {
 }
-
 /* GLAZEWM WIDGET (LEFT) */
 .glazewm-workspaces .widget-container {
   /* font-size: 12px; */
@@ -58,8 +57,6 @@ https://github.com/amnweb/yasb/wiki
   border-radius: 3px;
   margin-right: 2px;
   font-size: 13px;
-  /*     󰓇*/
-  /* height: 17; */
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--bg_hover);
@@ -69,13 +66,11 @@ https://github.com/amnweb/yasb/wiki
 .glazewm-workspaces .ws-btn.populated {
   color: var(--text);
 }
-
-/*active and populated*/
+/* active and populated */
 .glazewm-workspaces .ws-btn.active_populated {
   background-color: var(--bg_active);
   color: var(--text);
 }
-
 .glazewm-workspaces .ws-btn.active_empty {
   background-color: var(--bg_active);
   color: var(--subtle);
