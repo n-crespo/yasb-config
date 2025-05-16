@@ -119,9 +119,9 @@ widgets:
   notifications:
     type: "yasb.notifications.NotificationsWidget"
     options:
-      label: "{count}"
+      label: "<span></span>"
       label_alt: "{count} notifications"
-      hide_empty: true
+      hide_empty: false
       tooltip: true
       callbacks:
         on_left: "toggle_notification"

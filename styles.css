@@ -225,29 +225,30 @@ Example: "Windows Media" becomes "windows-media" */
 .notification-widget {
   padding: 0px;
   margin: 0px;
-  color: var(--text);
+  /* color: var(--subtle); */
 }
 .notification-widget .widget-container {
-  background-color: rgba(17, 17, 27, 0.75);
-  color: var(--text);
   margin: 0px;
   border-radius: 3px;
-  /* border: 1px solid #45475a; */
+}
+.notification-widget .widget-container:hover {
+  background-color: var(--bg_hover);
+  /* color: var(--blue); */
 }
 .notification-widget .icon {
   padding: 0px;
   margin: 0px;
-  color: var(--blue);
   font-size: 12px;
+  color: var(--subtle);
+  /* color: var(--blue); */
 }
 .notification-widget .icon.new-notification {
   margin: 0px;
-  color: var(--blue);
+  /* color: var(--blue); */
 }
 .notification-widget .label.new-notification {
   margin: 0px;
-  color: var(--text);
-  color: var(--blue);
+  /* color: var(--blue); */
 }
 
 /* SYSTRAY WIDGET */
