@@ -244,7 +244,7 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .notification-widget .icon.new-notification {
   margin: 0px;
-  /* color: var(--blue); */
+  color: var(--blue);
 }
 .notification-widget .label.new-notification {
   margin: 0px;
