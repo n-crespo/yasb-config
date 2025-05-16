@@ -41,6 +41,8 @@ https://github.com/amnweb/yasb/wiki
 .glazewm-workspaces .widget-container,
 .widget-container {
 }
+
+/************* LEFT ************/
 /* GLAZEWM WIDGET (LEFT) */
 .glazewm-workspaces .widget-container {
   /* font-size: 12px; */
@@ -214,12 +216,12 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /************* RIGHT ***************/
-
 /* MEMORY WIDGET */
 /* .memory-widget .label { */
 /* color: var(--subtle); */
 /* } */
 
+/* NOTIFICATION WIDGET  */
 .notification-widget {
   padding: 0px;
   margin: 0px;
@@ -465,7 +467,6 @@ Example: "Windows Media" becomes "windows-media" */
   border-radius: 3px;
   height: 4px;
 }
-
 .volume-slider::groove {
   background: transparent;
   height: 6px;
@@ -513,7 +514,6 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /* BATTERY WIDGET */
-
 .battery-widget .widget-container:hover {
   border-radius: 3px;
   padding: 2px;
@@ -550,6 +550,7 @@ Example: "Windows Media" becomes "windows-media" */
   padding-right: -5px;
 }
 
+/* CALENDAR POPUP  */
 .calendar .calendar-table::item:hover,
 .clock-widget:hover {
   border-radius: 3px;
