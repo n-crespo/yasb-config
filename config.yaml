@@ -121,7 +121,7 @@ widgets:
     options:
       label: "<span></span>"
       label_alt: "{count} notifications"
-      hide_empty: false
+      hide_empty: true
       tooltip: true
       callbacks:
         on_left: "toggle_notification"
