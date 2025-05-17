@@ -38,13 +38,16 @@ bars:
       left: ["glazewm_workspaces"]
       center: ["media"]
       right: [
+          # my fake systray icons:
           # "memory",
           "notifications",
           "systray",
           "glazewm_tiling_direction",
           "bluetooth",
           "wifi",
-          "pomodoro",
+          # "pomodoro",
+
+          # other widgets
           "volume",
           "battery",
           "clock",
