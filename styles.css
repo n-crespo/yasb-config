@@ -520,8 +520,9 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--text);
 }
 .battery-widget .widget-container .icon {
-  font-size: 13px;
-  padding-right: 0px;
+  padding: 0px;
+  font-size: 14px;
+  margin-right: 0px;
 }
 .battery-widget .widget-container .icon.status-critical {
   color: var(--red);
