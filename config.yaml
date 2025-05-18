@@ -40,10 +40,10 @@ bars:
       right: [
           # my fake systray icons:
           # "memory",
-          "notifications",
+          "bluetooth",
+          # "notifications",
           "systray",
           "glazewm_tiling_direction",
-          "bluetooth",
           "wifi",
           # "pomodoro",
 
@@ -179,7 +179,7 @@ widgets:
       label: "<span>{icon}</span>"
       label_alt: "{device_name}"
       icons:
-        bluetooth_on: ""
+        bluetooth_on: ""
         bluetooth_off: "󰂲"
         bluetooth_connected: ""
       callbacks:

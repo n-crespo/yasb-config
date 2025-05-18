@@ -319,13 +319,13 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--subtle);
   font-size: 10px;
   border-radius: 3px;
-  padding: 0px 0px;
-  margin: 0px 1px;
+  padding: 0px 2px;
+  margin: 0px 0px;
 }
 .bluetooth-widget .icon {
   border-radius: 3px;
-  color: var(--blue);
   padding: 0px 2px;
+  color: var(--blue);
   font-weight: bold;
   font-size: 15px;
   margin: 0px 0px;
@@ -337,19 +337,17 @@ Example: "Windows Media" becomes "windows-media" */
 
 /* WIFI WIDGET */
 .wifi-widget {
+  padding: 0px 0px;
   margin: 0px;
-  padding: 0px 2px;
 }
 .wifi-widget:hover {
   border-radius: 3px;
-  padding: 0px;
   background-color: var(--bg_hover);
   color: var(--text);
 }
 .wifi-widget .widget-container:hover {
 }
 .wifi-widget .widget-container .label {
-  margin-left: -4px;
   font-size: 14px;
   color: var(--text);
 }
