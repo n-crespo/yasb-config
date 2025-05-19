@@ -212,7 +212,7 @@ Example: "Windows Media" becomes "windows-media" */
 /* MEMORY WIDGET */
 
 .memory-widget {
-  margin-right: 8px;
+  margin: 0px 8px;
 }
 .memory-widget .widget-container {
 }
@@ -312,6 +312,8 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /* BLUETOOTH WIDET  */
+.bluetooth-widget {
+}
 .bluetooth-widget,
 .bluetooth-widget .label,
 .bluetooth-widget .widget-container,
@@ -425,7 +427,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 /* VOLUME WIDGET */
 .volume-widget {
-  margin: 0px 5px;
+  margin: 0px 8px;
   padding: 0px 3px;
 }
 .volume-widget:hover {
@@ -484,7 +486,7 @@ Example: "Windows Media" becomes "windows-media" */
 /* BATTERY WIDGET */
 .battery-widget {
   padding: 0px 3px;
-  margin-right: 5px;
+  margin-right: 8px;
 }
 .battery-widget:hover {
   background-color: var(--bg_hover);

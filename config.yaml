@@ -72,8 +72,8 @@ widgets:
       label: "{title} - {artist}"
       label_alt: "{title}"
       max_field_size:
-        label: 25
-        label_alt: 24
+        label: 40
+        label_alt: 25
       controls_only: false
       controls_left: true
       hide_empty: true
