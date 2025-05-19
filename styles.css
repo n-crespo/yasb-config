@@ -20,13 +20,16 @@ https://github.com/amnweb/yasb/wiki
 /* this is for everything */
 * {
   /* font-family: "Microsoft Sans Serif", "JetBrainsMono NFP"; */
+  appearance: none;
   font-family: "JetBrainsMono NFP";
   border-radius: 3px;
   font-weight: 600;
-  padding: 0px 4px;
   font-size: 12px;
   color: white;
-  margin: 0;
+  margin: 0px;
+}
+*:hover {
+  cursor: pointer;
 }
 .yasb-bar {
   padding: 0px;
@@ -34,8 +37,13 @@ https://github.com/amnweb/yasb/wiki
 .icon {
   color: var(--text);
   font-size: 16px;
-  font-weight: 200;
   border-radius: 3px;
+}
+.container-right,
+.container-center,
+.container-left {
+  padding: 0px;
+  margin: 0px;
 }
 .apps-widget .widget-container,
 .glazewm-workspaces .widget-container,
@@ -44,11 +52,10 @@ https://github.com/amnweb/yasb/wiki
 
 /************* LEFT ************/
 /* GLAZEWM WIDGET (LEFT) */
+.glazewm-workspaces,
 .glazewm-workspaces .widget-container {
-  /* font-size: 12px; */
 }
 .glazewm-workspaces {
-  margin-left: -5px;
 }
 .glazewm-workspaces .offline-status {
   color: var(--subtle);
@@ -56,15 +63,12 @@ https://github.com/amnweb/yasb/wiki
 .glazewm-workspaces .ws-btn {
   color: var(--subtle);
   padding: 2px 7px; /* background color fills the padding */
-  border-radius: 3px;
-  margin-right: 2px;
-  font-size: 13px;
+  margin-right: 1px; /* needed */
+  font-size: 13px; /* make it a bit bigger */
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--bg_hover);
-  /* font-size: 12px; */
 }
-/* inactive workspaces */
 .glazewm-workspaces .ws-btn.populated {
   color: var(--text);
 }
@@ -73,6 +77,7 @@ https://github.com/amnweb/yasb/wiki
   background-color: var(--bg_active);
   color: var(--text);
 }
+/* empty workspaces */
 .glazewm-workspaces .ws-btn.active_empty {
   background-color: var(--bg_active);
   color: var(--subtle);
@@ -80,27 +85,16 @@ https://github.com/amnweb/yasb/wiki
 
 /* MEDIA WIDGET (CENTER) */
 .media-widget {
-  /* border: 1px solid grey; */
-  /* padding: 0px; */
-  margin: 0px;
-  padding: 0px;
 }
 .media-widget .label {
   color: var(--subtle);
   font-size: 10px;
-  padding: 4px;
-  border-radius: 3px;
-}
-.media-widget .btn.prev,
-.media-widget .btn.next {
-  color: var(--subtle);
-  /* this is to make the buttons invisible */
-  /* font-size: 1px; */
-  /* padding: 0px; */
+  margin-left: 5px;
+  padding: 0px 5px;
 }
 .media-widget .btn {
   color: var(--subtle);
-  border-radius: 2px;
+  padding: 0px 5px;
   font-size: 15px;
   font-weight: 200;
 }
@@ -111,6 +105,9 @@ https://github.com/amnweb/yasb/wiki
 }
 .media-widget .btn.disabled:hover,
 .media-widget .btn.disabled {
+}
+.media-widget .btn.prev,
+.media-widget .btn.next {
 }
 
 /* MEDIA POPUP (CENTER)*/
@@ -135,11 +132,7 @@ https://github.com/amnweb/yasb/wiki
 }
 .media-menu .source {
   font-size: 11px;
-  font-weight: bold;
-  font-weight: normal;
-  border-radius: 2px;
   padding: 2px 4px;
-  color: var(--text);
 }
 /* The source class name is the same as what you see in the media widget; just replace spaces with dashes and convert it to lowercase.
 Example: "Windows Media" becomes "windows-media" */
@@ -217,19 +210,40 @@ Example: "Windows Media" becomes "windows-media" */
 
 /************* RIGHT ***************/
 /* MEMORY WIDGET */
-/* .memory-widget .label { */
-/* color: var(--subtle); */
+
+.memory-widget {
+  margin-right: 8px;
+}
+.memory-widget .widget-container {
+}
+.memory-widget:hover {
+  background-color: var(--bg_hover);
+}
+.memory-widget .label {
+  padding: 0px 3px;
+  color: var(--subtle);
+}
+/* .memory-widget .label.status-low { */
+/*   color: var(--green); */
+/* } */
+/* .memory-widget .label.status-medium { */
+/*   color: var(--green); */
+/* } */
+/* .memory-widget .label.status-high { */
+/*   color: var(--yellow); */
+/* } */
+/* .memory-widget .label.status-critical { */
+/*   color: var(--red); */
 /* } */
 
-/* NOTIFICATION WIDGET  */
+/* NOTIFICATION WIDGET (unused)  */
 .notification-widget {
-  padding: 0px;
-  margin: 0px;
+  /* padding: 0px; */
+  /* margin: 0px; */
   /* color: var(--subtle); */
 }
 .notification-widget .widget-container {
   margin: 0px;
-  border-radius: 3px;
 }
 .notification-widget .widget-container:hover {
   background-color: var(--bg_hover);
@@ -252,39 +266,29 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /* SYSTRAY WIDGET */
-.systray {
-  background: transparent;
-  padding: 0px;
-  margin: 0px;
+.systray .widget-container {
+  padding: auto 3px;
+  /* background: transparent; */
+  /* padding: 0px; */
+  /* margin: 0px; */
 }
 .systray .button {
-  margin: 0px 0px;
   background: transparent;
-  padding: 5px 0px;
-  border-radius: 3px;
-}
-.systray .unpinned-container:hover,
-.systray .pinned-container:hover {
-  /* background: var(--bg_hover); */
+  padding: auto 0px;
 }
 .systray .unpinned-container,
 .systray .pinned-container {
-  margin: 0px;
   padding: 0px;
-  background: transparent;
 }
 .systray .pinned-container[forceshow="true"] {
-  background-color: blue;
 }
 .systray .button[dragging="true"] {
-  background-color: blue;
 }
 .systray .button:hover {
   background: var(--bg_hover);
 }
 .systray .unpinned-visibility-btn:hover,
 .systray .pinned-visibility-btn:hover {
-  background: var(--bg_hover);
 }
 /* COLLAPSE/UNCOLLAPSE BUTTON */
 .systray .unpinned-visibility-btn {
@@ -293,19 +297,15 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .systray .unpinned-visibility-btn:checked {
 }
+
 /* TILING DIRECTION WIDGET */
 .glazewm-tiling-direction {
-  padding: 0px;
-  margin: 0px;
 }
 .glazewm-tiling-direction .btn {
-  /* padding: 0px 1px; */
-  font-size: 15px;
+  font-size: 13px;
   margin: 0px 0px;
-  padding: 2px 4px;
+  padding: 2px 5px;
   font-weight: bold;
-  color: var(--text);
-  border-radius: 3px;
 }
 .glazewm-tiling-direction .btn:hover {
   background: var(--bg_hover);
@@ -318,47 +318,32 @@ Example: "Windows Media" becomes "windows-media" */
 .bluetooth-widget .label.alt {
   color: var(--subtle);
   font-size: 10px;
-  border-radius: 3px;
-  padding: 0px 2px;
-  margin: 0px 0px;
+  /* padding: 0px 2px; */
+  /* margin: 0px 0px; */
 }
-.bluetooth-widget .icon {
-  border-radius: 3px;
-  padding: 0px 2px;
-  color: var(--blue);
-  font-weight: bold;
-  font-size: 15px;
-  margin: 0px 0px;
-}
-.bluetooth-widget .label::hover,
-.bluetooth-widget .icon::hover {
+.bluetooth-widget:hover {
   background-color: var(--bg_hover);
+}
+.bluetooth-widget .label,
+.bluetooth-widget .icon {
+  padding: 0px 3px;
+  color: var(--blue);
+  font-size: 15px;
 }
 
 /* WIFI WIDGET */
 .wifi-widget {
-  padding: 0px 0px;
-  margin: 0px;
+  padding: 0px 3px;
 }
 .wifi-widget:hover {
-  border-radius: 3px;
   background-color: var(--bg_hover);
-  color: var(--text);
-}
-.wifi-widget .widget-container:hover {
 }
 .wifi-widget .widget-container .label {
-  font-size: 14px;
-  color: var(--text);
-}
-.wifi-widget .widget-container .label.alt {
-}
-.wifi-widget .widget-container .icon {
+  font-size: 12px;
 }
 
-/* POMODORO WIDGET */
+/* POMODORO WIDGET (unused) */
 .pomodoro-widget {
-  border-radius: 3px;
   margin: 0px 4px;
   background: transparent;
   padding: 0px;
@@ -394,7 +379,6 @@ Example: "Windows Media" becomes "windows-media" */
 /* Pomodoro menu styling */
 .pomodoro-menu {
   background-color: var(--blur);
-  border-radius: 3px;
 }
 .pomodoro-menu .header {
   font-size: 16px;
@@ -415,7 +399,6 @@ Example: "Windows Media" becomes "windows-media" */
   background-color: var(--bg_active);
   color: var(--blue);
   border: none;
-  border-radius: 3px;
   padding: 6px 12px;
 }
 .pomodoro-menu .button.start,
@@ -441,17 +424,19 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /* VOLUME WIDGET */
+.volume-widget {
+  margin: 0px 5px;
+  padding: 0px 3px;
+}
 .volume-widget:hover {
-  border-radius: 3px;
-  padding: 2px;
+  /* padding: 0px 2px; */
   background-color: var(--bg_hover);
   color: var(--text);
 }
 .volume-widget .icon {
   color: white;
   font-size: 13px;
-  /* padding-top: 0px; */
-  padding-right: 0px;
+  margin-right: 2px;
 }
 /* AUDIO MENU POPUP */
 .volume-slider {
@@ -462,12 +447,11 @@ Example: "Windows Media" becomes "windows-media" */
   background: transparent;
 }
 .volume-slider::sub-page {
-  background: white;
+  background: var(--text);
   border-radius: 3px;
   height: 4px;
 }
 .volume-slider::groove {
-  background: transparent;
   height: 6px;
   border-radius: 3px;
   background: var(--bg_hover);
@@ -475,7 +459,6 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .volume-slider::groove:hover {
   background: transparent;
-  border-radius: 3px;
   background: var(--bg_hover);
 }
 .volume-slider::handle {
@@ -485,44 +468,35 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .audio-container .device {
   background-color: transparent;
-  border: none;
   padding: 6px 8px 6px 4px;
   margin: 2px 0;
-  font-size: 12px;
-  border-radius: 3px;
-}
-.audio-container .device.selected {
-  background-color: var(--subtle);
-}
-.audio-container .device:hover {
-  background-color: var(--bg_hover);
-}
-/* DEVICE BUTTONS */
-.audio-container .device {
-  border: none;
-  padding: 6px 8px 6px 4px;
-  margin: 2px 0;
-  font-size: 12px;
-  border-radius: 3px;
+  color: var(--subtle);
 }
 .audio-container .device.selected {
   background-color: var(--bg_active);
+  color: var(--text);
 }
 .audio-container .device:hover {
+  color: var(--text);
   background-color: var(--bg_hover);
 }
 
 /* BATTERY WIDGET */
-.battery-widget .widget-container:hover {
-  border-radius: 3px;
-  padding: 2px;
+.battery-widget {
+  padding: 0px 3px;
+  margin-right: 5px;
+}
+.battery-widget:hover {
   background-color: var(--bg_hover);
   color: var(--text);
 }
 .battery-widget .widget-container .icon {
-  padding: 0px;
   font-size: 14px;
-  margin-right: 0px;
+  margin-right: 2px;
+}
+.battery-widget .widget-container .icon.status-charging {
+  color: var(--yellow);
+  font-size: 12px;
 }
 .battery-widget .widget-container .icon.status-critical {
   color: var(--red);
@@ -539,21 +513,14 @@ Example: "Windows Media" becomes "windows-media" */
 .battery-widget .widget-container .icon.status-full {
   color: white;
 }
-.battery-widget .widget-container .icon.status-charging {
-  color: var(--yellow);
-  font-size: 12px;
-}
 
 /* CLOCK WIDGET */
 .clock-widget {
-  padding-left: 0px;
-  padding-right: -5px;
+  padding: 0px 3px;
 }
-
 /* CALENDAR POPUP  */
 .calendar .calendar-table::item:hover,
 .clock-widget:hover {
-  border-radius: 3px;
   background-color: var(--bg_hover);
   color: var(--text);
 }
@@ -562,6 +529,7 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .calendar .calendar-table,
 .calendar .calendar-table::item {
+  border-radius: 3px;
   background-color: rgba(17, 17, 27, 0);
   color: var(--subtle);
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;

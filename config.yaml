@@ -39,7 +39,7 @@ bars:
       center: ["media"]
       right: [
           # my fake systray icons:
-          # "memory",
+          "memory",
           "bluetooth",
           # "notifications",
           "systray",
@@ -103,21 +103,25 @@ widgets:
         on_middle: "do_nothing"
         on_right: "toggle_label"
 
-  ########## RIGHT ###########
-  # memory:
-  # type: "yasb.memory.MemoryWidget"
-  # options:
-  #   # icon: ""
-  #   label: "{virtual_mem_used}"
-  #   label_alt: "{virtual_mem_free}"
-  #   update_interval: 5000
-  #   callbacks:
-  #     on_right: "do_nothing"
-  #     on_left: "exec cmd /c procexp"
-  #   memory_thresholds:
-  #     low: 25
-  #     medium: 50
-  #     high: 90
+  ######### RIGHT ###########
+  memory:
+    type: "yasb.memory.MemoryWidget"
+    options:
+      # icon: ""
+      label: "{virtual_mem_used}"
+      label_alt: "{virtual_mem_total}"
+      update_interval: 5000
+      animation:
+        enabled: true
+        type: "fadeInOut"
+        duration: 200
+      callbacks:
+        on_right: "toggle_label"
+        on_left: "toggle_label"
+      memory_thresholds:
+        low: 25
+        medium: 50
+        high: 90
 
   notifications:
     type: "yasb.notifications.NotificationsWidget"
