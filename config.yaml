@@ -40,7 +40,6 @@ bars:
       right: [
           # my fake systray icons:
           "memory",
-          "bluetooth",
           # "notifications",
           "systray",
           "glazewm_tiling_direction",
@@ -49,6 +48,7 @@ bars:
 
           # other widgets
           "volume",
+          "bluetooth",
           "battery",
           "clock",
         ]
@@ -149,13 +149,13 @@ widgets:
     type: "yasb.systray.SystrayWidget"
     options:
       class_name: "systray"
-      label_collapsed: ""
-      label_expanded: ""
+      label_collapsed: ""
+      label_expanded: ""
       label_position: "left" # Can be "left" or "right"
       icon_size: 14 # Can be any integer between 8 and 64
       pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
-      show_unpinned: true
-      show_unpinned_button: false
+      show_unpinned: false
+      show_unpinned_button: true
       show_battery: false
       show_volume: false
       show_network: false
