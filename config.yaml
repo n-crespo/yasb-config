@@ -185,7 +185,7 @@ widgets:
       icons:
         bluetooth_on: ""
         bluetooth_off: "󰂲"
-        bluetooth_connected: ""
+        bluetooth_connected: "󰥰"
       callbacks:
         on_right: "exec cmd.exe /c start ms-settings:bluetooth"
       label_shadow:

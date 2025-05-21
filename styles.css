@@ -325,19 +325,16 @@ Example: "Windows Media" becomes "windows-media" */
 .bluetooth-widget .label.alt {
   color: var(--subtle);
   font-size: 10px;
-  /* padding: 0px 2px; */
-  /* margin: 0px 0px; */
+  padding: 0px 2px;
 }
 .bluetooth-widget:hover {
   background-color: var(--bg_hover);
 }
-.bluetooth-widget .label,
 .bluetooth-widget .icon {
-  margin-top: 1px;
-  padding: 0px 3px;
   color: var(--blue);
   font-weight: normal;
-  font-size: 15px;
+  margin-top: -3px;
+  font-size: 22px;
 }
 
 /* WIFI WIDGET */
