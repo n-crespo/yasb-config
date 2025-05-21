@@ -308,6 +308,7 @@ Example: "Windows Media" becomes "windows-media" */
 .glazewm-tiling-direction .btn {
   font-size: 13px;
   margin: 0px 0px;
+  margin-top: 1px;
   padding: 2px 5px;
   font-weight: bold;
 }
@@ -333,8 +334,8 @@ Example: "Windows Media" becomes "windows-media" */
 .bluetooth-widget .icon {
   color: var(--blue);
   font-weight: normal;
-  margin-top: -3px;
-  font-size: 22px;
+  margin-top: 1px;
+  font-size: 13px;
 }
 
 /* WIFI WIDGET */
