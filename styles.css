@@ -156,6 +156,7 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--text);
 }
 .media-menu .btn {
+  background-color: var(--bg_active);
   font-family: "Segoe Fluent Icons";
   font-size: 14px;
   font-weight: 400;
@@ -174,13 +175,13 @@ Example: "Windows Media" becomes "windows-media" */
   background-color: var(--bg_hover);
 }
 .media-menu .btn.play {
-  background-color: var(--bg_hover);
   font-size: 20px;
 }
 .media-menu .btn.disabled:hover,
 .media-menu .btn.disabled {
+  cursor: default;
+  background-color: none;
   color: var(--subtle);
-  background-color: black;
 }
 .media-menu .playback-time {
   font-size: 13px;
