@@ -183,8 +183,8 @@ widgets:
       label: "<span>{icon}</span>"
       label_alt: "{device_name}"
       icons:
-        bluetooth_on: ""
-        bluetooth_off: "󰂲"
+        bluetooth_on: ""
+        bluetooth_off: ""
         bluetooth_connected: ""
       callbacks:
         on_right: "exec cmd.exe /c start ms-settings:bluetooth"
