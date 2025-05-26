@@ -70,7 +70,7 @@ widgets:
     type: "yasb.media.MediaWidget"
     options:
       label: "{title} - {artist}"
-      label_alt: " "
+      label_alt: ""
       max_field_size:
         label: 40
         label_alt: 25
@@ -79,9 +79,6 @@ widgets:
       hide_empty: true
       label_shadow:
         enabled: false
-        color: "black"
-        radius: 3
-        offset: [1, 1]
       show_thumbnail: false
       thumbnail_alpha: 100
       thumbnail_padding: 0
