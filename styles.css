@@ -1,5 +1,4 @@
 /*
-This is default and very simple styles file for Yasb.
 For more information about configuration options, please visit the Wiki
 https://github.com/amnweb/yasb/wiki
 */
@@ -54,7 +53,7 @@ https://github.com/amnweb/yasb/wiki
 .widget-container {
 }
 
-/************* LEFT ************/
+/* ***************** LEFT ********************** /
 /* GLAZEWM WIDGET (LEFT) */
 .glazewm-workspaces,
 .glazewm-workspaces .widget-container {
@@ -71,6 +70,7 @@ https://github.com/amnweb/yasb/wiki
   font-size: 13px; /* make it a bit bigger */
 }
 .glazewm-workspaces .ws-btn:hover {
+  /* cursor: pointer; */
   background-color: var(--bg_hover);
 }
 .glazewm-workspaces .ws-btn.populated {
@@ -87,7 +87,8 @@ https://github.com/amnweb/yasb/wiki
   color: var(--subtle);
 }
 
-/* MEDIA WIDGET (CENTER) */
+/* ***************** CENTER *****************  */
+/* MEDIA WIDGET */
 .media-widget {
 }
 .media-widget .label {
@@ -113,7 +114,6 @@ https://github.com/amnweb/yasb/wiki
 .media-widget .btn.prev,
 .media-widget .btn.next {
 }
-
 /* MEDIA POPUP (CENTER)*/
 .media-menu {
   min-width: 420px;
@@ -214,8 +214,8 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 /************* RIGHT ***************/
-/* MEMORY WIDGET */
 
+/* MEMORY WIDGET */
 .memory-widget {
   margin: 0px 8px;
 }
@@ -229,61 +229,19 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--subtle);
 }
 /* .memory-widget .label.status-low { */
-/*   color: var(--green); */
-/* } */
 /* .memory-widget .label.status-medium { */
-/*   color: var(--green); */
-/* } */
 /* .memory-widget .label.status-high { */
-/*   color: var(--yellow); */
-/* } */
 /* .memory-widget .label.status-critical { */
-/*   color: var(--red); */
-/* } */
-
-/* NOTIFICATION WIDGET (unused)  */
-.notification-widget {
-  /* padding: 0px; */
-  /* margin: 0px; */
-  /* color: var(--subtle); */
-}
-.notification-widget .widget-container {
-  margin: 0px;
-}
-.notification-widget .widget-container:hover {
-  background-color: var(--bg_hover);
-  /* color: var(--blue); */
-}
-.notification-widget .icon {
-  padding: 0px;
-  margin: 0px;
-  font-size: 12px;
-  color: var(--subtle);
-  /* color: var(--blue); */
-}
-.notification-widget .icon.new-notification {
-  margin: 0px;
-  color: var(--blue);
-}
-.notification-widget .label.new-notification {
-  margin: 0px;
-  /* color: var(--blue); */
-}
 
 /* SYSTRAY WIDGET */
 .systray .widget-container {
   padding: auto 3px;
-  /* background: transparent; */
-  /* padding: 0px; */
-  /* margin: 0px; */
 }
 .systray .button {
-  background: transparent;
   padding: auto 0px;
 }
 .systray .unpinned-container,
 .systray .pinned-container {
-  padding: 0px;
 }
 .systray .pinned-container[forceshow="true"] {
 }
@@ -293,6 +251,7 @@ Example: "Windows Media" becomes "windows-media" */
 .systray .pinned-visibility-btn:hover,
 .systray .button:hover {
   background: var(--bg_hover);
+  color: var(--text);
 }
 /* COLLAPSE/UNCOLLAPSE BUTTON */
 .systray .unpinned-visibility-btn {
@@ -349,88 +308,6 @@ Example: "Windows Media" becomes "windows-media" */
 .wifi-widget .widget-container .label {
   font-size: 12px;
 }
-
-/* POMODORO WIDGET (unused) */
-.pomodoro-widget {
-  margin: 0px 4px;
-  background: transparent;
-  padding: 0px;
-}
-.pomodoro-widget:hover {
-  background: var(--bg_hover);
-  /* color: var(--text); */
-}
-.pomodoro-widget:pressed {
-  background-color: transparent;
-  appearance: none;
-}
-.pomodoro-widget .icon {
-  font-size: 13px;
-  padding-right: -3px;
-  padding-top: -1px;
-}
-.pomodoro-widget .label.paused {
-  color: var(--red);
-}
-/* .pomodoro-widget .icon.work, */
-/* .pomodoro-widget .icon.break, */
-.pomodoro-widget .icon.paused {
-  margin-top: 2px;
-}
-.pomodoro-widget .label.work {
-  color: var(--yellowgreen);
-}
-.pomodoro-widget .label.break,
-.pomodoro-widget .icon.break {
-  color: var(--yellow);
-}
-/* Pomodoro menu styling */
-.pomodoro-menu {
-  background-color: var(--blur);
-}
-.pomodoro-menu .header {
-  font-size: 16px;
-  font-weight: 600;
-  max-height: 0px;
-  color: var(--text);
-}
-.pomodoro-menu .status {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--blue);
-}
-.pomodoro-menu .session {
-  font-size: 12px;
-  color: var(--blue);
-}
-.pomodoro-menu .button {
-  background-color: var(--bg_active);
-  color: var(--blue);
-  border: none;
-  padding: 6px 12px;
-}
-.pomodoro-menu .button.start,
-.pomodoro-menu .button.start:hover {
-  background-color: var(--yellowgreen);
-  color: var(--black);
-}
-.pomodoro-menu .button.reset {
-  background-color: var(--bg_active);
-}
-.pomodoro-menu .button:hover {
-  background-color: var(--bg_hover);
-  color: var(--blue);
-}
-.pomodoro-menu .button.pause {
-  background-color: var(--red);
-  color: var(--black);
-}
-.pomodoro-menu .button.start:pressed,
-.pomodoro-menu .button:pressed {
-  background-color: var(--bg_hover);
-  color: var(--black);
-}
-
 /* VOLUME WIDGET */
 .volume-widget {
   margin-left: 8px;
@@ -572,3 +449,115 @@ Example: "Windows Media" becomes "windows-media" */
   font-weight: 900;
   margin-top: -20px;
 }
+
+/* ================= UNUSED =================  */
+
+/* POMODORO WIDGET (unused) */
+/* .pomodoro-widget { */
+/*   margin: 0px 4px; */
+/*   background: transparent; */
+/*   padding: 0px; */
+/* } */
+/* .pomodoro-widget:hover { */
+/*   background: var(--bg_hover); */
+/*   /* color: var(--text); */
+/* } */
+/* .pomodoro-widget:pressed { */
+/*   background-color: transparent; */
+/*   appearance: none; */
+/* } */
+/* .pomodoro-widget .icon { */
+/*   font-size: 13px; */
+/*   padding-right: -3px; */
+/*   padding-top: -1px; */
+/* } */
+/* .pomodoro-widget .label.paused { */
+/*   color: var(--red); */
+/* } */
+/* /* .pomodoro-widget .icon.work, */
+/* /* .pomodoro-widget .icon.break, */
+/* .pomodoro-widget .icon.paused { */
+/*   margin-top: 2px; */
+/* } */
+/* .pomodoro-widget .label.work { */
+/*   color: var(--yellowgreen); */
+/* } */
+/* .pomodoro-widget .label.break, */
+/* .pomodoro-widget .icon.break { */
+/*   color: var(--yellow); */
+/* } */
+/* /* Pomodoro menu styling */
+/* .pomodoro-menu { */
+/*   background-color: var(--blur); */
+/* } */
+/* .pomodoro-menu .header { */
+/*   font-size: 16px; */
+/*   font-weight: 600; */
+/*   max-height: 0px; */
+/*   color: var(--text); */
+/* } */
+/* .pomodoro-menu .status { */
+/*   font-size: 18px; */
+/*   font-weight: 600; */
+/*   color: var(--blue); */
+/* } */
+/* .pomodoro-menu .session { */
+/*   font-size: 12px; */
+/*   color: var(--blue); */
+/* } */
+/* .pomodoro-menu .button { */
+/*   background-color: var(--bg_active); */
+/*   color: var(--blue); */
+/*   border: none; */
+/*   padding: 6px 12px; */
+/* } */
+/* .pomodoro-menu .button.start, */
+/* .pomodoro-menu .button.start:hover { */
+/*   background-color: var(--yellowgreen); */
+/*   color: var(--black); */
+/* } */
+/* .pomodoro-menu .button.reset { */
+/*   background-color: var(--bg_active); */
+/* } */
+/* .pomodoro-menu .button:hover { */
+/*   background-color: var(--bg_hover); */
+/*   color: var(--blue); */
+/* } */
+/* .pomodoro-menu .button.pause { */
+/*   background-color: var(--red); */
+/*   color: var(--black); */
+/* } */
+/* .pomodoro-menu .button.start:pressed, */
+/* .pomodoro-menu .button:pressed { */
+/*   background-color: var(--bg_hover); */
+/*   color: var(--black); */
+/* } */
+
+/* /* NOTIFICATION WIDGET (unused)  */
+/* .notification-widget { */
+/*   /* padding: 0px; */
+/*   /* margin: 0px; */
+/*   /* color: var(--subtle); */
+/* } */
+/* .notification-widget .widget-container { */
+/*   margin: 0px; */
+/* } */
+/* .notification-widget .widget-container:hover { */
+/*   background-color: var(--bg_hover); */
+/*   /* color: var(--blue); */
+/* } */
+/* .notification-widget .icon { */
+/*   padding: 0px; */
+/*   margin: 0px; */
+/*   font-size: 12px; */
+/*   color: var(--subtle); */
+/*   /* color: var(--blue); */
+/* } */
+/* .notification-widget .icon.new-notification { */
+/*   margin: 0px; */
+/*   color: var(--blue); */
+/* } */
+/* .notification-widget .label.new-notification { */
+/*   margin: 0px; */
+/*   /* color: var(--blue); */
+/* } */
