@@ -20,10 +20,12 @@ https://github.com/amnweb/yasb/wiki
 * {
   /* font-family: "Microsoft Sans Serif", "JetBrainsMono NFP"; */
   appearance: none;
-  font-family: "JetBrainsMono NFP";
+  font-family: "Arimo Nerd Font Propo";
+  /* font-family: "Segoe UI", Tahoma, Verdana, sans-serif; */
   border-radius: 3px;
   font-weight: 600;
-  font-size: 12px;
+  font-size: 13px;
+  letter-spacing: 0.3px;
   color: white;
   margin: 0px;
   border: none;
@@ -67,7 +69,7 @@ https://github.com/amnweb/yasb/wiki
   color: var(--subtle);
   padding: 2px 7px; /* background color fills the padding */
   margin-right: 1px; /* needed */
-  font-size: 13px; /* make it a bit bigger */
+  font-size: 14px; /* make it a bit bigger */
 }
 .glazewm-workspaces .ws-btn:hover {
   /* cursor: pointer; */
@@ -142,6 +144,9 @@ https://github.com/amnweb/yasb/wiki
 Example: "Windows Media" becomes "windows-media" */
 .media-menu .source.firefox {
   background-color: #ff583b;
+}
+.media-menu .source.zen {
+  background-color: var(--bg_active);
 }
 .media-menu .source.spotify {
   background-color: #199143;
