@@ -67,8 +67,7 @@ https://github.com/amnweb/yasb/wiki
 }
 .glazewm-workspaces .ws-btn {
   color: var(--subtle);
-  padding: 2px 7px; /* background color fills the padding */
-  margin-right: 1px; /* needed */
+  padding: 3px 7px; /* background color fills the padding */
   font-size: 14px; /* make it a bit bigger */
 }
 .glazewm-workspaces .ws-btn:hover {
@@ -161,9 +160,9 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--text);
 }
 .media-menu .btn {
-  background-color: var(--bg_active);
+  /* background-color: var(--subtle); */
   font-family: "Segoe Fluent Icons";
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 400;
   margin: 10px 2px 0px 2px;
   min-width: 40px;
