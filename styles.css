@@ -95,7 +95,7 @@ https://github.com/amnweb/yasb/wiki
 }
 .media-widget .label {
   color: var(--subtle);
-  font-size: 10px;
+  font-size: 11px;
   margin-left: 5px;
   padding: 0px 5px;
 }
@@ -261,7 +261,7 @@ Example: "Windows Media" becomes "windows-media" */
 /* COLLAPSE/UNCOLLAPSE BUTTON */
 .systray .unpinned-visibility-btn {
   padding: 5px 3px;
-  backgroud-color: transparent;
+  background-color: transparent;
   color: var(--subtle);
 }
 .systray .unpinned-visibility-btn:checked {
@@ -275,7 +275,6 @@ Example: "Windows Media" becomes "windows-media" */
   margin: 0px 0px;
   margin-top: 1px;
   padding: 2px 5px;
-  font-weight: bold;
 }
 .glazewm-tiling-direction .btn:hover {
   background: var(--bg_hover);
