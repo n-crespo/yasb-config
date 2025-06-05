@@ -18,10 +18,9 @@ https://github.com/amnweb/yasb/wiki
 
 /* this is for everything */
 * {
-  /* font-family: "Microsoft Sans Serif", "JetBrainsMono NFP"; */
   appearance: none;
-  font-family: "Arimo Nerd Font Propo";
-  /* font-family: "Segoe UI", Tahoma, Verdana, sans-serif; */
+  font-family: "Microsoft Sans Serif", "Arimo Nerd Font Propo";
+  /* "Segoe UI" "Arimo Nerd Font Propo" "JetBrainsMono NFP"; */
   border-radius: 3px;
   font-weight: 600;
   font-size: 13px;
@@ -272,7 +271,7 @@ Example: "Windows Media" becomes "windows-media" */
 .glazewm-tiling-direction .btn {
   font-size: 13px;
   margin: 0px 0px;
-  margin-top: 1px;
+  /* margin-top: 1px; */
   padding: 2px 5px;
 }
 .glazewm-tiling-direction .btn:hover {
@@ -298,7 +297,7 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--blue);
   font-weight: normal;
   margin-top: 1px;
-  font-size: 13px;
+  font-size: 12px;
 }
 
 /* WIFI WIDGET */
@@ -379,7 +378,7 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--text);
 }
 .battery-widget .widget-container .icon {
-  font-size: 14px;
+  font-size: 15px;
   margin-right: 2px;
 }
 .battery-widget .widget-container .icon.status-charging {
@@ -420,7 +419,7 @@ Example: "Windows Media" becomes "windows-media" */
   border-radius: 3px;
   background-color: rgba(17, 17, 27, 0);
   color: var(--subtle);
-  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-family: "Microsoft Sans Serif", "Segoe UI", Tahoma, Verdana, sans-serif;
   margin: 0;
   padding: 0;
   border: none;
