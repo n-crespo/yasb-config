@@ -18,6 +18,7 @@ https://github.com/amnweb/yasb/wiki
 
 /* this is for everything */
 * {
+  background: black;
   appearance: none;
   font-family: "Microsoft Sans Serif", "Arimo Nerd Font Propo";
   /* "Segoe UI" "Arimo Nerd Font Propo" "JetBrainsMono NFP"; */

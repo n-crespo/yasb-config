@@ -20,8 +20,8 @@ bars:
       acrylic: false
       dark_mode: true
       round_corners: false
-      round_corners_type: "normal"
-      border_color: "System"
+      # round_corners_type: "small"
+      # border_color: "#00000000"
     window_flags:
       always_on_top: false
       windows_app_bar: true
