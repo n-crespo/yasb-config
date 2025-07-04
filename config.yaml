@@ -105,8 +105,9 @@ widgets:
     type: "yasb.memory.MemoryWidget"
     options:
       # icon: ""
-      label: "{virtual_mem_used}"
-      label_alt: "{virtual_mem_total}"
+      label: "󰫢"
+      label_alt: "{virtual_mem_used}"
+      # label_alt: "{virtual_mem_total}"
       update_interval: 5000
       animation:
         enabled: true
@@ -116,8 +117,8 @@ widgets:
         on_right: "toggle_label"
         on_left: "toggle_label"
       memory_thresholds:
-        low: 25
-        medium: 50
+        low: 50
+        medium: 81
         high: 90
 
   notifications:
