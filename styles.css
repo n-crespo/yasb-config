@@ -19,7 +19,7 @@ https://github.com/amnweb/yasb/wiki
 /* this is for everything */
 * {
   appearance: none;
-  font-family: "Microsoft Sans Serif", "Arimo Nerd Font Propo";
+  font-family: "Aptos", "Symbols Nerd Font";
   /* "Segoe UI" "Arimo Nerd Font Propo" "JetBrainsMono NFP"; */
   border-radius: 3px;
   font-weight: 600;
@@ -68,7 +68,7 @@ https://github.com/amnweb/yasb/wiki
 .glazewm-workspaces .ws-btn {
   color: var(--subtle);
   padding: 3px 7px; /* background color fills the padding */
-  font-size: 14px; /* make it a bit bigger */
+  /* font-size: 14px; /* make it a bit bigger */
 }
 .glazewm-workspaces .ws-btn:hover {
   /* cursor: pointer; */
@@ -222,7 +222,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 /* MEMORY WIDGET */
 .memory-widget {
-  margin: 0px 8px;
+  margin: 0px 5px;
 }
 .memory-widget .widget-container {
 }
@@ -230,13 +230,22 @@ Example: "Windows Media" becomes "windows-media" */
   background-color: var(--bg_hover);
 }
 .memory-widget .label {
+  font-size: 12px;
   padding: 0px 3px;
   color: var(--subtle);
 }
-/* .memory-widget .label.status-low { */
-/* .memory-widget .label.status-medium { */
-/* .memory-widget .label.status-high { */
-/* .memory-widget .label.status-critical { */
+.memory-widget .label.status-low {
+  color: var(--subtle);
+}
+.memory-widget .label.status-medium {
+  color: var(--subtle);
+}
+.memory-widget .label.status-high {
+  color: var(--yellow);
+}
+.memory-widget .label.status-critical {
+  color: var(--red);
+}
 
 /* SYSTRAY WIDGET */
 .systray .widget-container {
@@ -274,7 +283,7 @@ Example: "Windows Media" becomes "windows-media" */
   font-size: 13px;
   margin: 0px 0px;
   /* margin-top: 1px; */
-  padding: 2px 5px;
+  padding: 2px 3px;
 }
 .glazewm-tiling-direction .btn:hover {
   background: var(--bg_hover);
@@ -304,7 +313,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 /* WIFI WIDGET */
 .wifi-widget {
-  padding: 0px 3px;
+  padding: 0px 2px;
 }
 .wifi-widget:hover {
   background-color: var(--bg_hover);
