@@ -280,7 +280,7 @@ Example: "Windows Media" becomes "windows-media" */
 .glazewm-tiling-direction {
 }
 .glazewm-tiling-direction .btn {
-  font-size: 13px;
+  font-size: 14px;
   margin: 0px 0px;
   /* margin-top: 1px; */
   padding: 2px 3px;
@@ -291,6 +291,7 @@ Example: "Windows Media" becomes "windows-media" */
 
 /* BLUETOOTH WIDET  */
 .bluetooth-widget {
+  margin-top: 1px;
   margin-right: 8px;
 }
 .bluetooth-widget,
@@ -299,7 +300,7 @@ Example: "Windows Media" becomes "windows-media" */
 .bluetooth-widget .label.alt {
   color: var(--subtle);
   font-size: 10px;
-  padding: 0px 2px;
+  padding: 0px 0px;
 }
 .bluetooth-widget:hover {
   background-color: var(--bg_hover);
@@ -314,6 +315,7 @@ Example: "Windows Media" becomes "windows-media" */
 /* WIFI WIDGET */
 .wifi-widget {
   padding: 0px 2px;
+  margin-bottom: 1px;
 }
 .wifi-widget:hover {
   background-color: var(--bg_hover);
@@ -324,7 +326,7 @@ Example: "Windows Media" becomes "windows-media" */
 /* VOLUME WIDGET */
 .volume-widget {
   margin-left: 8px;
-  padding: 0px 3px;
+  padding: 0px 2px;
 }
 .volume-widget:hover {
   /* padding: 0px 2px; */
@@ -389,12 +391,12 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--text);
 }
 .battery-widget .widget-container .icon {
-  font-size: 15px;
+  font-size: 12px;
   margin-right: 2px;
 }
 .battery-widget .widget-container .icon.status-charging {
   color: var(--yellow);
-  font-size: 12px;
+  font-size: 14px;
 }
 .battery-widget .widget-container .icon.status-critical {
   color: var(--red);
