@@ -145,6 +145,9 @@ Example: "Windows Media" becomes "windows-media" */
 .media-menu .source.firefox {
   background-color: #ff583b;
 }
+.media-menu .source.brave {
+  background-color: #fb542b;
+}
 .media-menu .source.zen {
   background-color: var(--bg_active);
 }

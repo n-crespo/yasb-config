@@ -36,8 +36,9 @@ bars:
     widgets:
       # removed: "microphone", "power_menu", "home", "active_window", "apps"
       left: ["glazewm_workspaces"]
-      center: ["media"]
+      center: []
       right: [
+          # "media",
           # my fake systray icons:
           "memory",
           # "notifications",
@@ -69,8 +70,8 @@ widgets:
   media:
     type: "yasb.media.MediaWidget"
     options:
-      label: "{title} - {artist}"
-      label_alt: ""
+      label: ""
+      label_alt: "{title} - {artist}"
       max_field_size:
         label: 40
         label_alt: 25
