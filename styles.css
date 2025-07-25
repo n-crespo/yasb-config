@@ -54,6 +54,9 @@ https://github.com/amnweb/yasb/wiki
 .glazewm-workspaces .widget-container,
 .widget-container {
 }
+QPushButton {
+  outline: none; /* don't show outlines on click */
+}
 
 /* ***************** LEFT ********************** /
 /* GLAZEWM WIDGET (LEFT) */
