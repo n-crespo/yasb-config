@@ -399,6 +399,7 @@ Example: "Windows Media" becomes "windows-media" */
 .battery-widget .widget-container .icon {
   font-size: 13px;
   margin-right: 2px;
+  margin-bottom: 1px;
 }
 .battery-widget .widget-container .icon.status-charging {
   color: var(--yellow);
