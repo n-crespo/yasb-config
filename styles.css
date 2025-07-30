@@ -473,6 +473,16 @@ Example: "Windows Media" becomes "windows-media" */
   margin-top: -20px;
 }
 
+.tooltip {
+  background-color: var(--blur);
+  border: 1px solid #36383a;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
 /* ================= UNUSED =================  */
 
 /* POMODORO WIDGET (unused) */
