@@ -37,7 +37,7 @@ https://github.com/amnweb/yasb/wiki
 }
 .yasb-bar {
   background-color: var(--blur);
-  /* background: var(--blur); */
+  border-radius: 0px;
   padding: 0px;
 }
 .icon {
