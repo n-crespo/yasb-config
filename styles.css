@@ -443,8 +443,6 @@ Example: "Windows Media" becomes "windows-media" */
   font-family: "Microsoft Sans Serif", "Segoe UI", Tahoma, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  border: none;
-  outline: none;
 }
 .calendar .calendar-table::item:selected {
   color: white;
