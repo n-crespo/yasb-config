@@ -54,9 +54,6 @@ https://github.com/amnweb/yasb/wiki
 QPushButton {
   outline: none; /* don't show outlines on click */
 }
-.container-right {
-  margin-right: -5px;
-}
 /* Global context menu style */
 .context-menu,
 .context-menu .menu-checkbox {
@@ -201,16 +198,6 @@ QPushButton {
   font-size: 12px;
   font-weight: 900;
 }
-.glazewm-tiling-direction .btn:hover {
-  background: var(--bg_hover);
-}
-
-/* ------------ AUDIO GROUPER --------------  */
-
-.audio-grouper .container:hover {
-  background-color: red;
-  background: red;
-}
 
 /* VOLUME WIDGET */
 .volume-widget {
@@ -265,15 +252,7 @@ QPushButton {
   background-color: var(--bg_hover);
 }
 /* BLUETOOTH WIDET  */
-.bluetooth-widget {
-}
-.bluetooth-widget:hover {
-  /* background-color: none; */
-}
-.bluetooth-widget .label,
-.bluetooth-widget .widget-container,
-.bluetooth-widget .label.alt {
-  color: var(--subtle);
+.bluetooth-widget .widget-container {
   font-size: 11px;
 }
 .bluetooth-widget .icon {
@@ -281,19 +260,18 @@ QPushButton {
   font-weight: normal;
   font-size: 12px;
 }
+.bluetooth-widget .label.alt {
+  font-size: 10px;
+  margin-left: 3px;
+  color: var(--subtle);
+}
 
 /* WIFI WIDGET */
 
-.wifi-grouper .container {
-}
+/* HACK: a grouper surrounds this wifi widget  */
+
 .wifi-widget {
   padding: 0px;
-}
-.wifi-widget .widget-container .icon:hover,
-.wifi-widget .widget-container .label:hover,
-.wifi-widget:hover {
-  /* this doesn't work  */
-  background-color: var(--bg_hover);
 }
 .wifi-widget .widget-container .label {
   font-size: 10px;
@@ -462,16 +440,6 @@ QPushButton {
   margin-top: -20px;
 }
 
-.tooltip {
-  background-color: var(--bg);
-  border: 1px solid #36383a;
-  color: var(--text);
-  padding: 6px 12px;
-  border-radius: 3px;
-  font-size: 13px;
-  margin-top: 4px;
-}
-
 /* BATTERY WIDGET */
 .battery-widget {
 }
@@ -501,4 +469,14 @@ QPushButton {
 }
 .battery-widget .widget-container .icon.status-full {
   color: white;
+}
+
+.tooltip {
+  background-color: var(--bg);
+  border: 1px solid #36383a;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 3px;
+  font-size: 13px;
+  margin-top: 4px;
 }
