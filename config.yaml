@@ -39,21 +39,27 @@ bars:
       center: ["clock"]
       right: [
           # "media",
-          # my fake systray icons:
           "memory",
           # "notifications",
-          "systray",
+          # "systray",
           "glazewm_tiling_direction",
-          "wifi",
+          "bluetooth",
+          "wifi-grouper",
+          # "wifi",
           # "pomodoro",
 
           # other widgets
           "volume",
-          "bluetooth",
           "battery",
         ]
 
 widgets:
+  wifi-grouper:
+    type: "yasb.grouper.GrouperWidget"
+    options:
+      class_name: "wifi-grouper"
+      widgets: ["wifi"]
+
   ############## LEFT ############
   glazewm_workspaces:
     update_interval: 50
@@ -105,8 +111,8 @@ widgets:
     type: "yasb.memory.MemoryWidget"
     options:
       # icon: ""
-      label: "󰫢"
-      label_alt: "{virtual_mem_used}"
+      label: "{virtual_mem_used}"
+      label_alt: ""
       # label_alt: "{virtual_mem_total}"
       update_interval: 5000
       animation:
@@ -181,16 +187,13 @@ widgets:
       label: "<span>{icon}</span>"
       label_alt: "{device_name}"
       icons:
-        bluetooth_on: ""
+        bluetooth_on: "󰂯"
         bluetooth_off: ""
         bluetooth_connected: ""
       callbacks:
         on_right: "exec cmd.exe /c start ms-settings:bluetooth"
       label_shadow:
         enabled: false
-        color: "black"
-        radius: 1
-        offset: [0, 0]
 
   pomodoro:
     type: "yasb.pomodoro.PomodoroWidget"
@@ -212,11 +215,11 @@ widgets:
         work: "🍅"
         break: "🏖️"
         paused: "🛑"
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
+      # container_padding:
+      #   top: 0
+      #   left: 0
+      #   bottom: 0
+      #   right: 0
       menu:
         blur: true
         round_corners: true
@@ -244,9 +247,20 @@ widgets:
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
-      label: "{wifi_icon}"
-      label_alt: "<span>{wifi_icon}<span> {wifi_name}"
+      label_alt: "{wifi_icon}"
+      label: "<span>{wifi_icon}</span> {wifi_name}"
       update_interval: 5000
+      menu_config:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        wifi_icons_secured: ["\ue670", "\ue671", "\ue672", "\ue673"]
+        wifi_icons_unsecured: ["\uec3c", "\uec3d", "\uec3e", "\uec3f"]
       wifi_icons:
         - "󰤯" # 0% strength (no wifi)
         - "󰤟" # 1-25% strength
@@ -254,8 +268,8 @@ widgets:
         - "󰤥" # 51-75% strength
         - "󰤨" # 76-100% strength. Alternate theming: \uf1eb
       callbacks:
-        on_left: "exec cmd.exe /c start ms-settings:network"
-        # on_right: ""
+        on_right: "exec cmd.exe /c start ms-settings:network"
+        on_left: "toggle_menu"
 
   volume:
     type: "yasb.volume.VolumeWidget"
@@ -313,3 +327,21 @@ widgets:
         alignment: "right"
         direction: "down"
         distance: 6
+# taskbar:
+#     type: "yasb.taskbar.TaskbarWidget"
+#     options:
+#       monitor_exclusive: true
+#       show_only_visible: true
+#       icon_size: 14
+#       animation:
+#         enabled: true
+#       title_label:
+#         enabled: false
+#         show: "focused"
+#         min_length: 10
+#         max_length: 30
+#       ignore_apps:
+#         processes: []
+#         titles: []
+#         classes: []
+

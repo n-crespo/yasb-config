@@ -1,0 +1,276 @@
+/* ================= UNUSED =================  */
+
+/* POMODORO WIDGET (unused) */
+/* .pomodoro-widget { */
+/*   margin: 0px 4px; */
+/*   background: transparent; */
+/*   padding: 0px; */
+/* } */
+/* .pomodoro-widget:hover { */
+/*   background: var(--bg_hover); */
+/*   /* color: var(--text); */
+/* } */
+/* .pomodoro-widget:pressed { */
+/*   background-color: transparent; */
+/*   appearance: none; */
+/* } */
+/* .pomodoro-widget .icon { */
+/*   font-size: 13px; */
+/*   padding-right: -3px; */
+/*   padding-top: -1px; */
+/* } */
+/* .pomodoro-widget .label.paused { */
+/*   color: var(--red); */
+/* } */
+/* /* .pomodoro-widget .icon.work, */
+/* /* .pomodoro-widget .icon.break, */
+/* .pomodoro-widget .icon.paused { */
+/*   margin-top: 2px; */
+/* } */
+/* .pomodoro-widget .label.work { */
+/*   color: var(--yellowgreen); */
+/* } */
+/* .pomodoro-widget .label.break, */
+/* .pomodoro-widget .icon.break { */
+/*   color: var(--yellow); */
+/* } */
+/* /* Pomodoro menu styling */
+/* .pomodoro-menu { */
+/*   background-color: var(--blur); */
+/* } */
+/* .pomodoro-menu .header { */
+/*   font-size: 16px; */
+/*   font-weight: 600; */
+/*   max-height: 0px; */
+/*   color: var(--text); */
+/* } */
+/* .pomodoro-menu .status { */
+/*   font-size: 18px; */
+/*   font-weight: 600; */
+/*   color: var(--blue); */
+/* } */
+/* .pomodoro-menu .session { */
+/*   font-size: 12px; */
+/*   color: var(--blue); */
+/* } */
+/* .pomodoro-menu .button { */
+/*   background-color: var(--bg_active); */
+/*   color: var(--blue); */
+/*   border: none; */
+/*   padding: 6px 12px; */
+/* } */
+/* .pomodoro-menu .button.start, */
+/* .pomodoro-menu .button.start:hover { */
+/*   background-color: var(--yellowgreen); */
+/*   color: var(--black); */
+/* } */
+/* .pomodoro-menu .button.reset { */
+/*   background-color: var(--bg_active); */
+/* } */
+/* .pomodoro-menu .button:hover { */
+/*   background-color: var(--bg_hover); */
+/*   color: var(--blue); */
+/* } */
+/* .pomodoro-menu .button.pause { */
+/*   background-color: var(--red); */
+/*   color: var(--black); */
+/* } */
+/* .pomodoro-menu .button.start:pressed, */
+/* .pomodoro-menu .button:pressed { */
+/*   background-color: var(--bg_hover); */
+/*   color: var(--black); */
+/* } */
+
+/* /* NOTIFICATION WIDGET (unused)  */
+/* .notification-widget { */
+/*   /* padding: 0px; */
+/*   /* margin: 0px; */
+/*   /* color: var(--subtle); */
+/* } */
+/* .notification-widget .widget-container { */
+/*   margin: 0px; */
+/* } */
+/* .notification-widget .widget-container:hover { */
+/*   background-color: var(--bg_hover); */
+/*   /* color: var(--blue); */
+/* } */
+/* .notification-widget .icon { */
+/*   padding: 0px; */
+/*   margin: 0px; */
+/*   font-size: 12px; */
+/*   color: var(--subtle); */
+/*   /* color: var(--blue); */
+/* } */
+/* .notification-widget .icon.new-notification { */
+/*   margin: 0px; */
+/*   color: var(--blue); */
+/* } */
+/* .notification-widget .label.new-notification { */
+/*   margin: 0px; */
+/*   /* color: var(--blue); */
+/* } */
+/*
+
+/* ***************** CENTER *****************  */
+/* MEDIA WIDGET */
+/*  .media-widget { */
+/* } */
+/* .media-widget .label { */
+/*   color: var(--subtle); */
+/*   font-size: 11px; */
+/*   margin-left: 5px; */
+/*   padding: 0px 5px; */
+/* } */
+/* .media-widget .btn { */
+/*   color: var(--subtle); */
+/*   padding: 0px 5px; */
+/*   font-size: 15px; */
+/*   font-weight: 200; */
+/* } */
+/* .media-widget .label:hover, */
+/* .media-widget .btn:hover { */
+/*   color: var(--text); */
+/*   background-color: var(--bg_hover); */
+/* } */
+/* .media-widget .btn.disabled:hover, */
+/* .media-widget .btn.disabled { */
+/* } */
+/* .media-widget .btn.prev, */
+/* .media-widget .btn.next { */
+/* } */
+/* MEDIA POPUP (CENTER)*/
+/* .media-menu { */
+/*   min-width: 420px; */
+/*   max-width: 420px; */
+/*   background-color: var(--bg); */
+/* } */
+/* .media-menu .title, */
+/* .media-menu .artist, */
+/* .media-menu .source { */
+/*   font-size: 14px; */
+/*   font-weight: 600; */
+/*   margin-left: 10px; */
+/* } */
+/* .media-menu .artist { */
+/*   font-size: 13px; */
+/*   color: var(--subtle); */
+/*   margin-top: 0px; */
+/*   margin-bottom: 8px; */
+/* } */
+/* .media-menu .source { */
+/*   font-size: 11px; */
+/*   padding: 2px 4px; */
+/* } */
+/* The source class name is the same as what you see in the media widget; just replace spaces with dashes and convert it to lowercase.
+Example: "Windows Media" becomes "windows-media" */
+/* .media-menu .source.firefox { */
+/*   background-color: #ff583b; */
+/* } */
+/* .media-menu .source.brave { */
+/*   background-color: #fb542b; */
+/* } */
+/* .media-menu .source.zen { */
+/*   background-color: var(--bg_active); */
+/* } */
+/* .media-menu .source.spotify { */
+/*   background-color: #199143; */
+/*   color: var(--text); */
+/* } */
+/* .media-menu .source.edge { */
+/*   background-color: #0078d4; */
+/*   color: var(--text); */
+/* } */
+/* .media-menu .source.windows-media { */
+/*   background-color: #0078d4; */
+/*   color: var(--text); */
+/* } */
+/* .media-menu .btn { */
+/*   font-family: "Segoe Fluent Icons"; */
+/*   font-size: 18px; */
+/*   font-weight: 400; */
+/*   margin: 10px 2px 0px 2px; */
+/*   min-width: 40px; */
+/*   max-width: 40px; */
+/*   min-height: 40px; */
+/*   max-height: 40px; */
+/*   border-radius: 10px; */
+/* } */
+/* .media-menu .btn.prev { */
+/*   margin-left: 10px; */
+/* } */
+/* .media-menu .btn:hover { */
+/*   color: white; */
+/*   background-color: var(--bg_hover); */
+/* } */
+/* .media-menu .btn.play { */
+/*   font-size: 20px; */
+/* } */
+/* .media-menu .btn.disabled:hover, */
+/* .media-menu .btn.disabled { */
+/*   cursor: default; */
+/*   background-color: none; */
+/*   color: var(--subtle); */
+/* } */
+/* .media-menu .playback-time { */
+/*   font-size: 13px; */
+/*   color: var(--subtle); */
+/*   margin-top: 20px; */
+/*   min-width: 100px; */
+/* } */
+/* .media-menu .progress-slider { */
+/*   height: 10px; */
+/*   margin: 5px 4px; */
+/*   border-radius: 3px; */
+/* } */
+/* .media-menu .progress-slider::groove { */
+/*   background: transparent; */
+/*   height: 2px; */
+/*   border-radius: 3px; */
+/*   background: var(--bg_hover); */
+/* } */
+/* .media-menu .progress-slider::groove:hover { */
+/*   background: transparent; */
+/*   height: 6px; */
+/*   border-radius: 3px; */
+/*   background: var(--bg_hover); */
+/* } */
+/* .media-menu .progress-slider::sub-page { */
+/*   background: white; */
+/*   border-radius: 3px; */
+/*   height: 4px; */
+/* }  */
+
+/* SYSTRAY WIDGET */
+/* .systray .widget-container { */
+/*   margin: 0px 4px; */
+/*   padding: auto 3px; */
+/* } */
+/* .systray .button { */
+/*   padding: auto 0px; */
+/* } */
+/* .systray .unpinned-container, */
+/* .systray .pinned-container { */
+/* } */
+/* .systray .pinned-container[forceshow="true"] { */
+/* } */
+/* .systray .button[dragging="true"] { */
+/* } */
+/* .systray .unpinned-visibility-btn:hover, */
+/* .systray .pinned-visibility-btn:hover, */
+/* .systray .button:hover { */
+/*   background: var(--bg_hover); */
+/*   color: var(--text); */
+/* } */
+/* .systray .unpinned-visibility-btn { */
+/*   padding: 5px 3px; */
+/*   background-color: transparent; */
+/*   color: var(--subtle); */
+/* } */
+/* .systray .unpinned-visibility-btn:checked { */
+/* } */
+
+/* TASKBAR WIDGET */
+/* .taskbar-widget { */
+/*   margin: 0px 4px; */
+/*   margin-left: 20px; */
+/* } */
