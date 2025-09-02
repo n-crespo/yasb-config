@@ -281,7 +281,6 @@ QPushButton {
   margin-right: 2px;
 }
 .wifi-menu {
-  /* background-color: rgba(17, 17, 27, 0.4); */
   max-height: 350px;
   min-height: 375px;
   min-width: 375px;
@@ -293,7 +292,7 @@ QPushButton {
   background-color: #4cc2ff;
 }
 .wifi-menu .header {
-  /* background-color: transparent; */
+  background-color: var(--bg);
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 2px;
@@ -369,9 +368,7 @@ QPushButton {
   font-weight: 600;
   padding: 12px;
   margin-top: 2px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  /* color: #9399b2; */
-  /* background-color: rgba(17, 17, 27, 0.6); */
+  background-color: var(--bg);
 }
 .wifi-menu .footer .settings-button {
   border: none;
