@@ -274,6 +274,7 @@ QPushButton {
   padding: 0px;
 }
 .wifi-widget .widget-container .label {
+  margin-top: 2px;
   font-size: 10px;
 }
 .wifi-widget .widget-container .icon {
