@@ -78,7 +78,7 @@ widgets:
       label: "{title} - {artist}"
       label_alt: ""
       max_field_size:
-        label: 20
+        label: 40
         label_alt: 25
       controls_only: false
       controls_left: true
@@ -86,19 +86,15 @@ widgets:
       label_shadow:
         enabled: false
       show_thumbnail: false
-      thumbnail_alpha: 100
-      thumbnail_padding: 0
-      thumbnail_corner_radius: 5
       symmetric_corner_radius: true
-      thumbnail_edge_fade: true
       media_menu_icons:
         prev_track: "󰒮"
         next_track: "󰒭"
         play: "󰐊"
         pause: "󰏤"
       icons:
-        prev_track: "󰒮"
-        next_track: "󰒭"
+        prev_track: ""
+        next_track: ""
         play: "󰐊"
         pause: "󰏤"
       callbacks:
@@ -110,11 +106,9 @@ widgets:
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
-      # icon: ""
-      label: "{virtual_mem_used}"
-      label_alt: ""
-      # label_alt: "{virtual_mem_total}"
-      update_interval: 5000
+      label: "{virtual_mem_percent}%" # virtual_mem_used
+      label_alt: "{virtual_mem_used}" # virtual_mem_used
+      update_interval: 3000
       animation:
         enabled: true
         type: "fadeInOut"
@@ -174,8 +168,8 @@ widgets:
   glazewm_tiling_direction:
     type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
     options:
-      horizontal_label: ""
-      vertical_label: ""
+      horizontal_label: "󰓡"
+      vertical_label: "󰓢"
 
   bluetooth:
     type: "yasb.bluetooth.BluetoothWidget"
@@ -297,13 +291,13 @@ widgets:
       label: "<span>{icon}</span>{percent}%"
       label_alt: "{time_remaining}"
       # time_remaining_natural: true # this seems to round down 😭
+      time_remaining_natural: true
       status_thresholds:
         { critical: 10, low: 20, medium: 70, high: 80, full: 100 }
       charging_options:
-        icon_format: "{charging_icon}" # show only charging icon
+        icon_format: "{icon}" # show only charging icon
       status_icons:
         {
-          icon_charging: "󱐋",
           icon_critical: "",
           icon_low: "",
           icon_medium: "",

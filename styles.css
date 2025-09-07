@@ -192,10 +192,12 @@ QPushButton {
 }
 
 /* TILING DIRECTION WIDGET */
-.glazewm-tiling-direction {
+.glazewm-tiling-direction:hover {
+  background: none;
 }
-.glazewm-tiling-direction .btn {
-  font-size: 12px;
+.glazewm-tiling-direction .btn,
+.glazewm-tiling-direction .btn:hover {
+  color: var(--subtle);
   font-weight: 900;
 }
 
@@ -217,20 +219,21 @@ QPushButton {
   background: transparent;
 }
 .volume-slider::sub-page {
-  background: var(--text);
+  background: white;
   border-radius: 3px;
   height: 4px;
 }
 .volume-slider::groove {
+  background: transparent;
   height: 6px;
   border-radius: 3px;
-  background: black;
-  cursor: pointer; /* Make it clear it's interactive */
+  background: rgba(255, 255, 255, 0.1);
 }
 .volume-slider::groove:hover {
-  height: 8px;
-  /* background: transparent; */
-  /* background: black; */
+  background: transparent;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.2);
 }
 .volume-slider::handle {
 }
@@ -274,8 +277,7 @@ QPushButton {
   padding: 0px;
 }
 .wifi-widget .widget-container .label {
-  margin-top: 2px;
-  font-size: 10px;
+  /* margin-top: 2px; */
 }
 .wifi-widget .widget-container .icon {
   font-size: 12px;
@@ -396,7 +398,7 @@ QPushButton {
 /* CALENDAR POPUP  */
 .calendar .calendar-table::item:hover,
 .clock-widget:hover {
-  background-color: var(--bg_hover);
+  background-color: var(--bg);
   color: var(--text);
 }
 .calendar {
@@ -441,17 +443,12 @@ QPushButton {
 /* BATTERY WIDGET */
 .battery-widget {
 }
-.battery-widget:hover {
-  background-color: var(--bg_hover);
-  color: var(--text);
-}
 .battery-widget .widget-container .icon {
   font-size: 13px;
   margin-right: 2px;
 }
 .battery-widget .widget-container .icon.status-charging {
-  color: var(--yellow);
-  font-size: 14px;
+  color: var(--green);
 }
 .battery-widget .widget-container .icon.status-critical {
   color: var(--red);
@@ -480,36 +477,37 @@ QPushButton {
 }
 
 /* MEDIA WIDGET  */
-.media-widget {
-}
-.media-widget .label {
+.media-widget .label,
+.media-widget .label.alt {
   color: var(--subtle);
   font-size: 11px;
-  margin-left: 5px;
-  padding: 0px 5px;
+  /* margin-left: 5px; */
 }
 .media-widget .btn {
   color: var(--subtle);
-  padding: 0px 5px;
   font-size: 15px;
   font-weight: 200;
+  margin-right: 6;
+}
+.media-widget .btn.prev,
+.media-widget .btn.next {
+  font-size: 0.5px;
+  padding: 0px;
+  margin: 0px;
 }
 .media-widget .label:hover,
 .media-widget .btn:hover {
   color: var(--text);
   background-color: var(--bg_hover);
 }
-.media-widget .btn.disabled:hover,
-.media-widget .btn.disabled {
-}
-.media-widget .btn.prev,
-.media-widget .btn.next {
+.media-widget .btn.disabled,
+.media-widget .btn.disabled:hover {
+  color: var(--subtle);
 }
 
-/* MEDIA POPUP (CENTER)  */
 .media-menu {
-  min-width: 420px;
-  max-width: 420px;
+  min-width: 350px;
+  max-width: 350px;
   background-color: var(--bg);
 }
 .media-menu .title,
@@ -521,40 +519,39 @@ QPushButton {
 }
 .media-menu .artist {
   font-size: 13px;
-  color: var(--subtle);
+  color: #6c7086;
   margin-top: 0px;
   margin-bottom: 8px;
 }
 .media-menu .source {
   font-size: 11px;
+  color: #000;
+  font-weight: normal;
+  border-radius: 3px;
+  background-color: #bac2de;
   padding: 2px 4px;
 }
-/* /* The source class name is the same as what you see in the media widget; just replace spaces with dashes and convert it to lowercase. */
-/* Example: "Windows Media" becomes "windows-media" */
-*/ .media-menu .source.firefox {
+/* The source class name is the same as what you see in the media widget; just replace spaces with dashes and convert it to lowercase.
+Example: "Windows Media" becomes "windows-media" */
+.media-menu .source.firefox {
   background-color: #ff583b;
-}
-.media-menu .source.brave {
-  background-color: #fb542b;
-}
-.media-menu .source.zen {
-  background-color: var(--bg_active);
+  color: #ffffff;
 }
 .media-menu .source.spotify {
   background-color: #199143;
-  color: var(--text);
+  color: #ffffff;
 }
 .media-menu .source.edge {
   background-color: #0078d4;
-  color: var(--text);
+  color: #ffffff;
 }
 .media-menu .source.windows-media {
   background-color: #0078d4;
-  color: var(--text);
+  color: #ffffff;
 }
+
 .media-menu .btn {
-  font-family: "Segoe Fluent Icons";
-  font-size: 18px;
+  font-size: 21px;
   font-weight: 400;
   margin: 10px 2px 0px 2px;
   min-width: 40px;
@@ -568,20 +565,22 @@ QPushButton {
 }
 .media-menu .btn:hover {
   color: white;
-  background-color: var(--bg_hover);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 .media-menu .btn.play {
+  background-color: rgba(255, 255, 255, 0.1);
   font-size: 20px;
 }
 .media-menu .btn.disabled:hover,
 .media-menu .btn.disabled {
-  cursor: default;
-  background-color: none;
   color: var(--subtle);
+  background-color: var(--bg);
 }
+
 .media-menu .playback-time {
   font-size: 13px;
-  color: var(--subtle);
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  color: #7f849c;
   margin-top: 20px;
   min-width: 100px;
 }
@@ -594,13 +593,13 @@ QPushButton {
   background: transparent;
   height: 2px;
   border-radius: 3px;
-  background: var(--bg_hover);
+  background: rgba(255, 255, 255, 0.1);
 }
 .media-menu .progress-slider::groove:hover {
   background: transparent;
   height: 6px;
   border-radius: 3px;
-  background: var(--bg_hover);
+  background: rgba(255, 255, 255, 0.2);
 }
 .media-menu .progress-slider::sub-page {
   background: white;
