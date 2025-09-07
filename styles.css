@@ -167,15 +167,12 @@ QPushButton {
 /************* RIGHT ***************/
 
 /* MEMORY WIDGET */
-.memory-widget {
-}
-.memory-widget .widget-container {
-}
 .memory-widget:hover {
   background-color: var(--bg_hover);
 }
 .memory-widget .label {
-  font-size: 12px;
+  font-size: 11px;
+  margin-top: 1px;
   color: var(--subtle);
 }
 .memory-widget .label.status-low {
@@ -192,9 +189,6 @@ QPushButton {
 }
 
 /* TILING DIRECTION WIDGET */
-.glazewm-tiling-direction:hover {
-  background: none;
-}
 .glazewm-tiling-direction .btn,
 .glazewm-tiling-direction .btn:hover {
   color: var(--subtle);
@@ -202,8 +196,6 @@ QPushButton {
 }
 
 /* VOLUME WIDGET */
-.volume-widget {
-}
 .volume-widget .icon {
   margin-left: 0px;
   font-size: 13px;
@@ -235,8 +227,8 @@ QPushButton {
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.2);
 }
-.volume-slider::handle {
-}
+/* .volume-slider::handle { */
+/* } */
 .audio-menu {
   background-color: var(--bg);
 }
@@ -275,9 +267,6 @@ QPushButton {
 
 .wifi-widget {
   padding: 0px;
-}
-.wifi-widget .widget-container .label {
-  /* margin-top: 2px; */
 }
 .wifi-widget .widget-container .icon {
   font-size: 12px;
@@ -393,8 +382,6 @@ QPushButton {
 }
 
 /* CLOCK WIDGET */
-.clock-widget {
-}
 /* CALENDAR POPUP  */
 .calendar .calendar-table::item:hover,
 .clock-widget:hover {
@@ -441,8 +428,6 @@ QPushButton {
 }
 
 /* BATTERY WIDGET */
-.battery-widget {
-}
 .battery-widget .widget-container .icon {
   font-size: 13px;
   margin-right: 2px;
@@ -468,7 +453,6 @@ QPushButton {
 
 .tooltip {
   background-color: var(--bg);
-  border: 1px solid #36383a;
   color: var(--text);
   padding: 6px 12px;
   border-radius: 3px;
@@ -480,7 +464,8 @@ QPushButton {
 .media-widget .label,
 .media-widget .label.alt {
   color: var(--subtle);
-  font-size: 11px;
+  margin-top: 1px;
+  font-size: 10px;
   /* margin-left: 5px; */
 }
 .media-widget .btn {
@@ -495,10 +480,8 @@ QPushButton {
   padding: 0px;
   margin: 0px;
 }
-.media-widget .label:hover,
 .media-widget .btn:hover {
   color: var(--text);
-  background-color: var(--bg_hover);
 }
 .media-widget .btn.disabled,
 .media-widget .btn.disabled:hover {
