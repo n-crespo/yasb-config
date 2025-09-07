@@ -38,7 +38,7 @@ bars:
       left: ["glazewm_workspaces"]
       center: ["clock"]
       right: [
-          # "media",
+          "media",
           "memory",
           # "notifications",
           # "systray",
@@ -75,10 +75,10 @@ widgets:
   media:
     type: "yasb.media.MediaWidget"
     options:
-      label: ""
-      label_alt: "{title} - {artist}"
+      label: "{title} - {artist}"
+      label_alt: ""
       max_field_size:
-        label: 40
+        label: 20
         label_alt: 25
       controls_only: false
       controls_left: true
