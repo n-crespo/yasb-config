@@ -46,7 +46,7 @@ https://github.com/amnweb/yasb/wiki
 }
 .widget {
   margin: 0px 0px;
-  padding: 0px 8px;
+  padding: 0px 6px;
 }
 .widget:hover {
   background-color: var(--bg_hover);
@@ -243,10 +243,10 @@ QPushButton {
 }
 .audio-container .device:hover {
   color: var(--text);
-  background-color: var(--bg_hover);
+  background-color: var(--bg_active);
 }
 /* BLUETOOTH WIDET  */
-.bluetooth-widget .widget-container {
+.widget-container {
   font-size: 11px;
 }
 .bluetooth-widget .icon {
@@ -265,7 +265,7 @@ QPushButton {
 /* HACK: a grouper surrounds this wifi widget  */
 
 .wifi-widget {
-  padding: 0px;
+  padding: 0px; /* we already have padding from the grouper */
 }
 .wifi-widget .widget-container .icon {
   font-size: 12px;
