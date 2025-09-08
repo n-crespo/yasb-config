@@ -57,12 +57,12 @@ QPushButton {
 /* Global context menu style */
 .context-menu,
 .context-menu .menu-checkbox {
-  background-color: #202020;
+  background-color: var(--bg);
   border: none;
   padding: 4px 0px;
   /* font-family: "Segoe UI"; */
   font-size: 12px;
-  color: #ffffff;
+  color: var(--text);
 }
 .context-menu::right-arrow {
   width: 8px;
@@ -97,7 +97,6 @@ QPushButton {
   font-size: 12px;
   margin: 0;
   color: #ffffff;
-  font-family: "Segoe UI";
 }
 .context-menu .submenu::item:disabled {
   margin: 0;
@@ -117,14 +116,14 @@ QPushButton {
   border-radius: 2px;
 }
 .context-menu .menu-checkbox .checkbox::indicator:checked {
-  background: #007acc;
+  background: var(--blue);
   border-radius: 2px;
 }
 .context-menu .menu-checkbox .checkbox:focus {
   outline: none;
 }
 .context-menu::item:checked {
-  background-color: #0078d7;
+  background: var(--blue);
   color: white;
 }
 
@@ -452,6 +451,7 @@ QPushButton {
 }
 
 .tooltip {
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: var(--bg);
   color: var(--text);
   padding: 6px 12px;
