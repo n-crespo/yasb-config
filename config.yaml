@@ -39,8 +39,8 @@ bars:
       center: ["clock"]
       right: [
           "media",
-          "glazewm_tiling_direction",
           "memory",
+          "glazewm_tiling_direction",
           # "notifications",
           # "systray",
           "bluetooth",
@@ -168,8 +168,8 @@ widgets:
   glazewm_tiling_direction:
     type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
     options:
-      horizontal_label: "󰓡"
-      vertical_label: "󰓢"
+      horizontal_label: ""
+      vertical_label: ""
 
   bluetooth:
     type: "yasb.bluetooth.BluetoothWidget"
