@@ -43,13 +43,9 @@ bars:
           "glazewm_tiling_direction",
           # "notifications",
           # "systray",
-          "bluetooth",
           "wifi-grouper",
-          # "wifi",
-          # "pomodoro",
-
-          # other widgets
           "volume",
+          "bluetooth",
           "battery",
         ]
 
@@ -188,55 +184,6 @@ widgets:
         on_right: "exec cmd.exe /c start ms-settings:bluetooth"
       label_shadow:
         enabled: false
-
-  pomodoro:
-    type: "yasb.pomodoro.PomodoroWidget"
-    options:
-      # label: "<span>{icon}</span> {remaining} {session}/{total_sessions} - {status}"
-      label: "<span>{icon}</span> {remaining}"
-      label_alt: "{remaining}"
-      work_duration: 25
-      break_duration: 5
-      long_break_duration: 15
-      long_break_interval: 4
-      auto_start_breaks: true
-      auto_start_work: false
-      sound_notification: true
-      show_notification: true
-      hide_on_break: false
-      session_target: 8
-      icons:
-        work: "🍅"
-        break: "🏖️"
-        paused: "🛑"
-      # container_padding:
-      #   top: 0
-      #   left: 0
-      #   bottom: 0
-      #   right: 0
-      menu:
-        blur: true
-        round_corners: true
-        round_corners_type: "normal"
-        border_color: "System"
-        alignment: "right"
-        direction: "down"
-        offset_top: 6
-        offset_left: 0
-        circle_background_color: "#09ffffff"
-        circle_work_progress_color: "#9acd32"
-        circle_break_progress_color: "#ffce08"
-        circle_thickness: 8
-        circle_size: 160
-      callbacks:
-        on_left: "toggle_menu"
-        on_middle: "reset_timer"
-        on_right: "toggle_label"
-      label_shadow:
-        enabled: false
-        color: "black"
-        radius: 3
-        offset: [1, 1]
 
   wifi:
     type: "yasb.wifi.WifiWidget"
