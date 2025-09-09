@@ -222,8 +222,8 @@ widgets:
       label_alt: "{volume}"
       tooltip: true
       volume_icons:
-        - "󰝟"
-        - "󰕿"
+        - "󰸈"
+        - "󰖀"
         - "󰖀"
         - "󰕾"
         - "󰕾"
