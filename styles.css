@@ -42,7 +42,7 @@ https://github.com/amnweb/yasb/wiki
 }
 .icon {
   color: var(--text);
-  font-size: 16px;
+  font-size: 15px;
   border-radius: 3px;
 }
 .widget {
@@ -199,9 +199,7 @@ QPushButton {
 /* VOLUME WIDGET */
 .volume-widget .icon {
   margin-left: 0px;
-  font-size: 13px;
   margin-right: 2px;
-  margin-top: 1px;
 }
 /* AUDIO MENU POPUP */
 .volume-slider {
@@ -249,15 +247,15 @@ QPushButton {
 }
 /* BLUETOOTH WIDET  */
 .widget-container {
-  font-size: 11px;
+  font-size: 10px;
 }
 .bluetooth-widget .icon {
   color: var(--blue);
   font-weight: normal;
-  font-size: 12px;
+  /* font-size: 14px; */
 }
 .bluetooth-widget .label.alt {
-  font-size: 10px;
+  font-size: var(--smaller);
   margin-left: 4px;
   color: var(--subtle);
 }
@@ -437,7 +435,7 @@ QPushButton {
 
 /* BATTERY WIDGET */
 .battery-widget .widget-container .icon {
-  font-size: 13px;
+  font-size: 15px;
   margin-right: 3px;
 }
 .battery-widget .widget-container .icon.status-charging {

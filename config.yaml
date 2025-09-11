@@ -44,8 +44,8 @@ bars:
           # "notifications",
           # "systray",
           "wifi-grouper",
-          "volume",
           "bluetooth",
+          "volume",
           "battery",
         ]
 
