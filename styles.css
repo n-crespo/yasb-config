@@ -14,6 +14,7 @@ https://github.com/amnweb/yasb/wiki
   --yellow: #ffce08;
   --red: #d7474b;
   --text: white;
+  --smaller: 12px;
 }
 
 /* this is for everything */
@@ -22,7 +23,7 @@ https://github.com/amnweb/yasb/wiki
   /* font-family: "JetBrainsMono NFP", "Symbols Nerd Font"; */
   font-family: "Symbols Nerd Font", "Microsoft Sans Serif";
   border-radius: 3px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.2px;
   color: white;
@@ -171,7 +172,7 @@ QPushButton {
 }
 .memory-widget .label {
   color: var(--subtle);
-  font-size: 10px;
+  font-size: var(--smaller);
   margin-top: 1px;
 }
 .memory-widget .label.status-low {
@@ -192,6 +193,7 @@ QPushButton {
 .glazewm-tiling-direction .btn:hover {
   color: var(--subtle);
   font-weight: 900;
+  font-size: 14px;
 }
 
 /* VOLUME WIDGET */
@@ -271,11 +273,11 @@ QPushButton {
 .wifi-widget .label {
   margin-top: 1px;
   color: var(--subtle);
-  font-size: 10px;
+  font-size: var(--smaller);
 }
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
-  font-size: 11px;
+  font-size: var(--smaller);
   margin-right: 2px;
 }
 .wifi-menu {
@@ -472,7 +474,7 @@ QPushButton {
 .media-widget .label.alt {
   color: var(--subtle);
   margin-top: 1px;
-  font-size: 10px;
+  font-size: var(--smaller);
   /* margin-left: 5px; */
 }
 .media-widget .btn {
