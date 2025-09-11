@@ -141,6 +141,7 @@ QPushButton {
   color: var(--subtle);
 }
 .glazewm-workspaces .ws-btn {
+  font-size: 14px;
   color: var(--subtle);
   padding: 5px 7px; /* background color fills the padding */
   /* font-size: 14px; /* make it a bit bigger */
