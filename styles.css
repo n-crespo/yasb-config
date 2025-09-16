@@ -174,7 +174,6 @@ QPushButton {
 .memory-widget .label {
   color: var(--subtle);
   font-size: var(--smaller);
-  margin-top: 1px;
 }
 .memory-widget .label.status-low {
   color: var(--subtle);
@@ -194,7 +193,6 @@ QPushButton {
 .glazewm-tiling-direction .btn:hover {
   color: var(--subtle);
   font-weight: 900;
-  font-size: 14px;
 }
 
 /* VOLUME WIDGET */
@@ -270,7 +268,6 @@ QPushButton {
   padding: 0px; /* we already have padding from the grouper */
 }
 .wifi-widget .label {
-  margin-top: 1px;
   color: var(--subtle);
   font-size: var(--smaller);
 }
@@ -278,7 +275,6 @@ QPushButton {
   color: var(--subtle);
   font-size: 13px;
   margin-right: 2px;
-  margin-top: 1px;
 }
 .wifi-menu {
   max-height: 350px;
@@ -473,7 +469,6 @@ QPushButton {
 .media-widget .label,
 .media-widget .label.alt {
   color: var(--subtle);
-  margin-top: 1px;
   font-size: var(--smaller);
   /* margin-left: 5px; */
 }
