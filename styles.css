@@ -20,12 +20,12 @@ https://github.com/amnweb/yasb/wiki
 /* this is for everything */
 * {
   appearance: none;
-  /* font-family: "JetBrainsMono NFP", "Symbols Nerd Font"; */
-  font-family: "Symbols Nerd Font", "Microsoft Sans Serif";
+  font-family: "JetBrainsMono NFP";
+  /* font-family: "Microsoft Sans Serif"; */
   border-radius: 3px;
   font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.2px;
+  letter-spacing: -0.4px;
   color: white;
   margin: 0px;
   border: none;
@@ -41,6 +41,7 @@ https://github.com/amnweb/yasb/wiki
   border-radius: 0px;
 }
 .icon {
+  font-family: "Symbols Nerd Font";
   color: var(--text);
   font-size: 15px;
   border-radius: 3px;
@@ -59,9 +60,8 @@ QPushButton {
 .context-menu,
 .context-menu .menu-checkbox {
   background-color: var(--bg);
+  padding: 5px 0px;
   border: none;
-  padding: 4px 0px;
-  /* font-family: "Segoe UI"; */
   font-size: 12px;
   color: var(--text);
 }
@@ -81,7 +81,7 @@ QPushButton {
 .context-menu::item:selected,
 .context-menu .menu-checkbox:hover {
   background-color: #3a3a3a;
-  color: #ffffff;
+  color: var(--text);
 }
 .context-menu::separator {
   height: 1px;
@@ -125,7 +125,7 @@ QPushButton {
 }
 .context-menu::item:checked {
   background: var(--blue);
-  color: white;
+  color: var(--text);
 }
 
 /* ***************** LEFT ********************** */
@@ -141,9 +141,9 @@ QPushButton {
   color: var(--subtle);
 }
 .glazewm-workspaces .ws-btn {
-  font-size: 14px;
+  /* font-size: 14px; */
   color: var(--subtle);
-  padding: 5px 7px; /* background color fills the padding */
+  padding: 3px 8px; /* background color fills the padding */
   /* font-size: 14px; /* make it a bit bigger */
 }
 .glazewm-workspaces .ws-btn:hover {
@@ -192,7 +192,7 @@ QPushButton {
 .glazewm-tiling-direction .btn,
 .glazewm-tiling-direction .btn:hover {
   color: var(--subtle);
-  font-weight: 900;
+  font-weight: 300;
 }
 
 /* VOLUME WIDGET */
@@ -387,6 +387,10 @@ QPushButton {
 
 /* CLOCK WIDGET */
 /* CALENDAR POPUP  */
+.clock-widget .label {
+  font-size: 13px;
+  color: var(--subtle);
+}
 .calendar .calendar-table::item:hover,
 .clock-widget:hover {
   background-color: var(--bg);
@@ -398,9 +402,8 @@ QPushButton {
 .calendar .calendar-table,
 .calendar .calendar-table::item {
   border-radius: 3px;
-  background-color: rgba(17, 17, 27, 0);
+  background-color: var(--bg);
   color: var(--subtle);
-  font-family: "Microsoft Sans Serif", "Segoe UI", Tahoma, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -413,12 +416,12 @@ QPushButton {
 .calendar .day-label,
 .calendar .month-label,
 .calendar .date-label {
-  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   color: var(--text);
   font-size: 16px;
   font-weight: 700;
   min-width: 180px;
   max-width: 180px;
+  margin-bottom: 4px;
 }
 .calendar .month-label {
   color: var(--text);
@@ -456,12 +459,13 @@ QPushButton {
 }
 
 .tooltip {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--bg_active);
   background-color: var(--bg);
   color: var(--text);
   padding: 6px 12px;
   border-radius: 3px;
   font-size: 13px;
+  font-family: "JetBrainsMono NFP", "Symbols Nerd Font";
   margin-top: 4px;
 }
 
@@ -470,13 +474,13 @@ QPushButton {
 .media-widget .label.alt {
   color: var(--subtle);
   font-size: var(--smaller);
-  /* margin-left: 5px; */
+  margin-left: 3px;
 }
 .media-widget .btn {
   color: var(--subtle);
-  font-size: 15px;
+  font-family: "Segoe Fluent Icons";
+  font-size: 17px;
   font-weight: 200;
-  margin-right: 6;
 }
 .media-widget .btn.prev,
 .media-widget .btn.next {
@@ -491,11 +495,12 @@ QPushButton {
 .media-widget .btn.disabled:hover {
   color: var(--subtle);
 }
-
+/* MEDIA POPUP  */
 .media-menu {
   min-width: 350px;
   max-width: 350px;
   background-color: var(--bg);
+  border: 1px solid var(--bg_active);
 }
 .media-menu .title,
 .media-menu .artist,
@@ -556,7 +561,7 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .media-menu .btn.play {
   background-color: rgba(255, 255, 255, 0.1);
-  font-size: 20px;
+  font-size: 22px;
 }
 .media-menu .btn.disabled:hover,
 .media-menu .btn.disabled {

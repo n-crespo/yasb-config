@@ -1,5 +1,3 @@
-# This is default and very simple configuration file for Yasb.
-# For more information about configuration options, please visit the Wiki
 # https://github.com/amnweb/yasb/wiki
 watch_stylesheet: true
 watch_config: true
@@ -14,7 +12,7 @@ bars:
       center: true
     animation:
       enabled: true
-      duration: 1000
+      duration: 500
     blur_effect:
       enabled: false
       acrylic: false
@@ -27,12 +25,7 @@ bars:
       windows_app_bar: true
     dimensions:
       width: "100%"
-      height: 22
-    padding:
-      top: 0
-      left: 0
-      bottom: 0
-      right: 0
+      # height: 20
     widgets:
       # removed: "microphone", "power_menu", "home", "active_window", "apps"
       left: ["glazewm_workspaces"]
@@ -71,6 +64,21 @@ widgets:
   media:
     type: "yasb.media.MediaWidget"
     options:
+      media_menu:
+        blur: false # Whether to apply a blur effect to the popup background.
+        round_corners: true # Whether to round the corners of the popup.
+        round_corners_type: "normal" # The type of corner rounding. Can be "normal" or "symmetric".
+        border_color: "system" # The border color of the popup. Can be a HEX, None or "system".
+        alignment: "right" # The alignment of the popup relative to the widget. Can be "left", "center", or "right".
+        direction: "down" # The direction in which the popup opens. Can be "up" or "down".
+        offset_top: 6 # The vertical offset of the popup from the widget.
+        offset_left: 0 # The horizontal offset of the popup from the widget.
+        thumbnail_corner_radius: 8 # The corner radius for the thumbnail in the popup.
+        thumbnail_size: 120 # The size of the thumbnail in the popup.
+        max_title_size: 60 # The maximum size for the title in the popup.
+        max_artist_size: 20 # The maximum size for the artist name in the popup.
+        show_source: true # Whether to show the media source (e.g., Spotify, YouTube) in the popup.
+        show_volume_slider: false # Whether to show the volume slider in the popup. Volume control per application.
       label: "{title} - {artist}"
       label_alt: ""
       max_field_size:
@@ -97,6 +105,15 @@ widgets:
         on_left: "toggle_media_menu"
         on_middle: "do_nothing"
         on_right: "toggle_label"
+      scrolling_label:
+        enabled: false # Whether to enable the scrolling label.
+        update_interval_ms: 33 # The update interval for the scrolling label in milliseconds.
+        style: "bounce" # The style of the scrolling label. Can be "left", "right", "bounce", or "bounce-ease".
+        separator: " | " # The separator between repeating text in "left" or "right" scrolling style.
+        label_padding: 1 # The padding around the label in "bounce" and "bounce-ease" style. By default it's one character on each side.
+        ease_slope: 20 # The easing slope for the bounce effect. Easing curve params: https://www.desmos.com/calculator/j7eamemxzi
+        ease_pos: 0.8 # The easing curve position for the bounce effect.
+        ease_min: 0.5 # The minimum value for the bounce effect easing curve.
 
   ######### RIGHT ###########
   memory:
@@ -116,50 +133,6 @@ widgets:
         low: 50
         medium: 81
         high: 90
-
-  notifications:
-    type: "yasb.notifications.NotificationsWidget"
-    options:
-      label: "<span></span>"
-      label_alt: "{count} notifications"
-      hide_empty: true
-      tooltip: true
-      callbacks:
-        on_left: "toggle_notification"
-        on_right: "toggle_label"
-        on_middle: "toggle_label"
-      container_padding:
-        top: 0
-        left: 0
-        bottom: 0
-        right: 0
-      label_shadow:
-        enabled: false
-        color: "black"
-        radius: 3
-        offset: [1, 1]
-
-  systray:
-    type: "yasb.systray.SystrayWidget"
-    options:
-      class_name: "systray"
-      label_collapsed: ""
-      label_expanded: ""
-      label_position: "left" # Can be "left" or "right"
-      icon_size: 14 # Can be any integer between 8 and 64
-      pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
-      show_unpinned: true
-      show_unpinned_button: true
-      show_battery: false
-      show_volume: false
-      show_network: false
-      container_padding:
-        left: 0
-        top: 0
-        right: 0
-        bottom: 0
-      btn_shadow:
-        enabled: false
 
   glazewm_tiling_direction:
     type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
@@ -217,10 +190,10 @@ widgets:
     options:
       mute_text: "0%"
       animation:
-        enabled: true
+        enabled: True
       label: "<span>{icon}</span> {level}"
       label_alt: "{volume}"
-      tooltip: true
+      tooltip: True
       volume_icons:
         - "󰸈"
         - "󰖀"
@@ -238,7 +211,7 @@ widgets:
       label: "<span>{icon}</span>{percent}%"
       label_alt: "{time_remaining}"
       # time_remaining_natural: true # this seems to round down 😭
-      time_remaining_natural: true
+      time_remaining_natural: True
       status_thresholds:
         { critical: 10, low: 20, medium: 70, high: 80, full: 100 }
       charging_options:
@@ -268,6 +241,7 @@ widgets:
         alignment: "right"
         direction: "down"
         distance: 6
+# ---------- unused widgets ----------
 # taskbar:
 #     type: "yasb.taskbar.TaskbarWidget"
 #     options:
@@ -286,3 +260,41 @@ widgets:
 #         titles: []
 #         classes: []
 
+# systray:
+#   type: "yasb.systray.SystrayWidget"
+#   options:
+#     class_name: "systray"
+#     label_collapsed: ""
+#     label_expanded: ""
+#     label_position: "left" # Can be "left" or "right"
+#     icon_size: 14 # Can be any integer between 8 and 64
+#     pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
+#     show_unpinned: true
+#     show_unpinned_button: true
+#     show_battery: false
+#     show_volume: false
+#     show_network: false
+#     btn_shadow:
+#       enabled: false
+
+# notifications:
+#   type: "yasb.notifications.NotificationsWidget"
+#   options:
+#     label: "<span></span>"
+#     label_alt: "{count} notifications"
+#     hide_empty: true
+#     tooltip: true
+#     callbacks:
+#       on_left: "toggle_notification"
+#       on_right: "toggle_label"
+#       on_middle: "toggle_label"
+#     container_padding:
+#       top: 0
+#       left: 0
+#       bottom: 0
+#       right: 0
+#     label_shadow:
+#       enabled: false
+#       color: "black"
+#       radius: 3
+#       offset: [1, 1]
