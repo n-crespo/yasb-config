@@ -37,7 +37,7 @@ https://github.com/amnweb/yasb/wiki
   cursor: pointer;
 }
 .yasb-bar {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: "#0a0a0a";
   border-radius: 0px;
 }
 .icon {
@@ -222,9 +222,10 @@ QPushButton {
   background: rgba(255, 255, 255, 0.1);
 }
 .volume-slider::groove:hover {
+  cursor: pointer;
   background: transparent;
-  height: 6px;
-  border-radius: 3px;
+  height: 8px;
+  border-radius: 4px;
   background: rgba(255, 255, 255, 0.2);
 }
 /* .volume-slider::handle { */
@@ -476,14 +477,13 @@ QPushButton {
 .media-widget .label.alt {
   color: var(--subtle);
   font-size: var(--smaller);
+  margin-left: 3px;
 }
 .media-widget .btn.play {
   color: var(--subtle);
   font-family: "Segoe Fluent Icons";
   font-size: 17px;
   margin-bottom: 1px;
-  margin-right: 1px;
-  font-weight: 200;
 }
 .media-widget .btn.prev,
 .media-widget .btn.next {
@@ -514,7 +514,6 @@ QPushButton {
   font-size: 13px;
   color: #6c7086;
   margin-top: 0px;
-  margin-bottom: 8px;
 }
 .media-menu .source {
   font-size: 11px;
@@ -542,7 +541,6 @@ Example: "Windows Media" becomes "windows-media" */
   background-color: #0078d4;
   color: #ffffff;
 }
-
 .media-menu .btn {
   font-size: 21px;
   font-weight: 400;
@@ -569,33 +567,32 @@ Example: "Windows Media" becomes "windows-media" */
   color: var(--subtle);
   background-color: var(--bg);
 }
-
 .media-menu .playback-time {
   font-size: 13px;
   font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
   color: #7f849c;
-  margin-top: 20px;
+  margin-top: 12px;
   min-width: 100px;
 }
 .media-menu .progress-slider {
   height: 10px;
   margin: 5px 4px;
-  border-radius: 3px;
+  border-radius: 1px;
 }
 .media-menu .progress-slider::groove {
   background: transparent;
-  height: 2px;
+  height: 6px;
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.1);
 }
 .media-menu .progress-slider::groove:hover {
   background: transparent;
-  height: 6px;
-  border-radius: 3px;
+  height: 8px;
+  border-radius: 4px;
   background: rgba(255, 255, 255, 0.2);
 }
 .media-menu .progress-slider::sub-page {
   background: white;
   border-radius: 3px;
-  height: 4px;
+  height: 6px;
 }

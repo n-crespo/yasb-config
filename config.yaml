@@ -79,7 +79,7 @@ widgets:
         show_source: true # Whether to show the media source (e.g., Spotify, YouTube) in the popup.
         show_volume_slider: false # Whether to show the volume slider in the popup. Volume control per application.
       label: "{title} - {artist}"
-      label_alt: ""
+      label_alt: "..."
       max_field_size:
         label: 28
         label_alt: 25
@@ -101,9 +101,9 @@ widgets:
         play: "󰐊"
         pause: "󰏤"
       callbacks:
-        on_left: "toggle_media_menu"
-        on_middle: "do_nothing"
-        on_right: "toggle_label"
+        on_right: "toggle_media_menu"
+        on_middle: "toggle_label"
+        on_left: "toggle_play_pause"
       scrolling_label:
         enabled: false # Whether to enable the scrolling label.
         update_interval_ms: 33 # The update interval for the scrolling label in milliseconds.
@@ -200,9 +200,9 @@ widgets:
         - "󰕾"
         - "󰕾"
       callbacks:
-        on_left: "toggle_volume_menu"
-        on_right: "do_nothing"
-        # on_right: "exec cmd.exe /c start ms-settings:sound"
+        on_right: "toggle_volume_menu"
+        on_left: "toggle_mute"
+        on_middle: "exec cmd.exe /c start ms-settings:sound"
 
   battery:
     type: "yasb.battery.BatteryWidget"
