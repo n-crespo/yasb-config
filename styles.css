@@ -198,7 +198,7 @@ QPushButton {
 /* VOLUME WIDGET */
 .volume-widget .icon {
   margin-left: 0px;
-  margin-right: 2px;
+  margin-right: 3px;
 }
 /* AUDIO MENU POPUP */
 .volume-slider {
@@ -274,7 +274,7 @@ QPushButton {
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
   font-size: 13px;
-  margin-right: 2px;
+  margin-right: 3px;
 }
 .wifi-menu {
   max-height: 350px;
@@ -474,19 +474,18 @@ QPushButton {
 .media-widget .label.alt {
   color: var(--subtle);
   font-size: var(--smaller);
-  margin-left: 3px;
 }
-.media-widget .btn {
+.media-widget .btn.play {
   color: var(--subtle);
   font-family: "Segoe Fluent Icons";
   font-size: 17px;
+  margin-bottom: 1px;
+  margin-right: 1px;
   font-weight: 200;
 }
 .media-widget .btn.prev,
 .media-widget .btn.next {
-  font-size: 0.5px;
-  padding: 0px;
-  margin: 0px;
+  max-width: 0px; /* hide prev/next buttons */
 }
 .media-widget .btn:hover {
   color: var(--text);
