@@ -30,12 +30,11 @@ bars:
       # removed: "microphone", "power_menu", "home", "active_window", "apps"
       left: ["glazewm_workspaces"]
       center: ["clock"]
-      right: [
+      right:
+        [
           "media",
           "memory",
           "glazewm_tiling_direction",
-          # "notifications",
-          # "systray",
           "wifi-grouper",
           "bluetooth",
           "volume",

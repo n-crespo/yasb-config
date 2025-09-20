@@ -192,6 +192,8 @@ QPushButton {
 .glazewm-tiling-direction .btn,
 .glazewm-tiling-direction .btn:hover {
   color: var(--subtle);
+  margin: 1px;
+  font-size: 16px;
   font-weight: 300;
 }
 
