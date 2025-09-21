@@ -503,6 +503,7 @@ QPushButton {
   max-width: 350px;
   background-color: var(--bg);
   border: 1px solid var(--bg_active);
+  border-radius: 8px;
 }
 .media-menu .title,
 .media-menu .artist,
