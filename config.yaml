@@ -160,7 +160,7 @@ widgets:
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
-      label_alt: "{wifi_icon}"
+      label_alt: "<span>{wifi_icon}</span>"
       label: "<span>{wifi_icon}</span> {wifi_name}"
       update_interval: 5000
       menu_config:
@@ -181,8 +181,9 @@ widgets:
         - "󰤥" # 51-75% strength
         - "󰤨" # 76-100% strength. Alternate theming: \uf1eb
       callbacks:
-        on_right: "exec cmd.exe /c start ms-settings:network"
-        on_left: "toggle_menu"
+        on_middle: "exec cmd.exe /c start ms-settings:network"
+        on_right: "toggle_menu"
+        on_left: "toggle_label"
 
   volume:
     type: "yasb.volume.VolumeWidget"

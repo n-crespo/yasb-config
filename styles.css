@@ -272,13 +272,13 @@ QPushButton {
   padding: 0px; /* we already have padding from the grouper */
 }
 .wifi-widget .label {
+  margin-left: 3px;
   color: var(--subtle);
   font-size: var(--smaller);
 }
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
-  font-size: 13px;
-  margin-right: 3px;
+  font-size: 15px;
 }
 .wifi-menu {
   max-height: 350px;
