@@ -265,7 +265,8 @@ QPushButton {
 
 /* WIFI WIDGET */
 
-/* HACK: a grouper surrounds this wifi widget  */
+/* HACK: a grouper surrounds this wifi widget so the hover bg works properly  */
+/* .wifi-grouper */
 
 .wifi-widget {
   color: var(--subtle);
