@@ -14,7 +14,7 @@ https://github.com/amnweb/yasb/wiki
   --yellow: #ffce08;
   --red: #d7474b;
   --text: white;
-  --smaller: 12px;
+  --smaller: 11px;
 }
 
 /* this is for everything */
@@ -171,7 +171,8 @@ QPushButton {
 .memory-widget:hover {
   background-color: var(--bg_hover);
 }
-.memory-widget .label {
+.memory-widget .label,
+.memory-widget .label.alt {
   color: var(--subtle);
   font-size: var(--smaller);
   margin: 1px;
@@ -256,6 +257,7 @@ QPushButton {
   font-weight: normal;
   /* font-size: 14px; */
 }
+.bluetooth-widget .label,
 .bluetooth-widget .label.alt {
   font-size: var(--smaller);
   margin-left: 4px;

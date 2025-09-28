@@ -146,12 +146,13 @@ widgets:
       animation:
         enabled: true
         type: "fadeInOut"
-      label: "<span>{icon}</span>"
-      label_alt: "<span>{icon}</span>{device_name}"
+      label: "<span>{icon}</span>{device_name}"
+      label_alt: "<span>{icon}</span>"
+      label_no_device: ""
       icons:
-        bluetooth_on: "󰂯"
+        bluetooth_on: ""
         bluetooth_off: ""
-        bluetooth_connected: ""
+        bluetooth_connected: "󰂯"
       callbacks:
         on_right: "exec cmd.exe /c start ms-settings:bluetooth"
       label_shadow:
