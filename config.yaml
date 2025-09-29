@@ -161,8 +161,8 @@ widgets:
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
-      label_alt: "<span>{wifi_icon}</span>"
-      label: "<span>{wifi_icon}</span> {wifi_name}"
+      label: "<span>{wifi_icon}</span>"
+      label_alt: "<span>{wifi_icon}</span> {wifi_name}"
       update_interval: 5000
       menu_config:
         blur: true
