@@ -195,7 +195,7 @@ QPushButton {
   color: var(--subtle);
   margin: 1px;
   font-size: 15px;
-  font-weight: 300;
+  font-weight: 800;
 }
 
 /* VOLUME WIDGET */
@@ -484,7 +484,6 @@ QPushButton {
 .media-widget .btn.play {
   color: var(--subtle);
   font-family: "Segoe Fluent Icons";
-  font-size: 17px;
   margin-bottom: 1px;
 }
 .media-widget .btn.prev,
