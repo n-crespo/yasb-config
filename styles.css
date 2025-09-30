@@ -21,10 +21,11 @@ https://github.com/amnweb/yasb/wiki
 * {
   appearance: none;
   font-family: "JetBrainsMono NFP";
+  /* font-family: "RobotoMono Nerd Font Propo"; */
   /* font-family: "Microsoft Sans Serif"; */
   border-radius: 3px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: bold;
   letter-spacing: -0.4px;
   color: white;
   margin: 0px;
