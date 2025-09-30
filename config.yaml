@@ -25,18 +25,17 @@ bars:
       windows_app_bar: true
     dimensions:
       width: "100%"
-      height: 28
+      height: 22
     widgets:
       # removed: "microphone", "power_menu", "home", "active_window", "apps"
       left: ["glazewm_workspaces"]
       center: ["clock"]
-      right:
-        [
+      right: [
           "media",
-          "glazewm_tiling_direction",
-          "memory",
-          "wifi-grouper",
+          # "glazewm_tiling_direction",
           "bluetooth",
+          "wifi-grouper",
+          "memory",
           "volume",
           "battery",
         ]
@@ -64,22 +63,22 @@ widgets:
     type: "yasb.media.MediaWidget"
     options:
       media_menu:
-        blur: false # Whether to apply a blur effect to the popup background.
-        round_corners: true # Whether to round the corners of the popup.
-        round_corners_type: "normal" # The type of corner rounding. Can be "normal" or "symmetric".
-        border_color: "system" # The border color of the popup. Can be a HEX, None or "system".
-        alignment: "right" # The alignment of the popup relative to the widget. Can be "left", "center", or "right".
-        direction: "down" # The direction in which the popup opens. Can be "up" or "down".
-        offset_top: 6 # The vertical offset of the popup from the widget.
-        offset_left: 0 # The horizontal offset of the popup from the widget.
-        thumbnail_corner_radius: 8 # The corner radius for the thumbnail in the popup.
-        thumbnail_size: 120 # The size of the thumbnail in the popup.
-        max_title_size: 60 # The maximum size for the title in the popup.
-        max_artist_size: 20 # The maximum size for the artist name in the popup.
-        show_source: true # Whether to show the media source (e.g., Spotify, YouTube) in the popup.
-        show_volume_slider: false # Whether to show the volume slider in the popup. Volume control per application.
+        blur: false
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        thumbnail_corner_radius: 8
+        thumbnail_size: 120
+        max_title_size: 60
+        max_artist_size: 20
+        show_source: true
+        show_volume_slider: false
       label: "{title} - {artist}"
-      label_alt: "..."
+      label_alt: ".."
       max_field_size:
         label: 28
         label_alt: 25
@@ -118,20 +117,34 @@ widgets:
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
-      label: "{virtual_mem_percent}%" # virtual_mem_used
-      label_alt: "{virtual_mem_used}" # virtual_mem_used
+      # label_alt: "{virtual_mem_percent}%"
+      label: "" # virtual_mem_used
+      label_alt: "{virtual_mem_used}"
       update_interval: 3000
       animation:
         enabled: true
         type: "fadeInOut"
         duration: 200
       callbacks:
-        on_right: "toggle_label"
         on_left: "toggle_label"
+        on_right: "exec cmd.exe /c start btop"
       memory_thresholds:
         low: 50
         medium: 81
         high: 90
+      progress_bar:
+        enabled: true
+      hide_decimal: true
+      histogram_icons:
+        - "\u2581" # 0%
+        - "\u2581" # 10%
+        - "\u2582" # 20%
+        - "\u2583" # 30%
+        - "\u2584" # 40%
+        - "\u2585" # 50%
+        - "\u2586" # 60%
+        - "\u2587" # 70%
+        - "\u2588" # 80%+
 
   glazewm_tiling_direction:
     type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
@@ -147,12 +160,17 @@ widgets:
         enabled: true
         type: "fadeInOut"
       label: "<span>{icon}</span>{device_name}"
-      label_alt: "<span>{icon}</span>"
+      label_alt: "<span>{icon}</span>{device_name}"
       label_no_device: ""
+      device_aliases:
+        - name: "Nothing Ear (a)"
+          alias: "󱡏"
+        - name: "iPhone"
+          alias: ""
       icons:
         bluetooth_on: ""
         bluetooth_off: ""
-        bluetooth_connected: "󰂯"
+        bluetooth_connected: ""
       callbacks:
         on_right: "exec cmd.exe /c start ms-settings:bluetooth"
       label_shadow:
@@ -212,7 +230,7 @@ widgets:
       label: "<span>{icon}</span>{percent}%"
       label_alt: "{time_remaining}"
       # time_remaining_natural: true # this seems to round down 😭
-      time_remaining_natural: True
+      time_remaining_natural: true
       status_thresholds:
         { critical: 10, low: 20, medium: 70, high: 80, full: 100 }
       charging_options:
@@ -243,23 +261,6 @@ widgets:
         direction: "down"
         distance: 6
 # ---------- unused widgets ----------
-# taskbar:
-#     type: "yasb.taskbar.TaskbarWidget"
-#     options:
-#       monitor_exclusive: true
-#       show_only_visible: true
-#       icon_size: 14
-#       animation:
-#         enabled: true
-#       title_label:
-#         enabled: false
-#         show: "focused"
-#         min_length: 10
-#         max_length: 30
-#       ignore_apps:
-#         processes: []
-#         titles: []
-#         classes: []
 
 # systray:
 #   type: "yasb.systray.SystrayWidget"

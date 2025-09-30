@@ -7,14 +7,14 @@ https://github.com/amnweb/yasb/wiki
   --bg_active: rgba(255, 255, 255, 0.15);
   --bg_hover: #1e1e1e;
   --bg: #202020;
-  --blue: #84aff2;
+  --blue: #88a3bc;
   --black: #1e1e1e;
   --green: #39c559;
   --yellowgreen: #9acd32;
   --yellow: #ffce08;
   --red: #d7474b;
   --text: white;
-  --smaller: 11px;
+  --smaller: 10px;
 }
 
 /* this is for everything */
@@ -23,7 +23,7 @@ https://github.com/amnweb/yasb/wiki
   font-family: "JetBrainsMono NFP";
   /* font-family: "Microsoft Sans Serif"; */
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: -0.4px;
   color: white;
@@ -43,7 +43,7 @@ https://github.com/amnweb/yasb/wiki
 .icon {
   font-family: "Symbols Nerd Font";
   color: var(--text);
-  font-size: 15px;
+  font-size: 16px;
   border-radius: 3px;
 }
 .widget {
@@ -141,13 +141,11 @@ QPushButton {
   color: var(--subtle);
 }
 .glazewm-workspaces .ws-btn {
-  /* font-size: 14px; */
+  font-size: 13px;
   color: var(--subtle);
-  padding: 3px 8px; /* background color fills the padding */
-  /* font-size: 14px; /* make it a bit bigger */
+  padding: 2px 8px;
 }
 .glazewm-workspaces .ws-btn:hover {
-  /* cursor: pointer; */
   background-color: var(--bg_hover);
 }
 .glazewm-workspaces .ws-btn.populated {
@@ -249,19 +247,17 @@ QPushButton {
   background-color: var(--bg_active);
 }
 /* BLUETOOTH WIDET  */
-.widget-container {
-  font-size: 10px;
+.bluetooth-widget .widget-container {
+  font-size: var(--smaller);
 }
 .bluetooth-widget .icon {
   color: var(--blue);
   font-weight: normal;
-  /* font-size: 14px; */
 }
 .bluetooth-widget .label,
 .bluetooth-widget .label.alt {
-  font-size: var(--smaller);
-  margin-left: 4px;
-  color: var(--subtle);
+  font-size: 14px;
+  color: var(--blue);
 }
 
 /* WIFI WIDGET */
@@ -280,7 +276,6 @@ QPushButton {
 }
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
-  font-size: 15px;
 }
 .wifi-menu {
   max-height: 350px;
@@ -391,11 +386,10 @@ QPushButton {
 }
 
 /* CLOCK WIDGET */
-/* CALENDAR POPUP  */
 .clock-widget .label {
-  font-size: 12px;
   color: var(--subtle);
 }
+/* CALENDAR POPUP  */
 .calendar .calendar-table::item:hover,
 .clock-widget:hover {
   background-color: var(--bg);
@@ -441,7 +435,6 @@ QPushButton {
 
 /* BATTERY WIDGET */
 .battery-widget .widget-container .icon {
-  font-size: 15px;
   margin-right: 3px;
 }
 .battery-widget .widget-container .icon.status-charging {
@@ -478,7 +471,7 @@ QPushButton {
 .media-widget .label,
 .media-widget .label.alt {
   color: var(--subtle);
-  font-size: var(--smaller);
+  font-size: 10px;
   margin-left: 3px;
 }
 .media-widget .btn.play {
