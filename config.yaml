@@ -134,6 +134,9 @@ widgets:
         high: 90
       progress_bar:
         enabled: true
+        size: 15
+        color: "#797979"
+        thickness: 3
       hide_decimal: true
       histogram_icons:
         - "\u2581" # 0%

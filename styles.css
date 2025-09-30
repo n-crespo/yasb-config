@@ -169,6 +169,9 @@ QPushButton {
 .memory-widget:hover {
   background-color: var(--bg_hover);
 }
+.memory-widget .progress-circle {
+  font-size: 8px;
+}
 .memory-widget .label,
 .memory-widget .label.alt {
   color: var(--subtle);
@@ -252,7 +255,7 @@ QPushButton {
 }
 .bluetooth-widget .icon {
   color: var(--blue);
-  font-weight: normal;
+  font-weight: bold;
 }
 .bluetooth-widget .label,
 .bluetooth-widget .label.alt {
@@ -276,6 +279,7 @@ QPushButton {
 }
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
+  font-size: 12px;
 }
 .wifi-menu {
   max-height: 350px;
