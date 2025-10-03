@@ -163,19 +163,22 @@ widgets:
         enabled: true
         type: "fadeInOut"
       label: "<span>{icon}</span>{device_name}"
-      label_alt: "<span>{icon}</span>{device_name}"
+      label_alt: "<span>󰂯</span>"
       label_no_device: ""
       device_aliases:
         - name: "Nothing Ear (a)"
           alias: "󱡏"
         - name: "iPhone"
           alias: ""
+        - name: "Zubin’s JBL 2"
+          alias: "󰓃"
       icons:
         bluetooth_on: ""
         bluetooth_off: ""
         bluetooth_connected: ""
       callbacks:
         on_right: "exec cmd.exe /c start ms-settings:bluetooth"
+        on_left: toggle_label
       label_shadow:
         enabled: false
 

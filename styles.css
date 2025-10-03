@@ -14,7 +14,8 @@ https://github.com/amnweb/yasb/wiki
   --yellow: #ffce08;
   --red: #d7474b;
   --text: white;
-  --smaller: 15px;
+  --small: 15px;
+  --smaller: 11px;
 }
 
 /* this is for everything */
@@ -176,7 +177,7 @@ QPushButton {
 .memory-widget .label,
 .memory-widget .label.alt {
   color: var(--subtle);
-  font-size: calc(var(--smaller) - 2);
+  font-size: calc(var(--small) - 2);
   margin: 1px;
 }
 .memory-widget .label.status-low {
@@ -251,16 +252,14 @@ QPushButton {
   background-color: var(--bg_active);
 }
 /* BLUETOOTH WIDET  */
-.bluetooth-widget .widget-container {
-}
 .bluetooth-widget .icon {
-  font-size: var(--smaller);
+  font-size: var(--small);
   color: var(--blue);
   font-weight: bold;
 }
 .bluetooth-widget .label,
 .bluetooth-widget .label.alt {
-  font-size: var(--smaller);
+  font-size: var(--small);
   color: var(--blue);
 }
 
@@ -276,11 +275,11 @@ QPushButton {
 .wifi-widget .label {
   margin-left: 3px;
   color: var(--subtle);
-  font-size: calc(var(--smaller) - 2);
+  font-size: var(--smaller);
 }
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
-  font-size: var(--smaller);
+  font-size: var(--small);
 }
 .wifi-menu {
   max-height: 350px;
