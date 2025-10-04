@@ -171,7 +171,11 @@ QPushButton {
 .memory-widget:hover {
   background-color: var(--bg_hover);
 }
+.memory-widget {
+  padding: 0px 4px;
+}
 .memory-widget .progress-circle {
+  padding: 0px;
   font-size: 8px;
 }
 .memory-widget .label,

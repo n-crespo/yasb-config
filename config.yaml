@@ -134,7 +134,7 @@ widgets:
         high: 90
       progress_bar:
         enabled: true
-        size: 15
+        size: 17
         color: "#797979"
         thickness: 3
       hide_decimal: true
