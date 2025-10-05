@@ -8,6 +8,7 @@ https://github.com/amnweb/yasb/wiki
   --bg_hover: #1e1e1e;
   --bg: #202020;
   --blue: #88a3bc;
+  --bluetooth: #0082fc;
   --black: #1e1e1e;
   --green: #39c559;
   --yellowgreen: #9acd32;
@@ -258,13 +259,13 @@ QPushButton {
 /* BLUETOOTH WIDET  */
 .bluetooth-widget .icon {
   font-size: var(--small);
-  color: var(--blue);
+  color: var(--bluetooth);
   font-weight: bold;
 }
 .bluetooth-widget .label,
 .bluetooth-widget .label.alt {
   font-size: var(--small);
-  color: var(--blue);
+  color: var(--bluetooth);
 }
 
 /* WIFI WIDGET */
