@@ -600,3 +600,7 @@ Example: "Windows Media" becomes "windows-media" */
   border-radius: 3px;
   height: 6px;
 }
+
+.systray .unpinned-container {
+  margin-right: 9px;
+}

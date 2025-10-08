@@ -32,6 +32,7 @@ bars:
       center: ["clock"]
       right: [
           "media",
+          # "systray",
           # "glazewm_tiling_direction",
           "bluetooth",
           "wifi-grouper",
@@ -113,6 +114,23 @@ widgets:
         ease_pos: 0.8 # The easing curve position for the bounce effect.
         ease_min: 0.5 # The minimum value for the bounce effect easing curve.
 
+  # systray:
+  #   type: "yasb.systray.SystrayWidget"
+  #   options:
+  #     class_name: "systray"
+  #     label_collapsed: ""
+  #     label_expanded: ""
+  #     label_position: "left" # Can be "left" or "right"
+  #     icon_size: 14 # Can be any integer between 8 and 64
+  #     pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
+  #     show_unpinned: true
+  #     show_unpinned_button: false
+  #     show_battery: true
+  #     show_volume: true
+  #     show_network: true
+  #     btn_shadow:
+  #       enabled: false
+
   ######### RIGHT ###########
   memory:
     type: "yasb.memory.MemoryWidget"
@@ -127,7 +145,7 @@ widgets:
         duration: 200
       callbacks:
         on_left: "toggle_label"
-        on_right: "exec cmd.exe /c start btop"
+        on_right: "exec cmd.exe /c wt --focus btop"
       memory_thresholds:
         low: 50
         medium: 81
@@ -267,24 +285,6 @@ widgets:
         direction: "down"
         distance: 6
 # ---------- unused widgets ----------
-
-# systray:
-#   type: "yasb.systray.SystrayWidget"
-#   options:
-#     class_name: "systray"
-#     label_collapsed: ""
-#     label_expanded: ""
-#     label_position: "left" # Can be "left" or "right"
-#     icon_size: 14 # Can be any integer between 8 and 64
-#     pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
-#     show_unpinned: true
-#     show_unpinned_button: true
-#     show_battery: false
-#     show_volume: false
-#     show_network: false
-#     btn_shadow:
-#       enabled: false
-
 # notifications:
 #   type: "yasb.notifications.NotificationsWidget"
 #   options:
