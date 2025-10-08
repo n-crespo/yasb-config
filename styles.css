@@ -259,7 +259,7 @@ QPushButton {
 /* BLUETOOTH WIDET  */
 .bluetooth-widget .icon {
   font-size: var(--small);
-  color: var(--bluetooth);
+  color: var(--blue);
   font-weight: bold;
 }
 .bluetooth-widget .label,
