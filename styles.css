@@ -147,6 +147,8 @@ QPushButton {
   font-size: 13px;
   color: var(--subtle);
   padding: 2px 8px;
+  border-right: 1px solid var(--subtle);
+  border-radius: 0px;
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--bg_hover);
@@ -162,9 +164,21 @@ QPushButton {
 }
 /* empty workspaces */
 .glazewm-workspaces .ws-btn.active_empty {
+  /* color: #7d8b9d; */
+  /* background-color: #727272; */
   background-color: var(--bg_active);
   color: var(--subtle);
 }
+.glazewm-workspaces .ws-btn .label {
+  font-size: 12px;
+} /*Style for workspace label in buttons.*/
+.glazewm-workspaces .ws-btn .icon-1 {
+  margin-left: 6px;
+  font-size: 10px;
+}
+.glazewm-workspaces .ws-btn .icon {
+  font-size: 5px;
+} /*Style for icon in buttons.*/
 
 /************* RIGHT ***************/
 

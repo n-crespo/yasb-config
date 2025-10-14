@@ -56,8 +56,20 @@ widgets:
       offline_label: "GlazeWM Offline"
       hide_empty_workspaces: true
       hide_if_offline: false
+      enable_scroll_switching: false
       populated_label: "{display_name}"
       empty_label: "{display_name}"
+      animation: true
+      app_icons:
+        {
+          "enabled_populated": true,
+          "enabled_active": true,
+          "size": 14,
+          "max_icons": 0,
+          "hide_label": False,
+          "hide_duplicates": False,
+          "hide_floating": False,
+        }
 
   ########### CENTER #############
   media:
