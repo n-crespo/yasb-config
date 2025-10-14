@@ -542,6 +542,10 @@ Example: "Windows Media" becomes "windows-media" */
   background-color: #ff583b;
   color: #ffffff;
 }
+.media-menu .source.brave {
+  background-color: #fb542b;
+  color: #ffffff;
+}
 .media-menu .source.spotify {
   background-color: #199143;
   color: #ffffff;
