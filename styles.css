@@ -145,34 +145,35 @@ QPushButton {
 }
 .glazewm-workspaces .ws-btn {
   font-size: 13px;
-  color: var(--subtle);
   padding: 2px 8px;
-  /* border-bottom: 2px solid transparent; */
-  /* border: 1px solid transparent; */
-  /* border-radius: 9px; */
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--bg_hover);
 }
+/* gray bg on active workspaces */
+.glazewm-workspaces .ws-btn.active_populated,
+.glazewm-workspaces .ws-btn.active_empty {
+  background-color: var(--bg_active);
+}
+/* white on populated workspaces, subtle gray on empty ones  */
+.glazewm-workspaces .ws-btn.active_empty {
+  color: var(--subtle);
+}
 .glazewm-workspaces .ws-btn.populated {
   color: var(--text);
 }
-/* active and populated */
-.glazewm-workspaces .ws-btn.active_empty,
-.glazewm-workspaces .ws-btn.active_populated {
-  background-color: var(--bg_active);
-  color: var(--text);
+.glazewm-workspaces .ws-btn.empty,
+.glazewm-workspaces .ws-btn.empty .label {
+  color: var(--subtle);
 }
 .glazewm-workspaces .ws-btn .label {
   font-size: 12px;
-} /*Style for workspace label in buttons.*/
-.glazewm-workspaces .ws-btn .icon-1 {
-  margin-left: 6px;
-  font-size: 10px;
 }
-.glazewm-workspaces .ws-btn .icon {
-  font-size: 5px;
-} /*Style for icon in buttons.*/
+/* used if i want to show app icons per workspace  */
+/* .glazewm-workspaces .ws-btn .icon-1 { */
+/*   margin-left: 6px; */
+/*   font-size: 10px; */
+/* } */
 
 /************* RIGHT ***************/
 

@@ -62,9 +62,9 @@ widgets:
       animation: true
       app_icons:
         {
-          "enabled_populated": true,
-          "enabled_active": true,
-          "size": 14,
+          "enabled_populated": false,
+          "enabled_active": false,
+          "size": 13,
           "max_icons": 0,
           "hide_label": False,
           "hide_duplicates": False,
