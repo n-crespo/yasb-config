@@ -157,7 +157,7 @@ widgets:
         duration: 200
       callbacks:
         on_left: "toggle_label"
-        on_right: "exec cmd.exe /c wt --focus btop"
+        on_right: "exec cmd /c Taskmgr"
       memory_thresholds:
         low: 50
         medium: 81
