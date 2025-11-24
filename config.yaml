@@ -248,7 +248,24 @@ widgets:
         enabled: True
       label: "<span>{icon}</span> {level}"
       label_alt: "{volume}"
-      tooltip: True
+      tooltip: true
+      slider_beep: false
+      audio_menu:
+        blur: true # Enable blur effect for the menu
+        round_corners: true # Enable round corners for the menu (not supported on Windows 10)
+        round_corners_type: "normal" # Set the type of round corners for the menu (normal, small) (not supported on Windows 10)
+        border_color: "system" # Set the border color for the menu, "system", Hex color or None
+        alignment: "right" # Set the alignment of the menu (left, right, center)
+        direction: "down" # Set the direction of the menu (up, down)
+        offset_top: 6 # Set the top offset of the menu
+        offset_left: 0 # Set the left offset of the menu
+        show_apps: true # Whether to show the list of applications with audio sessions
+        show_app_labels: false # Whether to show application labels in the audio menu
+        show_app_icons: true # Whether to show application icons in the audio menu
+        show_apps_expanded: true # Whether application volumes are expanded by default when opening the menu
+        app_icons: # Icons for the toggle button to expand/collapse application volumes
+          toggle_down: "\uf078" # Icon for btn collapsed state
+          toggle_up: "\uf077" # Icon for btn expanded state
       volume_icons:
         - "󰸈"
         - "󰖀"
@@ -287,7 +304,7 @@ widgets:
       timezones: []
       callbacks:
         on_left: "toggle_calendar"
-        on_right: "do_nothing"
+        on_right: "toggle_calendar"
       calendar:
         blur: True
         round_corners: True
