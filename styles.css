@@ -9,7 +9,6 @@ https://github.com/amnweb/yasb/wiki
   --bg: #202020;
   --blue: #88a3bc;
   --bluetooth: #0082fc;
-  --winblue: "#4CC2FF";
   --black: #1e1e1e;
   --green: #39c559;
   --yellowgreen: #9acd32;
@@ -230,7 +229,7 @@ QPushButton {
   background: transparent;
 }
 .volume-slider::sub-page {
-  background: var(--winblue);
+  background: white;
   border-radius: 3px;
   height: 4px;
 }
@@ -238,6 +237,9 @@ QPushButton {
   height: 6px;
   border-radius: 3px;
   background: var(--bg_active);
+}
+.audio-menu .system-volume-container .volume-slider {
+  border: none;
 }
 .audio-menu {
   background-color: var(--bg);
@@ -257,9 +259,6 @@ QPushButton {
 .audio-container .device:hover {
   color: var(--text);
   background-color: var(--bg_active);
-}
-.audio-menu .system-volume-container .volume-slider {
-  border: none;
 }
 .audio-menu .audio-container .device {
   background-color: transparent;
