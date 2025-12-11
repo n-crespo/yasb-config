@@ -658,6 +658,12 @@ Example: "Windows Media" becomes "windows-media" */
   height: 6px;
 }
 
-.systray .unpinned-container {
-  margin-right: 9px;
+.systray .unpinned-visibility-btn {
+  border-radius: 4px;
+  height: 20px;
+  width: 16px;
 }
+
+/* .systray .unpinned-container { */
+/*   margin-right: 9px; */
+/* } */

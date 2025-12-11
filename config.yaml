@@ -32,7 +32,7 @@ bars:
       center: ["clock"]
       right: [
           "media",
-          # "systray",
+          "systray",
           # "glazewm_tiling_direction",
           "bluetooth",
           "wifi-grouper",
@@ -126,22 +126,22 @@ widgets:
         ease_pos: 0.8 # The easing curve position for the bounce effect.
         ease_min: 0.5 # The minimum value for the bounce effect easing curve.
 
-  # systray:
-  #   type: "yasb.systray.SystrayWidget"
-  #   options:
-  #     class_name: "systray"
-  #     label_collapsed: ""
-  #     label_expanded: ""
-  #     label_position: "left" # Can be "left" or "right"
-  #     icon_size: 14 # Can be any integer between 8 and 64
-  #     pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
-  #     show_unpinned: true
-  #     show_unpinned_button: false
-  #     show_battery: true
-  #     show_volume: true
-  #     show_network: true
-  #     btn_shadow:
-  #       enabled: false
+  systray:
+    type: "yasb.systray.SystrayWidget"
+    options:
+      class_name: "systray"
+      label_collapsed: ""
+      label_expanded: "󰍴"
+      label_position: "right" # Can be "left" or "right"
+      icon_size: 15 # Can be any integer between 8 and 64
+      pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
+      show_unpinned: false
+      show_unpinned_button: true
+      show_battery: true
+      show_volume: false
+      show_network: false
+      btn_shadow:
+        enabled: false
 
   ######### RIGHT ###########
   memory:
