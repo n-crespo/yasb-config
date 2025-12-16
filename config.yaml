@@ -32,9 +32,9 @@ bars:
       center: ["clock"]
       right: [
           "media",
-          "systray",
           # "glazewm_tiling_direction",
           "bluetooth",
+          "systray",
           "wifi-grouper",
           "memory",
           "volume",
