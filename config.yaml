@@ -200,8 +200,10 @@ widgets:
           alias: "󱡏"
         - name: "iPhone"
           alias: ""
-        - name: "Zubin’s JBL 2"
+        - name: "HK Onyx Studio 6"
           alias: "󰓃"
+        - name: "Zubin’s JBL 2"
+          alias: "󰴸"
       icons:
         bluetooth_on: ""
         bluetooth_off: ""
