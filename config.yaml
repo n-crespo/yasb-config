@@ -239,7 +239,7 @@ widgets:
         - "󰤨" # 76-100% strength. Alternate theming: \uf1eb
       callbacks:
         on_middle: "exec cmd.exe /c start ms-settings:network"
-        on_right: "toggle_menu"
+        on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/"
         on_left: "toggle_label"
 
   volume:
