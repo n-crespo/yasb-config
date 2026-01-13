@@ -209,7 +209,7 @@ widgets:
         bluetooth_off: ""
         bluetooth_connected: ""
       callbacks:
-        on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/"
+        on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/bluetooth"
         on_left: toggle_label
       label_shadow:
         enabled: false
@@ -239,7 +239,7 @@ widgets:
         - "󰤨" # 76-100% strength. Alternate theming: \uf1eb
       callbacks:
         on_middle: "exec cmd.exe /c start ms-settings:network"
-        on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/"
+        on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/wifi"
         on_left: "toggle_label"
 
   volume:
@@ -277,7 +277,7 @@ widgets:
       callbacks:
         on_right: "toggle_volume_menu"
         on_left: "toggle_mute"
-        on_middle: "exec cmd.exe /c start ms-settings:sound"
+        on_middle: "exec cmd.exe /c start ms-actioncenter:controlcenter/volume"
 
   battery:
     type: "yasb.battery.BatteryWidget"
