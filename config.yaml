@@ -209,7 +209,7 @@ widgets:
         bluetooth_off: ""
         bluetooth_connected: ""
       callbacks:
-        on_right: "exec explorer.exe ms-actioncenter:controlcenter/"
+        on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/"
         on_left: toggle_label
       label_shadow:
         enabled: false
