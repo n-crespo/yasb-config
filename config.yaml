@@ -137,7 +137,7 @@ widgets:
       pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
       show_unpinned: false
       show_unpinned_button: true
-      show_battery: true
+      show_battery: false
       show_volume: false
       show_network: false
       btn_shadow:
