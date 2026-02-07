@@ -22,7 +22,8 @@ https://github.com/amnweb/yasb/wiki
 /* this is for everything */
 * {
   appearance: none;
-  font-family: "Symbols Nerd Font", "JetBrainsMono NFP";
+  font-family: "JetBrainsMono NFP";
+  /* font-family: "Symbols Nerd Font", "JetBrainsMono NFP"; */
   /* font-family: "RobotoMono Nerd Font Propo"; */
   /* font-family: "Microsoft Sans Serif"; */
   border-radius: 3px;
