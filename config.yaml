@@ -219,10 +219,14 @@ widgets:
     options:
       label: "<span>{wifi_icon}</span>"
       label_alt: "<span>{wifi_icon}</span> {wifi_name}"
-      update_interval: 5000
+      update_interval: 2000
+      animation:
+        enabled: true
+        type: fadeInOut
+        duration: 200
       menu_config:
-        blur: true
-        round_corners: true
+        blur: false
+        round_corners: false
         round_corners_type: "normal"
         border_color: "System"
         alignment: "right"
