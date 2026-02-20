@@ -556,6 +556,7 @@ Example: "Windows Media" becomes "windows-media" */
   border-radius: 4px;
   height: 20px;
   width: 16px;
+  color: var(--subtle);
 }
 
 /* .systray .unpinned-container { */
