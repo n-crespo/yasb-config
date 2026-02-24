@@ -35,8 +35,8 @@ bars:
           # "glazewm_tiling_direction",
           "bluetooth",
           "systray",
-          "wifi-grouper",
           "memory",
+          "wifi-grouper",
           "volume",
           "battery",
         ]
@@ -165,7 +165,8 @@ widgets:
       progress_bar:
         enabled: true
         size: 17
-        color: "#797979"
+        color: "#585858"
+        background_color: "#272727"
         thickness: 3
       hide_decimal: true
       histogram_icons:

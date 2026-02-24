@@ -220,6 +220,10 @@ QPushButton {
 .volume-widget .icon {
   margin-left: 0px;
   margin-right: 3px;
+  color: var(--subtle);
+}
+.volume-widget .label {
+  color: var(--subtle);
 }
 /* AUDIO MENU POPUP */
 .volume-slider {
