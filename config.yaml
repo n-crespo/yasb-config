@@ -28,7 +28,7 @@ bars:
       height: 22
     widgets:
       # removed: "microphone", "power_menu", "home", "active_window", "apps"
-      left: ["glazewm_workspaces"]
+      left: ["komorebi_workspaces"]
       center: ["clock"]
       right: [
           "media",
@@ -49,6 +49,36 @@ widgets:
       widgets: ["wifi"]
 
   ############## LEFT ############
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_offline: "Komorebi Offline"
+      label_workspace_btn: "{name}"
+      label_workspace_active_btn: "{name}"
+      label_workspace_populated_btn: "{name}"
+      label_default_name: "{name}"
+      label_zero_index: true
+      hide_empty_workspaces: true
+      hide_if_offline: false
+      animation: false
+      toggle_workspace_layer:
+        enabled: false
+        tiling_label: "Tiling"
+        floating_label: "Floating"
+      app_icons:
+        enabled_populated: false
+        enabled_active: false
+        size: 12
+        max_icons: 0
+        hide_label: false
+        hide_duplicates: false
+        hide_floating: false
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [1, 1]
+
   glazewm_workspaces:
     update_interval: 50
     type: "glazewm.workspaces.GlazewmWorkspacesWidget"
@@ -180,11 +210,11 @@ widgets:
         - "\u2587" # 70%
         - "\u2588" # 80%+
 
-  glazewm_tiling_direction:
-    type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
-    options:
-      horizontal_label: ""
-      vertical_label: ""
+  # glazewm_tiling_direction:
+  #   type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
+  #   options:
+  #     horizontal_label: ""
+  #     vertical_label: ""
 
   bluetooth:
     type: "yasb.bluetooth.BluetoothWidget"
