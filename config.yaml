@@ -1,6 +1,6 @@
 # https://github.com/amnweb/yasb/wiki
 watch_stylesheet: true
-watch_config: true
+watch_config: false
 debug: false
 bars:
   primary-bar:
