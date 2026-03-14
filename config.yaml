@@ -60,7 +60,7 @@ widgets:
       label_zero_index: true
       hide_empty_workspaces: false
       hide_if_offline: false
-      animation: false
+      animation: true
       toggle_workspace_layer:
         enabled: false
         tiling_label: "Tiling"
