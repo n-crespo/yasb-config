@@ -58,7 +58,7 @@ widgets:
       label_workspace_populated_btn: "{name}"
       label_default_name: "{name}"
       label_zero_index: true
-      hide_empty_workspaces: true
+      hide_empty_workspaces: false
       hide_if_offline: false
       animation: false
       toggle_workspace_layer:

@@ -134,42 +134,30 @@ QPushButton {
 
 /* ***************** LEFT ********************** */
 
-/* GLAZEWM WIDGET (LEFT) */
-.glazewm-workspaces {
+/* komorebi WIDGET (LEFT) */
+.komorebi-workspaces {
   margin-left: -5px;
 }
-.glazewm-workspaces:hover {
+.komorebi-workspaces:hover {
   background-color: none;
 }
-.glazewm-workspaces .offline-status {
-  color: var(--subtle);
-}
-.glazewm-workspaces .ws-btn {
-  font-size: 13px;
-  padding: 2px 8px;
-}
-.glazewm-workspaces .ws-btn:hover {
+.komorebi-workspaces .ws-btn:hover {
   background-color: var(--bg_hover);
 }
-/* gray bg on active workspaces */
-.glazewm-workspaces .ws-btn.active_populated,
-.glazewm-workspaces .ws-btn.active_empty {
-  background-color: var(--bg_active);
-}
-/* white on populated workspaces, subtle gray on empty ones  */
-.glazewm-workspaces .ws-btn.active_empty {
-  color: var(--subtle);
-}
-.glazewm-workspaces .ws-btn.populated {
+.komorebi-workspaces .ws-btn.populated {
   color: var(--text);
 }
-.glazewm-workspaces .ws-btn.empty,
-.glazewm-workspaces .ws-btn.empty .label {
+.komorebi-workspaces .ws-btn {
+  font-size: 13px;
+  padding: 2px 8px;
   color: var(--subtle);
 }
-.glazewm-workspaces .ws-btn .label {
-  font-size: 12px;
+/* gray bg on active workspaces */
+.komorebi-workspaces .ws-btn.active {
+  background-color: var(--bg_active);
+  color: var(--text);
 }
+
 /* used if i want to show app icons per workspace  */
 /* .glazewm-workspaces .ws-btn .icon-1 { */
 /*   margin-left: 6px; */
