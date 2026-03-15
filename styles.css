@@ -136,7 +136,7 @@ QPushButton {
 
 /* GLAZEWM WIDGET (LEFT) */
 .glazewm-workspaces {
-  margin-left: -5px;
+  margin-left: -8px;
 }
 .glazewm-workspaces:hover {
   background-color: none;
@@ -146,9 +146,11 @@ QPushButton {
 }
 .glazewm-workspaces .ws-btn {
   font-size: 13px;
-  padding: 2px 7px;
+  padding: 0px 7px;
   padding-left: 0px;
-  border: 1px solid black;
+  border: 1px solid var(--subtle);
+  border-radius: 8px;
+  margin: 0px 3px;
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--bg_hover);
@@ -164,7 +166,8 @@ QPushButton {
 }
 /* EMPTY LABEL: should have negative margin */
 .glazewm-workspaces .ws-btn.empty .label,
-.glazewm-workspaces .ws-btn.focused_empty .label {
+.glazewm-workspaces .ws-btn.focused_empty .label,
+.glazewm-workspaces .ws-btn.populated .label {
   color: var(--subtle);
 }
 .glazewm-workspaces .ws-btn .icon-1 {

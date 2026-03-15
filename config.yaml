@@ -64,7 +64,7 @@ widgets:
         {
           "enabled_populated": true,
           "enabled_active": true,
-          "size": 15,
+          "size": 14,
           "max_icons": 0,
           "hide_label": False,
           "hide_duplicates": False,
