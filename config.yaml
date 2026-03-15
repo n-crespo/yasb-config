@@ -54,7 +54,7 @@ widgets:
     type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
       offline_label: "GlazeWM Offline"
-      hide_empty_workspaces: true
+      hide_empty_workspaces: false
       hide_if_offline: false
       enable_scroll_switching: false
       populated_label: "{display_name}"
