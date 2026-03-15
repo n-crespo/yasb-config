@@ -148,27 +148,29 @@ QPushButton {
   font-size: 13px;
   padding: 0px 7px;
   padding-left: 0px;
-  border: 1px solid var(--subtle);
-  border-top: none;
-  border-radius: 6px;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
+  border-bottom: 3px solid var(--subtle);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
   margin: 0px 3px;
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--bg_hover);
 }
+.glazewm-workspaces .ws-btn.empty,
+.glazewm-workspaces .ws-btn.focused_empty .label {
+  border: none;
+}
 /* gray bg on active workspaces */
-.glazewm-workspaces .ws-btn.focused_populated,
+.glazewm-workspaces .ws-btn.focused_populated {
+  background-color: var(--bg_active);
+  border-bottom: 3px solid var(--subtle);
+}
 .glazewm-workspaces .ws-btn.focused_empty {
   background-color: var(--bg_active);
-  border: 1px solid var(--subtle);
-  border-top: none;
+  border: none;
 }
-.glazewm-workspaces .ws-btn.focused_populated .label {
-  margin-right: unset;
-}
-/* EMPTY LABEL: should have negative margin */
 .glazewm-workspaces .ws-btn.empty .label,
 .glazewm-workspaces .ws-btn.focused_empty .label,
 .glazewm-workspaces .ws-btn.populated .label {
