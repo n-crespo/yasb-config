@@ -15,6 +15,7 @@ https://github.com/amnweb/yasb/wiki
   --yellow: #ffce08;
   --red: #d7474b;
   --text: white;
+  --accent: #4cc2ff;
   --small: 15px;
   --smaller: 11px;
 }
@@ -165,7 +166,7 @@ QPushButton {
 /* gray bg on active workspaces */
 .glazewm-workspaces .ws-btn.focused_populated {
   background-color: var(--bg_active);
-  border-bottom: 3px solid var(--subtle);
+  border-bottom: 3px solid var(--accent);
 }
 .glazewm-workspaces .ws-btn.focused_empty {
   background-color: var(--bg_active);
