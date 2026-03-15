@@ -149,7 +149,10 @@ QPushButton {
   padding: 0px 7px;
   padding-left: 0px;
   border: 1px solid var(--subtle);
-  border-radius: 8px;
+  border-top: none;
+  border-radius: 6px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
   margin: 0px 3px;
 }
 .glazewm-workspaces .ws-btn:hover {
@@ -159,7 +162,8 @@ QPushButton {
 .glazewm-workspaces .ws-btn.focused_populated,
 .glazewm-workspaces .ws-btn.focused_empty {
   background-color: var(--bg_active);
-  border: 1px solid var(--bg_active);
+  border: 1px solid var(--subtle);
+  border-top: none;
 }
 .glazewm-workspaces .ws-btn.focused_populated .label {
   margin-right: unset;
