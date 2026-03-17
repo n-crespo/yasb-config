@@ -59,6 +59,8 @@ widgets:
       enable_scroll_switching: false
       populated_label: "{display_name}"
       empty_label: "{display_name}"
+      active_populated_label: "{display_name}"
+      active_empty_label: "{display_name}"
       animation: true
       app_icons:
         {

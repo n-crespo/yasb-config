@@ -137,7 +137,8 @@ QPushButton {
 
 /* GLAZEWM WIDGET (LEFT) */
 .glazewm-workspaces {
-  padding-left: 0px;
+  /* fully left align this widget */
+  padding-left: unset;
 }
 .glazewm-workspaces:hover {
   background-color: none;
@@ -148,7 +149,6 @@ QPushButton {
 .glazewm-workspaces .ws-btn {
   font-size: 13px;
   padding: 0px 7px;
-  padding-left: 0px;
   border-bottom: 3px solid var(--subtle);
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
