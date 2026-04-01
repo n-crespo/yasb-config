@@ -85,15 +85,3 @@
 #     max_length: 56
 #     max_length_ellipsis: "..."
 #     monitor_exclusive: false
-
-# bluetooth:
-#   type: "yasb.bluetooth.BluetoothWidget"
-#   options:
-#     label: "<span>{icon}</span>"
-#     label_alt: "{device_name}"
-#     icons:
-#       bluetooth_on: "\udb80\udcaf"
-#       bluetooth_off: "\udb80\udcb2"
-#       bluetooth_connected: "\udb80\udcb1"
-#     callbacks:
-#       on_right: "exec cmd.exe /c start ms-settings:bluetooth"
