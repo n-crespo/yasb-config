@@ -148,12 +148,9 @@ QPushButton {
 }
 .glazewm-workspaces .ws-btn {
   font-size: 13px;
-  padding: 0px 7px;
-  border-bottom: 3px solid var(--subtle);
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
+  padding: 0px 4px;
+  /* border-top: 2px solid var(--subtle); */
+  border-radius: 3px;
   margin: 0px 3px;
 }
 .glazewm-workspaces .ws-btn:hover {
@@ -166,7 +163,7 @@ QPushButton {
 /* gray bg on active workspaces */
 .glazewm-workspaces .ws-btn.focused_populated {
   background-color: var(--bg_active);
-  border-bottom: 3px solid var(--accent);
+  /* border-top: 2px solid var(--accent); */
 }
 .glazewm-workspaces .ws-btn.focused_empty {
   background-color: var(--bg_active);
@@ -403,7 +400,8 @@ QPushButton {
 
 /* BATTERY WIDGET */
 .battery-widget .widget-container .icon {
-  margin-right: 3px;
+  padding-right: 3px;
+  font-size: 13px;
 }
 .battery-widget .widget-container .icon.status-charging {
   color: var(--green);
