@@ -148,7 +148,7 @@ QPushButton {
 }
 .glazewm-workspaces .ws-btn {
   font-size: 13px;
-  padding: 0px 4px;
+  padding: 0px 6px;
   /* border-top: 2px solid var(--subtle); */
   border-radius: 3px;
   margin: 0px 3px;
