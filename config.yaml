@@ -12,7 +12,7 @@ bars:
       center: true
     animation:
       enabled: true
-      duration: 500
+      duration: 200
     blur_effect:
       enabled: false
       acrylic: false
@@ -21,8 +21,20 @@ bars:
       # round_corners_type: "small"
       # border_color: "#00000000"
     window_flags:
-      always_on_top: false
+      always_on_top: true
       windows_app_bar: true
+      hide_on_fullscreen: true
+      auto_hide: false
+    layouts:
+      left:
+        alignment: "left"
+        stretch: true
+      center:
+        alignment: "center"
+        stretch: true
+      right:
+        alignment: "right"
+        stretch: true
     dimensions:
       width: "100%"
       height: 22
