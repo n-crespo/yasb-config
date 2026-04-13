@@ -572,3 +572,76 @@ Example: "Windows Media" becomes "windows-media" */
 /* .systray .unpinned-container { */
 /*   margin-right: 9px; */
 /* } */
+
+/* memory menu */
+.memory-popup {
+  background-color: rgba(28, 28, 28, 0.7);
+  min-width: 400px;
+}
+
+.memory-popup .header {
+  background: transparent;
+  padding: 12px 16px;
+}
+.memory-popup .header .text {
+  font-size: 16px;
+  font-family: "Segoe UI";
+  color: rgb(255, 255, 255);
+}
+.memory-popup .header .pin-btn {
+  font-size: 14px;
+  background: transparent;
+  font-family: "Segoe Fluent Icons";
+  border: none;
+  padding: 6px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.memory-popup .header .pin-btn:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+.memory-popup .header .pin-btn.pinned {
+  color: #ffffff;
+}
+/* Graph area */
+.memory-popup .graph-container {
+  background: transparent;
+  min-height: 64px;
+}
+.memory-popup .memory-graph {
+  color: #0f6bff; /* <-- set the graph line/fill color */
+}
+.memory-popup .memory-graph-grid {
+  color: rgba(255, 255, 255, 0.05); /* set the grid line color */
+}
+.memory-popup .graph-title {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: "Segoe UI";
+  padding: 0px 0px 4px 14px;
+}
+/* Stats grid */
+.memory-popup .stats {
+  background: transparent;
+  padding: 16px;
+}
+.memory-popup .stats .stat-item {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 8px;
+}
+.memory-popup .stats .stat-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: "Segoe UI";
+  font-weight: 400;
+  padding: 6px 4px 2px 4px;
+}
+.memory-popup .stats .stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  font-family: "Segoe UI";
+  padding: 0 4px 12px 4px;
+}

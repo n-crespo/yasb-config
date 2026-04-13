@@ -170,12 +170,17 @@ widgets:
         type: "fadeInOut"
         duration: 200
       callbacks:
-        on_left: "toggle_label"
+        on_left: "toggle_menu"
         on_right: "exec cmd /c Taskmgr"
       memory_thresholds:
         low: 50
         medium: 81
         high: 90
+      menu:
+        enabled: true
+        show_graph: true
+        show_graph_grid: true
+        graph_history_size: 60
       progress_bar:
         enabled: true
         size: 17
