@@ -138,7 +138,7 @@ widgets:
           priority: 16
         unit_converter:
           enabled: true
-          prefix: "*"
+          prefix: "u"
           priority: 17
         web_search:
           enabled: true
