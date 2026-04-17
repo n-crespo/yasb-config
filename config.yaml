@@ -43,6 +43,7 @@ bars:
       left: ["glazewm_workspaces"]
       center: ["clock"]
       right: [
+          "quick_launch",
           "media",
           # "glazewm_tiling_direction",
           "bluetooth",
@@ -54,6 +55,105 @@ bars:
         ]
 
 widgets:
+  quick_launch:
+    type: "yasb.quick_launch.QuickLaunchWidget"
+    options:
+      label: ""
+      search_placeholder: "Search..."
+      max_results: 50
+      show_icons: true
+      home_page: false
+      compact_mode: false
+      compact_text: false
+      icon_size: 32
+      popup:
+        width: 720
+        height: 480
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "system"
+        dark_mode: true
+      callbacks:
+        on_left: "toggle_quick_launch"
+      keybindings:
+        - keys: "alt+space"
+          action: "toggle_quick_launch"
+      providers:
+        ssh:
+          enabled: true
+          prefix: "ssh"
+        apps:
+          enabled: true
+          prefix: "*"
+          priority: 0
+          show_recent: true
+          max_recent: 5
+          show_description: true
+        calculator:
+          enabled: true
+          prefix: "*"
+          priority: 2
+        clipboard_history:
+          enabled: true
+          prefix: "v"
+          priority: 3
+          max_items: 30
+          show_preview: true
+        color:
+          enabled: true
+          prefix: "c"
+          priority: 4
+        currency:
+          enabled: true
+          prefix: "$"
+          priority: 5
+        emoji:
+          enabled: true
+          prefix: ":"
+          priority: 7
+        file_search:
+          enabled: true
+          prefix: "/"
+          priority: 8
+          backend: "auto"
+          show_path: true
+          show_preview: true
+        kill_process:
+          enabled: true
+          prefix: "kill"
+          priority: 12
+        settings:
+          enabled: true
+          prefix: "s"
+          priority: 14
+        snippets:
+          enabled: true
+          prefix: ";"
+          priority: 15
+          type_delay: 200
+        system_commands:
+          enabled: true
+          prefix: "*"
+          priority: 16
+        unit_converter:
+          enabled: true
+          prefix: "*"
+          priority: 17
+        web_search:
+          enabled: true
+          prefix: "*"
+          priority: 99
+          engine: "google"
+        windows_terminal:
+          enabled: true
+          prefix: "wt"
+          priority: 21
+        world_clock:
+          enabled: true
+          prefix: "tz"
+          priority: 22
+
   wifi-grouper:
     type: "yasb.grouper.GrouperWidget"
     options:
