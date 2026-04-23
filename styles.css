@@ -23,14 +23,15 @@ https://github.com/amnweb/yasb/wiki
 /* this is for everything */
 * {
   appearance: none;
-  font-family: "JetBrainsMono Nerd Font Propo";
+  /* font-family: "JetBrainsMono Nerd Font Propo"; */
   /* font-family: "Symbols Nerd Font", "JetBrainsMono NFP"; */
   /* font-family: "RobotoMono Nerd Font Propo"; */
   /* font-family: "Microsoft Sans Serif"; */
+  font-family: "Segoe UI";
   border-radius: 3px;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: -0.4px;
+  font-size: 14px;
+  font-weight: 600;
+  /* letter-spacing: -0.4px; */
   color: white;
   margin: 0px;
   border: none;
@@ -46,7 +47,8 @@ https://github.com/amnweb/yasb/wiki
   border-radius: 0px;
 }
 .icon {
-  font-family: "Symbols Nerd Font";
+  /* font-family: "Symbols Nerd Font"; */
+  font-family: "Segoe Fluent Icons";
   color: var(--text);
   font-size: 16px;
   border-radius: 3px;
@@ -146,6 +148,10 @@ QPushButton {
 .glazewm-workspaces .offline-status {
   color: var(--subtle);
 }
+.glazewm-workspaces .label {
+  /* center text w/icon */
+  margin-bottom: 2px;
+}
 .glazewm-workspaces .ws-btn {
   font-size: 13px;
   padding: 0px 6px;
@@ -228,6 +234,8 @@ QPushButton {
   color: var(--subtle);
 }
 .volume-widget .label {
+  /* center text w/icon */
+  margin-bottom: 2px;
   color: var(--subtle);
 }
 /* AUDIO MENU POPUP */
@@ -401,7 +409,7 @@ QPushButton {
 /* BATTERY WIDGET */
 .battery-widget .widget-container .icon {
   padding-right: 3px;
-  font-size: 13px;
+  font-size: 19px;
 }
 .battery-widget .widget-container .icon.status-charging {
   color: var(--green);
@@ -428,8 +436,9 @@ QPushButton {
   color: var(--text);
   padding: 6px 12px;
   border-radius: 3px;
-  font-size: 13px;
-  font-family: "JetBrainsMono Nerd Font Propo", "Symbols Nerd Font";
+  font-size: 14px;
+  /* font-family: "JetBrainsMono Nerd Font Propo", "Symbols Nerd Font"; */
+  font-family: "Segoe UI";
   margin-top: 4px;
 }
 
