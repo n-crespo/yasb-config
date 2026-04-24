@@ -339,7 +339,7 @@ QPushButton {
 .bluetooth-widget .label,
 .bluetooth-widget .label.alt {
   font-size: 16px;
-  color: var(--bluetooth);
+  color: var(--blue);
 }
 
 /* WIFI WIDGET */
