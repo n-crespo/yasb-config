@@ -37,7 +37,7 @@ bars:
         stretch: true
     dimensions:
       width: "100%"
-      height: 22
+      height: 20
     widgets:
       # removed: "microphone", "power_menu", "home", "active_window", "apps"
       left: ["glazewm_workspaces"]
@@ -178,7 +178,7 @@ widgets:
         {
           "enabled_populated": true,
           "enabled_active": true,
-          "size": 14,
+          "size": 13,
           "max_icons": 0,
           "hide_label": False,
           "hide_duplicates": False,
@@ -247,7 +247,7 @@ widgets:
       label_collapsed: ""
       label_expanded: "󰍴"
       label_position: "right" # Can be "left" or "right"
-      icon_size: 15 # Can be any integer between 8 and 64
+      icon_size: 14 # Can be any integer between 8 and 64
       pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
       show_unpinned: false
       show_unpinned_button: true
@@ -262,8 +262,8 @@ widgets:
     type: "yasb.memory.MemoryWidget"
     options:
       # label_alt: "{virtual_mem_percent}%"
-      label: "" # virtual_mem_used
-      label_alt: "{virtual_mem_used}"
+      label_alt: "" # virtual_mem_used
+      label: "{virtual_mem_used}"
       update_interval: 3000
       animation:
         enabled: true
@@ -273,9 +273,9 @@ widgets:
         on_left: "toggle_menu"
         on_right: "exec cmd /c Taskmgr"
       memory_thresholds:
-        low: 50
-        medium: 81
-        high: 90
+        low: 25
+        medium: 50
+        high: 95
       menu:
         enabled: true
         show_graph: true
@@ -283,10 +283,10 @@ widgets:
         graph_history_size: 60
       progress_bar:
         enabled: true
-        size: 17
-        color: "#585858"
-        background_color: "#272727"
-        thickness: 3
+        size: 13
+        color: "#555555"
+        background_color: "#242424"
+        thickness: 2
       hide_decimal: true
       histogram_icons:
         - "\u2581" # 0%
@@ -337,8 +337,8 @@ widgets:
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
-      label: "<span>{wifi_icon}</span>"
-      label_alt: "<span>{wifi_icon}</span> {wifi_name}"
+      label: "<span>{wifi_icon}</span> {wifi_name}"
+      label_alt: "<span>{wifi_icon}</span>"
       update_interval: 2000
       animation:
         enabled: true
@@ -356,11 +356,18 @@ widgets:
         wifi_icons_secured: ["\ue670", "\ue671", "\ue672", "\ue673"]
         wifi_icons_unsecured: ["\uec3c", "\uec3d", "\uec3e", "\uec3f"]
       wifi_icons:
-        - "󰤯" # 0% strength (no wifi)
-        - "󰤟" # 1-25% strength
-        - "󰤢" # 26-50% strength
-        - "󰤥" # 51-75% strength
-        - "󰤨" # 76-100% strength. Alternate theming: \uf1eb
+        [
+          "\udb82\udd2e",
+          "\udb82\udd1f",
+          "\udb82\udd22",
+          "\udb82\udd25",
+          "\udb82\udd28",
+        ]
+        # - "󰤯" # 0% strength (no wifi)
+        # - "󰤟" # 1-25% strength
+        # - "󰤢" # 26-50% strength
+        # - "󰤥" # 51-75% strength
+        # - "󰤨" # 76-100% strength. Alternate theming: \uf1eb
       callbacks:
         on_middle: "exec cmd.exe /c start ms-settings:network"
         on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/wifi"

@@ -3,7 +3,7 @@ For more information about configuration options, please visit the Wiki
 https://github.com/amnweb/yasb/wiki
 */
 :root {
-  --subtle: #585858;
+  --subtle: #555555;
   --bg_active: #252525;
   --bg_hover: #1e1e1e;
   --bg: #0f0f0f;
@@ -17,21 +17,17 @@ https://github.com/amnweb/yasb/wiki
   --text: white;
   --accent: #4cc2ff;
   --small: 15px;
-  --smaller: 11px;
+  --smaller: 12px;
 }
 
 /* this is for everything */
 * {
   appearance: none;
   /* font-family: "JetBrainsMono Nerd Font Propo"; */
-  /* font-family: "Symbols Nerd Font", "JetBrainsMono NFP"; */
-  /* font-family: "RobotoMono Nerd Font Propo"; */
-  /* font-family: "Microsoft Sans Serif"; */
-  font-family: "Segoe UI";
+  font-family: "Segoe UI", "Segoe Fluent Icons";
   border-radius: 3px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 600;
-  /* letter-spacing: -0.4px; */
   color: white;
   margin: 0px;
   border: none;
@@ -47,15 +43,13 @@ https://github.com/amnweb/yasb/wiki
   border-radius: 0px;
 }
 .icon {
-  /* font-family: "Symbols Nerd Font"; */
-  font-family: "Segoe Fluent Icons";
   color: var(--text);
   font-size: 16px;
   border-radius: 3px;
 }
 .widget {
   margin: 0px 0px;
-  padding: 0px 6px;
+  padding: 0px 7px;
 }
 .widget:hover {
   background-color: var(--bg_hover);
@@ -134,6 +128,16 @@ QPushButton {
   background: var(--blue);
   color: var(--text);
 }
+.tooltip {
+  /* font-family: "JetBrainsMono Nerd Font Propo", "Symbols Nerd Font"; */
+  font-family: "Segoe UI", "Segoe Fluent Icons";
+  border: 1px solid var(--bg_active);
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 5px;
+  border-radius: 3px;
+  font-size: 12px;
+}
 
 /* ***************** LEFT ********************** */
 
@@ -193,18 +197,14 @@ QPushButton {
 .memory-widget:hover {
   background-color: var(--bg_hover);
 }
-.memory-widget {
-  padding: 0px 4px;
-}
 .memory-widget .progress-circle {
   padding: 0px;
-  font-size: 8px;
 }
 .memory-widget .label,
 .memory-widget .label.alt {
+  margin-left: 2px;
   color: var(--subtle);
-  font-size: calc(var(--small) - 2);
-  margin: 1px;
+  padding-bottom: 2px;
 }
 .memory-widget .label.status-low {
   color: var(--subtle);
@@ -213,10 +213,7 @@ QPushButton {
   color: var(--subtle);
 }
 .memory-widget .label.status-high {
-  color: var(--yellow);
-}
-.memory-widget .label.status-critical {
-  color: var(--red);
+  color: var(--subtle);
 }
 
 /* TILING DIRECTION WIDGET */
@@ -224,14 +221,13 @@ QPushButton {
   color: var(--subtle);
   margin: 1px;
   font-size: 15px;
-  font-weight: 800;
 }
 
 /* VOLUME WIDGET */
 .volume-widget .icon {
-  margin-left: 0px;
-  margin-right: 3px;
+  margin-inline: 0px;
   color: var(--subtle);
+  font-size: 14px;
 }
 .volume-widget .label {
   /* center text w/icon */
@@ -330,32 +326,39 @@ QPushButton {
 }
 
 /* BLUETOOTH WIDET  */
+.bluetooth-widget {
+  /* padding-left: 4px; */
+  /* padding-right: 4px; */
+}
 .bluetooth-widget .icon {
-  font-size: var(--small);
+  margin: -2px;
+  /* background-color: red; */
+  font-size: 14px;
   color: var(--blue);
-  font-weight: bold;
 }
 .bluetooth-widget .label,
 .bluetooth-widget .label.alt {
-  font-size: var(--small);
-  color: var(--blue);
+  font-size: 16px;
+  color: var(--bluetooth);
 }
 
 /* WIFI WIDGET */
 /* HACK: a grouper surrounds this wifi widget so the hover bg works properly  */
-/* .wifi-grouper */
-.wifi-widget {
-  color: var(--subtle);
+.wifi-grouper {
   padding: 0px;
 }
+.wifi-widget {
+  color: var(--subtle);
+}
 .wifi-widget .label {
-  margin-left: 3px;
+  margin-left: 2px;
   color: var(--subtle);
   font-size: var(--smaller);
+  padding-bottom: 2px;
 }
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
-  font-size: var(--small);
+  font-size: 14px;
 }
 
 /* CLOCK WIDGET */
@@ -409,7 +412,9 @@ QPushButton {
 /* BATTERY WIDGET */
 .battery-widget .widget-container .icon {
   padding-right: 3px;
-  font-size: 19px;
+}
+.battery-widget .label {
+  padding-bottom: 2px;
 }
 .battery-widget .widget-container .icon.status-charging {
   color: var(--green);
@@ -428,18 +433,6 @@ QPushButton {
 }
 .battery-widget .widget-container .icon.status-full {
   color: white;
-}
-
-.tooltip {
-  border: 1px solid var(--bg_active);
-  background-color: var(--bg);
-  color: var(--text);
-  padding: 6px 12px;
-  border-radius: 3px;
-  font-size: 14px;
-  /* font-family: "JetBrainsMono Nerd Font Propo", "Symbols Nerd Font"; */
-  font-family: "Segoe UI";
-  margin-top: 4px;
 }
 
 /* MEDIA WIDGET  */
@@ -488,7 +481,6 @@ QPushButton {
 .media-menu .source {
   font-size: 11px;
   color: #000;
-  font-weight: normal;
   border-radius: 3px;
   background-color: #bac2de;
   padding: 2px 4px;
@@ -517,7 +509,6 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .media-menu .btn {
   font-size: 21px;
-  font-weight: 400;
   margin: 10px 2px 0px 2px;
   min-width: 40px;
   max-width: 40px;
@@ -663,7 +654,6 @@ Example: "Windows Media" becomes "windows-media" */
 .quick-launch-widget .icon:hover {
   color: #fff;
 }
-
 /* Quick Launch Popup - main window */
 .quick-launch-popup .container {
   background-color: rgba(29, 29, 29, 0.452);
@@ -713,7 +703,6 @@ Example: "Windows Media" becomes "windows-media" */
   font-family: "Segoe UI";
   max-height: 28px;
 }
-
 /* Results list */
 .quick-launch-popup .results {
   background: transparent;
@@ -755,7 +744,6 @@ Example: "Windows Media" becomes "windows-media" */
   color: rgb(255, 255, 255);
   padding-top: 8px;
 }
-
 /* Preview Pane */
 .quick-launch-popup .preview {
   background: rgba(0, 0, 0, 0);
@@ -786,14 +774,12 @@ Example: "Windows Media" becomes "windows-media" */
   margin-bottom: 10px;
   margin-left: -2px;
 }
-
 .quick-launch-popup .preview .preview-meta .preview-subtitle {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.8);
   font-family: "Segoe UI";
   padding-bottom: 1px;
 }
-
 /* Preview inline edit form (.preview.edit) */
 .quick-launch-popup .preview.edit .preview-title {
   font-size: 13px;
