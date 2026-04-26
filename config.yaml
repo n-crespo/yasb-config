@@ -432,7 +432,7 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "{%a %b %d, %I:%M %p}"
+      label: "{%a %b %d, %#I:%M:%S %p}"
       timezones: []
       callbacks:
         on_left: "toggle_calendar"
