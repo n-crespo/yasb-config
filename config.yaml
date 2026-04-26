@@ -287,7 +287,7 @@ widgets:
         color: "#555555"
         background_color: "#242424"
         thickness: 2
-      hide_decimal: true
+      hide_decimal: false
       histogram_icons:
         - "\u2581" # 0%
         - "\u2581" # 10%
@@ -442,9 +442,14 @@ widgets:
         round_corners: True
         round_corners_type: "normal"
         border_color: "System"
-        alignment: "right"
+        alignment: "center"
         direction: "down"
         distance: 6
+        show_holidays: true
+        show_years: true
+        country_code: "US"
+        holiday_color: "#FF6464"
+        extended: false
 # ---------- unused widgets ----------
 # notifications:
 #   type: "yasb.notifications.NotificationsWidget"
