@@ -432,7 +432,7 @@ widgets:
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "{%a %b %d, %#I:%M:%S %p}"
+      label: "{%a %b %d, %#I:%M %p}"
       timezones: []
       callbacks:
         on_left: "toggle_calendar"
@@ -450,25 +450,3 @@ widgets:
         country_code: "US"
         holiday_color: "#FF6464"
         extended: false
-# ---------- unused widgets ----------
-# notifications:
-#   type: "yasb.notifications.NotificationsWidget"
-#   options:
-#     label: "<span></span>"
-#     label_alt: "{count} notifications"
-#     hide_empty: true
-#     tooltip: true
-#     callbacks:
-#       on_left: "toggle_notification"
-#       on_right: "toggle_label"
-#       on_middle: "toggle_label"
-#     container_padding:
-#       top: 0
-#       left: 0
-#       bottom: 0
-#       right: 0
-#     label_shadow:
-#       enabled: false
-#       color: "black"
-#       radius: 3
-#       offset: [1, 1]
