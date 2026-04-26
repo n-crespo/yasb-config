@@ -260,7 +260,7 @@ QPushButton {
   border: none;
 }
 .audio-menu {
-  background-color: var(--bg);
+  background-color: var(--blur_bg);
   min-width: 250px;
 }
 .audio-container .device {
