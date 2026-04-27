@@ -564,9 +564,10 @@ QPushButton {
 }
 
 /* BATTERY WIDGET */
-.battery-widget .widget-container .icon {
-  padding-right: 3px;
-  padding-bottom: 2px;
+.battery-widget .icon {
+  padding-top: 3px;
+  padding-right: 1px;
+  font-size: 20px;
 }
 .battery-widget .label {
   padding-bottom: 2px;

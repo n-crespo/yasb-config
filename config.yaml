@@ -411,12 +411,12 @@ widgets:
       charging_options:
         icon_format: "{icon}" # show only charging icon
       status_icons:
-        icon_charging: "\uf0e7"
-        icon_critical: "\uf244"
-        icon_low: "\uf243"
-        icon_medium: "\uf242"
-        icon_high: "\uf241"
-        icon_full: "\uf240"
+        icon_charging: "\ue83e"
+        icon_critical: "\ue851"
+        icon_low: "\ue853"
+        icon_medium: "\ue856"
+        icon_high: "\ue858"
+        icon_full: "\ue83f"
 
   clock:
     type: "yasb.clock.ClockWidget"
