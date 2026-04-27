@@ -407,7 +407,7 @@ widgets:
       # time_remaining_natural: true # this seems to round down 😭
       time_remaining_natural: true
       status_thresholds:
-        { critical: 10, low: 20, medium: 70, high: 80, full: 100 }
+        { critical: 10, low: 20, medium: 70, high: 90, full: 100 }
       charging_options:
         icon_format: "{icon}" # show only charging icon
       status_icons:
