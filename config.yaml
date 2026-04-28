@@ -149,10 +149,6 @@ widgets:
           enabled: true
           prefix: "wt"
           priority: 21
-        world_clock:
-          enabled: true
-          prefix: "tz"
-          priority: 22
 
   wifi-grouper:
     type: "yasb.grouper.GrouperWidget"
