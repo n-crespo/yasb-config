@@ -9,13 +9,12 @@ bars:
     class_name: "yasb-bar"
     alignment:
       position: "top"
-      center: true
+      align: "center"
     animation:
       enabled: true
       duration: 200
     blur_effect:
       enabled: false
-      acrylic: false
       dark_mode: true
       round_corners: false
       # round_corners_type: "small"
@@ -60,6 +59,7 @@ widgets:
     options:
       label: ""
       search_placeholder: "Search..."
+      remember_last_query: true
       max_results: 50
       show_icons: true
       home_page: false
@@ -92,7 +92,7 @@ widgets:
           show_description: true
         calculator:
           enabled: true
-          prefix: "*"
+          prefix: "="
           priority: 2
         clipboard_history:
           enabled: true
@@ -145,6 +145,8 @@ widgets:
           prefix: "*"
           priority: 99
           engine: "google"
+          remove_engines:
+            ["brave", "bing", "duckduckgo", "stackoverflow", "x", "wikipedia"]
         windows_terminal:
           enabled: true
           prefix: "wt"
@@ -162,14 +164,12 @@ widgets:
     type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
       offline_label: "GlazeWM Offline"
-      hide_empty_workspaces: false
       hide_if_offline: false
       enable_scroll_switching: false
       populated_label: "{display_name}"
       empty_label: "{display_name}"
       active_populated_label: "{display_name}"
       active_empty_label: "{display_name}"
-      animation: true
       app_icons:
         {
           "enabled_populated": true,
@@ -208,8 +208,6 @@ widgets:
       controls_only: false
       controls_left: true
       hide_empty: true
-      label_shadow:
-        enabled: false
       show_thumbnail: false
       symmetric_corner_radius: true
       media_menu_icons:
@@ -240,19 +238,27 @@ widgets:
     type: "yasb.systray.SystrayWidget"
     options:
       class_name: "systray"
-      label_collapsed: ""
-      label_expanded: "󰍴"
+      label_collapsed: "\ue70d"
+      label_expanded: "\ue76b"
       label_position: "right" # Can be "left" or "right"
       icon_size: 14 # Can be any integer between 8 and 64
       pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
+      show_in_popup: true
+      use_hook: false
       show_unpinned: false
       show_unpinned_button: true
       show_battery: false
       show_volume: false
       show_network: false
-      btn_shadow:
-        enabled: false
-
+      popup:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: System
+        alignment: "center"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
   ######### RIGHT ###########
   memory:
     type: "yasb.memory.MemoryWidget"
@@ -261,10 +267,6 @@ widgets:
       label_alt: "" # virtual_mem_used
       label: "{virtual_mem_used}"
       update_interval: 3000
-      animation:
-        enabled: true
-        type: "fadeInOut"
-        duration: 200
       callbacks:
         on_left: "toggle_menu"
         on_right: "exec cmd /c Taskmgr"
@@ -305,9 +307,6 @@ widgets:
     type: "yasb.bluetooth.BluetoothWidget"
     options:
       tooltip: true
-      animation:
-        enabled: true
-        type: "fadeInOut"
       label: "<span>{icon}</span>{device_name}"
       label_alt: "<span>󰂯</span>"
       label_no_device: ""
@@ -327,8 +326,6 @@ widgets:
       callbacks:
         on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/bluetooth"
         on_left: toggle_label
-      label_shadow:
-        enabled: false
 
   wifi:
     type: "yasb.wifi.WifiWidget"
@@ -336,10 +333,6 @@ widgets:
       label: "<span>{wifi_icon}</span> {wifi_name}"
       label_alt: "<span>{wifi_icon}</span>"
       update_interval: 2000
-      animation:
-        enabled: true
-        type: fadeInOut
-        duration: 200
       wifi_icons:
         [
           "\udb82\udd2e",
@@ -362,8 +355,6 @@ widgets:
     type: "yasb.volume.VolumeWidget"
     options:
       mute_text: "0%"
-      animation:
-        enabled: True
       label: "<span>{icon}</span> {level}"
       label_alt: "{volume}"
       tooltip: true
@@ -429,7 +420,6 @@ widgets:
         border_color: "System"
         alignment: "center"
         direction: "down"
-        distance: 6
         show_holidays: true
         show_years: true
         country_code: "US"
