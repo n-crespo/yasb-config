@@ -239,12 +239,12 @@ widgets:
     options:
       class_name: "systray"
       label_collapsed: "\ue70d"
-      label_expanded: "\ue76b"
+      label_expanded: "\ue70e"
       label_position: "right" # Can be "left" or "right"
       icon_size: 14 # Can be any integer between 8 and 64
       pin_click_modifier: "alt" # Can be "ctrl", "alt" or "shift"
       show_in_popup: true
-      use_hook: false
+      use_hook: true
       show_unpinned: false
       show_unpinned_button: true
       show_battery: false
