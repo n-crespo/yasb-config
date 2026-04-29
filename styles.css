@@ -165,6 +165,7 @@ QPushButton {
   border-radius: 3px;
   margin: 0px 3px;
   animation: none;
+  cursor: pointer;
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--bg_hover);
@@ -215,6 +216,7 @@ QPushButton {
 
 /* MEMORY WIDGET */
 .memory-widget:hover {
+  cursor: pointer;
   background-color: var(--bg_hover);
 }
 .memory-widget .progress-circle {
@@ -244,6 +246,9 @@ QPushButton {
 }
 
 /* VOLUME WIDGET */
+.volume-widget {
+  cursor: pointer;
+}
 .volume-widget .icon {
   margin-inline: 0px;
   color: var(--subtle);
@@ -365,6 +370,7 @@ QPushButton {
 /* WIFI WIDGET */
 /* HACK: a grouper surrounds this wifi widget so the hover bg works properly  */
 .wifi-grouper {
+  cursor: pointer;
   padding: 0px;
 }
 .wifi-widget {
@@ -383,6 +389,7 @@ QPushButton {
 
 /* CLOCK WIDGET */
 .clock-widget .label {
+  cursor: pointer;
   color: var(--subtle);
 }
 /* CALENDAR POPUP  */
@@ -581,6 +588,9 @@ QPushButton {
 }
 
 /* BATTERY WIDGET */
+.battery-widget {
+  cursor: pointer;
+}
 .battery-widget .icon {
   padding-top: 3px;
   padding-right: 1px;
@@ -611,11 +621,13 @@ QPushButton {
 /* MEDIA WIDGET  */
 .media-widget .label,
 .media-widget .label.alt {
+  cursor: pointer;
   color: var(--subtle);
   font-size: var(--smaller);
   margin-left: 3px;
 }
 .media-widget .btn.play {
+  cursor: pointer;
   color: var(--subtle);
   font-family: "Segoe Fluent Icons";
   margin-bottom: 1px;
@@ -736,6 +748,7 @@ Example: "Windows Media" becomes "windows-media" */
 }
 
 .systray .unpinned-visibility-btn {
+  cursor: pointer;
   border-radius: 4px;
   height: 20px;
   width: 16px;
@@ -776,7 +789,6 @@ Example: "Windows Media" becomes "windows-media" */
   background-color: var(--blur_bg);
   min-width: 400px;
 }
-
 .memory-popup .header {
   background: transparent;
   padding: 12px 16px;
