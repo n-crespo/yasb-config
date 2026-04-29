@@ -164,27 +164,10 @@ QPushButton {
   /* border-top: 2px solid var(--subtle); */
   border-radius: 3px;
   margin: 0px 3px;
+  animation: none;
 }
 .glazewm-workspaces .ws-btn:hover {
   background-color: var(--bg_hover);
-}
-.glazewm-workspaces .ws-btn.empty,
-.glazewm-workspaces .ws-btn.focused_empty .label {
-  border: none;
-}
-/* gray bg on active workspaces */
-.glazewm-workspaces .ws-btn.focused_populated {
-  background-color: var(--bg_active);
-  /* border-top: 2px solid var(--accent); */
-}
-.glazewm-workspaces .ws-btn.focused_empty {
-  background-color: var(--bg_active);
-  border: none;
-}
-.glazewm-workspaces .ws-btn.empty .label,
-.glazewm-workspaces .ws-btn.focused_empty .label,
-.glazewm-workspaces .ws-btn.populated .label {
-  color: var(--subtle);
 }
 .glazewm-workspaces .ws-btn .icon-1 {
   margin-left: 6px;
@@ -192,6 +175,41 @@ QPushButton {
 .glazewm-workspaces .ws-btn .icon {
   padding: 0px 1px;
 }
+/* empty workspaces have even dimer label */
+.glazewm-workspaces .ws-btn.empty,
+.glazewm-workspaces .ws-btn.empty .label {
+  color: var(--bg_active);
+}
+/* non-focused workspaces and focused/empty have dimmer label */
+.glazewm-workspaces .ws-btn.populated .label,
+.glazewm-workspaces .ws-btn.focused_empty .label {
+  color: var(--subtle);
+}
+
+/* focused workspace has proper bg and label color */
+.glazewm-workspaces .ws-btn.focused_empty,
+.glazewm-workspaces .ws-btn.focused_populated {
+  background-color: var(--bg_active);
+}
+/* .glazewm-workspaces .ws-btn.focused_empty .label, */
+.glazewm-workspaces .ws-btn.focused_populated .label {
+  color: white;
+}
+/* .glazewm-workspaces .ws-btn.active_populated { */
+/*   border: 1px solid blue; */
+/* } */
+/* .glazewm-workspaces .ws-btn.focused_empty { */
+/*   background-color: var(--bg_active); */
+/*   border: 1px solid red; */
+/*   border: none; */
+/* } */
+/* /* gray bg on focused workspace */
+
+/* .glazewm-workspaces .ws-btn.focused_populated { */
+/*   background-color: var(--bg_active); */
+/*   /* color: red; */
+/*   /* border-top: 2px solid var(--accent); */
+/* } */
 
 /************* RIGHT ***************/
 
