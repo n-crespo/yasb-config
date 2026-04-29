@@ -59,7 +59,7 @@ widgets:
     options:
       label: ""
       search_placeholder: "Search..."
-      remember_last_query: true
+      remember_last_query: false
       max_results: 50
       show_icons: true
       home_page: false
