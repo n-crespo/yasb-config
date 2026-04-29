@@ -11,7 +11,7 @@ bars:
       position: "top"
       align: "center"
     animation:
-      enabled: true
+      enabled: false
       duration: 200
     blur_effect:
       enabled: false
