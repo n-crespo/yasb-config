@@ -60,7 +60,7 @@ QPushButton {
 .context-menu {
   border: 1px solid var(--bg_active);
   border-radius: 4px;
-  background-color: var(--blur_bg);
+  background-color: rgba(29, 29, 29, 0.1);
 }
 .context-menu,
 .context-menu .menu-checkbox {
@@ -722,6 +722,31 @@ Example: "Windows Media" becomes "windows-media" */
   height: 20px;
   width: 16px;
   color: var(--subtle);
+  margin-top: 2px;
+}
+/* The icon the drag is hovering over (drop target icon) */
+.systray-popup .button.drag-over {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* Icon being dragged, we already apply some transparency to it so you don't need to use it */
+.systray-popup .button.dragging {
+}
+
+.systray .pinned-container.pinned-container.drop-target {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.systray-popup {
+  background-color: rgba(29, 29, 29, 0.152);
+  padding: 4px;
+}
+.systray-popup .button {
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  border-radius: 6px;
+}
+.systray-popup .button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* .systray .unpinned-container { */
