@@ -723,7 +723,8 @@ Example: "Windows Media" becomes "windows-media" */
 .media-menu .playback-time {
   font-size: 13px;
   font-family: "Segoe UI Variable", Tahoma, Verdana, sans-serif;
-  color: #7f849c;
+  color: white;
+  opacity: 0.5;
   margin-top: 12px;
   min-width: 100px;
 }
