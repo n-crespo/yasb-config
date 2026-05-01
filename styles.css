@@ -663,7 +663,7 @@ QPushButton {
 }
 .media-menu .artist {
   font-size: 13px;
-  color: #6c7086;
+  opacity: 0.5;
   margin-top: 0px;
 }
 .media-menu .source {
