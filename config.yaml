@@ -145,8 +145,7 @@ widgets:
           prefix: "*"
           priority: 99
           engine: "google"
-          remove_engines:
-            ["brave", "bing", "duckduckgo", "stackoverflow", "x", "wikipedia"]
+          remove_engines: ["brave", "bing", "duckduckgo", "stackoverflow", "x", "wikipedia"]
         windows_terminal:
           enabled: true
           prefix: "wt"
@@ -334,13 +333,7 @@ widgets:
       label_alt: "<span>{wifi_icon}</span>"
       update_interval: 2000
       wifi_icons:
-        [
-          "\udb82\udd2e",
-          "\udb82\udd1f",
-          "\udb82\udd22",
-          "\udb82\udd25",
-          "\udb82\udd28",
-        ]
+        ["\udb82\udd2e", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"]
         # - "󰤯" # 0% strength (no wifi)
         # - "󰤟" # 1-25% strength
         # - "󰤢" # 26-50% strength
@@ -393,8 +386,7 @@ widgets:
       label_alt: "{time_remaining}"
       # time_remaining_natural: true # this seems to round down 😭
       time_remaining_natural: true
-      status_thresholds:
-        { critical: 10, low: 20, medium: 70, high: 90, full: 100 }
+      status_thresholds: { critical: 10, low: 20, medium: 70, high: 90, full: 100 }
       charging_options:
         icon_format: "{icon}" # show only charging icon
       status_icons:
