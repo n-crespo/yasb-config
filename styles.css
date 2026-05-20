@@ -59,8 +59,8 @@ QPushButton {
 /* Global context menu style (right click menu) */
 .context-menu {
   border: 1px solid var(--bg_active);
-  border-radius: 4px;
-  background-color: var(--blur_bg);
+  /* border-radius: 4px; */
+  /* background-color: var(--blur_bg); */
 }
 .context-menu,
 .context-menu .menu-checkbox {
