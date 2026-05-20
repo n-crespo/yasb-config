@@ -60,7 +60,7 @@ QPushButton {
 .context-menu {
   border: 1px solid var(--bg_active);
   /* border-radius: 4px; */
-  /* background-color: var(--blur_bg); */
+  background-color: var(--blur_bg);
 }
 .context-menu,
 .context-menu .menu-checkbox {
