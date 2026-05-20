@@ -354,10 +354,10 @@ QPushButton {
 }
 
 /* BLUETOOTH WIDET  */
-.bluetooth-widget {
-  /* padding-left: 4px; */
-  /* padding-right: 4px; */
-}
+/* .bluetooth-widget { */
+/* padding-left: 4px; */
+/* padding-right: 4px; */
+/* } */
 .bluetooth-widget .icon {
   margin: -2px;
   /* background-color: red; */
@@ -764,8 +764,8 @@ Example: "Windows Media" becomes "windows-media" */
   background-color: rgba(255, 255, 255, 0.2);
 }
 /* Icon being dragged, we already apply some transparency to it so you don't need to use it */
-.systray-popup .button.dragging {
-}
+/* .systray-popup .button.dragging { */
+/* } */
 
 .systray .pinned-container.pinned-container.drop-target {
   background-color: rgba(255, 255, 255, 0.1);
