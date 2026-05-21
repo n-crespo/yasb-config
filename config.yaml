@@ -333,12 +333,12 @@ widgets:
       label_alt: "<span>{wifi_icon}</span>"
       update_interval: 2000
       wifi_icons:
-        ["\udb82\udd2e", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"]
-        # - "󰤯" # 0% strength (no wifi)
-        # - "󰤟" # 1-25% strength
-        # - "󰤢" # 26-50% strength
-        # - "󰤥" # 51-75% strength
-        # - "󰤨" # 76-100% strength. Alternate theming: \uf1eb
+        # ["\udb82\udd2e", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"]
+        - "󰤯" # 0% strength (no wifi)
+        - "󰤟" # 1-25% strength
+        - "󰤢" # 26-50% strength
+        - "󰤥" # 51-75% strength
+        - "󰤨" # 76-100% strength. Alternate theming: \uf1eb
       callbacks:
         on_middle: "exec cmd.exe /c start ms-settings:network"
         on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/wifi"
