@@ -628,12 +628,12 @@ QPushButton {
   color: var(--subtle);
   font-size: var(--smaller);
   margin-left: 3px;
+  margin-bottom: 1px;
 }
 .media-widget .btn.play {
   cursor: pointer;
   color: var(--subtle);
   font-family: "Segoe Fluent Icons";
-  margin-bottom: 1px;
 }
 .media-widget .btn.prev,
 .media-widget .btn.next {
