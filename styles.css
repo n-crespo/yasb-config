@@ -156,8 +156,6 @@ QPushButton {
   color: var(--subtle);
 }
 .glazewm-workspaces .label {
-  /* center text w/icon */
-  margin-bottom: 2px;
 }
 .glazewm-workspaces .ws-btn {
   font-size: 13px;
@@ -227,7 +225,6 @@ QPushButton {
 .memory-widget .label.alt {
   margin-left: 2px;
   color: var(--subtle);
-  padding-bottom: 2px;
 }
 .memory-widget .label.status-low {
   color: var(--subtle);
@@ -257,7 +254,6 @@ QPushButton {
 }
 .volume-widget .label {
   /* center text w/icon */
-  margin-bottom: 2px;
   color: var(--subtle);
 }
 /* AUDIO MENU POPUP */
@@ -384,7 +380,6 @@ QPushButton {
   margin-left: 2px;
   color: var(--subtle);
   font-size: var(--smaller);
-  padding-bottom: 2px;
 }
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
@@ -412,7 +407,6 @@ QPushButton {
 .clock-popup.calendar .calendar-table::item {
   background-color: rgba(17, 17, 27, 0);
   color: rgba(162, 177, 196, 0.85);
-  font-family: "SF Pro Text";
   margin: 0;
   padding: 0;
   border: none;
@@ -431,7 +425,6 @@ QPushButton {
 .clock-popup.calendar .month-label,
 .clock-popup.calendar .year-label,
 .clock-popup.calendar .date-label {
-  font-family: "SF Pro Text";
   font-size: 16px;
   color: #fff;
   font-weight: 700;
@@ -448,7 +441,6 @@ QPushButton {
   font-size: 88px;
   font-weight: 900;
   color: rgb(255, 255, 255);
-  margin-top: -20px;
 }
 .clock-popup.calendar .extended-container {
   border-left: 1px solid rgba(255, 255, 255, 0.2);
@@ -465,14 +457,12 @@ QPushButton {
 }
 .clock-popup.calendar .extended-container .upcoming-events-header {
   font-size: 12px;
-  font-family: "SF Pro Text";
   font-weight: 600;
   margin: 4px 0 8px 0;
   color: #d2d6e2;
 }
 .clock-popup.calendar .extended-container .upcoming-events-item {
   font-size: 12px;
-  font-family: "SF Pro Text";
   font-weight: 600;
   padding: 3px 0;
   color: #b2b6c0;
@@ -494,7 +484,6 @@ QPushButton {
 }
 .clock-popup .clock-label-timer {
   font-size: 13px;
-  font-family: "SF Pro Text";
   font-weight: 600;
   color: #8d9196;
 }
@@ -513,7 +502,6 @@ QPushButton {
 /* Dialog Buttons */
 .clock-popup .button {
   border-radius: 4px;
-  font-family: "SF Pro Text";
   font-weight: 600;
   font-size: 13px;
   min-height: 28px;
@@ -576,7 +564,6 @@ QPushButton {
 }
 .clock-popup .alarm-input-title {
   font-size: 14px;
-  font-family: "SF Pro Text";
   font-weight: 600;
   color: #d2d6e2;
   background-color: rgba(255, 255, 255, 0.1);
@@ -596,12 +583,12 @@ QPushButton {
   cursor: pointer;
 }
 .battery-widget .icon {
-  padding-top: 3px;
+  margin-top: 5px;
   padding-right: 1px;
   font-size: 20px;
 }
 .battery-widget .label {
-  padding-bottom: 2px;
+  /* padding-bottom: 2px; */
 }
 .battery-widget .widget-container .icon.status-charging {
   color: var(--green);
@@ -723,7 +710,6 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .media-menu .playback-time {
   font-size: 13px;
-  font-family: "SF Pro Text", Tahoma, Verdana, sans-serif;
   color: white;
   opacity: 0.5;
   margin-top: 12px;
@@ -800,7 +786,6 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .memory-popup .header .text {
   font-size: 16px;
-  font-family: "SF Pro Text";
   color: rgb(255, 255, 255);
 }
 .memory-popup .header .pin-btn {
@@ -831,7 +816,6 @@ Example: "Windows Media" becomes "windows-media" */
 .memory-popup .graph-title {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.5);
-  font-family: "SF Pro Text";
   padding: 0px 0px 4px 14px;
 }
 /* Stats grid */
@@ -849,7 +833,6 @@ Example: "Windows Media" becomes "windows-media" */
 .memory-popup .stats .stat-label {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.65);
-  font-family: "SF Pro Text";
   font-weight: 400;
   padding: 6px 4px 2px 4px;
 }
@@ -857,7 +840,6 @@ Example: "Windows Media" becomes "windows-media" */
   font-size: 20px;
   font-weight: 700;
   color: #ffffff;
-  font-family: "SF Pro Text";
   padding: 0 4px 12px 4px;
 }
 
@@ -907,7 +889,6 @@ Example: "Windows Media" becomes "windows-media" */
   border: none;
   color: #ffffff;
   font-size: 16px;
-  font-family: "SF Pro Text";
   font-weight: 400;
   padding: 4px 0;
 }
@@ -921,7 +902,6 @@ Example: "Windows Media" becomes "windows-media" */
   margin-right: 4px;
   font-size: 13px;
   font-weight: 600;
-  font-family: "SF Pro Text";
   max-height: 28px;
 }
 /* Results list */
@@ -932,20 +912,17 @@ Example: "Windows Media" becomes "windows-media" */
 /* Individual result item here you can set font size for title */
 .quick-launch-popup .results-list-view {
   font-size: 16px;
-  font-family: "SF Pro Text";
   font-weight: 600;
   color: #ffffff;
 }
 .quick-launch-popup .results-list-view .description {
   color: rgba(255, 255, 255, 0.6);
   font-size: 11px;
-  font-family: "SF Pro Text";
   font-weight: 600;
 }
 .quick-launch-popup .results-list-view .separator {
   color: rgba(255, 255, 255, 0.6);
   font-size: 13px;
-  font-family: "SF Pro Text";
   font-weight: 600;
   padding: 4px 0 4px 12px;
 }
@@ -961,7 +938,6 @@ Example: "Windows Media" becomes "windows-media" */
 /* Empty state when no results found */
 .quick-launch-popup .results-empty-text {
   font-size: 24px;
-  font-family: "SF Pro Text";
   color: rgb(255, 255, 255);
   padding-top: 8px;
 }
@@ -974,7 +950,6 @@ Example: "Windows Media" becomes "windows-media" */
   font-size: 13px;
   color: rgba(255, 255, 255, 0.85);
   padding: 8px 12px;
-  font-family: "SF Pro Text";
   background-color: rgba(255, 255, 255, 0.03);
   border: none;
 }
@@ -985,26 +960,22 @@ Example: "Windows Media" becomes "windows-media" */
 .quick-launch-popup .preview .preview-meta {
   padding: 6px 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  font-family: "SF Pro Text";
 }
 .quick-launch-popup .preview .preview-meta .preview-title {
   font-size: 14px;
   font-weight: 600;
   color: rgb(255, 255, 255);
-  font-family: "SF Pro Text";
   margin-bottom: 10px;
   margin-left: -2px;
 }
 .quick-launch-popup .preview .preview-meta .preview-subtitle {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.8);
-  font-family: "SF Pro Text";
   padding-bottom: 1px;
 }
 /* Preview inline edit form (.preview.edit) */
 .quick-launch-popup .preview.edit .preview-title {
   font-size: 13px;
-  font-family: "SF Pro Text";
   font-weight: 600;
   color: #ffffff;
   padding: 8px 12px 4px 12px;
@@ -1015,7 +986,6 @@ Example: "Windows Media" becomes "windows-media" */
   border-radius: 4px;
   color: #ffffff;
   font-size: 13px;
-  font-family: "SF Pro Text";
   padding: 6px 8px;
   margin: 0 12px;
 }
@@ -1028,7 +998,6 @@ Example: "Windows Media" becomes "windows-media" */
   border-radius: 4px;
   color: #ffffff;
   font-size: 13px;
-  font-family: "SF Pro Text";
   padding: 6px 8px;
   margin: 0 12px;
 }
@@ -1044,7 +1013,6 @@ Example: "Windows Media" becomes "windows-media" */
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.8);
   font-size: 12px;
-  font-family: "SF Pro Text";
   font-weight: 600;
   padding: 4px 16px;
 }
