@@ -49,7 +49,7 @@ https://github.com/amnweb/yasb/wiki
 }
 .widget {
   margin: 0px 0px;
-  padding: 0px 7px;
+  padding: 0px 6px;
 }
 .widget:hover {
   background-color: var(--bg_hover);
