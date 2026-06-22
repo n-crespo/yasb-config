@@ -422,7 +422,7 @@ QPushButton {
   color: #282936;
   font-weight: bold;
   background-color: #74b0ff;
-  border-radius: 12px;
+  border-radius: 9px;
 }
 .clock-popup.calendar .day-label {
   margin-top: 20px;
