@@ -148,7 +148,18 @@ widgets:
           prefix: "*"
           priority: 99
           engine: "google"
-          remove_engines: ["brave", "bing", "duckduckgo", "stackoverflow", "x", "wikipedia"]
+          remove_engines:
+            [
+              "brave",
+              "bing",
+              "duckduckgo",
+              "stackoverflow",
+              "x",
+              "wikipedia",
+              "github",
+              "youtube",
+              "reddit",
+            ]
         windows_terminal:
           enabled: true
           prefix: "wt"
