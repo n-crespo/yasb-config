@@ -80,6 +80,9 @@ widgets:
         - keys: "alt+space"
           action: "toggle_quick_launch"
       providers:
+        window_switcher:
+          enabled: true
+          prefix: "w"
         ssh:
           enabled: true
           prefix: "ssh"
