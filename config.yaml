@@ -46,6 +46,7 @@ bars:
           "media",
           # "glazewm_tiling_direction",
           "bluetooth",
+          "control_center",
           "systray",
           "memory",
           "wifi-grouper",
@@ -332,13 +333,61 @@ widgets:
           alias: "󰓃"
         - name: "Zubin’s JBL 2"
           alias: "󰴸"
+        - name: "Keychron M3"
+          alias: ""
       icons:
         bluetooth_on: ""
         bluetooth_off: ""
         bluetooth_connected: ""
       callbacks:
-        on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/bluetooth"
-        on_left: toggle_label
+        # on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/bluetooth"
+        on_right: toggle_label
+        on_left: "toggle_menu"
+      menu_config:
+        blur: true
+        round_corners: true
+        round_corners_type: "normal"
+        border_color: "System"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+        offset_left: 0
+        labels:
+          title: "Bluetooth"
+          your_devices: "Your devices"
+          new_devices: "New devices"
+          not_connected: "Not connected"
+          connected: "Connected"
+          more_settings: "More Bluetooth settings"
+          connect: "Connect"
+          disconnect: "Disconnect"
+          connecting: "Connecting"
+          disconnecting: "Disconnecting"
+          pair: "Pair"
+          manage: "Manage"
+          power_on: "On"
+          power_off: "Off"
+        device_icons:
+          headphones: "\ue7f6"
+          headset: "\ue95b"
+          speaker: "\ue7f5"
+          phone: "\ue8ea"
+          tablet: "\ue70a"
+          laptop: "\ue7f8"
+          computer: "\ue950"
+          keyboard: "\ue765"
+          mouse: "\ue962"
+          controller: "\ue7fc"
+          watch: "\ue918"
+          camera: "\ue722"
+          generic: "\ue702"
+          battery:
+            empty: "\ueba0"
+            low: "\ueba2"
+            medium: "\ueba5"
+            high: "\ueba8"
+            full: "\uebaa"
+          scan: "\ue72c"
 
   wifi:
     type: "yasb.wifi.WifiWidget"
@@ -431,3 +480,76 @@ widgets:
         country_code: "US"
         holiday_color: "#FF6464"
         extended: false
+
+  control_center:
+    type: "yasb.control_center.ControlCenterWidget"
+    options:
+      label: "<span>\ue713</span>"
+      class_name: "control_center"
+      tooltip: true
+      sections_order:
+        - "system_controls"
+        - "quick_actions"
+        - "sliders"
+        - "power"
+        - "media"
+      popup:
+        alignment: "center"
+        direction: "down"
+        border_color: System
+        round_corners: true
+        round_corners_type: normal
+        offset_top: 8
+      sections:
+        system_controls:
+          profile_image_size: 28
+          power_icon: "\uE7E8"
+          lock_icon: "\uE72E"
+          settings_icon: "\uE713"
+        quick_actions:
+          show: true
+          columns: 3
+          label_position: "default"
+          actions:
+            - id: "screenshot"
+              label: "Screenshot"
+              icon: "\ue91b"
+            - id: "toggle_dnd"
+              label: "Do Not Disturb"
+              icon: "\uf285"
+            - id: "toggle_mic_mute"
+              label: "Mic Mute"
+              icon: "\uF12E"
+        sliders:
+          show: true
+          brightness:
+            show_slider: true
+            icon: "\uE706"
+            show_source_selector: true
+            source_selector_icon: "\uE972"
+          volume:
+            show_slider: true
+            icon: "\uE767"
+            show_source_selector: true
+            source_selector_icon: "\uE972"
+          microphone:
+            show_slider: true
+            icon: "\uE720"
+            show_source_selector: true
+            source_selector_icon: "\uE972"
+        media:
+          show: true
+          thumbnail_size: 36
+          thumbnail_radius: 4
+          icons:
+            prev_track: "\ue622"
+            next_track: "\ue623"
+            play: "\uf5b0"
+            pause: "\ue62e"
+        power:
+          show: true
+          power_plan_title: "Power Plan"
+          power_mode_title: "Power Mode"
+          button_menu_icon: "\ue76c"
+      callbacks:
+        on_left: "toggle_menu"

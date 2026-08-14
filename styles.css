@@ -7,7 +7,7 @@ https://github.com/amnweb/yasb/wiki
   --bg_active: #252525;
   --bg_hover: #1e1e1e;
   --bg: #0f0f0f;
-  --blue: #88a3bc;
+  --blue: #4cc2ff;
   --bluetooth: #0082fc;
   --black: #1e1e1e;
   --green: #39c559;
@@ -365,6 +365,138 @@ QPushButton {
 .bluetooth-widget .label.alt {
   font-size: 16px;
   color: var(--blue);
+}
+.bluetooth-menu {
+  background: rgba(28, 28, 28, 0.6);
+  min-width: 360px;
+  min-height: 480px;
+}
+.bluetooth-menu .header {
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.bluetooth-menu .header .title {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+.bluetooth-menu .header .power-button {
+  background-color: rgba(255, 255, 255, 0.12);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 14px;
+  margin-left: 8px;
+}
+.bluetooth-menu .header .power-button:checked {
+  background-color: #4cc2ff;
+  color: #000;
+}
+.bluetooth-menu .progress-bar {
+  min-height: 2px;
+  max-height: 2px;
+  color: #4cc2ff;
+}
+.bluetooth-menu .bluetooth-list {
+  background-color: transparent;
+}
+.bluetooth-menu .section {
+  background-color: transparent;
+}
+.bluetooth-menu .section-title {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 12px 4px;
+  color: rgba(255, 255, 255, 0.6);
+}
+.bluetooth-menu .error-message {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 0;
+  background-color: #92242d;
+  color: #e7bfc2;
+}
+.bluetooth-menu .bluetooth-item {
+  min-height: 44px;
+  padding: 6px 12px;
+  margin: 2px 4px;
+  border-radius: 6px;
+}
+.bluetooth-menu .bluetooth-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.bluetooth-menu .bluetooth-item.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+}
+.bluetooth-menu .bluetooth-item .icon {
+  font-family: "Segoe Fluent Icons";
+  font-size: 18px;
+  margin-right: 12px;
+  min-width: 28px;
+  font-weight: 400;
+}
+.bluetooth-menu .bluetooth-item .name {
+  font-size: 14px;
+  font-weight: 600;
+}
+.bluetooth-menu .bluetooth-item .status {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+.bluetooth-menu .bluetooth-item .battery {
+  font-size: 13px;
+  font-weight: 600;
+  padding-right: 6px;
+}
+.bluetooth-menu .bluetooth-item .battery-icon {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Segoe Fluent Icons";
+}
+.bluetooth-menu .bluetooth-item .controls-container {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.bluetooth-menu .bluetooth-item .connect {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 4px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+}
+.bluetooth-menu .bluetooth-item .connect:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+}
+.bluetooth-menu .footer {
+  padding: 8px 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.bluetooth-menu .footer .settings-button {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.bluetooth-menu .footer .scan-icon {
+  font-family: "Segoe Fluent Icons";
+  background-color: transparent;
+  border: none;
+  font-weight: 400;
+  min-width: 28px;
+  min-height: 28px;
+  color: #fff;
+  border-radius: 4px;
+}
+.bluetooth-menu .footer .scan-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* WIFI WIDGET */
@@ -1025,4 +1157,297 @@ Example: "Windows Media" becomes "windows-media" */
 }
 .quick-launch-popup .preview.edit .preview-btn.save:hover {
   background: rgb(19, 90, 204);
+}
+
+/* --------- CONTROL CENTER --------- */
+/* POPUP WINDOW */
+/* .control-center-widget, */
+/* .control-center-widget .widget-container, */
+.control-center-widget .icon {
+  margin-top: 2px;
+  font-size: 13px;
+  color: lightgray;
+}
+.control-center-menu {
+  background: rgba(32, 32, 32, 0.6);
+  min-width: 360px;
+}
+
+/* SECTIONS */
+/* Left and right padding of 12 px + 4 px margin for quick action and power plan,
+which is 16 pixels same as the other sections. */
+.control-center-menu .section {
+  background: rgba(255, 255, 255, 0);
+  margin: 0;
+  padding: 16px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+/* We dont want a padding at the bottom of the first section. */
+.control-center-menu .section.system-controls {
+  padding: 12px 16px 0 16px;
+}
+.control-center-menu .section.sliders {
+  padding: 16px;
+}
+.control-center-menu .section.media,
+.control-center-menu .section.power,
+.control-center-menu .section.system-controls {
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+
+/* SHARED SEGOE FLUENT ICONS */
+.control-center-menu .section.system-controls .button,
+.control-center-menu .section.quick-actions .button .icon,
+.control-center-menu .section.sliders .slider .icon,
+.control-center-menu .section.sliders .slider .source-selector,
+.control-center-menu .section.power .plan-name .icon,
+.control-center-menu .section.power .mode-name .icon,
+.control-center-menu .section.media .button {
+  font-family: "Segoe Fluent Icons";
+  font-weight: 400;
+}
+
+/* SHARED HOVER & TRANSITION TRANSITIONS */
+.control-center-menu .section.quick-actions .button .icon,
+.control-center-menu .section.system-controls .button,
+.control-center-menu .section.sliders .slider .source-selector,
+.control-center-menu .section.power .plan-name,
+.control-center-menu .section.power .mode-name,
+.control-center-menu .section.media .button {
+  transition:
+    background-color 0.08s,
+    opacity 0.08s;
+  opacity: 1;
+}
+
+/* SHARED CLICKED / PRESSED STATES */
+.control-center-menu .section.system-controls .button:clicked,
+.control-center-menu .section.system-controls .button:pressed,
+.control-center-menu .section.quick-actions .button .icon:clicked,
+.control-center-menu .section.quick-actions .button .icon:pressed,
+.control-center-menu .section.sliders .slider .source-selector:clicked,
+.control-center-menu .section.sliders .slider .source-selector:pressed,
+.control-center-menu .section.power .plan-name:clicked,
+.control-center-menu .section.power .plan-name:pressed,
+.control-center-menu .section.power .mode-name:clicked,
+.control-center-menu .section.power .mode-name:pressed,
+.control-center-menu .section.media .button:clicked,
+.control-center-menu .section.media .button:pressed {
+  opacity: 0.5;
+}
+
+/* SHARED DISABLED STATES */
+.control-center-menu .section.quick-actions .button.disabled .title,
+.control-center-menu .section.quick-actions .button.disabled .icon,
+.control-center-menu .section.sliders .slider.disabled,
+.control-center-menu .section.media .button.disabled,
+.control-center-menu .section.media .button.disabled:hover {
+  opacity: 0.5;
+}
+
+/* SYSTEM CONTROLS */
+.control-center-menu .section.system-controls .button {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  min-height: 32px;
+  max-height: 32px;
+  min-width: 32px;
+  max-width: 32px;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  transition:
+    background-color 0.08s,
+    opacity 0.08s;
+}
+.control-center-menu .section.system-controls .button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* QUICK ACTIONS */
+.control-center-menu .section.quick-actions .button {
+  margin: 0 4px;
+  cursor: pointer;
+}
+.control-center-menu .section.quick-actions .button .icon {
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 48px;
+  border-radius: 6px;
+  color: rgb(255, 255, 255);
+}
+.control-center-menu .section.quick-actions .button .icon:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.control-center-menu .section.quick-actions .button.active .icon {
+  background-color: #47aff5;
+  border: 1px solid #47aff5;
+  color: #000;
+}
+.control-center-menu .section.quick-actions .button.active .icon:hover {
+  background-color: #42a0df;
+  border: 1px solid #42a0df;
+  color: #000;
+}
+.control-center-menu .section.quick-actions .button.disabled .icon:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.control-center-menu .section.quick-actions .button.active .icon:pressed {
+  background-color: #3795d3;
+  border: 1px solid #3795d3;
+}
+.control-center-menu .section.quick-actions .button .title {
+  font-size: 12px;
+  margin: 4px 0 8px 0;
+  padding: 0;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+/* SLIDERS */
+.control-center-menu .section.sliders .slider {
+  background: transparent;
+  border: none;
+  min-height: 34px;
+  margin: 0 4px 0 4px;
+}
+.control-center-menu .section.sliders .slider .icon {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  min-width: 36px;
+}
+.control-center-menu .section.sliders .slider .value {
+  min-width: 36px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+.control-center-menu .section.sliders .slider .source-selector {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0);
+  margin-left: 4px;
+}
+.control-center-menu .section.sliders .slider .source-selector:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* POWER PLAN & POWER MODE */
+.control-center-menu .section.power .plan-name,
+.control-center-menu .section.power .mode-name {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  min-height: 36px;
+  margin: 0 4px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.control-center-menu .section.power .plan-name:hover,
+.control-center-menu .section.power .mode-name:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.control-center-menu .section.power .mode-name.disabled,
+.control-center-menu .section.power .mode-name.disabled:hover {
+  opacity: 0.5;
+  background: rgba(255, 255, 255, 0.06);
+}
+.control-center-menu .section.power .plan-name .title,
+.control-center-menu .section.power .mode-name .title {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+.control-center-menu .section.power .plan-name .subtext,
+.control-center-menu .section.power .mode-name .subtext {
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.control-center-menu .section.power .plan-name .icon,
+.control-center-menu .section.power .mode-name .icon {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+}
+
+/* MEDIA CONTROLS */
+.control-center-menu .section.media {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.control-center-menu .section.media .track-info {
+  padding-left: 8px;
+}
+.control-center-menu .section.media .title {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+.control-center-menu .section.media .subtext {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+.control-center-menu .section.media .button {
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0);
+  min-width: 32px;
+  min-height: 32px;
+  max-width: 32px;
+  max-height: 32px;
+  border-radius: 6px;
+  margin: 0 0 0 4px;
+}
+.control-center-menu .section.media .button:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.control-center-menu .section.media .button.disabled,
+.control-center-menu .section.media .button.disabled:hover {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+/* Context menu styles for dropdowns and menus inside the Control Center panel */
+.control-center-menu .context-menu {
+  background-color: rgba(48, 48, 48, 0.86);
+  padding: 4px 0px;
+  font-family: "Segoe UI Variable", "Segoe UI";
+  font-weight: 600;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+.control-center-menu .context-menu::item {
+  background-color: transparent;
+  padding: 6px 12px;
+  margin: 2px 6px;
+  border-radius: 4px;
+  min-width: 100px;
+}
+.control-center-menu .context-menu::item:selected {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+.control-center-menu .context-menu::separator {
+  height: 1px;
+  background-color: rgb(68, 68, 68);
+  margin: 4px 0;
+}
+.control-center-menu .context-menu::indicator:unchecked {
+  width: 4px;
+  height: 12px;
+  margin-left: 0;
+  color: transparent;
+  background-color: transparent;
+}
+.control-center-menu .context-menu::indicator:checked {
+  width: 4px;
+  height: 12px;
+  background-color: #47aff5;
+  border-radius: 2px;
+  margin-left: 0;
 }
