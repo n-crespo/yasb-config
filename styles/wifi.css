@@ -1,0 +1,18 @@
+/* WIFI WIDGET */
+/* HACK: a grouper surrounds this wifi widget so the hover bg works properly  */
+.wifi-grouper {
+  cursor: pointer;
+  padding: 0px;
+}
+.wifi-widget {
+  color: var(--subtle);
+}
+.wifi-widget .label {
+  margin-left: 2px;
+  color: var(--subtle);
+  font-size: var(--smaller);
+}
+.wifi-widget .widget-container .icon {
+  color: var(--subtle);
+  font-size: 14px;
+}

@@ -1,0 +1,98 @@
+/* --------- GLOBAL CONTEXT MENU --------- */
+/* POPUP WINDOW */
+.context-menu {
+  background-color: var(--blur-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4px 0px;
+  font-weight: 600;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.context-menu .menu-checkbox {
+  padding: 5px 0px;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+/* SHARED TRANSITION & HOVER STATES */
+.context-menu::item,
+.context-menu .menu-checkbox {
+  background-color: rgba(255, 255, 255, 0);
+  padding: 6px 12px;
+  margin: 2px 6px;
+  border-radius: 4px;
+  min-width: 100px;
+  transition:
+    background-color 0.08s,
+    color 0.08s,
+    opacity 0.08s;
+}
+
+.context-menu::item:selected,
+.context-menu .menu-checkbox:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* SHARED DISABLED STATES */
+.context-menu::item:disabled,
+.context-menu .submenu::item:disabled {
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 0.5;
+}
+
+.context-menu .submenu::item:disabled {
+  margin: 0;
+  padding-left: 16px;
+}
+
+/* SEPARATOR & ARROW */
+.context-menu::separator {
+  height: 1px;
+  background-color: rgb(68, 68, 68);
+  margin: 4px 0px;
+}
+
+.context-menu::right-arrow {
+  width: 8px;
+  height: 8px;
+  padding-right: 24px;
+}
+
+/* CHECKBOXES & INDICATORS */
+.context-menu .menu-checkbox .checkbox {
+  border: none;
+  padding: 8px 16px;
+  font-size: 12px;
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+.context-menu .menu-checkbox .checkbox:unchecked {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.context-menu .menu-checkbox .checkbox::indicator {
+  width: 12px;
+  height: 12px;
+  margin-left: 0px;
+  margin-right: 8px;
+}
+
+.context-menu .menu-checkbox .checkbox::indicator:unchecked {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.context-menu .menu-checkbox .checkbox::indicator:checked,
+.context-menu::item:checked {
+  background-color: #47aff5;
+  color: #ffffff;
+  border-radius: 2px;
+}
+
+.context-menu .menu-checkbox .checkbox:focus {
+  outline: none;
+}

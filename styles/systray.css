@@ -1,0 +1,39 @@
+.systray {
+  padding: 0px;
+}
+.systray .unpinned-visibility-btn {
+  cursor: pointer;
+  border-radius: 4px;
+  height: 20px;
+  width: 13px;
+  color: var(--subtle);
+  margin-top: 2px;
+}
+/* The icon the drag is hovering over (drop target icon) */
+.systray-popup .button.drag-over {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* Icon being dragged, we already apply some transparency to it so you don't need to use it */
+/* .systray-popup .button.dragging { */
+/* } */
+
+.systray .pinned-container.pinned-container.drop-target {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.systray-popup {
+  background-color: rgba(29, 29, 29, 0.152);
+  padding: 4px;
+}
+.systray-popup .button {
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  border-radius: 6px;
+}
+.systray-popup .button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* .systray .unpinned-container { */
+/*   margin-right: 9px; */
+/* } */

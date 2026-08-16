@@ -1,0 +1,123 @@
+/* MEMORY WIDGET */
+.memory-widget:hover {
+  cursor: pointer;
+  background-color: var(--bg_hover);
+}
+.memory-widget .progress-circle {
+  padding: 0px;
+}
+.memory-widget .label,
+.memory-widget .label.alt {
+  margin-left: 2px;
+  color: var(--subtle);
+}
+.memory-widget .label.status-low {
+  color: var(--subtle);
+}
+.memory-widget .label.status-medium {
+  color: var(--subtle);
+}
+.memory-widget .label.status-high {
+  color: var(--subtle);
+}
+
+/* --------- MEMORY MENU --------- */
+/* POPUP WINDOW */
+.memory-popup {
+  background: rgba(32, 32, 32, 0.6);
+  min-width: 400px;
+}
+
+/* HEADER */
+.memory-popup .header {
+  background: transparent;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.memory-popup .header .text {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+}
+
+.memory-popup .header .pin-btn {
+  font-family: "Segoe Fluent Icons";
+  font-weight: 400;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  border-radius: 6px;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 4px;
+  color: rgba(255, 255, 255, 0.5);
+  transition:
+    background-color 0.08s,
+    color 0.08s,
+    opacity 0.08s;
+}
+
+.memory-popup .header .pin-btn:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: rgb(255, 255, 255);
+}
+
+.memory-popup .header .pin-btn.pinned {
+  color: #47aff5;
+}
+
+.memory-popup .header .pin-btn:clicked,
+.memory-popup .header .pin-btn:pressed {
+  opacity: 0.5;
+}
+
+/* GRAPH AREA */
+.memory-popup .graph-container {
+  background: transparent;
+  min-height: 64px;
+  padding: 12px 16px 0 16px;
+}
+
+.memory-popup .graph-title {
+  font-size: 1px;
+  margin: 0;
+  padding: 0;
+  color: rgba(32, 32, 32, 0.6);
+}
+
+.memory-popup .memory-graph {
+  color: #47aff5;
+}
+
+.memory-popup .memory-graph-grid {
+  color: rgba(255, 255, 255, 0.05);
+}
+
+/* STATS GRID */
+.memory-popup .stats {
+  background: transparent;
+  padding: 16px;
+}
+
+.memory-popup .stats .stat-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin: 4px;
+}
+
+.memory-popup .stats .stat-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0 0 2px 0;
+}
+
+.memory-popup .stats .stat-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 0;
+}

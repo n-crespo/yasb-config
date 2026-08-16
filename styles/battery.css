@@ -1,0 +1,30 @@
+/* BATTERY WIDGET */
+.battery-widget {
+  cursor: pointer;
+}
+.battery-widget .icon {
+  margin-top: 5px;
+  padding-right: 1px;
+  font-size: 20px;
+}
+.battery-widget .label {
+  /* padding-bottom: 2px; */
+}
+.battery-widget .widget-container .icon.status-charging {
+  color: var(--green);
+}
+.battery-widget .widget-container .icon.status-critical {
+  color: var(--red);
+}
+.battery-widget .widget-container .icon.status-low {
+  color: var(--yellow);
+}
+.battery-widget .widget-container .icon.status-medium {
+  color: white;
+}
+.battery-widget .widget-container .icon.status-high {
+  color: white;
+}
+.battery-widget .widget-container .icon.status-full {
+  color: white;
+}

@@ -1,0 +1,106 @@
+/* VOLUME WIDGET */
+.volume-widget {
+  cursor: pointer;
+}
+.volume-widget .icon {
+  margin-inline: 0px;
+  color: var(--subtle);
+  font-size: 14px;
+}
+.volume-widget .label {
+  /* center text w/icon */
+  color: var(--subtle);
+}
+/* AUDIO MENU POPUP */
+.volume-slider {
+  border: none;
+  height: 10px;
+  margin: 5px 4px;
+  border-radius: 3px;
+  background: transparent;
+}
+.volume-slider::sub-page {
+  background: white;
+  border-radius: 3px;
+  height: 4px;
+}
+.volume-slider::groove {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--bg_active);
+}
+.audio-menu .system-volume-container .volume-slider {
+  border: none;
+}
+.audio-menu {
+  background-color: var(--blur_bg);
+  min-width: 250px;
+}
+.audio-container .device {
+  background-color: transparent;
+  border-radius: 7px;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  color: var(--subtle);
+}
+.audio-container .device.selected {
+  background-color: var(--bg_active);
+  color: var(--text);
+}
+.audio-container .device:hover {
+  color: var(--text);
+  background-color: var(--bg_active);
+}
+.audio-menu .audio-container .device {
+  background-color: transparent;
+  border: none;
+  padding: 6px 8px 6px 4px;
+  margin: 2px 0;
+  font-size: 12px;
+  border-radius: 4px;
+  color: white;
+  opacity: 0.5;
+}
+.audio-menu .audio-container .device.selected {
+  background-color: rgba(255, 255, 255, 0.085);
+  opacity: 1;
+}
+.audio-menu .audio-container .device:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+/* Toggle button for application volumes (if is enabled) */
+.audio-menu .toggle-apps {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  min-height: 24px;
+  min-width: 24px;
+  border-radius: 4px;
+}
+.audio-menu .toggle-apps.expanded {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.audio-menu .toggle-apps:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+/* Container for application volumes (if is enabled) */
+.audio-menu .apps-container {
+  padding: 8px;
+  margin-top: 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.062);
+}
+.audio-menu .apps-container .app-volume .app-icon-container {
+  min-width: 40px;
+  min-height: 40px;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 6px;
+  margin-right: 8px;
+}
+/* .audio-menu .apps-container .app-volume .app-slider { */
+/* } */
+.audio-menu .apps-container .app-volume .app-icon-container:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
