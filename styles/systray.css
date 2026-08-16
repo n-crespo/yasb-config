@@ -3,6 +3,7 @@
 }
 .systray .unpinned-visibility-btn {
   cursor: pointer;
+  padding: 0px 2px;
   border-radius: 4px;
   height: 20px;
   width: 13px;
