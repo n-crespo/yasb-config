@@ -351,19 +351,17 @@ QPushButton {
 }
 
 /* BLUETOOTH WIDET  */
-/* .bluetooth-widget { */
-/* padding-left: 4px; */
-/* padding-right: 4px; */
-/* } */
+.bluetooth-widget {
+  padding: 0px;
+}
 .bluetooth-widget .icon {
-  margin: -2px;
-  /* background-color: red; */
   font-size: 14px;
   color: var(--blue);
 }
+/* this is the device specific icon */
 .bluetooth-widget .label,
 .bluetooth-widget .label.alt {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--blue);
 }
 .bluetooth-menu {
@@ -516,6 +514,11 @@ QPushButton {
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
   font-size: 14px;
+}
+
+.button-grouper {
+  cursor: pointer;
+  padding: 0px 6px;
 }
 
 /* CLOCK WIDGET */
@@ -870,6 +873,9 @@ Example: "Windows Media" becomes "windows-media" */
   height: 6px;
 }
 
+.systray {
+  padding: 0px;
+}
 .systray .unpinned-visibility-btn {
   cursor: pointer;
   border-radius: 4px;
@@ -1161,18 +1167,19 @@ Example: "Windows Media" becomes "windows-media" */
 
 /* --------- CONTROL CENTER --------- */
 /* POPUP WINDOW */
-/* .control-center-widget, */
+.control-center-widget {
+  padding: 0px 2px;
+}
 /* .control-center-widget .widget-container, */
 .control-center-widget .icon {
   margin-top: 2px;
-  font-size: 13px;
+  font-size: 12px;
   color: lightgray;
 }
 .control-center-menu {
   background: rgba(32, 32, 32, 0.6);
   min-width: 360px;
 }
-
 /* SECTIONS */
 /* Left and right padding of 12 px + 4 px margin for quick action and power plan,
 which is 16 pixels same as the other sections. */
@@ -1194,7 +1201,6 @@ which is 16 pixels same as the other sections. */
 .control-center-menu .section.system-controls {
   border-bottom: 1px solid rgba(255, 255, 255, 0);
 }
-
 /* SHARED SEGOE FLUENT ICONS */
 .control-center-menu .section.system-controls .button,
 .control-center-menu .section.quick-actions .button .icon,
@@ -1206,7 +1212,6 @@ which is 16 pixels same as the other sections. */
   font-family: "Segoe Fluent Icons";
   font-weight: 400;
 }
-
 /* SHARED HOVER & TRANSITION TRANSITIONS */
 .control-center-menu .section.quick-actions .button .icon,
 .control-center-menu .section.system-controls .button,
@@ -1219,7 +1224,6 @@ which is 16 pixels same as the other sections. */
     opacity 0.08s;
   opacity: 1;
 }
-
 /* SHARED CLICKED / PRESSED STATES */
 .control-center-menu .section.system-controls .button:clicked,
 .control-center-menu .section.system-controls .button:pressed,
@@ -1235,7 +1239,6 @@ which is 16 pixels same as the other sections. */
 .control-center-menu .section.media .button:pressed {
   opacity: 0.5;
 }
-
 /* SHARED DISABLED STATES */
 .control-center-menu .section.quick-actions .button.disabled .title,
 .control-center-menu .section.quick-actions .button.disabled .icon,
@@ -1244,7 +1247,6 @@ which is 16 pixels same as the other sections. */
 .control-center-menu .section.media .button.disabled:hover {
   opacity: 0.5;
 }
-
 /* SYSTEM CONTROLS */
 .control-center-menu .section.system-controls .button {
   background-color: rgba(255, 255, 255, 0.08);
@@ -1262,7 +1264,6 @@ which is 16 pixels same as the other sections. */
 .control-center-menu .section.system-controls .button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 /* QUICK ACTIONS */
 .control-center-menu .section.quick-actions .button {
   margin: 0 4px;
@@ -1305,7 +1306,6 @@ which is 16 pixels same as the other sections. */
   font-weight: 600;
   color: rgb(255, 255, 255);
 }
-
 /* SLIDERS */
 .control-center-menu .section.sliders .slider {
   background: transparent;
@@ -1336,7 +1336,6 @@ which is 16 pixels same as the other sections. */
 .control-center-menu .section.sliders .slider .source-selector:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
 /* POWER PLAN & POWER MODE */
 .control-center-menu .section.power .plan-name,
 .control-center-menu .section.power .mode-name {
@@ -1374,7 +1373,6 @@ which is 16 pixels same as the other sections. */
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
 }
-
 /* MEDIA CONTROLS */
 .control-center-menu .section.media {
   background-color: rgba(0, 0, 0, 0.2);
@@ -1411,7 +1409,6 @@ which is 16 pixels same as the other sections. */
 .control-center-menu .section.media .button.disabled:hover {
   background-color: rgba(255, 255, 255, 0);
 }
-
 /* Context menu styles for dropdowns and menus inside the Control Center panel */
 .control-center-menu .context-menu {
   background-color: rgba(48, 48, 48, 0.86);

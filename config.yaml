@@ -38,21 +38,11 @@ bars:
       width: "100%"
       height: 20
     widgets:
-      # removed: "microphone", "power_menu", "home", "active_window", "apps"
+      # removed: "microphone", "power_menu", "home", "active_window", "apps", "glazewm_tiling_direction",
       left: ["glazewm_workspaces"]
       center: ["clock"]
-      right: [
-          "quick_launch",
-          "media",
-          # "glazewm_tiling_direction",
-          "bluetooth",
-          "control_center",
-          "systray",
-          "memory",
-          "wifi-grouper",
-          "volume",
-          "battery",
-        ]
+      right:
+        ["quick_launch", "media", "button-grouper", "memory", "wifi-grouper", "volume", "battery"]
 
 widgets:
   quick_launch:
@@ -171,6 +161,12 @@ widgets:
     options:
       class_name: "wifi-grouper"
       widgets: ["wifi"]
+
+  button-grouper:
+    type: "yasb.grouper.GrouperWidget"
+    options:
+      class_name: "button-grouper"
+      widgets: ["bluetooth", "control_center", "systray"]
 
   ############## LEFT ############
   glazewm_workspaces:
@@ -322,8 +318,9 @@ widgets:
     options:
       tooltip: true
       label: "<span>{icon}</span>{device_name}"
-      label_alt: "<span>󰂯</span>"
-      label_no_device: ""
+      label_alt: "\ue702"
+      label_no_device: " "
+      label_device_separator: " "
       device_aliases:
         - name: "Nothing Ear (a)"
           alias: "󱡏"
@@ -334,11 +331,11 @@ widgets:
         - name: "Zubin’s JBL 2"
           alias: "󰴸"
         - name: "Keychron M3"
-          alias: ""
+          alias: ""
       icons:
-        bluetooth_on: ""
-        bluetooth_off: ""
-        bluetooth_connected: ""
+        bluetooth_on: "" # full dot
+        bluetooth_off: " "
+        bluetooth_connected: "" # full dot
       callbacks:
         # on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/bluetooth"
         on_right: toggle_label
@@ -484,7 +481,7 @@ widgets:
   control_center:
     type: "yasb.control_center.ControlCenterWidget"
     options:
-      label: "<span>\ue713</span>"
+      label: "<span>\uf8b0</span>"
       class_name: "control_center"
       tooltip: true
       sections_order:
