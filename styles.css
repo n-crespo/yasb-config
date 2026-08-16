@@ -361,6 +361,7 @@ QPushButton {
 /* this is the device specific icon */
 .bluetooth-widget .label,
 .bluetooth-widget .label.alt {
+  padding: 0px 2px;
   font-size: 14px;
   color: var(--blue);
 }
@@ -880,7 +881,7 @@ Example: "Windows Media" becomes "windows-media" */
   cursor: pointer;
   border-radius: 4px;
   height: 20px;
-  width: 16px;
+  width: 13px;
   color: var(--subtle);
   margin-top: 2px;
 }

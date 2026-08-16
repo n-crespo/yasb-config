@@ -317,9 +317,9 @@ widgets:
     type: "yasb.bluetooth.BluetoothWidget"
     options:
       tooltip: true
-      label: "<span>{icon}</span>{device_name}"
+      label: "{icon}{device_name}"
       label_alt: "\ue702"
-      label_no_device: " "
+      label_no_device: ""
       label_device_separator: " "
       device_aliases:
         - name: "Nothing Ear (a)"
@@ -331,11 +331,11 @@ widgets:
         - name: "Zubin’s JBL 2"
           alias: "󰴸"
         - name: "Keychron M3"
-          alias: ""
+          alias: "󰍽"
       icons:
         bluetooth_on: "" # full dot
-        bluetooth_off: " "
-        bluetooth_connected: "" # full dot
+        bluetooth_off: ""
+        bluetooth_connected: "" # full dot
       callbacks:
         # on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/bluetooth"
         on_right: toggle_label
