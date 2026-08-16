@@ -402,7 +402,7 @@ widgets:
       callbacks:
         on_middle: "exec cmd.exe /c start ms-settings:network"
         on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/wifi"
-        on_left: "toggle_label"
+        on_left: "toggle_menu"
 
   volume:
     type: "yasb.volume.VolumeWidget"
