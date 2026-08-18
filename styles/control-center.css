@@ -6,6 +6,7 @@
 /* .control-center-widget .widget-container, */
 .control-center-widget .icon {
   margin-top: 3px;
+  padding-right: 1px; /* fix settings icon alignment */
   font-size: 13px;
   color: lightgray;
 }
