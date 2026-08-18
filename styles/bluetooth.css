@@ -9,7 +9,7 @@
 /* this is the device specific icon */
 .bluetooth-widget .label,
 .bluetooth-widget .label.alt {
-  padding: 0px 2px;
+  padding: 0px 1px;
   font-size: 14px;
   color: var(--blue);
 }
