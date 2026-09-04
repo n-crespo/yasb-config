@@ -10,7 +10,6 @@
 .wifi-widget .label {
   margin-left: 2px;
   color: var(--subtle);
-  font-size: var(--smaller);
 }
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
