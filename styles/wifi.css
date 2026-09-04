@@ -2,9 +2,10 @@
 /* HACK: a grouper surrounds this wifi widget so the hover bg works properly  */
 .wifi-grouper {
   cursor: pointer;
-  padding: 0px;
 }
 .wifi-widget {
+  padding: 0px;
+  /* default padding is already applied to grouper */
   color: var(--subtle);
 }
 .wifi-widget .label {
@@ -13,7 +14,7 @@
 }
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* --------- WIFI MENU --------- */
