@@ -41,8 +41,7 @@ bars:
       # removed: "microphone", "power_menu", "home", "active_window", "apps", "glazewm_tiling_direction",
       left: ["glazewm_workspaces"]
       center: ["clock"]
-      right:
-        ["quick_launch", "media", "button-grouper", "memory", "wifi-grouper", "volume", "battery"]
+      right: ["quick_launch", "media", "button-grouper", "wifi-grouper", "volume", "battery"]
 
 widgets:
   quick_launch:
@@ -166,7 +165,7 @@ widgets:
     type: "yasb.grouper.GrouperWidget"
     options:
       class_name: "button-grouper"
-      widgets: ["bluetooth", "systray"]
+      widgets: ["bluetooth", "memory", "systray"]
 
   ############## LEFT ############
   glazewm_workspaces:
@@ -274,8 +273,8 @@ widgets:
     type: "yasb.memory.MemoryWidget"
     options:
       # label_alt: "{virtual_mem_percent}%"
-      label_alt: "" # virtual_mem_used
-      label: "{virtual_mem_used}"
+      label: ""
+      label_alt: "{virtual_mem_used}" # virtual_mem_used
       update_interval: 3000
       callbacks:
         on_left: "toggle_menu"
@@ -291,7 +290,7 @@ widgets:
         graph_history_size: 60
       progress_bar:
         enabled: true
-        size: 13
+        size: 14
         color: "#555555"
         background_color: "#242424"
         thickness: 2
