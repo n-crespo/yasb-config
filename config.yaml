@@ -20,9 +20,9 @@ bars:
       # round_corners_type: "small"
       # border_color: "#00000000"
     window_flags:
-      always_on_top: true
+      always_on_top: false
       windows_app_bar: false
-      hide_on_fullscreen: false
+      hide_on_fullscreen: true
       auto_hide: false
     layouts:
       left:
