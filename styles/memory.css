@@ -1,6 +1,7 @@
 /* MEMORY WIDGET */
 .memory-widget {
-  padding: 0px 2px;
+  /* less padding since progress circle has padding */
+  padding: 0px 0px;
 }
 .memory-widget:hover {
   cursor: pointer;
