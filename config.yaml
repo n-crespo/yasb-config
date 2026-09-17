@@ -41,7 +41,7 @@ bars:
       # removed: "microphone", "power_menu", "home", "active_window", "apps", "glazewm_tiling_direction",
       left: ["glazewm_workspaces"]
       center: ["clock"]
-      right: ["quick_launch", "media", "button-grouper", "wifi-grouper", "volume", "battery"]
+      right: ["quick_launch", "media", "button-grouper", "volume", "battery"]
 
 widgets:
   quick_launch:
@@ -165,7 +165,7 @@ widgets:
     type: "yasb.grouper.GrouperWidget"
     options:
       class_name: "button-grouper"
-      widgets: ["bluetooth", "memory", "systray"]
+      widgets: ["bluetooth", "memory", "wifi-grouper", "systray"]
 
   ############## LEFT ############
   glazewm_workspaces:
@@ -387,8 +387,8 @@ widgets:
   wifi:
     type: "yasb.wifi.WifiWidget"
     options:
-      label: "<span>{wifi_icon}</span> {wifi_name}"
-      label_alt: "<span>{wifi_icon}</span>"
+      label: "<span>{wifi_icon}</span>"
+      label_alt: "<span>{wifi_icon}</span> {wifi_name}"
       update_interval: 2000
       wifi_icons:
         # ["\udb82\udd2e", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"]
