@@ -165,7 +165,7 @@ widgets:
     type: "yasb.grouper.GrouperWidget"
     options:
       class_name: "button-grouper"
-      widgets: ["bluetooth", "memory", "wifi-grouper", "systray"]
+      widgets: ["bluetooth", "wifi-grouper", "memory", "systray"]
 
   ############## LEFT ############
   glazewm_workspaces:
