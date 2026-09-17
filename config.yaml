@@ -335,8 +335,7 @@ widgets:
         bluetooth_off: ""
         bluetooth_connected: "" # full dot
       callbacks:
-        # on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/bluetooth"
-        on_right: toggle_label
+        on_right: "exec cmd.exe /c start ms-actioncenter:controlcenter/bluetooth"
         on_left: "toggle_menu"
       menu_config:
         blur: true
