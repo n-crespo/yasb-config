@@ -1,5 +1,6 @@
 .systray {
   padding: 0px;
+  margin-bottom: 1px;
 }
 .systray .unpinned-visibility-btn {
   cursor: pointer;

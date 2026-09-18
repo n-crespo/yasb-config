@@ -1,6 +1,7 @@
 /* WIFI WIDGET */
 /* HACK: a grouper surrounds this wifi widget so the hover bg works properly  */
 .wifi-grouper {
+  /* border: 1px solid red; */
   cursor: pointer;
   padding: 0px 1px;
 }
@@ -16,6 +17,8 @@
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
   font-size: 14px;
+  /* fix misaligned icon */
+  padding-left: -1px;
 }
 
 /* --------- WIFI MENU --------- */
