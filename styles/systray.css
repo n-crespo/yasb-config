@@ -1,6 +1,15 @@
 .systray {
   padding: 0px;
-  margin-bottom: 1px;
+  margin-bottom: 0px;
+}
+.systray .button {
+  /* border: 1px solid red; */
+  padding: 0px;
+  margin: 0px;
+}
+.systray .pinned-container {
+  /* fix alignment */
+  margin-left: -1px;
 }
 .systray .unpinned-visibility-btn {
   cursor: pointer;

@@ -16,7 +16,7 @@
 }
 .wifi-widget .widget-container .icon {
   color: var(--subtle);
-  font-size: 14px;
+  font-size: 13px;
   /* fix misaligned icon */
   padding-left: -1px;
 }

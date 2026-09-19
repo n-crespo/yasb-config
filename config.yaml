@@ -290,7 +290,7 @@ widgets:
         graph_history_size: 60
       progress_bar:
         enabled: true
-        size: 15
+        size: 14
         color: "#555555"
         background_color: "#242424"
         thickness: 2
