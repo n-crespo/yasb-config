@@ -389,6 +389,7 @@ widgets:
       label: "<span>{wifi_icon}</span>"
       label_alt: "<span>{wifi_icon}</span> {wifi_name}"
       update_interval: 2000
+      ethernet_label: "󰈁"
       wifi_icons:
         # ["\udb82\udd2e", "\udb82\udd1f", "\udb82\udd22", "\udb82\udd25", "\udb82\udd28"]
         - "󰤯" # 0% strength (no wifi)
