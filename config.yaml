@@ -330,6 +330,8 @@ widgets:
           alias: "󰴸"
         - name: "Keychron M3"
           alias: "󰍽"
+        - name: "Zubin’s Beats Pill"
+          alias: "󰴸"
       icons:
         bluetooth_on: "" # full dot
         bluetooth_off: ""
