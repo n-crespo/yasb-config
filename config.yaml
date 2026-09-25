@@ -318,7 +318,7 @@ widgets:
       tooltip: true
       label: "{icon}{device_name}"
       label_no_device: ""
-      label_device_separator: " "
+      label_device_separator: ""
       device_aliases:
         - name: "Nothing Ear (a)"
           alias: "󱡏"

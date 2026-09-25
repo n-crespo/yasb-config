@@ -1,6 +1,6 @@
 /* BLUETOOTH WIDET  */
 .bluetooth-widget {
-  padding: 0px 2px;
+  padding: 0px 1px;
   /* border: 1px solid red; */
 }
 .bluetooth-widget .icon {
@@ -12,6 +12,7 @@
 .bluetooth-widget .label.alt {
   /* icon is misaligned */
   padding-left: -1px;
+  padding-right: -1px;
   font-size: 13px;
   color: var(--blue);
 }
