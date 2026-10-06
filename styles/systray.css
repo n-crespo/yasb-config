@@ -6,11 +6,12 @@
   /* border: 1px solid red; */
   padding: 0px;
   margin: 0px;
-}
-.systray .pinned-container {
-  /* fix alignment */
+  /* fix padding around pinned icons */
   margin-left: -1px;
+  margin-right: -1px;
 }
+/* .systray .pinned-container { */
+/* } */
 .systray .unpinned-visibility-btn {
   cursor: pointer;
   padding: 0px;
