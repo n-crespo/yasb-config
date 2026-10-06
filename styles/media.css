@@ -73,6 +73,11 @@
   color: #000000;
 }
 
+.media-menu .source[class*="spotify"] {
+  background-color: #1ed760;
+  color: #000000;
+}
+
 .media-menu .source.edge,
 .media-menu .source.windows-media {
   background-color: #47aff5;
