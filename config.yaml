@@ -194,6 +194,26 @@ widgets:
   media:
     type: "yasb.media.MediaWidget"
     options:
+      label: "{title} - {artist}"
+      label_alt: "Music"
+      controls_only: false
+      controls_left: true
+      show_thumbnail: false
+      hide_empty: true
+      max_field_size:
+        label: 28
+        label_alt: 25
+      icons:
+        prev_track: ""
+        next_track: ""
+        play: "󰐊"
+        pause: "󰏤"
+      scrolling_label:
+        enabled: false # Whether to enable the scrolling label.
+      callbacks:
+        on_right: "toggle_media_menu"
+        on_middle: "toggle_label"
+        on_left: "toggle_play_pause"
       media_menu:
         blur: true
         round_corners: true
@@ -209,39 +229,11 @@ widgets:
         max_artist_size: 20
         show_source: true
         show_volume_slider: false
-      label: "{title} - {artist}"
-      label_alt: ".."
-      max_field_size:
-        label: 28
-        label_alt: 25
-      controls_only: false
-      controls_left: true
-      hide_empty: true
-      show_thumbnail: false
-      symmetric_corner_radius: true
       media_menu_icons:
         prev_track: "󰒮"
         next_track: "󰒭"
         play: "󰐊"
         pause: "󰏤"
-      icons:
-        prev_track: ""
-        next_track: ""
-        play: "󰐊"
-        pause: "󰏤"
-      callbacks:
-        on_right: "toggle_media_menu"
-        on_middle: "toggle_label"
-        on_left: "toggle_play_pause"
-      scrolling_label:
-        enabled: false # Whether to enable the scrolling label.
-        update_interval_ms: 33 # The update interval for the scrolling label in milliseconds.
-        style: "bounce" # The style of the scrolling label. Can be "left", "right", "bounce", or "bounce-ease".
-        separator: " | " # The separator between repeating text in "left" or "right" scrolling style.
-        label_padding: 1 # The padding around the label in "bounce" and "bounce-ease" style. By default it's one character on each side.
-        ease_slope: 20 # The easing slope for the bounce effect. Easing curve params: https://www.desmos.com/calculator/j7eamemxzi
-        ease_pos: 0.8 # The easing curve position for the bounce effect.
-        ease_min: 0.5 # The minimum value for the bounce effect easing curve.
 
   systray:
     type: "yasb.systray.SystrayWidget"
