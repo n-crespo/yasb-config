@@ -10,9 +10,6 @@
 /* this is the device specific icon */
 .bluetooth-widget .label,
 .bluetooth-widget .label.alt {
-  /* icon is misaligned */
-  padding-left: -1px;
-  padding-right: -1px;
   font-size: 13px;
   color: var(--blue);
 }
