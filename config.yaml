@@ -41,9 +41,26 @@ bars:
       # removed: "microphone", "power_menu", "home", "active_window", "apps", "glazewm_tiling_direction",
       left: ["glazewm_workspaces"]
       center: ["clock"]
-      right: ["quick_launch", "media", "button-grouper", "volume", "battery"]
+      right: ["quick_launch", "ticktick", "media", "button-grouper", "volume", "battery"]
 
 widgets:
+  ticktick:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "<span>\ue787</span> {data}"
+      label_alt: "{data}"
+      class_name: "ticktick-widget"
+      label_max_length: 28
+      tooltip: true
+      tooltip_label: "{data}"
+      exec_options:
+        run_cmd: "pwsh -NoProfile -File C:/Users/nicol/.config/yasb/ticktick.ps1 -Upcoming -NoColor"
+        run_interval: 60000 # run every minute
+        return_format: "string"
+        hide_empty: false
+      callbacks:
+        on_right: "exec_custom" # right click to re-run script!
+
   quick_launch:
     type: "yasb.quick_launch.QuickLaunchWidget"
     options:
