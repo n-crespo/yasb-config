@@ -106,14 +106,14 @@ function ConvertTo-LocalDateTime
   param([AllowNull()] $Value)
 
   if ($null -eq $Value -or "$Value" -eq '')
-  { return $null 
+  { return $null
   }
 
   if ($Value -is [datetimeoffset])
-  { return $Value.LocalDateTime 
+  { return $Value.LocalDateTime
   }
   if ($Value -is [datetime])
-  { return $Value.ToLocalTime() 
+  { return $Value.ToLocalTime()
   }
 
   $iso = $Value -replace '([+-]\d{2})(\d{2})$', '$1:$2'
@@ -193,7 +193,7 @@ function Get-FilterArguments
 
   $statuses = @($script:StatusOpen)
   if ($IncludeDone)
-  { $statuses += $script:StatusCompleted 
+  { $statuses += $script:StatusCompleted
   }
 
   $arguments = @(
@@ -206,13 +206,13 @@ function Get-FilterArguments
 
   # Optional filters: only added when provided.
   if ($Priority)
-  { $arguments += '--priority', ($Priority -join ',') 
+  { $arguments += '--priority', ($Priority -join ',')
   }
   if ($Tag)
-  { $arguments += '--tag',      ($Tag      -join ',') 
+  { $arguments += '--tag',      ($Tag      -join ',')
   }
   if ($Project)
-  { $arguments += '--projects', ($Project  -join ',') 
+  { $arguments += '--projects', ($Project  -join ',')
   }
 
   $arguments
@@ -225,7 +225,7 @@ function Get-RawTickTickTask
 
   $json = (Invoke-TickTickCli -Arguments $FilterArguments) -join "`n"
   if ([string]::IsNullOrWhiteSpace($json))
-  { return @() 
+  { return @()
   }
 
   @($json | ConvertFrom-Json)
@@ -251,12 +251,12 @@ function ConvertTo-TaskModel
     $end   = ConvertTo-LocalDateTime $Raw.dueDate
     $start = ConvertTo-LocalDateTime $Raw.startDate
     if (-not $start)
-    { $start = $end 
+    { $start = $end
     }
 
     $priorityName = $script:PriorityNames[[int]$Raw.priority]
     if (-not $priorityName)
-    { $priorityName = 'None' 
+    { $priorityName = 'None'
     }
 
     [pscustomobject]@{
@@ -270,9 +270,9 @@ function ConvertTo-TaskModel
       CliOrder = $Order
       # Tasks with no dates at all sort last.
       SortKey  = if ($start)
-      { $start 
+      { $start
       } else
-      { [datetime]::MaxValue 
+      { [datetime]::MaxValue
       }
     }
   }
@@ -363,10 +363,10 @@ function Select-UpcomingTask
   }
 
   if ($allDay.Count -gt 0)
-  { return $allDay[0] 
+  { return $allDay[0]
   }
   if ($bestTimed)
-  { return $bestTimed 
+  { return $bestTimed
   }
 }
 
@@ -385,13 +385,13 @@ function Format-ClockTime
 
   $culture = [cultureinfo]::InvariantCulture
   $text = if ($Time.Minute -eq 0)
-  { $Time.ToString('%h', $culture) 
+  { $Time.ToString('%h', $culture)
   } else
-  { $Time.ToString('h:mm', $culture) 
+  { $Time.ToString('h:mm', $culture)
   }
 
   if ($OmitMeridiem)
-  { return $text 
+  { return $text
   }
   $text + $Time.ToString('tt', $culture)
 }
@@ -402,15 +402,15 @@ function Format-TimeRange
   param([Parameter(Mandatory)] $Task)
 
   if ($Task.IsAllDay)
-  { return 'all day' 
+  { return 'all day'
   }
   if (-not $Task.Start)
-  { return 'no time' 
+  { return 'no time'
   }
 
   $hasDuration = $Task.End -and $Task.End -ne $Task.Start
   if (-not $hasDuration)
-  { return Format-ClockTime $Task.Start 
+  { return Format-ClockTime $Task.Start
   }
 
   # Only show AM/PM once when both ends are on the same day and in the same half of it.
@@ -430,13 +430,13 @@ function Format-CompactTime
 
   $culture = [cultureinfo]::InvariantCulture
   $text = if ($Time.Minute -eq 0)
-  { $Time.ToString('%h', $culture) 
+  { $Time.ToString('%h', $culture)
   } else
-  { $Time.ToString('h\:mm', $culture) 
+  { $Time.ToString('h\:mm', $culture)
   }
 
   if (-not $OmitMeridiem)
-  { $text += $Time.ToString('tt', $culture).ToLowerInvariant() 
+  { $text += $Time.ToString('tt', $culture).ToLowerInvariant()
   }
   $text
 }
@@ -447,15 +447,15 @@ function Format-CompactTimeRange
   param([Parameter(Mandatory)] $Task)
 
   if ($Task.IsAllDay)
-  { return 'all day' 
+  { return 'all day'
   }
   if (-not $Task.Start)
-  { return 'no time' 
+  { return 'no time'
   }
 
   $hasDuration = $Task.End -and $Task.End -ne $Task.Start
   if (-not $hasDuration)
-  { return Format-CompactTime $Task.Start 
+  { return Format-CompactTime $Task.Start
   }
 
   # Only the second time carries am/pm when both are in the same half of the day.
@@ -469,12 +469,12 @@ function Get-TaskStyleCode
   param([Parameter(Mandatory)] $Task)
 
   if ($Task.IsDone)
-  { return $script:DoneStyle 
+  { return $script:DoneStyle
   }
 
   $color = $script:PriorityColors[$Task.Priority]
   if (-not $color)
-  { $color = $script:PriorityColors['None'] 
+  { $color = $script:PriorityColors['None']
   }
   @($color)
 }
@@ -507,7 +507,7 @@ function Format-TaskLine
     {
       $line = '{0}: {1}' -f (Format-CompactTimeRange $Task), $Task.Title
       if ($IncludeDate -and $Task.Start)
-      { $line = '{0:ddd} {1}' -f $Task.Start, $line 
+      { $line = '{0:ddd} {1}' -f $Task.Start, $line
       }
     } else
     {
@@ -516,16 +516,16 @@ function Format-TaskLine
       if ($IncludeDate)
       {
         $day = if ($Task.Start)
-        { '{0:ddd MMM d}' -f $Task.Start 
+        { '{0:ddd MMM d}' -f $Task.Start
         } else
-        { '' 
+        { ''
         }
         $line = '{0,-11} {1}' -f $day, $line
       }
     }
 
     if ($NoColor)
-    { return $line 
+    { return $line
     }
     Add-AnsiStyle -Text $line -Code (Get-TaskStyleCode $Task)
   }
@@ -561,24 +561,24 @@ function Invoke-Main
   }
 
   if ($AsObject)
-  { return $tasks 
+  { return $tasks
   }
 
   if ($tasks.Count -eq 0)
   {
     Write-Host $(if ($Upcoming)
-      { 'No upcoming tasks.' 
+      { 'No upcoming tasks.'
       } else
-      { 'No tasks.' 
+      { 'No tasks.'
       })
     return
   }
 
   # Show the date for multi-day lists, or for an upcoming task that isn't today.
   $showDate = if ($Upcoming)
-  { $tasks[0].Start.Date -ne (Get-Date).Date 
+  { $tasks[0].Start.Date -ne (Get-Date).Date
   } else
-  { $rangeDays -gt 1 
+  { $rangeDays -gt 1
   }
 
   $plain = $NoColor -or $env:NO_COLOR
