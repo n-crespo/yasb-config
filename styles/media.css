@@ -68,12 +68,8 @@
   color: #ffffff;
 }
 
-.media-menu .source.spotify {
-  background-color: #1ed760;
-  color: #000000;
-}
-
-.media-menu .source[class*="spotify"] {
+.media-menu .source.spotify,
+.media-menu .source.spotifast {
   background-color: #1ed760;
   color: #000000;
 }
