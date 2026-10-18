@@ -1,0 +1,17 @@
+/* TICKTICK-UPCOMING WIDGET */
+.ticktick-upcoming-widget .label,
+.ticktick-upcoming-widget .label.alt {
+  cursor: pointer;
+  color: var(--subtle);
+  font-size: var(--smaller);
+  margin-left: 3px;
+}
+.ticktick-upcoming-widget .icon {
+  cursor: pointer;
+  color: var(--subtle);
+  font-size: 11px;
+  margin-top: 3px;
+}
+/* .ticktick-upcoming-widget .label:hover, */
+/* .ticktick-upcoming-widget .icon:hover { */
+/* } */

@@ -41,7 +41,7 @@ bars:
       # removed: "microphone", "power_menu", "home", "active_window", "apps", "glazewm_tiling_direction",
       left: ["glazewm_workspaces"]
       center: ["clock", "ticktick_focus"]
-      right: ["quick_launch", "ticktick", "media", "button-grouper", "volume", "battery"]
+      right: ["quick_launch", "ticktick_upcoming", "media", "button-grouper", "volume", "battery"]
 
 widgets:
   ticktick_focus:
@@ -53,32 +53,32 @@ widgets:
       tooltip: true
       callbacks:
         on_right: "exec_custom" # right click to re-run script!
-        on_left: 'exec C:\Users\nicol\.config\yasb\ticktick-window.exe'
+        on_left: 'exec C:\Users\nicol\.config\yasb\build\ticktick-window.exe'
       exec_options:
-        run_cmd: 'C:\Users\nicol\.config\yasb\ticktick-focus.exe'
+        run_cmd: 'C:\Users\nicol\.config\yasb\build\ticktick-focus.exe'
         run_interval: 1000
         return_format: "json"
         hide_empty: true
         use_shell: false
 
-  ticktick:
+  ticktick_upcoming:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "<span>\ue787</span> {data}"
-      label_alt: "{data}"
-      class_name: "ticktick-widget"
+      label: "<span>\ue787</span> {data[label]}"
+      label_alt: "{data[label]}"
+      class_name: "ticktick-upcoming-widget"
       label_max_length: 28
       tooltip: true
-      tooltip_label: "{data}"
+      tooltip_label: "{data[label]}"
       exec_options:
-        run_cmd: "pwsh -NoProfile -File C:/Users/nicol/.config/yasb/ticktick.ps1 -Upcoming -NoColor"
+        run_cmd: 'C:\Users\nicol\.config\yasb\build\ticktick-upcoming.exe'
         run_interval: 60000 # run every minute
-        return_format: "string"
+        return_format: "json"
         hide_empty: false
         use_shell: false
       callbacks:
         on_right: "exec_custom" # right click to re-run script!
-        on_left: 'exec C:\Users\nicol\.config\yasb\ticktick-window.exe'
+        on_left: 'exec C:\Users\nicol\.config\yasb\build\ticktick-window.exe'
 
   quick_launch:
     type: "yasb.quick_launch.QuickLaunchWidget"
