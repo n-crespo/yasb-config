@@ -47,17 +47,16 @@ widgets:
   ticktick_focus:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "{data[html]}"
+      label: "{data}"
       class_name: "ticktick-focus-widget"
-      tooltip_label: "{data[state]}: {data[time]}"
-      tooltip: true
+      tooltip: false
       callbacks:
         on_right: "exec_custom" # right click to re-run script!
         on_left: 'exec C:\Users\nicol\.config\yasb\build\ticktick-window.exe'
       exec_options:
         run_cmd: 'C:\Users\nicol\.config\yasb\build\ticktick-focus.exe'
-        run_interval: 1000
-        return_format: "json"
+        run_interval: 900
+        return_format: "string"
         hide_empty: true
         use_shell: false
 

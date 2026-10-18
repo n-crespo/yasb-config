@@ -1,16 +1,15 @@
 // ticktick-focus.cs
 //
-// Prints the TickTick PWA's focus timer state as JSON, based on its window title:
-//   "TickTick - 10:50 - Focusing"  ->  {"state":"focusing","icon":"<clock icon>","time":"10:50",
-//                                       "html":"<b style=\"color:#39c559;font-size:13px;margin-top:1px\">icon</b> 10:50"}
-//   "TickTick - 11:36 - Paused"    ->  {"state":"paused", ... "html":"<b style=...>icon</b> 11:36"}
-// Prints nothing when no timer is running or paused.
+// Prints the TickTick PWA's focus timer state as an HTML label, based on its window title:
+//   "TickTick - 10:50 - Focusing"  ->  <b style="color:#39c559;...">icon</b> 10:50
+//   "TickTick - 11:36 - Paused"    ->  <b style="color:#e5484d;...">icon</b> 11:36
+// Prints nothing when no timer is running or paused. It's plain text, not JSON, on purpose:
+// with return_format "string", YASB's hide_empty hides the whole widget on empty output.
 //
 // Optional argument: "focusing" or "paused" prints only when the timer is in that state
 // (and nothing otherwise), e.g.  ticktick-focus.exe paused
 //
-// Non-ASCII characters are written as \uXXXX escapes, so the output is plain ASCII
-// and can't be garbled by console or encoding settings.
+// Output is UTF-8 (the icons are Nerd Font characters).
 //
 // Written for the C# 5 compiler that ships with Windows (no C# 6 syntax).
 //
@@ -75,33 +74,11 @@ static class TickFocus
         return DateTime.Now.Second;
     }
 
-    // Escapes a string for use inside a JSON string literal (non-ASCII becomes \uXXXX).
-    static string JsonEscape(string value)
-    {
-        var sb = new StringBuilder();
-        foreach (char c in value)
-        {
-            if (c == '"')       sb.Append("\\\"");
-            else if (c == '\\') sb.Append("\\\\");
-            else if (c < 0x20 || c > 0x7E) sb.Append("\\u").Append(((int)c).ToString("x4"));
-            else                sb.Append(c);
-        }
-        return sb.ToString();
-    }
-
     // The label as HTML: only the icon is wrapped in a colored tag; the time is left plain.
     static string ToHtml(string icon, string time, string color)
     {
         string style = "color:" + color + ";font-size:" + IconFontSize + ";margin-top:" + IconMarginTop;
         return "<" + IconTag + " style=\"" + style + "\">" + icon + "</" + IconTag + "> " + time;
-    }
-
-    static string ToJson(string state, string icon, string time, string color)
-    {
-        return "{\"state\":\""  + JsonEscape(state) + "\"," +
-               "\"icon\":\""   + JsonEscape(icon)  + "\"," +
-               "\"time\":\""   + JsonEscape(time)  + "\"," +
-               "\"html\":\""   + JsonEscape(ToHtml(icon, time, color)) + "\"}";
     }
 
     // Returns the time part of the title if it matches "<Prefix><time><suffix>", else null.
@@ -151,18 +128,17 @@ static class TickFocus
         if (state != null && (only == null || only == state))
         {
             result = (state == "focusing")
-                ? ToJson("focusing", ClockIcon(SecondsOf(focusing)), focusing, FocusingColor)
-                : ToJson("paused", PausedIcon, paused, PausedColor);
+                ? ToHtml(ClockIcon(SecondsOf(focusing)), focusing, FocusingColor)
+                : ToHtml(PausedIcon, paused, PausedColor);
         }
 
-        if (result != null)
+        if (result == null) return 0;
+
+        // Write bytes directly: works with or without a console attached.
+        byte[] bytes = new UTF8Encoding(false).GetBytes(result + "\n");
+        using (Stream stdout = Console.OpenStandardOutput())
         {
-            // Write bytes directly: works with or without a console attached.
-            byte[] bytes = new UTF8Encoding(false).GetBytes(result + "\n");
-            using (Stream stdout = Console.OpenStandardOutput())
-            {
-                stdout.Write(bytes, 0, bytes.Length);
-            }
+            stdout.Write(bytes, 0, bytes.Length);
         }
         return 0;
     }
