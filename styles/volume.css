@@ -55,12 +55,12 @@
 
 .audio-container .device:hover,
 .audio-menu .audio-container .device:hover {
-  background-color: rgba(255, 255, 255, 0.06);
   color: rgb(255, 255, 255);
 }
 
 .audio-container .device.selected,
 .audio-menu .audio-container .device.selected {
+  border: 1px solid red;
   background-color: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: rgb(255, 255, 255);
