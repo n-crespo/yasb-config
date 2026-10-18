@@ -68,6 +68,10 @@
   color: #ffffff;
 }
 
+.media-menu .source.helium {
+  background-color: "#3450D1";
+}
+
 .media-menu .source.spotify,
 .media-menu .source.spotifast {
   background-color: #1ed760;
