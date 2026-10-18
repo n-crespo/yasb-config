@@ -41,7 +41,7 @@ bars:
       # removed: "microphone", "power_menu", "home", "active_window", "apps", "glazewm_tiling_direction",
       left: ["glazewm_workspaces"]
       center: ["clock", "ticktick_focus"]
-      right: ["quick_launch", "ticktick_upcoming", "media", "button-grouper", "volume", "battery"]
+      right: ["quick_launch", "ticktick_upcoming", "media", "button_grouper", "volume", "battery"]
 
 widgets:
   ticktick_focus:
@@ -196,10 +196,10 @@ widgets:
       class_name: "wifi-grouper"
       widgets: ["wifi"]
 
-  button-grouper:
+  button_grouper:
     type: "yasb.grouper.GrouperWidget"
     options:
-      class_name: "button-grouper"
+      class_name: "button_grouper"
       widgets: ["bluetooth", "wifi-grouper", "memory", "systray"]
 
   ############## LEFT ############
