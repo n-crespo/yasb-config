@@ -52,6 +52,7 @@ widgets:
       tooltip_label: "{data[state]}: {data[time]}"
       tooltip: true
       callbacks:
+        on_right: "exec_custom" # right click to re-run script!
         on_left: 'exec C:\Users\nicol\.config\yasb\ticktick-window.exe'
       exec_options:
         run_cmd: 'C:\Users\nicol\.config\yasb\ticktick-focus.exe'
