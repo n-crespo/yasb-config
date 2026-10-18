@@ -7,7 +7,7 @@
 // "date" is a short weekday like "Tue" when the task isn't today, and is then also prefixed
 // to "label". When there is nothing upcoming: {"state":"none","label":"No upcoming tasks."}
 //
-// "details" is an HTML list of every open task still to come in the lookahead window,
+// "details" is an HTML list of every open task still to come in the next 3 days (DetailsDays),
 // grouped by day (for a tooltip); "&nbsp;" is used for indentation.
 //
 // Timed tasks win over all-day tasks on the same day, but an all-day task beats timed tasks
@@ -222,17 +222,40 @@ static class TickUpcoming
         }
     }
 
-    const string MutedColor = "#8a8a8a";   // times, day dates, and the no-priority bar
+    // The details list covers today plus the following days, up to this many days in total.
+    const int DetailsDays = 3;
 
-    // Open tasks still to come (or in progress): a centered heading per day, then a table of
-    // "time | title" rows whose bar is colored by priority, with a rule between days.
+    const string MutedColor = "#8a8a8a";   // times and day dates
+    const string FaintColor = "#4a4a4a";   // rules and the no-priority bar
+
+    // Titles longer than this are cut short with an ellipsis so one long task can't stretch the tooltip.
+    const int MaxTitleLength = 40;
+
+    static string Truncate(string text)
+    {
+        return text.Length <= MaxTitleLength ? text : text.Substring(0, MaxTitleLength - 1).TrimEnd() + "…";
+    }
+
+    static string Span(string color, string text)
+    {
+        return "<span style=\"color:" + color + "\">" + text + "</span>";
+    }
+
+    // Width in pixels of the time column. Fixed so the bars and titles line up across days
+    // (each day is its own table, because a wide heading cell would otherwise stretch the
+    // columns of a shared table and open a gap after the time).
+    const int TimeColumnWidth = 80;
+
+    // Open tasks still to come (or in progress), left-aligned. Each day is a bold heading
+    // followed by rows of time, a thin bar colored by priority, and the title.
     static string DetailsHtml(List<Task> tasks, DateTime now)
     {
         var upcoming = tasks.FindAll(delegate(Task t)
         {
-            return t.IsAllDay || t.Start > now || (t.End > now);
+            return t.Start.Date < now.Date.AddDays(DetailsDays) &&
+                   (t.IsAllDay || t.Start > now || t.End > now);
         });
-        if (upcoming.Count == 0) return "<center>No upcoming tasks.</center>";
+        if (upcoming.Count == 0) return "No upcoming tasks.";
 
         // By day; all-day tasks first within a day (in the CLI's order), then by start time.
         upcoming.Sort(delegate(Task a, Task b)
@@ -250,26 +273,23 @@ static class TickUpcoming
         {
             if (t.Start.Date != day)
             {
-                if (sb.Length > 0) sb.Append("</table><hr>");
                 day = t.Start.Date;
-                string heading = day == now.Date ? "TODAY"
-                    : day == now.Date.AddDays(1) ? "TOMORROW"
-                    : day.ToString("dddd", CultureInfo.InvariantCulture).ToUpperInvariant();
-                sb.Append("<center><b>").Append(heading).Append("</b>")
-                  .Append("&nbsp;&nbsp;<span style=\"color:" + MutedColor + "\">")
-                  .Append(day.ToString("MMM d", CultureInfo.InvariantCulture))
-                  .Append("</span></center><br>")
+                bool isRelative = day == now.Date || day == now.Date.AddDays(1);
+                string heading = day == now.Date ? "Today"
+                    : day == now.Date.AddDays(1) ? "Tomorrow"
+                    : day.ToString("dddd", CultureInfo.InvariantCulture);
+                if (sb.Length > 0) sb.Append("</table><br><br>");
+                sb.Append("<b>").Append(heading).Append("</b>&nbsp;&nbsp;")
+                  .Append(Span(MutedColor, day.ToString(isRelative ? "dddd, MMM d" : "MMM d", CultureInfo.InvariantCulture)))
                   .Append("<table cellspacing=\"0\" cellpadding=\"2\">");
             }
 
-            string bar = PriorityColor(t.Priority) ?? MutedColor;
-            sb.Append("<tr><td align=\"right\"><span style=\"color:" + MutedColor + "\">")
-              .Append(HtmlEscape(CompactRange(t))).Append("</span></td>")
-              .Append("<td>&nbsp;<span style=\"color:").Append(bar).Append("\">┃</span>&nbsp;</td>")
-              .Append("<td>").Append(HtmlEscape(t.Title.Trim())).Append("</td></tr>");
+            string bar = PriorityColor(t.Priority) ?? FaintColor;
+            sb.Append("<tr><td width=\"" + TimeColumnWidth + "\" align=\"right\">").Append(Span(MutedColor, HtmlEscape(CompactRange(t)))).Append("</td>")
+              .Append("<td>&nbsp;").Append(Span(bar, "▎")).Append("&nbsp;</td>")
+              .Append("<td>").Append(HtmlEscape(Truncate(t.Title.Trim()))).Append("</td></tr>");
         }
-        sb.Append("</table>");
-        return sb.ToString();
+        return sb.Append("</table>").ToString();
     }
 
     static string ToJson(Task task, List<Task> tasks, DateTime now)
