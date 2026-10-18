@@ -40,10 +40,27 @@ bars:
     widgets:
       # removed: "microphone", "power_menu", "home", "active_window", "apps", "glazewm_tiling_direction",
       left: ["glazewm_workspaces"]
-      center: ["clock"]
+      center: ["clock", "ticktick_focus"]
       right: ["quick_launch", "ticktick", "media", "button-grouper", "volume", "battery"]
 
 widgets:
+  ticktick_focus:
+    type: "yasb.custom.CustomWidget"
+    options:
+      label: "{data}"
+      label_alt: "{data}"
+      class_name: "ticktick-focus-widget"
+      label_max_length: 28
+      tooltip: true
+      tooltip_label: "{data}"
+      exec_options:
+        run_cmd: "C:/Users/nicol/.config/yasb/ticktick-focus.exe"
+        run_interval: 1000 # run every minute
+        return_format: "string"
+        hide_empty: true
+      callbacks:
+        on_right: "exec_custom" # right click to re-run script!
+
   ticktick:
     type: "yasb.custom.CustomWidget"
     options:

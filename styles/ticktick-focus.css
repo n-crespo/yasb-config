@@ -1,0 +1,10 @@
+/* TICKTICK-FOCUS WIDGET */
+.ticktick-focus-widget .label,
+.ticktick-focus-widget .label.alt {
+  cursor: pointer;
+  color: var(--subtle);
+  font-size: 13px;
+}
+/* .ticktick-focus-widget .label:hover, */
+/* .ticktick-focus-widget .icon:hover { */
+/* } */
