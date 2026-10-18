@@ -3,7 +3,8 @@
 .ticktick-focus-widget .label.alt {
   cursor: pointer;
   color: var(--subtle);
-  font-size: 13px;
+  color: var(--red);
+  /* font-size: 13px; */
 }
 /* .ticktick-focus-widget .label:hover, */
 /* .ticktick-focus-widget .icon:hover { */
