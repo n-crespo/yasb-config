@@ -1,9 +1,16 @@
 // ticktick-focus.cs
 //
-// Prints the TickTick PWA's focus timer state, based on its window title:
-//   "TickTick - 10:50 - Focusing"  ->  "<timer icon> 10:50"
-//   "TickTick - 11:36 - Paused"    ->  "<pause icon> 11:36"
+// Prints the TickTick PWA's focus timer state as JSON, based on its window title:
+//   "TickTick - 10:50 - Focusing"  ->  {"state":"focusing","icon":"<clock icon>","time":"10:50",
+//                                       "html":"<b style=\"color:#39c559;font-size:13px;margin-top:1px\">icon</b> 10:50"}
+//   "TickTick - 11:36 - Paused"    ->  {"state":"paused", ... "html":"<b style=...>icon</b> 11:36"}
 // Prints nothing when no timer is running or paused.
+//
+// Optional argument: "focusing" or "paused" prints only when the timer is in that state
+// (and nothing otherwise), e.g.  ticktick-focus.exe paused
+//
+// Non-ASCII characters are written as \uXXXX escapes, so the output is plain ASCII
+// and can't be garbled by console or encoding settings.
 //
 // Written for the C# 5 compiler that ships with Windows (no C# 6 syntax).
 //
@@ -30,9 +37,72 @@ static class TickFocus
     const string FocusingSuffix = " - Focusing";
     const string PausedSuffix   = " - Paused";
 
-    // Edit these to change the icons (U+23F3 hourglass, U+23F8 pause; U+FE0F = emoji style).
-    const string FocusingIcon = "\u23F3";
-    const string PausedIcon   = "\u23F8\uFE0F";
+    // Tag and color for the icon in the "html" field. "b" is the tag YASB's own custom widget
+    // scripts use for inline colors; try "span" if you'd rather not have bold.
+    const string IconTag       = "b";
+    const string IconFontSize  = "12px";
+    const string IconMarginTop = "0px";
+    const string FocusingColor = "#39c559";   // green (any CSS color works)
+    const string PausedColor   = "#e5484d";   // red
+
+    // Paused icon (Nerd Font, U+F03E6).
+    const string PausedIcon = "󰏤";
+
+    // Running icon: a Nerd Font clock that steps once per second of the TIMER's seconds.
+    // nf-md-clock_time_one_outline (U+F144B) through twelve_outline (U+F1456) are consecutive.
+    const int ClockOneCodePoint = 0xF144B;
+
+    // Set to true if the icon spins backwards (e.g. a countdown timer).
+    static readonly bool CounterClockwise = false;
+
+    // Timer seconds 0 -> 12 o'clock, 1 -> 1 o'clock, ... 11 -> 11 o'clock, 12 -> 12 o'clock again.
+    // 60 is a multiple of 12, so the animation stays smooth across minute boundaries.
+    static string ClockIcon(int second)
+    {
+        int frame = second % 12;                       // 0..11
+        if (CounterClockwise) frame = (12 - frame) % 12;
+        int offset = (frame + 11) % 12;                // 0 = "one", 11 = "twelve"
+        return char.ConvertFromUtf32(ClockOneCodePoint + offset);
+    }
+
+    // Seconds part of a timer string: "10:50" -> 50, "1:10:50" -> 50.
+    // Falls back to the wall-clock second if the text is unexpected.
+    static int SecondsOf(string time)
+    {
+        int seconds;
+        string last = time.Substring(time.LastIndexOf(':') + 1);
+        if (int.TryParse(last, out seconds)) return seconds;
+        return DateTime.Now.Second;
+    }
+
+    // Escapes a string for use inside a JSON string literal (non-ASCII becomes \uXXXX).
+    static string JsonEscape(string value)
+    {
+        var sb = new StringBuilder();
+        foreach (char c in value)
+        {
+            if (c == '"')       sb.Append("\\\"");
+            else if (c == '\\') sb.Append("\\\\");
+            else if (c < 0x20 || c > 0x7E) sb.Append("\\u").Append(((int)c).ToString("x4"));
+            else                sb.Append(c);
+        }
+        return sb.ToString();
+    }
+
+    // The label as HTML: only the icon is wrapped in a colored tag; the time is left plain.
+    static string ToHtml(string icon, string time, string color)
+    {
+        string style = "color:" + color + ";font-size:" + IconFontSize + ";margin-top:" + IconMarginTop;
+        return "<" + IconTag + " style=\"" + style + "\">" + icon + "</" + IconTag + "> " + time;
+    }
+
+    static string ToJson(string state, string icon, string time, string color)
+    {
+        return "{\"state\":\""  + JsonEscape(state) + "\"," +
+               "\"icon\":\""   + JsonEscape(icon)  + "\"," +
+               "\"time\":\""   + JsonEscape(time)  + "\"," +
+               "\"html\":\""   + JsonEscape(ToHtml(icon, time, color)) + "\"}";
+    }
 
     // Returns the time part of the title if it matches "<Prefix><time><suffix>", else null.
     static string ParseTime(string title, string suffix)
@@ -48,7 +118,7 @@ static class TickFocus
         return looksLikeTime ? time : null;
     }
 
-    static int Main()
+    static int Main(string[] args)
     {
         string focusing = null;
         string paused = null;
@@ -70,13 +140,24 @@ static class TickFocus
             return true;
         }, IntPtr.Zero);
 
+        // Optional argument ("focusing" or "paused"): only print when the timer is in
+        // that state. Lets you run one YASB widget per state and style each in CSS.
+        string only = args.Length > 0 ? args[0].ToLowerInvariant() : null;
+
+        // A running timer wins over a paused one.
+        string state = focusing != null ? "focusing" : (paused != null ? "paused" : null);
+
         string result = null;
-        if (focusing != null)      result = FocusingIcon + " " + focusing;
-        else if (paused != null)   result = PausedIcon + " " + paused;
+        if (state != null && (only == null || only == state))
+        {
+            result = (state == "focusing")
+                ? ToJson("focusing", ClockIcon(SecondsOf(focusing)), focusing, FocusingColor)
+                : ToJson("paused", PausedIcon, paused, PausedColor);
+        }
 
         if (result != null)
         {
-            // Write UTF-8 bytes directly: works with or without a console attached.
+            // Write bytes directly: works with or without a console attached.
             byte[] bytes = new UTF8Encoding(false).GetBytes(result + "\n");
             using (Stream stdout = Console.OpenStandardOutput())
             {

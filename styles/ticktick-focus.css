@@ -2,10 +2,15 @@
 .ticktick-focus-widget .label,
 .ticktick-focus-widget .label.alt {
   cursor: pointer;
+  font-weight: normal;
   color: var(--subtle);
-  color: var(--red);
+  color: var(--text);
   /* font-size: 13px; */
 }
+
+/* .ticktick-focus-widget .widget-container { */
+/*   color: blue; */
+/* } */
 /* .ticktick-focus-widget .label:hover, */
 /* .ticktick-focus-widget .icon:hover { */
 /* } */

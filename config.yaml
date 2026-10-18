@@ -47,19 +47,16 @@ widgets:
   ticktick_focus:
     type: "yasb.custom.CustomWidget"
     options:
-      label: "{data}"
-      label_alt: "{data}"
+      label: "{data[html]}"
       class_name: "ticktick-focus-widget"
-      label_max_length: 28
+      tooltip_label: "{data[state]}: {data[time]}"
       tooltip: true
-      tooltip_label: "{data}"
       exec_options:
-        run_cmd: "C:/Users/nicol/.config/yasb/ticktick-focus.exe"
-        run_interval: 1000 # run every minute
-        return_format: "string"
+        run_cmd: 'C:\Users\nicol\.config\yasb\ticktick-focus.exe'
+        run_interval: 1000
+        return_format: "json"
         hide_empty: true
-      callbacks:
-        on_right: "exec_custom" # right click to re-run script!
+        use_shell: false
 
   ticktick:
     type: "yasb.custom.CustomWidget"
@@ -75,6 +72,7 @@ widgets:
         run_interval: 60000 # run every minute
         return_format: "string"
         hide_empty: false
+        use_shell: false
       callbacks:
         on_right: "exec_custom" # right click to re-run script!
 
