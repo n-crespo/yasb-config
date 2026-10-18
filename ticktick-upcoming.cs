@@ -3,9 +3,12 @@
 // Prints the TickTick task in progress right now (or the next one to start) as JSON:
 //   {"state":"upcoming","title":"Lecture","time":"2-4pm","date":"","priority":"none",
 //    "all_day":false,"start":"2026-10-18T14:00:00","end":"2026-10-18T16:00:00",
-//    "label":"2-4pm: Lecture"}
+//    "label":"2-4pm: Lecture","details":"<b>Today</b><br>..."}
 // "date" is a short weekday like "Tue" when the task isn't today, and is then also prefixed
 // to "label". When there is nothing upcoming: {"state":"none","label":"No upcoming tasks."}
+//
+// "details" is an HTML list of every open task still to come in the lookahead window,
+// grouped by day (for a tooltip); "&nbsp;" is used for indentation.
 //
 // Timed tasks win over all-day tasks on the same day, but an all-day task beats timed tasks
 // on later days. Looks 7 days ahead (optional argument: a different number of days).
@@ -202,7 +205,74 @@ static class TickUpcoming
         return "\"" + JsonEscape(value) + "\"";
     }
 
-    static string ToJson(Task task, DateTime now)
+    static string HtmlEscape(string value)
+    {
+        return value.Replace("&", "&amp;").Replace("<", "&lt;").Replace(">", "&gt;");
+    }
+
+    // Foreground color per priority (any CSS color works). Null = default text color.
+    static string PriorityColor(string priority)
+    {
+        switch (priority)
+        {
+            case "low":    return "#5b9bf0";
+            case "medium": return "#e5b84d";
+            case "high":   return "#e5484d";
+            default:       return null;
+        }
+    }
+
+    const string MutedColor = "#8a8a8a";   // times, day dates, and the no-priority bar
+
+    // Open tasks still to come (or in progress): a centered heading per day, then a table of
+    // "time | title" rows whose bar is colored by priority, with a rule between days.
+    static string DetailsHtml(List<Task> tasks, DateTime now)
+    {
+        var upcoming = tasks.FindAll(delegate(Task t)
+        {
+            return t.IsAllDay || t.Start > now || (t.End > now);
+        });
+        if (upcoming.Count == 0) return "<center>No upcoming tasks.</center>";
+
+        // By day; all-day tasks first within a day (in the CLI's order), then by start time.
+        upcoming.Sort(delegate(Task a, Task b)
+        {
+            int byDay = a.Start.Date.CompareTo(b.Start.Date);
+            if (byDay != 0) return byDay;
+            if (a.IsAllDay != b.IsAllDay) return a.IsAllDay ? -1 : 1;
+            int byStart = a.Start.CompareTo(b.Start);
+            return byStart != 0 ? byStart : a.CliOrder.CompareTo(b.CliOrder);
+        });
+
+        var sb = new StringBuilder();
+        DateTime day = DateTime.MinValue;
+        foreach (Task t in upcoming)
+        {
+            if (t.Start.Date != day)
+            {
+                if (sb.Length > 0) sb.Append("</table><hr>");
+                day = t.Start.Date;
+                string heading = day == now.Date ? "TODAY"
+                    : day == now.Date.AddDays(1) ? "TOMORROW"
+                    : day.ToString("dddd", CultureInfo.InvariantCulture).ToUpperInvariant();
+                sb.Append("<center><b>").Append(heading).Append("</b>")
+                  .Append("&nbsp;&nbsp;<span style=\"color:" + MutedColor + "\">")
+                  .Append(day.ToString("MMM d", CultureInfo.InvariantCulture))
+                  .Append("</span></center><br>")
+                  .Append("<table cellspacing=\"0\" cellpadding=\"2\">");
+            }
+
+            string bar = PriorityColor(t.Priority) ?? MutedColor;
+            sb.Append("<tr><td align=\"right\"><span style=\"color:" + MutedColor + "\">")
+              .Append(HtmlEscape(CompactRange(t))).Append("</span></td>")
+              .Append("<td>&nbsp;<span style=\"color:").Append(bar).Append("\">┃</span>&nbsp;</td>")
+              .Append("<td>").Append(HtmlEscape(t.Title.Trim())).Append("</td></tr>");
+        }
+        sb.Append("</table>");
+        return sb.ToString();
+    }
+
+    static string ToJson(Task task, List<Task> tasks, DateTime now)
     {
         string time = CompactRange(task);
         string date = task.Start.Date != now.Date
@@ -218,7 +288,8 @@ static class TickUpcoming
                "\"all_day\":" + (task.IsAllDay ? "true" : "false") + "," +
                "\"start\":" + Str(task.Start.ToString(iso, CultureInfo.InvariantCulture)) + "," +
                "\"end\":" + Str(task.End.ToString(iso, CultureInfo.InvariantCulture)) + "," +
-               "\"label\":" + Str(label) + "}";
+               "\"label\":" + Str(label) + "," +
+               "\"details\":" + Str(DetailsHtml(tasks, now)) + "}";
     }
 
     static int Main(string[] args)
@@ -231,8 +302,10 @@ static class TickUpcoming
         string result;
         try
         {
-            Task next = SelectUpcoming(GetTasks(now.Date, now.Date.AddDays(days)), now);
-            result = next != null ? ToJson(next, now) : "{\"state\":\"none\",\"label\":\"No upcoming tasks.\"}";
+            List<Task> tasks = GetTasks(now.Date, now.Date.AddDays(days));
+            Task next = SelectUpcoming(tasks, now);
+            result = next != null ? ToJson(next, tasks, now)
+                : "{\"state\":\"none\",\"label\":\"No upcoming tasks.\",\"details\":\"No upcoming tasks.\"}";
         }
         catch (Exception e)
         {

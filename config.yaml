@@ -69,7 +69,7 @@ widgets:
       class_name: "ticktick-upcoming-widget"
       label_max_length: 28
       tooltip: true
-      tooltip_label: "{data[label]}"
+      tooltip_label: "{data[details]}"
       exec_options:
         run_cmd: 'C:\Users\nicol\.config\yasb\build\ticktick-upcoming.exe'
         run_interval: 60000 # run every minute
