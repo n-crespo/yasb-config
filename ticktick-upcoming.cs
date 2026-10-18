@@ -8,6 +8,7 @@
 // to "label". When there is nothing upcoming: {"state":"none","label":"No upcoming tasks."}
 //
 // "details" is an HTML list of every open task still to come in the next 3 days (DetailsDays),
+// preceded by unfinished tasks from the last 5 days (OverdueDays) under red "overdue" headings,
 // grouped by day (for a tooltip); "&nbsp;" is used for indentation.
 //
 // Timed tasks win over all-day tasks on the same day, but an all-day task beats timed tasks
@@ -225,6 +226,10 @@ static class TickUpcoming
     // The details list covers today plus the following days, up to this many days in total.
     const int DetailsDays = 3;
 
+    // Open tasks that started up to this many days before today are listed as overdue.
+    const int OverdueDays = 5;
+    const string OverdueColor = "#c25b5b";
+
     const string MutedColor = "#8a8a8a";   // times and day dates
     const string FaintColor = "#4a4a4a";   // rules and the no-priority bar
 
@@ -252,6 +257,7 @@ static class TickUpcoming
     {
         var upcoming = tasks.FindAll(delegate(Task t)
         {
+            if (t.Start.Date < now.Date) return true;   // overdue
             return t.Start.Date < now.Date.AddDays(DetailsDays) &&
                    (t.IsAllDay || t.Start > now || t.End > now);
         });
@@ -275,12 +281,15 @@ static class TickUpcoming
             {
                 day = t.Start.Date;
                 bool isRelative = day == now.Date || day == now.Date.AddDays(1);
+                bool overdue = day < now.Date;
                 string heading = day == now.Date ? "Today"
                     : day == now.Date.AddDays(1) ? "Tomorrow"
+                    : day == now.Date.AddDays(-1) ? "Yesterday"
                     : day.ToString("dddd", CultureInfo.InvariantCulture);
                 if (sb.Length > 0) sb.Append("</table><br><br>");
-                sb.Append("<b>").Append(heading).Append("</b>&nbsp;&nbsp;")
-                  .Append(Span(MutedColor, day.ToString(isRelative ? "dddd, MMM d" : "MMM d", CultureInfo.InvariantCulture)))
+                string dateText = day.ToString(isRelative || day == now.Date.AddDays(-1) ? "dddd, MMM d" : "MMM d", CultureInfo.InvariantCulture);
+                sb.Append("<b>").Append(overdue ? Span(OverdueColor, heading) : heading).Append("</b>&nbsp;&nbsp;")
+                  .Append(Span(MutedColor, dateText + (overdue ? " · overdue" : "")))
                   .Append("<table cellspacing=\"0\" cellpadding=\"2\">");
             }
 
@@ -292,7 +301,7 @@ static class TickUpcoming
         return sb.Append("</table>").ToString();
     }
 
-    static string ToJson(Task task, List<Task> tasks, DateTime now)
+    static string ToJson(Task task, string details, DateTime now)
     {
         string time = CompactRange(task);
         string date = task.Start.Date != now.Date
@@ -309,7 +318,7 @@ static class TickUpcoming
                "\"start\":" + Str(task.Start.ToString(iso, CultureInfo.InvariantCulture)) + "," +
                "\"end\":" + Str(task.End.ToString(iso, CultureInfo.InvariantCulture)) + "," +
                "\"label\":" + Str(label) + "," +
-               "\"details\":" + Str(DetailsHtml(tasks, now)) + "}";
+               "\"details\":" + Str(details) + "}";
     }
 
     static int Main(string[] args)
@@ -322,10 +331,12 @@ static class TickUpcoming
         string result;
         try
         {
-            List<Task> tasks = GetTasks(now.Date, now.Date.AddDays(days));
-            Task next = SelectUpcoming(tasks, now);
-            result = next != null ? ToJson(next, tasks, now)
-                : "{\"state\":\"none\",\"label\":\"No upcoming tasks.\",\"details\":\"No upcoming tasks.\"}";
+            List<Task> all = GetTasks(now.Date.AddDays(-OverdueDays), now.Date.AddDays(days));
+            // Overdue tasks only show up in the details, never as the "next" task.
+            Task next = SelectUpcoming(all.FindAll(delegate(Task t) { return t.Start.Date >= now.Date; }), now);
+            string details = DetailsHtml(all, now);
+            result = next != null ? ToJson(next, details, now)
+                : "{\"state\":\"none\",\"label\":\"No upcoming tasks.\",\"details\":" + Str(details) + "}";
         }
         catch (Exception e)
         {
