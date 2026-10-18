@@ -55,7 +55,7 @@ widgets:
         on_left: 'exec C:\Users\nicol\.config\yasb\build\ticktick-window.exe'
       exec_options:
         run_cmd: 'C:\Users\nicol\.config\yasb\build\ticktick-focus.exe'
-        run_interval: 900
+        run_interval: 1000
         return_format: "string"
         hide_empty: true
         use_shell: false

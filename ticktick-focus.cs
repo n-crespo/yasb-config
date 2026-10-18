@@ -9,7 +9,11 @@
 // Optional argument: "focusing" or "paused" prints only when the timer is in that state
 // (and nothing otherwise), e.g.  ticktick-focus.exe paused
 //
-// Output is UTF-8 (the icons are Nerd Font characters).
+// While a timer is running, each run waits (cheaply, re-reading one window title every 50ms,
+// at most ~1.1s) for the displayed time to change, so output lines up with the real ticks.
+// Paused or no timer: returns immediately, no polling.
+//
+// Output is UTF-8(the icons are Nerd Font characters).
 //
 // Written for the C# 5 compiler that ships with Windows (no C# 6 syntax).
 //
@@ -95,10 +99,18 @@ static class TickFocus
         return looksLikeTime ? time : null;
     }
 
-    static int Main(string[] args)
+    // When a timer is running, block until its displayed time changes (or this long passes),
+    // so each run returns right on a real tick instead of at YASB's arbitrary phase.
+    const int MaxWaitMs = 1100;
+    const int PollMs    = 50;
+
+    // One scan of all top-level windows. Remembers the running timer's window handle so the
+    // wait loop can re-read just that one title instead of enumerating every window.
+    static void Snapshot(out string focusing, out string paused, out IntPtr focusWnd)
     {
-        string focusing = null;
-        string paused = null;
+        string f = null;
+        string p = null;
+        IntPtr fw = IntPtr.Zero;
         var buffer = new StringBuilder(256);
 
         EnumWindows(delegate(IntPtr hWnd, IntPtr lParam)
@@ -109,13 +121,50 @@ static class TickFocus
             string time = ParseTime(title, FocusingSuffix);
             if (time != null)
             {
-                focusing = time;
+                f = time;
+                fw = hWnd;
                 return false;   // a running timer wins; stop searching
             }
 
-            if (paused == null) paused = ParseTime(title, PausedSuffix);
+            if (p == null) p = ParseTime(title, PausedSuffix);
             return true;
         }, IntPtr.Zero);
+
+        focusing = f;
+        paused = p;
+        focusWnd = fw;
+    }
+
+    // Polls one window's title until the time differs from start. Returns the new time, the
+    // unchanged time on timeout, or null if the window is no longer in the focusing state.
+    static string WaitForTick(IntPtr hWnd, string start)
+    {
+        var buffer = new StringBuilder(256);
+        var clock = System.Diagnostics.Stopwatch.StartNew();
+        while (clock.ElapsedMilliseconds < MaxWaitMs)
+        {
+            System.Threading.Thread.Sleep(PollMs);
+            if (GetWindowText(hWnd, buffer, buffer.Capacity) == 0) return null;
+            string time = ParseTime(buffer.ToString(), FocusingSuffix);
+            if (time == null) return null;
+            if (time != start) return time;
+        }
+        return start;
+    }
+
+    static int Main(string[] args)
+    {
+        string focusing, paused;
+        IntPtr focusWnd;
+        Snapshot(out focusing, out paused, out focusWnd);
+
+        // Only a running timer waits; paused / no timer return immediately without polling.
+        if (focusing != null)
+        {
+            string next = WaitForTick(focusWnd, focusing);
+            if (next != null) focusing = next;
+            else Snapshot(out focusing, out paused, out focusWnd);   // state changed: rescan
+        }
 
         // Optional argument ("focusing" or "paused"): only print when the timer is in
         // that state. Lets you run one YASB widget per state and style each in CSS.
