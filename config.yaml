@@ -120,7 +120,7 @@ widgets:
           show_description: true
         calculator:
           enabled: true
-          prefix: "="
+          prefix: "*"
           priority: 2
         clipboard_history:
           enabled: true
