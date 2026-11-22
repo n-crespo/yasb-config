@@ -224,6 +224,10 @@ widgets:
           "hide_duplicates": False,
           "hide_floating": False,
         }
+      # NOTE: requires forked yasb (PR open)
+      animation:
+        enabled: true
+        duration: 100
 
   ########### CENTER #############
   media:
