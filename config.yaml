@@ -353,6 +353,8 @@ widgets:
       device_aliases:
         - name: "Nothing Ear (a)"
           alias: "󱡏"
+        - name: "Nothing Ear (3a)"
+          alias: "󱡏"
         - name: "iPhone"
           alias: ""
         - name: "HK Onyx Studio 6"
