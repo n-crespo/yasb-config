@@ -3,6 +3,8 @@
 .context-menu {
   background-color: var(--blur-bg);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  /* HACK: match Windows default border radius so border doesn't get cut off */
+  border-radius: 8px;
   padding: 4px 0px;
   font-weight: 600;
   font-size: 12px;
